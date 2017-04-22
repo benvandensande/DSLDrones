@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item value="/home/ben/rosjava/src/drone" key="project_location"/>
+	</section>
+	<section name="org.eclipse.buildship.ui.wizard.project.creation">
+		<item value="/home/ben/workspace/Drone" key="project_location"/>
+		<item value="true" key="use_default_location"/>
+	</section>
+</section>

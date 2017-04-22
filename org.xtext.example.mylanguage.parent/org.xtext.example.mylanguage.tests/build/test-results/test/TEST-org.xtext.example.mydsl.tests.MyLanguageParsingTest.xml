@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.xtext.example.mydsl.tests.MyLanguageParsingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-09T11:03:53" hostname="Benthesis" time="1.989">
+  <properties/>
+  <testcase name="loadModel" classname="org.xtext.example.mydsl.tests.MyLanguageParsingTest" time="1.989"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

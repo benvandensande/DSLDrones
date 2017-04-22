@@ -1,0 +1,3 @@
+include 'org.xtext.example.mylanguage'
+include 'org.xtext.example.mylanguage.ide'
+include 'org.xtext.example.mylanguage.tests'

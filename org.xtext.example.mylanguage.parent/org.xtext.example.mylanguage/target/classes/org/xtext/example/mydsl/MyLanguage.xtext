@@ -12,10 +12,8 @@ Test:
 	(statements+=Statement)+
 	;
 
-
 Statement:
 	Given | When | Then;
-
 
 Given:
 	'Given:'

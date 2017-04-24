@@ -66,8 +66,8 @@ public class MyLanguageGenerator extends AbstractGenerator {
     int _minus = (_length - 2);
     String _get = _split[_minus];
     String name = _get.replaceAll("[^A-Za-z0-9]", "");
-    int index = name.indexOf("src");
-    String _substring = name.substring((index + 19));
+    int index = name.indexOf("javafeatures");
+    String _substring = name.substring((index + 12));
     name = _substring;
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);

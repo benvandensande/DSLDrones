@@ -126,12 +126,24 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("\t\t");
     _builder.append("List<Statement> stat = new ArrayList<Statement>();");
     _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("Test test;");
+    _builder.newLine();
     {
       EList<Test> _tests = f.getTests();
       for(final Test t : _tests) {
         _builder.append("\t\t");
         _builder.append("stat = new ArrayList<Statement>();");
         _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("test = new Test(\"");
+        String _name = t.getName();
+        _builder.append(_name, "\t\t");
+        _builder.append("\",\"");
+        String _description = t.getDescription();
+        _builder.append(_description, "\t\t");
+        _builder.append("\", this.app);");
+        _builder.newLineIfNotEmpty();
         {
           EList<Statement> _statements = t.getStatements();
           for(final Statement s : _statements) {
@@ -144,14 +156,11 @@ public class MyLanguageGenerator extends AbstractGenerator {
           }
         }
         _builder.append("\t\t");
-        _builder.append("this.tests.add(new Test(\"");
-        String _name = t.getName();
-        _builder.append(_name, "\t\t");
-        _builder.append("\",\"");
-        String _description = t.getDescription();
-        _builder.append(_description, "\t\t");
-        _builder.append("\",stat));");
-        _builder.newLineIfNotEmpty();
+        _builder.append("test.commitStatements(stat);");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("this.tests.add(test);");
+        _builder.newLine();
       }
     }
     _builder.append("\t");
@@ -826,7 +835,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
     TimeUnit _second = sent.getSecond();
     CharSequence _createRunStat_1 = this.createRunStat(_second);
     _builder.append(_createRunStat_1, "");
-    _builder.append(", this.app, this.drone)");
+    _builder.append(", this.app, this.drone, test)");
     return _builder;
   }
   

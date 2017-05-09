@@ -77,12 +77,15 @@ class MyLanguageGenerator extends AbstractGenerator {
 				this.drone = drone;
 				this.app = app;
 				List<Statement> stat = new ArrayList<Statement>();
+				Test test;
 				«FOR Test t : f.tests»
 					stat = new ArrayList<Statement>();
+					test = new Test("«t.name»","«t.description»", this.app);
 					«FOR Statement s : t.statements»
 						stat.add(«s.createStatement()»);
 					«ENDFOR»
-					this.tests.add(new Test("«t.name»","«t.description»",stat));
+					test.commitStatements(stat);
+					this.tests.add(test);
 				«ENDFOR»
 			}
 			
@@ -210,7 +213,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(MissionGoalSent sent) '''new MissionGoalSentence(«sent.posX», «sent.posY», «sent.posZ», this.app, this.drone)'''
 	def createRunStat(MissionRiskLevelSent sent) '''new MissionRiskLevelSentence("«sent.risklevel»"", this.app, this.drone)'''
 	def createRunStat(MissionStatusSent sent) '''new MissionStatusSentence("«sent.state»", this.app, this.drone)'''
-	def createRunStat(TimeInterval sent) '''new timeIntervalSentence(«sent.first.createRunStat», «sent.second.createRunStat», this.app, this.drone)'''
+	def createRunStat(TimeInterval sent) '''new timeIntervalSentence(«sent.first.createRunStat», «sent.second.createRunStat», this.app, this.drone, test)'''
 	
 	def createRunStat(BatterySent s) {
 		var body = s.sent;

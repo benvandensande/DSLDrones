@@ -224,6 +224,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleBaroSent
+entryRuleBaroSent
+:
+{ before(grammarAccess.getBaroSentRule()); }
+	 ruleBaroSent
+{ after(grammarAccess.getBaroSentRule()); } 
+	 EOF 
+;
+
+// Rule BaroSent
+ruleBaroSent 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getBaroSentAccess().getGroup()); }
+		(rule__BaroSent__Group__0)
+		{ after(grammarAccess.getBaroSentAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleSonarSent
 entryRuleSonarSent
 :
@@ -1453,6 +1478,39 @@ rule__StatementBody__Alternatives
 		ruleSonarSent
 		{ after(grammarAccess.getStatementBodyAccess().getSonarSentParserRuleCall_7()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getStatementBodyAccess().getBaroSentParserRuleCall_8()); }
+		ruleBaroSent
+		{ after(grammarAccess.getStatementBodyAccess().getBaroSentParserRuleCall_8()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__SentAlternatives_3_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getBaroSentAccess().getSentGreaterSentParserRuleCall_3_0_0()); }
+		ruleGreaterSent
+		{ after(grammarAccess.getBaroSentAccess().getSentGreaterSentParserRuleCall_3_0_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getBaroSentAccess().getSentLessSentParserRuleCall_3_0_1()); }
+		ruleLessSent
+		{ after(grammarAccess.getBaroSentAccess().getSentLessSentParserRuleCall_3_0_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getBaroSentAccess().getSentEqualSentParserRuleCall_3_0_2()); }
+		ruleEqualSent
+		{ after(grammarAccess.getBaroSentAccess().getSentEqualSentParserRuleCall_3_0_2()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2367,6 +2425,114 @@ rule__When__Group__1__Impl
 	{ before(grammarAccess.getWhenAccess().getBodyAssignment_1()); }
 	(rule__When__BodyAssignment_1)
 	{ after(grammarAccess.getWhenAccess().getBodyAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__BaroSent__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__BaroSent__Group__0__Impl
+	rule__BaroSent__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getBaroSentAccess().getBarometerKeyword_0()); }
+	'Barometer'
+	{ after(grammarAccess.getBaroSentAccess().getBarometerKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__BaroSent__Group__1__Impl
+	rule__BaroSent__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getBaroSentAccess().getAltitudereadingKeyword_1()); }
+	'altitudereading'
+	{ after(grammarAccess.getBaroSentAccess().getAltitudereadingKeyword_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__BaroSent__Group__2__Impl
+	rule__BaroSent__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getBaroSentAccess().getIsKeyword_2()); }
+	'is'
+	{ after(grammarAccess.getBaroSentAccess().getIsKeyword_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__BaroSent__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getBaroSentAccess().getSentAssignment_3()); }
+	(rule__BaroSent__SentAssignment_3)
+	{ after(grammarAccess.getBaroSentAccess().getSentAssignment_3()); }
 )
 ;
 finally {
@@ -6388,6 +6554,21 @@ rule__When__BodyAssignment_1
 		{ before(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0()); }
 		ruleStatementBody
 		{ after(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__BaroSent__SentAssignment_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getBaroSentAccess().getSentAlternatives_3_0()); }
+		(rule__BaroSent__SentAlternatives_3_0)
+		{ after(grammarAccess.getBaroSentAccess().getSentAlternatives_3_0()); }
 	)
 ;
 finally {

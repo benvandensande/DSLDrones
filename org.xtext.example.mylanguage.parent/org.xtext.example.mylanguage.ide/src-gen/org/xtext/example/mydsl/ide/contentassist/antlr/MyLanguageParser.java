@@ -37,6 +37,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getStatementBodyAccess().getAlternatives(), "rule__StatementBody__Alternatives");
+					put(grammarAccess.getBaroSentAccess().getSentAlternatives_3_0(), "rule__BaroSent__SentAlternatives_3_0");
 					put(grammarAccess.getSonarSentAccess().getSentAlternatives_3_0(), "rule__SonarSent__SentAlternatives_3_0");
 					put(grammarAccess.getBatterySentAccess().getSentAlternatives_3_0(), "rule__BatterySent__SentAlternatives_3_0");
 					put(grammarAccess.getPeopleSentAccess().getAlternatives_1(), "rule__PeopleSent__Alternatives_1");
@@ -63,6 +64,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getGroup(), "rule__Given__Group__0");
 					put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
 					put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
+					put(grammarAccess.getBaroSentAccess().getGroup(), "rule__BaroSent__Group__0");
 					put(grammarAccess.getSonarSentAccess().getGroup(), "rule__SonarSent__Group__0");
 					put(grammarAccess.getNotificationSentAccess().getGroup(), "rule__NotificationSent__Group__0");
 					put(grammarAccess.getTimeSentAccess().getGroup(), "rule__TimeSent__Group__0");
@@ -111,6 +113,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getBodyAssignment_1(), "rule__Given__BodyAssignment_1");
 					put(grammarAccess.getThenAccess().getBodyAssignment_1(), "rule__Then__BodyAssignment_1");
 					put(grammarAccess.getWhenAccess().getBodyAssignment_1(), "rule__When__BodyAssignment_1");
+					put(grammarAccess.getBaroSentAccess().getSentAssignment_3(), "rule__BaroSent__SentAssignment_3");
 					put(grammarAccess.getSonarSentAccess().getSentAssignment_3(), "rule__SonarSent__SentAssignment_3");
 					put(grammarAccess.getNotificationSentAccess().getNotAssignment_0(), "rule__NotificationSent__NotAssignment_0");
 					put(grammarAccess.getTimeIntervalAccess().getFirstAssignment_3(), "rule__TimeInterval__FirstAssignment_3");

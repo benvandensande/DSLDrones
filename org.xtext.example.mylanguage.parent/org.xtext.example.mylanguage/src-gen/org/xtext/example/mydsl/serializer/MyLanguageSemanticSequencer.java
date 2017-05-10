@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.example.mydsl.myLanguage.BaroSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
@@ -71,6 +72,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == MyLanguagePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case MyLanguagePackage.BARO_SENT:
+				sequence_BaroSent(context, (BaroSent) semanticObject); 
+				return; 
 			case MyLanguagePackage.BATTERY_SENT:
 				sequence_BatterySent(context, (BatterySent) semanticObject); 
 				return; 
@@ -195,6 +199,19 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Contexts:
+	 *     StatementBody returns BaroSent
+	 *     BaroSent returns BaroSent
+	 *
+	 * Constraint:
+	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 */
+	protected void sequence_BaroSent(ISerializationContext context, BaroSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Contexts:

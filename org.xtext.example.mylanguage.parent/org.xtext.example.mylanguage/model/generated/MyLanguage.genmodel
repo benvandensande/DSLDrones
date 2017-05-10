@@ -21,6 +21,9 @@
     <genClasses ecoreClass="MyLanguage.ecore#//Then"/>
     <genClasses ecoreClass="MyLanguage.ecore#//When"/>
     <genClasses ecoreClass="MyLanguage.ecore#//StatementBody"/>
+    <genClasses ecoreClass="MyLanguage.ecore#//BaroSent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BaroSent/sent"/>
+    </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//SonarSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//SonarSent/sent"/>
     </genClasses>

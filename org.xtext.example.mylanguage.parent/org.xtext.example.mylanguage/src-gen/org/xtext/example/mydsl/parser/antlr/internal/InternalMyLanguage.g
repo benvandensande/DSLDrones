@@ -438,6 +438,99 @@ ruleStatementBody returns [EObject current=null]
 			$current = $this_SonarSent_7.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementBodyAccess().getBaroSentParserRuleCall_8());
+		}
+		this_BaroSent_8=ruleBaroSent
+		{
+			$current = $this_BaroSent_8.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleBaroSent
+entryRuleBaroSent returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBaroSentRule()); }
+	iv_ruleBaroSent=ruleBaroSent
+	{ $current=$iv_ruleBaroSent.current; }
+	EOF;
+
+// Rule BaroSent
+ruleBaroSent returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='Barometer'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getBaroSentAccess().getBarometerKeyword_0());
+		}
+		otherlv_1='altitudereading'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getBaroSentAccess().getAltitudereadingKeyword_1());
+		}
+		otherlv_2='is'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getBaroSentAccess().getIsKeyword_2());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBaroSentAccess().getSentGreaterSentParserRuleCall_3_0_0());
+					}
+					lv_sent_3_1=ruleGreaterSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBaroSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_1,
+							"org.xtext.example.mydsl.MyLanguage.GreaterSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getBaroSentAccess().getSentLessSentParserRuleCall_3_0_1());
+					}
+					lv_sent_3_2=ruleLessSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBaroSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_2,
+							"org.xtext.example.mydsl.MyLanguage.LessSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getBaroSentAccess().getSentEqualSentParserRuleCall_3_0_2());
+					}
+					lv_sent_3_3=ruleEqualSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBaroSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_3,
+							"org.xtext.example.mydsl.MyLanguage.EqualSent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
 	)
 ;
 

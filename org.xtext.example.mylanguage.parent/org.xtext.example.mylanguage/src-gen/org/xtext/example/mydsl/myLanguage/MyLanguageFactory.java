@@ -87,6 +87,15 @@ public interface MyLanguageFactory extends EFactory
   StatementBody createStatementBody();
 
   /**
+   * Returns a new object of class '<em>Baro Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Baro Sent</em>'.
+   * @generated
+   */
+  BaroSent createBaroSent();
+
+  /**
    * Returns a new object of class '<em>Sonar Sent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -29,7 +29,12 @@ When:
 	
 StatementBody:
 	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-	| NotificationSent | BatterySent | SonarSent;
+	| NotificationSent | BatterySent | SonarSent | BaroSent;
+
+BaroSent:
+	'Barometer''altitudereading''is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
 
 SonarSent:
 	'Sonar''distancereading''is'

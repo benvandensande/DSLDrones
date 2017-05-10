@@ -111,6 +111,11 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
         return createStatementBodyAdapter();
       }
       @Override
+      public Adapter caseBaroSent(BaroSent object)
+      {
+        return createBaroSentAdapter();
+      }
+      @Override
       public Adapter caseSonarSent(SonarSent object)
       {
         return createSonarSentAdapter();
@@ -438,6 +443,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStatementBodyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.BaroSent <em>Baro Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.BaroSent
+   * @generated
+   */
+  public Adapter createBaroSentAdapter()
   {
     return null;
   }

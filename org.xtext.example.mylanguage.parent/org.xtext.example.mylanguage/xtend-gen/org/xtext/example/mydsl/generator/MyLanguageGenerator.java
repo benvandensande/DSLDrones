@@ -14,6 +14,7 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.myLanguage.BaroSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
@@ -351,6 +352,17 @@ public class MyLanguageGenerator extends AbstractGenerator {
             _matched=true;
             StringConcatenation _builder = new StringConcatenation();
             CharSequence _createRunStat = this.createRunStat(((SonarSent)bod));
+            _builder.append(_createRunStat, "");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        if (bod instanceof BaroSent) {
+          if ((bod instanceof BaroSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((BaroSent)bod));
             _builder.append(_createRunStat, "");
             _switchResult = _builder;
           }
@@ -940,6 +952,59 @@ public class MyLanguageGenerator extends AbstractGenerator {
             _matched=true;
             StringConcatenation _builder = new StringConcatenation();
             _builder.append("new SonarSentence(");
+            CharSequence _createRunStat = this.createRunStat(((LessSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(" , this.app, this.drone)");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final BaroSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getSent();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (body instanceof EqualSent) {
+        if ((body instanceof EqualSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          _builder.append("new BaroSentence(");
+          CharSequence _createRunStat = this.createRunStat(((EqualSent)body));
+          _builder.append(_createRunStat, "");
+          _builder.append(" , this.app, this.drone)");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof GreaterSent) {
+          if ((body instanceof GreaterSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new BaroSentence(");
+            CharSequence _createRunStat = this.createRunStat(((GreaterSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(" , this.app, this.drone)");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        if (body instanceof LessSent) {
+          if ((body instanceof LessSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new BaroSentence(");
             CharSequence _createRunStat = this.createRunStat(((LessSent)body));
             _builder.append(_createRunStat, "");
             _builder.append(" , this.app, this.drone)");

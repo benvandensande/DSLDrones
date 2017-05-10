@@ -1,8 +1,7 @@
-grammar org.xtext.example.mydsl.MyLanguage with org.xtext.example.mydsl.MyTerminals
-
+grammar org.xtext.example.mydsl.MyLanguage with org.eclipse.xtext.common.Terminals
 
 generate myLanguage "http://www.xtext.org/example/mydsl/MyLanguage"
-        
+
 TestFile :
     (tests+=Test)*;
   
@@ -245,3 +244,6 @@ PercentUnit:
 	'percent('value=DOUBLE')'
 ;
 
+DOUBLE :
+	('-')? INT ('.' INT)?
+;

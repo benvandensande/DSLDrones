@@ -125,6 +125,14 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.SONAR_SENT:
+      {
+        SonarSent sonarSent = (SonarSent)theEObject;
+        T result = caseSonarSent(sonarSent);
+        if (result == null) result = caseStatementBody(sonarSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.NOTIFICATION_SENT:
       {
         NotificationSent notificationSent = (NotificationSent)theEObject;
@@ -561,6 +569,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStatementBody(StatementBody object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sonar Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sonar Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSonarSent(SonarSent object)
   {
     return null;
   }

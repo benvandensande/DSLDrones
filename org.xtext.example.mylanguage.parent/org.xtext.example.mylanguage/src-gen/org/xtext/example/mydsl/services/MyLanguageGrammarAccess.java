@@ -191,13 +191,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMissionSentParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cNotificationSentParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cBatterySentParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cSonarSentParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//StatementBody:
 		//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-		//	| NotificationSent | BatterySent;
+		//	| NotificationSent | BatterySent | SonarSent;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent | NotificationSent | BatterySent
+		//Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent | NotificationSent | BatterySent | SonarSent
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Robot
@@ -220,6 +221,53 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//BatterySent
 		public RuleCall getBatterySentParserRuleCall_6() { return cBatterySentParserRuleCall_6; }
+		
+		//SonarSent
+		public RuleCall getSonarSentParserRuleCall_7() { return cSonarSentParserRuleCall_7; }
+	}
+	public class SonarSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.SonarSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSonarKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cDistancereadingKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cIsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSentAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Alternatives cSentAlternatives_3_0 = (Alternatives)cSentAssignment_3.eContents().get(0);
+		private final RuleCall cSentGreaterSentParserRuleCall_3_0_0 = (RuleCall)cSentAlternatives_3_0.eContents().get(0);
+		private final RuleCall cSentLessSentParserRuleCall_3_0_1 = (RuleCall)cSentAlternatives_3_0.eContents().get(1);
+		private final RuleCall cSentEqualSentParserRuleCall_3_0_2 = (RuleCall)cSentAlternatives_3_0.eContents().get(2);
+		
+		//SonarSent:
+		//	'Sonar' 'distancereading' 'is'
+		//	sent=(GreaterSent | LessSent | EqualSent);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Sonar' 'distancereading' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		public Group getGroup() { return cGroup; }
+		
+		//'Sonar'
+		public Keyword getSonarKeyword_0() { return cSonarKeyword_0; }
+		
+		//'distancereading'
+		public Keyword getDistancereadingKeyword_1() { return cDistancereadingKeyword_1; }
+		
+		//'is'
+		public Keyword getIsKeyword_2() { return cIsKeyword_2; }
+		
+		//sent=(GreaterSent | LessSent | EqualSent)
+		public Assignment getSentAssignment_3() { return cSentAssignment_3; }
+		
+		//(GreaterSent | LessSent | EqualSent)
+		public Alternatives getSentAlternatives_3_0() { return cSentAlternatives_3_0; }
+		
+		//GreaterSent
+		public RuleCall getSentGreaterSentParserRuleCall_3_0_0() { return cSentGreaterSentParserRuleCall_3_0_0; }
+		
+		//LessSent
+		public RuleCall getSentLessSentParserRuleCall_3_0_1() { return cSentLessSentParserRuleCall_3_0_1; }
+		
+		//EqualSent
+		public RuleCall getSentEqualSentParserRuleCall_3_0_2() { return cSentEqualSentParserRuleCall_3_0_2; }
 	}
 	public class NotificationSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.NotificationSent");
@@ -1782,6 +1830,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final ThenElements pThen;
 	private final WhenElements pWhen;
 	private final StatementBodyElements pStatementBody;
+	private final SonarSentElements pSonarSent;
 	private final NotificationSentElements pNotificationSent;
 	private final TimeSentElements pTimeSent;
 	private final TimeIntervalElements pTimeInterval;
@@ -1844,6 +1893,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pThen = new ThenElements();
 		this.pWhen = new WhenElements();
 		this.pStatementBody = new StatementBodyElements();
+		this.pSonarSent = new SonarSentElements();
 		this.pNotificationSent = new NotificationSentElements();
 		this.pTimeSent = new TimeSentElements();
 		this.pTimeInterval = new TimeIntervalElements();
@@ -1985,13 +2035,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//StatementBody:
 	//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-	//	| NotificationSent | BatterySent;
+	//	| NotificationSent | BatterySent | SonarSent;
 	public StatementBodyElements getStatementBodyAccess() {
 		return pStatementBody;
 	}
 	
 	public ParserRule getStatementBodyRule() {
 		return getStatementBodyAccess().getRule();
+	}
+	
+	//SonarSent:
+	//	'Sonar' 'distancereading' 'is'
+	//	sent=(GreaterSent | LessSent | EqualSent);
+	public SonarSentElements getSonarSentAccess() {
+		return pSonarSent;
+	}
+	
+	public ParserRule getSonarSentRule() {
+		return getSonarSentAccess().getRule();
 	}
 	
 	//NotificationSent:

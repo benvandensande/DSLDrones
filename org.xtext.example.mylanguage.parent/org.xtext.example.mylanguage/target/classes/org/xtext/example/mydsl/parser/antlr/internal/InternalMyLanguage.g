@@ -429,6 +429,99 @@ ruleStatementBody returns [EObject current=null]
 			$current = $this_BatterySent_6.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementBodyAccess().getSonarSentParserRuleCall_7());
+		}
+		this_SonarSent_7=ruleSonarSent
+		{
+			$current = $this_SonarSent_7.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleSonarSent
+entryRuleSonarSent returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSonarSentRule()); }
+	iv_ruleSonarSent=ruleSonarSent
+	{ $current=$iv_ruleSonarSent.current; }
+	EOF;
+
+// Rule SonarSent
+ruleSonarSent returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='Sonar'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getSonarSentAccess().getSonarKeyword_0());
+		}
+		otherlv_1='distancereading'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getSonarSentAccess().getDistancereadingKeyword_1());
+		}
+		otherlv_2='is'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getSonarSentAccess().getIsKeyword_2());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getSonarSentAccess().getSentGreaterSentParserRuleCall_3_0_0());
+					}
+					lv_sent_3_1=ruleGreaterSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getSonarSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_1,
+							"org.xtext.example.mydsl.MyLanguage.GreaterSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getSonarSentAccess().getSentLessSentParserRuleCall_3_0_1());
+					}
+					lv_sent_3_2=ruleLessSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getSonarSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_2,
+							"org.xtext.example.mydsl.MyLanguage.LessSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getSonarSentAccess().getSentEqualSentParserRuleCall_3_0_2());
+					}
+					lv_sent_3_3=ruleEqualSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getSonarSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_3_3,
+							"org.xtext.example.mydsl.MyLanguage.EqualSent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
 	)
 ;
 
@@ -3092,25 +3185,32 @@ ruleDOUBLE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	leaveRule();
 }:
 	(
-		this_INT_0=RULE_INT
+		(
+			kw='-'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getHyphenMinusKeyword_0());
+			}
+		)?
+		this_INT_1=RULE_INT
 		{
-			$current.merge(this_INT_0);
+			$current.merge(this_INT_1);
 		}
 		{
-			newLeafNode(this_INT_0, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_0());
+			newLeafNode(this_INT_1, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1());
 		}
 		(
 			kw='.'
 			{
 				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_1_0());
+				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_2_0());
 			}
-			this_INT_2=RULE_INT
+			this_INT_3=RULE_INT
 			{
-				$current.merge(this_INT_2);
+				$current.merge(this_INT_3);
 			}
 			{
-				newLeafNode(this_INT_2, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1_1());
+				newLeafNode(this_INT_3, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_2_1());
 			}
 		)?
 	)

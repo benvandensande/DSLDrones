@@ -41,6 +41,7 @@ import org.xtext.example.mydsl.myLanguage.RobotDistanceSent;
 import org.xtext.example.mydsl.myLanguage.RobotPositionSent;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
+import org.xtext.example.mydsl.myLanguage.SonarSent;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Statement;
 import org.xtext.example.mydsl.myLanguage.StatementBody;
@@ -109,6 +110,13 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass statementBodyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sonarSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -571,6 +579,26 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EClass getStatementBody()
   {
     return statementBodyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSonarSent()
+  {
+    return sonarSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSonarSent_Sent()
+  {
+    return (EReference)sonarSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1472,6 +1500,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     statementBodyEClass = createEClass(STATEMENT_BODY);
 
+    sonarSentEClass = createEClass(SONAR_SENT);
+    createEReference(sonarSentEClass, SONAR_SENT__SENT);
+
     notificationSentEClass = createEClass(NOTIFICATION_SENT);
     createEAttribute(notificationSentEClass, NOTIFICATION_SENT__NOT);
 
@@ -1630,6 +1661,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     givenEClass.getESuperTypes().add(this.getStatement());
     thenEClass.getESuperTypes().add(this.getStatement());
     whenEClass.getESuperTypes().add(this.getStatement());
+    sonarSentEClass.getESuperTypes().add(this.getStatementBody());
     notificationSentEClass.getESuperTypes().add(this.getStatementBody());
     timeSentEClass.getESuperTypes().add(this.getStatementBody());
     timeIntervalEClass.getESuperTypes().add(this.getTimeSent());
@@ -1679,6 +1711,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEClass(whenEClass, When.class, "When", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(statementBodyEClass, StatementBody.class, "StatementBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(sonarSentEClass, SonarSent.class, "SonarSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSonarSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, SonarSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notificationSentEClass, NotificationSent.class, "NotificationSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNotificationSent_Not(), ecorePackage.getEString(), "not", null, 0, 1, NotificationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

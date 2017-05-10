@@ -20,6 +20,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Then" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="When" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatementBody"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SonarSent" eSuperTypes="#//StatementBody">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NotificationSent" eSuperTypes="#//StatementBody">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="not" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

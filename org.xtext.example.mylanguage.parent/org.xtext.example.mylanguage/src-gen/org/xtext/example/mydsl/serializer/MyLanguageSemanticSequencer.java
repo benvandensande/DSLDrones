@@ -47,6 +47,7 @@ import org.xtext.example.mydsl.myLanguage.RobotPositionSent;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
 import org.xtext.example.mydsl.myLanguage.SECONDS;
+import org.xtext.example.mydsl.myLanguage.SonarSent;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Test;
 import org.xtext.example.mydsl.myLanguage.TestFile;
@@ -165,6 +166,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.SECONDS:
 				sequence_SECONDS(context, (SECONDS) semanticObject); 
+				return; 
+			case MyLanguagePackage.SONAR_SENT:
+				sequence_SonarSent(context, (SonarSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.SPHERE_POSITION:
 				sequence_SpherePosition(context, (SpherePosition) semanticObject); 
@@ -750,6 +754,19 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getSECONDSAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StatementBody returns SonarSent
+	 *     SonarSent returns SonarSent
+	 *
+	 * Constraint:
+	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 */
+	protected void sequence_SonarSent(ISerializationContext context, SonarSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

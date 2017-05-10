@@ -72,6 +72,7 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.THEN: return createThen();
       case MyLanguagePackage.WHEN: return createWhen();
       case MyLanguagePackage.STATEMENT_BODY: return createStatementBody();
+      case MyLanguagePackage.SONAR_SENT: return createSonarSent();
       case MyLanguagePackage.NOTIFICATION_SENT: return createNotificationSent();
       case MyLanguagePackage.TIME_SENT: return createTimeSent();
       case MyLanguagePackage.TIME_INTERVAL: return createTimeInterval();
@@ -192,6 +193,17 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     StatementBodyImpl statementBody = new StatementBodyImpl();
     return statementBody;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SonarSent createSonarSent()
+  {
+    SonarSentImpl sonarSent = new SonarSentImpl();
+    return sonarSent;
   }
 
   /**

@@ -1,6 +1,7 @@
 ')'=76
 ','=40
-'.'=84
+'-'=84
+'.'=85
 'ACTIVE'=13
 'Battery'=42
 'CRITICAL'=19
@@ -9,7 +10,7 @@
 'GPS'=22
 'Given:'=30
 'Mission'=47
-'Notification'=85
+'Notification'=86
 'OFF'=12
 'ON'=11
 'PAUSED'=15
@@ -54,7 +55,7 @@
 'motor'=20
 'number'=46
 'obstacles'=58
-'payload'=86
+'payload'=87
 'percent('=83
 'position'=45
 'radius'=67
@@ -157,3 +158,4 @@ T__83=83
 T__84=84
 T__85=85
 T__86=86
+T__87=87

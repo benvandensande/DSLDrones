@@ -3092,25 +3092,32 @@ ruleDOUBLE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	leaveRule();
 }:
 	(
-		this_INT_0=RULE_INT
+		(
+			kw='-'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getHyphenMinusKeyword_0());
+			}
+		)?
+		this_INT_1=RULE_INT
 		{
-			$current.merge(this_INT_0);
+			$current.merge(this_INT_1);
 		}
 		{
-			newLeafNode(this_INT_0, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_0());
+			newLeafNode(this_INT_1, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1());
 		}
 		(
 			kw='.'
 			{
 				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_1_0());
+				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_2_0());
 			}
-			this_INT_2=RULE_INT
+			this_INT_3=RULE_INT
 			{
-				$current.merge(this_INT_2);
+				$current.merge(this_INT_3);
 			}
 			{
-				newLeafNode(this_INT_2, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1_1());
+				newLeafNode(this_INT_3, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_2_1());
 			}
 		)?
 	)

@@ -101,7 +101,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getKILOMETERAccess().getGroup(), "rule__KILOMETER__Group__0");
 					put(grammarAccess.getPercentUnitAccess().getGroup(), "rule__PercentUnit__Group__0");
 					put(grammarAccess.getDOUBLEAccess().getGroup(), "rule__DOUBLE__Group__0");
-					put(grammarAccess.getDOUBLEAccess().getGroup_1(), "rule__DOUBLE__Group_1__0");
+					put(grammarAccess.getDOUBLEAccess().getGroup_2(), "rule__DOUBLE__Group_2__0");
 					put(grammarAccess.getTestFileAccess().getTestsAssignment(), "rule__TestFile__TestsAssignment");
 					put(grammarAccess.getTestAccess().getNameAssignment_1(), "rule__Test__NameAssignment_1");
 					put(grammarAccess.getTestAccess().getDescriptionAssignment_2_1(), "rule__Test__DescriptionAssignment_2_1");

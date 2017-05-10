@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyLanguageParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ON'", "'OFF'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'motor'", "'camera'", "'GPS'", "'battery'", "'barometer'", "'scanner'", "'sonar'", "'autopilot'", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'status'", "'is'", "'sent'", "'Time'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'used'", "'as'", "'redundant'", "'component'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'fails'", "'collisionrisk'", "'tolerance'", "'seconds('", "')'", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'.'", "'Notification'", "'payload'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ON'", "'OFF'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'motor'", "'camera'", "'GPS'", "'battery'", "'barometer'", "'scanner'", "'sonar'", "'autopilot'", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'status'", "'is'", "'sent'", "'Time'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'used'", "'as'", "'redundant'", "'component'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'fails'", "'collisionrisk'", "'tolerance'", "'seconds('", "')'", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'", "'Notification'", "'payload'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -84,6 +84,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
     public static final int T__85=85;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__84=84;
+    public static final int T__87=87;
     public static final int T__86=86;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__30=30;
@@ -4308,7 +4309,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
                 alt3=5;
                 }
                 break;
-            case 85:
+            case 86:
                 {
                 alt3=6;
                 }
@@ -5142,7 +5143,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             if ( (LA10_0==58) ) {
                 alt10=1;
             }
-            else if ( (LA10_0==RULE_INT) ) {
+            else if ( (LA10_0==RULE_INT||LA10_0==84) ) {
                 alt10=2;
             }
             else {
@@ -9582,7 +9583,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3025:1: ( rule__PeopleNumbSent__Group__1__Impl rule__PeopleNumbSent__Group__2 )
             // InternalMyLanguage.g:3026:2: rule__PeopleNumbSent__Group__1__Impl rule__PeopleNumbSent__Group__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_23);
             rule__PeopleNumbSent__Group__1__Impl();
 
             state._fsp--;
@@ -9737,7 +9738,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3079:1: ( rule__MissionSent__Group__0__Impl rule__MissionSent__Group__1 )
             // InternalMyLanguage.g:3080:2: rule__MissionSent__Group__0__Impl rule__MissionSent__Group__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__MissionSent__Group__0__Impl();
 
             state._fsp--;
@@ -10367,7 +10368,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3295:1: ( rule__MissionRiskLevelSent__Group__1__Impl rule__MissionRiskLevelSent__Group__2 )
             // InternalMyLanguage.g:3296:2: rule__MissionRiskLevelSent__Group__1__Impl rule__MissionRiskLevelSent__Group__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__MissionRiskLevelSent__Group__1__Impl();
 
             state._fsp--;
@@ -10597,7 +10598,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3376:1: ( rule__MissionStatusSent__Group__1__Impl rule__MissionStatusSent__Group__2 )
             // InternalMyLanguage.g:3377:2: rule__MissionStatusSent__Group__1__Impl rule__MissionStatusSent__Group__2
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__MissionStatusSent__Group__1__Impl();
 
             state._fsp--;
@@ -10752,7 +10753,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3430:1: ( rule__Robot__Group__0__Impl rule__Robot__Group__1 )
             // InternalMyLanguage.g:3431:2: rule__Robot__Group__0__Impl rule__Robot__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__Robot__Group__0__Impl();
 
             state._fsp--;
@@ -10982,7 +10983,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3511:1: ( rule__RobotAutoPilot__Group__1__Impl rule__RobotAutoPilot__Group__2 )
             // InternalMyLanguage.g:3512:2: rule__RobotAutoPilot__Group__1__Impl rule__RobotAutoPilot__Group__2
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             rule__RobotAutoPilot__Group__1__Impl();
 
             state._fsp--;
@@ -11222,7 +11223,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3592:1: ( rule__RedundantComponent__Group__1__Impl rule__RedundantComponent__Group__2 )
             // InternalMyLanguage.g:3593:2: rule__RedundantComponent__Group__1__Impl rule__RedundantComponent__Group__2
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__RedundantComponent__Group__1__Impl();
 
             state._fsp--;
@@ -11297,7 +11298,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3619:1: ( rule__RedundantComponent__Group__2__Impl rule__RedundantComponent__Group__3 )
             // InternalMyLanguage.g:3620:2: rule__RedundantComponent__Group__2__Impl rule__RedundantComponent__Group__3
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__RedundantComponent__Group__2__Impl();
 
             state._fsp--;
@@ -11372,7 +11373,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3646:1: ( rule__RedundantComponent__Group__3__Impl rule__RedundantComponent__Group__4 )
             // InternalMyLanguage.g:3647:2: rule__RedundantComponent__Group__3__Impl rule__RedundantComponent__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__RedundantComponent__Group__3__Impl();
 
             state._fsp--;
@@ -11447,7 +11448,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3673:1: ( rule__RedundantComponent__Group__4__Impl rule__RedundantComponent__Group__5 )
             // InternalMyLanguage.g:3674:2: rule__RedundantComponent__Group__4__Impl rule__RedundantComponent__Group__5
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__RedundantComponent__Group__4__Impl();
 
             state._fsp--;
@@ -11592,7 +11593,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3727:1: ( rule__PayloadSent__Group__0__Impl rule__PayloadSent__Group__1 )
             // InternalMyLanguage.g:3728:2: rule__PayloadSent__Group__0__Impl rule__PayloadSent__Group__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__PayloadSent__Group__0__Impl();
 
             state._fsp--;
@@ -11747,7 +11748,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3781:1: ( rule__RobotDistanceSent__Group__0__Impl rule__RobotDistanceSent__Group__1 )
             // InternalMyLanguage.g:3782:2: rule__RobotDistanceSent__Group__0__Impl rule__RobotDistanceSent__Group__1
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             rule__RobotDistanceSent__Group__0__Impl();
 
             state._fsp--;
@@ -11822,7 +11823,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3808:1: ( rule__RobotDistanceSent__Group__1__Impl rule__RobotDistanceSent__Group__2 )
             // InternalMyLanguage.g:3809:2: rule__RobotDistanceSent__Group__1__Impl rule__RobotDistanceSent__Group__2
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__RobotDistanceSent__Group__1__Impl();
 
             state._fsp--;
@@ -12307,7 +12308,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:3970:1: ( rule__DistanceToLocationSent__Group__4__Impl rule__DistanceToLocationSent__Group__5 )
             // InternalMyLanguage.g:3971:2: rule__DistanceToLocationSent__Group__4__Impl rule__DistanceToLocationSent__Group__5
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__DistanceToLocationSent__Group__4__Impl();
 
             state._fsp--;
@@ -12633,7 +12634,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4078:1: ( rule__DistanceToObstaclesSent__Group__2__Impl rule__DistanceToObstaclesSent__Group__3 )
             // InternalMyLanguage.g:4079:2: rule__DistanceToObstaclesSent__Group__2__Impl rule__DistanceToObstaclesSent__Group__3
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__DistanceToObstaclesSent__Group__2__Impl();
 
             state._fsp--;
@@ -12809,7 +12810,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4132:1: ( rule__EqualSent__Group__0__Impl rule__EqualSent__Group__1 )
             // InternalMyLanguage.g:4133:2: rule__EqualSent__Group__0__Impl rule__EqualSent__Group__1
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             rule__EqualSent__Group__0__Impl();
 
             state._fsp--;
@@ -12884,7 +12885,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4159:1: ( rule__EqualSent__Group__1__Impl rule__EqualSent__Group__2 )
             // InternalMyLanguage.g:4160:2: rule__EqualSent__Group__1__Impl rule__EqualSent__Group__2
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__EqualSent__Group__1__Impl();
 
             state._fsp--;
@@ -13039,7 +13040,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4213:1: ( rule__LessSent__Group__0__Impl rule__LessSent__Group__1 )
             // InternalMyLanguage.g:4214:2: rule__LessSent__Group__0__Impl rule__LessSent__Group__1
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__LessSent__Group__0__Impl();
 
             state._fsp--;
@@ -13114,7 +13115,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4240:1: ( rule__LessSent__Group__1__Impl rule__LessSent__Group__2 )
             // InternalMyLanguage.g:4241:2: rule__LessSent__Group__1__Impl rule__LessSent__Group__2
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__LessSent__Group__1__Impl();
 
             state._fsp--;
@@ -13269,7 +13270,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4294:1: ( rule__GreaterSent__Group__0__Impl rule__GreaterSent__Group__1 )
             // InternalMyLanguage.g:4295:2: rule__GreaterSent__Group__0__Impl rule__GreaterSent__Group__1
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__GreaterSent__Group__0__Impl();
 
             state._fsp--;
@@ -13344,7 +13345,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4321:1: ( rule__GreaterSent__Group__1__Impl rule__GreaterSent__Group__2 )
             // InternalMyLanguage.g:4322:2: rule__GreaterSent__Group__1__Impl rule__GreaterSent__Group__2
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__GreaterSent__Group__1__Impl();
 
             state._fsp--;
@@ -14225,7 +14226,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4618:1: ( rule__CirclePosition__Group__0__Impl rule__CirclePosition__Group__1 )
             // InternalMyLanguage.g:4619:2: rule__CirclePosition__Group__0__Impl rule__CirclePosition__Group__1
             {
-            pushFollow(FOLLOW_38);
+            pushFollow(FOLLOW_39);
             rule__CirclePosition__Group__0__Impl();
 
             state._fsp--;
@@ -14300,7 +14301,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4645:1: ( rule__CirclePosition__Group__1__Impl rule__CirclePosition__Group__2 )
             // InternalMyLanguage.g:4646:2: rule__CirclePosition__Group__1__Impl rule__CirclePosition__Group__2
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__CirclePosition__Group__1__Impl();
 
             state._fsp--;
@@ -14375,7 +14376,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4672:1: ( rule__CirclePosition__Group__2__Impl rule__CirclePosition__Group__3 )
             // InternalMyLanguage.g:4673:2: rule__CirclePosition__Group__2__Impl rule__CirclePosition__Group__3
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_40);
             rule__CirclePosition__Group__2__Impl();
 
             state._fsp--;
@@ -14450,7 +14451,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4699:1: ( rule__CirclePosition__Group__3__Impl rule__CirclePosition__Group__4 )
             // InternalMyLanguage.g:4700:2: rule__CirclePosition__Group__3__Impl rule__CirclePosition__Group__4
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__CirclePosition__Group__3__Impl();
 
             state._fsp--;
@@ -14605,7 +14606,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4753:1: ( rule__SpherePosition__Group__0__Impl rule__SpherePosition__Group__1 )
             // InternalMyLanguage.g:4754:2: rule__SpherePosition__Group__0__Impl rule__SpherePosition__Group__1
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             rule__SpherePosition__Group__0__Impl();
 
             state._fsp--;
@@ -14680,7 +14681,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4780:1: ( rule__SpherePosition__Group__1__Impl rule__SpherePosition__Group__2 )
             // InternalMyLanguage.g:4781:2: rule__SpherePosition__Group__1__Impl rule__SpherePosition__Group__2
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__SpherePosition__Group__1__Impl();
 
             state._fsp--;
@@ -14755,7 +14756,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4807:1: ( rule__SpherePosition__Group__2__Impl rule__SpherePosition__Group__3 )
             // InternalMyLanguage.g:4808:2: rule__SpherePosition__Group__2__Impl rule__SpherePosition__Group__3
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_40);
             rule__SpherePosition__Group__2__Impl();
 
             state._fsp--;
@@ -14830,7 +14831,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:4834:1: ( rule__SpherePosition__Group__3__Impl rule__SpherePosition__Group__4 )
             // InternalMyLanguage.g:4835:2: rule__SpherePosition__Group__3__Impl rule__SpherePosition__Group__4
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__SpherePosition__Group__3__Impl();
 
             state._fsp--;
@@ -15385,7 +15386,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5023:1: ( rule__EnvironmentSent__Group__0__Impl rule__EnvironmentSent__Group__1 )
             // InternalMyLanguage.g:5024:2: rule__EnvironmentSent__Group__0__Impl rule__EnvironmentSent__Group__1
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             rule__EnvironmentSent__Group__0__Impl();
 
             state._fsp--;
@@ -15690,7 +15691,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5131:1: ( rule__FailingComponentSent__Group__0__Impl rule__FailingComponentSent__Group__1 )
             // InternalMyLanguage.g:5132:2: rule__FailingComponentSent__Group__0__Impl rule__FailingComponentSent__Group__1
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_44);
             rule__FailingComponentSent__Group__0__Impl();
 
             state._fsp--;
@@ -15920,7 +15921,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5212:1: ( rule__RiskSent__Group__1__Impl rule__RiskSent__Group__2 )
             // InternalMyLanguage.g:5213:2: rule__RiskSent__Group__1__Impl rule__RiskSent__Group__2
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_45);
             rule__RiskSent__Group__1__Impl();
 
             state._fsp--;
@@ -16075,7 +16076,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5266:1: ( rule__ToleranceSent__Group__0__Impl rule__ToleranceSent__Group__1 )
             // InternalMyLanguage.g:5267:2: rule__ToleranceSent__Group__0__Impl rule__ToleranceSent__Group__1
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_46);
             rule__ToleranceSent__Group__0__Impl();
 
             state._fsp--;
@@ -16150,7 +16151,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5293:1: ( rule__ToleranceSent__Group__1__Impl rule__ToleranceSent__Group__2 )
             // InternalMyLanguage.g:5294:2: rule__ToleranceSent__Group__1__Impl rule__ToleranceSent__Group__2
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__ToleranceSent__Group__1__Impl();
 
             state._fsp--;
@@ -16380,7 +16381,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5374:1: ( rule__SECONDS__Group__1__Impl rule__SECONDS__Group__2 )
             // InternalMyLanguage.g:5375:2: rule__SECONDS__Group__1__Impl rule__SECONDS__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__SECONDS__Group__1__Impl();
 
             state._fsp--;
@@ -16610,7 +16611,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5455:1: ( rule__HOUR__Group__1__Impl rule__HOUR__Group__2 )
             // InternalMyLanguage.g:5456:2: rule__HOUR__Group__1__Impl rule__HOUR__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__HOUR__Group__1__Impl();
 
             state._fsp--;
@@ -16840,7 +16841,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5536:1: ( rule__MINUTES__Group__1__Impl rule__MINUTES__Group__2 )
             // InternalMyLanguage.g:5537:2: rule__MINUTES__Group__1__Impl rule__MINUTES__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__MINUTES__Group__1__Impl();
 
             state._fsp--;
@@ -17070,7 +17071,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5617:1: ( rule__METER__Group__1__Impl rule__METER__Group__2 )
             // InternalMyLanguage.g:5618:2: rule__METER__Group__1__Impl rule__METER__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__METER__Group__1__Impl();
 
             state._fsp--;
@@ -17300,7 +17301,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5698:1: ( rule__CENTIMETER__Group__1__Impl rule__CENTIMETER__Group__2 )
             // InternalMyLanguage.g:5699:2: rule__CENTIMETER__Group__1__Impl rule__CENTIMETER__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__CENTIMETER__Group__1__Impl();
 
             state._fsp--;
@@ -17530,7 +17531,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5779:1: ( rule__MILLIMETER__Group__1__Impl rule__MILLIMETER__Group__2 )
             // InternalMyLanguage.g:5780:2: rule__MILLIMETER__Group__1__Impl rule__MILLIMETER__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__MILLIMETER__Group__1__Impl();
 
             state._fsp--;
@@ -17760,7 +17761,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5860:1: ( rule__KILOMETER__Group__1__Impl rule__KILOMETER__Group__2 )
             // InternalMyLanguage.g:5861:2: rule__KILOMETER__Group__1__Impl rule__KILOMETER__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__KILOMETER__Group__1__Impl();
 
             state._fsp--;
@@ -17990,7 +17991,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5941:1: ( rule__PercentUnit__Group__1__Impl rule__PercentUnit__Group__2 )
             // InternalMyLanguage.g:5942:2: rule__PercentUnit__Group__1__Impl rule__PercentUnit__Group__2
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__PercentUnit__Group__1__Impl();
 
             state._fsp--;
@@ -18145,7 +18146,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
             // InternalMyLanguage.g:5995:1: ( rule__DOUBLE__Group__0__Impl rule__DOUBLE__Group__1 )
             // InternalMyLanguage.g:5996:2: rule__DOUBLE__Group__0__Impl rule__DOUBLE__Group__1
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_21);
             rule__DOUBLE__Group__0__Impl();
 
             state._fsp--;
@@ -18174,21 +18175,38 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DOUBLE__Group__0__Impl"
-    // InternalMyLanguage.g:6003:1: rule__DOUBLE__Group__0__Impl : ( RULE_INT ) ;
+    // InternalMyLanguage.g:6003:1: rule__DOUBLE__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__DOUBLE__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6007:1: ( ( RULE_INT ) )
-            // InternalMyLanguage.g:6008:1: ( RULE_INT )
+            // InternalMyLanguage.g:6007:1: ( ( ( '-' )? ) )
+            // InternalMyLanguage.g:6008:1: ( ( '-' )? )
             {
-            // InternalMyLanguage.g:6008:1: ( RULE_INT )
-            // InternalMyLanguage.g:6009:2: RULE_INT
+            // InternalMyLanguage.g:6008:1: ( ( '-' )? )
+            // InternalMyLanguage.g:6009:2: ( '-' )?
             {
-             before(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_0()); 
-            match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_0()); 
+             before(grammarAccess.getDOUBLEAccess().getHyphenMinusKeyword_0()); 
+            // InternalMyLanguage.g:6010:2: ( '-' )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
+
+            if ( (LA30_0==84) ) {
+                alt30=1;
+            }
+            switch (alt30) {
+                case 1 :
+                    // InternalMyLanguage.g:6010:3: '-'
+                    {
+                    match(input,84,FOLLOW_2); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getDOUBLEAccess().getHyphenMinusKeyword_0()); 
 
             }
 
@@ -18211,17 +18229,22 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DOUBLE__Group__1"
-    // InternalMyLanguage.g:6018:1: rule__DOUBLE__Group__1 : rule__DOUBLE__Group__1__Impl ;
+    // InternalMyLanguage.g:6018:1: rule__DOUBLE__Group__1 : rule__DOUBLE__Group__1__Impl rule__DOUBLE__Group__2 ;
     public final void rule__DOUBLE__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6022:1: ( rule__DOUBLE__Group__1__Impl )
-            // InternalMyLanguage.g:6023:2: rule__DOUBLE__Group__1__Impl
+            // InternalMyLanguage.g:6022:1: ( rule__DOUBLE__Group__1__Impl rule__DOUBLE__Group__2 )
+            // InternalMyLanguage.g:6023:2: rule__DOUBLE__Group__1__Impl rule__DOUBLE__Group__2
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_48);
             rule__DOUBLE__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__DOUBLE__Group__2();
 
             state._fsp--;
 
@@ -18244,42 +18267,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DOUBLE__Group__1__Impl"
-    // InternalMyLanguage.g:6029:1: rule__DOUBLE__Group__1__Impl : ( ( rule__DOUBLE__Group_1__0 )? ) ;
+    // InternalMyLanguage.g:6030:1: rule__DOUBLE__Group__1__Impl : ( RULE_INT ) ;
     public final void rule__DOUBLE__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6033:1: ( ( ( rule__DOUBLE__Group_1__0 )? ) )
-            // InternalMyLanguage.g:6034:1: ( ( rule__DOUBLE__Group_1__0 )? )
+            // InternalMyLanguage.g:6034:1: ( ( RULE_INT ) )
+            // InternalMyLanguage.g:6035:1: ( RULE_INT )
             {
-            // InternalMyLanguage.g:6034:1: ( ( rule__DOUBLE__Group_1__0 )? )
-            // InternalMyLanguage.g:6035:2: ( rule__DOUBLE__Group_1__0 )?
+            // InternalMyLanguage.g:6035:1: ( RULE_INT )
+            // InternalMyLanguage.g:6036:2: RULE_INT
             {
-             before(grammarAccess.getDOUBLEAccess().getGroup_1()); 
-            // InternalMyLanguage.g:6036:2: ( rule__DOUBLE__Group_1__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
-
-            if ( (LA30_0==84) ) {
-                alt30=1;
-            }
-            switch (alt30) {
-                case 1 :
-                    // InternalMyLanguage.g:6036:3: rule__DOUBLE__Group_1__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__DOUBLE__Group_1__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getDOUBLEAccess().getGroup_1()); 
+             before(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1()); 
 
             }
 
@@ -18301,23 +18303,114 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__DOUBLE__Group__1__Impl"
 
 
-    // $ANTLR start "rule__DOUBLE__Group_1__0"
-    // InternalMyLanguage.g:6045:1: rule__DOUBLE__Group_1__0 : rule__DOUBLE__Group_1__0__Impl rule__DOUBLE__Group_1__1 ;
-    public final void rule__DOUBLE__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__DOUBLE__Group__2"
+    // InternalMyLanguage.g:6045:1: rule__DOUBLE__Group__2 : rule__DOUBLE__Group__2__Impl ;
+    public final void rule__DOUBLE__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6049:1: ( rule__DOUBLE__Group_1__0__Impl rule__DOUBLE__Group_1__1 )
-            // InternalMyLanguage.g:6050:2: rule__DOUBLE__Group_1__0__Impl rule__DOUBLE__Group_1__1
+            // InternalMyLanguage.g:6049:1: ( rule__DOUBLE__Group__2__Impl )
+            // InternalMyLanguage.g:6050:2: rule__DOUBLE__Group__2__Impl
             {
-            pushFollow(FOLLOW_21);
-            rule__DOUBLE__Group_1__0__Impl();
+            pushFollow(FOLLOW_2);
+            rule__DOUBLE__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DOUBLE__Group__2"
+
+
+    // $ANTLR start "rule__DOUBLE__Group__2__Impl"
+    // InternalMyLanguage.g:6056:1: rule__DOUBLE__Group__2__Impl : ( ( rule__DOUBLE__Group_2__0 )? ) ;
+    public final void rule__DOUBLE__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalMyLanguage.g:6060:1: ( ( ( rule__DOUBLE__Group_2__0 )? ) )
+            // InternalMyLanguage.g:6061:1: ( ( rule__DOUBLE__Group_2__0 )? )
+            {
+            // InternalMyLanguage.g:6061:1: ( ( rule__DOUBLE__Group_2__0 )? )
+            // InternalMyLanguage.g:6062:2: ( rule__DOUBLE__Group_2__0 )?
+            {
+             before(grammarAccess.getDOUBLEAccess().getGroup_2()); 
+            // InternalMyLanguage.g:6063:2: ( rule__DOUBLE__Group_2__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
+
+            if ( (LA31_0==85) ) {
+                alt31=1;
+            }
+            switch (alt31) {
+                case 1 :
+                    // InternalMyLanguage.g:6063:3: rule__DOUBLE__Group_2__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__DOUBLE__Group_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getDOUBLEAccess().getGroup_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DOUBLE__Group__2__Impl"
+
+
+    // $ANTLR start "rule__DOUBLE__Group_2__0"
+    // InternalMyLanguage.g:6072:1: rule__DOUBLE__Group_2__0 : rule__DOUBLE__Group_2__0__Impl rule__DOUBLE__Group_2__1 ;
+    public final void rule__DOUBLE__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalMyLanguage.g:6076:1: ( rule__DOUBLE__Group_2__0__Impl rule__DOUBLE__Group_2__1 )
+            // InternalMyLanguage.g:6077:2: rule__DOUBLE__Group_2__0__Impl rule__DOUBLE__Group_2__1
+            {
+            pushFollow(FOLLOW_23);
+            rule__DOUBLE__Group_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__DOUBLE__Group_1__1();
+            rule__DOUBLE__Group_2__1();
 
             state._fsp--;
 
@@ -18336,25 +18429,25 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__DOUBLE__Group_1__0"
+    // $ANTLR end "rule__DOUBLE__Group_2__0"
 
 
-    // $ANTLR start "rule__DOUBLE__Group_1__0__Impl"
-    // InternalMyLanguage.g:6057:1: rule__DOUBLE__Group_1__0__Impl : ( '.' ) ;
-    public final void rule__DOUBLE__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__DOUBLE__Group_2__0__Impl"
+    // InternalMyLanguage.g:6084:1: rule__DOUBLE__Group_2__0__Impl : ( '.' ) ;
+    public final void rule__DOUBLE__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6061:1: ( ( '.' ) )
-            // InternalMyLanguage.g:6062:1: ( '.' )
+            // InternalMyLanguage.g:6088:1: ( ( '.' ) )
+            // InternalMyLanguage.g:6089:1: ( '.' )
             {
-            // InternalMyLanguage.g:6062:1: ( '.' )
-            // InternalMyLanguage.g:6063:2: '.'
+            // InternalMyLanguage.g:6089:1: ( '.' )
+            // InternalMyLanguage.g:6090:2: '.'
             {
-             before(grammarAccess.getDOUBLEAccess().getFullStopKeyword_1_0()); 
-            match(input,84,FOLLOW_2); 
-             after(grammarAccess.getDOUBLEAccess().getFullStopKeyword_1_0()); 
+             before(grammarAccess.getDOUBLEAccess().getFullStopKeyword_2_0()); 
+            match(input,85,FOLLOW_2); 
+             after(grammarAccess.getDOUBLEAccess().getFullStopKeyword_2_0()); 
 
             }
 
@@ -18373,21 +18466,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__DOUBLE__Group_1__0__Impl"
+    // $ANTLR end "rule__DOUBLE__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__DOUBLE__Group_1__1"
-    // InternalMyLanguage.g:6072:1: rule__DOUBLE__Group_1__1 : rule__DOUBLE__Group_1__1__Impl ;
-    public final void rule__DOUBLE__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__DOUBLE__Group_2__1"
+    // InternalMyLanguage.g:6099:1: rule__DOUBLE__Group_2__1 : rule__DOUBLE__Group_2__1__Impl ;
+    public final void rule__DOUBLE__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6076:1: ( rule__DOUBLE__Group_1__1__Impl )
-            // InternalMyLanguage.g:6077:2: rule__DOUBLE__Group_1__1__Impl
+            // InternalMyLanguage.g:6103:1: ( rule__DOUBLE__Group_2__1__Impl )
+            // InternalMyLanguage.g:6104:2: rule__DOUBLE__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__DOUBLE__Group_1__1__Impl();
+            rule__DOUBLE__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -18406,25 +18499,25 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__DOUBLE__Group_1__1"
+    // $ANTLR end "rule__DOUBLE__Group_2__1"
 
 
-    // $ANTLR start "rule__DOUBLE__Group_1__1__Impl"
-    // InternalMyLanguage.g:6083:1: rule__DOUBLE__Group_1__1__Impl : ( RULE_INT ) ;
-    public final void rule__DOUBLE__Group_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__DOUBLE__Group_2__1__Impl"
+    // InternalMyLanguage.g:6110:1: rule__DOUBLE__Group_2__1__Impl : ( RULE_INT ) ;
+    public final void rule__DOUBLE__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6087:1: ( ( RULE_INT ) )
-            // InternalMyLanguage.g:6088:1: ( RULE_INT )
+            // InternalMyLanguage.g:6114:1: ( ( RULE_INT ) )
+            // InternalMyLanguage.g:6115:1: ( RULE_INT )
             {
-            // InternalMyLanguage.g:6088:1: ( RULE_INT )
-            // InternalMyLanguage.g:6089:2: RULE_INT
+            // InternalMyLanguage.g:6115:1: ( RULE_INT )
+            // InternalMyLanguage.g:6116:2: RULE_INT
             {
-             before(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1_1()); 
+             before(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_2_1()); 
             match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1_1()); 
+             after(grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_2_1()); 
 
             }
 
@@ -18443,21 +18536,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__DOUBLE__Group_1__1__Impl"
+    // $ANTLR end "rule__DOUBLE__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__TestFile__TestsAssignment"
-    // InternalMyLanguage.g:6099:1: rule__TestFile__TestsAssignment : ( ruleTest ) ;
+    // InternalMyLanguage.g:6126:1: rule__TestFile__TestsAssignment : ( ruleTest ) ;
     public final void rule__TestFile__TestsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6103:1: ( ( ruleTest ) )
-            // InternalMyLanguage.g:6104:2: ( ruleTest )
+            // InternalMyLanguage.g:6130:1: ( ( ruleTest ) )
+            // InternalMyLanguage.g:6131:2: ( ruleTest )
             {
-            // InternalMyLanguage.g:6104:2: ( ruleTest )
-            // InternalMyLanguage.g:6105:3: ruleTest
+            // InternalMyLanguage.g:6131:2: ( ruleTest )
+            // InternalMyLanguage.g:6132:3: ruleTest
             {
              before(grammarAccess.getTestFileAccess().getTestsTestParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -18488,17 +18581,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Test__NameAssignment_1"
-    // InternalMyLanguage.g:6114:1: rule__Test__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalMyLanguage.g:6141:1: rule__Test__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Test__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6118:1: ( ( RULE_ID ) )
-            // InternalMyLanguage.g:6119:2: ( RULE_ID )
+            // InternalMyLanguage.g:6145:1: ( ( RULE_ID ) )
+            // InternalMyLanguage.g:6146:2: ( RULE_ID )
             {
-            // InternalMyLanguage.g:6119:2: ( RULE_ID )
-            // InternalMyLanguage.g:6120:3: RULE_ID
+            // InternalMyLanguage.g:6146:2: ( RULE_ID )
+            // InternalMyLanguage.g:6147:3: RULE_ID
             {
              before(grammarAccess.getTestAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -18525,17 +18618,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Test__DescriptionAssignment_2_1"
-    // InternalMyLanguage.g:6129:1: rule__Test__DescriptionAssignment_2_1 : ( RULE_STRING ) ;
+    // InternalMyLanguage.g:6156:1: rule__Test__DescriptionAssignment_2_1 : ( RULE_STRING ) ;
     public final void rule__Test__DescriptionAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6133:1: ( ( RULE_STRING ) )
-            // InternalMyLanguage.g:6134:2: ( RULE_STRING )
+            // InternalMyLanguage.g:6160:1: ( ( RULE_STRING ) )
+            // InternalMyLanguage.g:6161:2: ( RULE_STRING )
             {
-            // InternalMyLanguage.g:6134:2: ( RULE_STRING )
-            // InternalMyLanguage.g:6135:3: RULE_STRING
+            // InternalMyLanguage.g:6161:2: ( RULE_STRING )
+            // InternalMyLanguage.g:6162:3: RULE_STRING
             {
              before(grammarAccess.getTestAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -18562,17 +18655,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Test__StatementsAssignment_3"
-    // InternalMyLanguage.g:6144:1: rule__Test__StatementsAssignment_3 : ( ruleStatement ) ;
+    // InternalMyLanguage.g:6171:1: rule__Test__StatementsAssignment_3 : ( ruleStatement ) ;
     public final void rule__Test__StatementsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6148:1: ( ( ruleStatement ) )
-            // InternalMyLanguage.g:6149:2: ( ruleStatement )
+            // InternalMyLanguage.g:6175:1: ( ( ruleStatement ) )
+            // InternalMyLanguage.g:6176:2: ( ruleStatement )
             {
-            // InternalMyLanguage.g:6149:2: ( ruleStatement )
-            // InternalMyLanguage.g:6150:3: ruleStatement
+            // InternalMyLanguage.g:6176:2: ( ruleStatement )
+            // InternalMyLanguage.g:6177:3: ruleStatement
             {
              before(grammarAccess.getTestAccess().getStatementsStatementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -18603,17 +18696,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Given__BodyAssignment_1"
-    // InternalMyLanguage.g:6159:1: rule__Given__BodyAssignment_1 : ( ruleStatementBody ) ;
+    // InternalMyLanguage.g:6186:1: rule__Given__BodyAssignment_1 : ( ruleStatementBody ) ;
     public final void rule__Given__BodyAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6163:1: ( ( ruleStatementBody ) )
-            // InternalMyLanguage.g:6164:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6190:1: ( ( ruleStatementBody ) )
+            // InternalMyLanguage.g:6191:2: ( ruleStatementBody )
             {
-            // InternalMyLanguage.g:6164:2: ( ruleStatementBody )
-            // InternalMyLanguage.g:6165:3: ruleStatementBody
+            // InternalMyLanguage.g:6191:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6192:3: ruleStatementBody
             {
              before(grammarAccess.getGivenAccess().getBodyStatementBodyParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18644,17 +18737,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Then__BodyAssignment_1"
-    // InternalMyLanguage.g:6174:1: rule__Then__BodyAssignment_1 : ( ruleStatementBody ) ;
+    // InternalMyLanguage.g:6201:1: rule__Then__BodyAssignment_1 : ( ruleStatementBody ) ;
     public final void rule__Then__BodyAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6178:1: ( ( ruleStatementBody ) )
-            // InternalMyLanguage.g:6179:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6205:1: ( ( ruleStatementBody ) )
+            // InternalMyLanguage.g:6206:2: ( ruleStatementBody )
             {
-            // InternalMyLanguage.g:6179:2: ( ruleStatementBody )
-            // InternalMyLanguage.g:6180:3: ruleStatementBody
+            // InternalMyLanguage.g:6206:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6207:3: ruleStatementBody
             {
              before(grammarAccess.getThenAccess().getBodyStatementBodyParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18685,17 +18778,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__When__BodyAssignment_1"
-    // InternalMyLanguage.g:6189:1: rule__When__BodyAssignment_1 : ( ruleStatementBody ) ;
+    // InternalMyLanguage.g:6216:1: rule__When__BodyAssignment_1 : ( ruleStatementBody ) ;
     public final void rule__When__BodyAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6193:1: ( ( ruleStatementBody ) )
-            // InternalMyLanguage.g:6194:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6220:1: ( ( ruleStatementBody ) )
+            // InternalMyLanguage.g:6221:2: ( ruleStatementBody )
             {
-            // InternalMyLanguage.g:6194:2: ( ruleStatementBody )
-            // InternalMyLanguage.g:6195:3: ruleStatementBody
+            // InternalMyLanguage.g:6221:2: ( ruleStatementBody )
+            // InternalMyLanguage.g:6222:3: ruleStatementBody
             {
              before(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18726,24 +18819,24 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NotificationSent__NotAssignment_0"
-    // InternalMyLanguage.g:6204:1: rule__NotificationSent__NotAssignment_0 : ( ( 'Notification' ) ) ;
+    // InternalMyLanguage.g:6231:1: rule__NotificationSent__NotAssignment_0 : ( ( 'Notification' ) ) ;
     public final void rule__NotificationSent__NotAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6208:1: ( ( ( 'Notification' ) ) )
-            // InternalMyLanguage.g:6209:2: ( ( 'Notification' ) )
+            // InternalMyLanguage.g:6235:1: ( ( ( 'Notification' ) ) )
+            // InternalMyLanguage.g:6236:2: ( ( 'Notification' ) )
             {
-            // InternalMyLanguage.g:6209:2: ( ( 'Notification' ) )
-            // InternalMyLanguage.g:6210:3: ( 'Notification' )
-            {
-             before(grammarAccess.getNotificationSentAccess().getNotNotificationKeyword_0_0()); 
-            // InternalMyLanguage.g:6211:3: ( 'Notification' )
-            // InternalMyLanguage.g:6212:4: 'Notification'
+            // InternalMyLanguage.g:6236:2: ( ( 'Notification' ) )
+            // InternalMyLanguage.g:6237:3: ( 'Notification' )
             {
              before(grammarAccess.getNotificationSentAccess().getNotNotificationKeyword_0_0()); 
-            match(input,85,FOLLOW_2); 
+            // InternalMyLanguage.g:6238:3: ( 'Notification' )
+            // InternalMyLanguage.g:6239:4: 'Notification'
+            {
+             before(grammarAccess.getNotificationSentAccess().getNotNotificationKeyword_0_0()); 
+            match(input,86,FOLLOW_2); 
              after(grammarAccess.getNotificationSentAccess().getNotNotificationKeyword_0_0()); 
 
             }
@@ -18771,17 +18864,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TimeInterval__FirstAssignment_3"
-    // InternalMyLanguage.g:6223:1: rule__TimeInterval__FirstAssignment_3 : ( ruleTimeUnit ) ;
+    // InternalMyLanguage.g:6250:1: rule__TimeInterval__FirstAssignment_3 : ( ruleTimeUnit ) ;
     public final void rule__TimeInterval__FirstAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6227:1: ( ( ruleTimeUnit ) )
-            // InternalMyLanguage.g:6228:2: ( ruleTimeUnit )
+            // InternalMyLanguage.g:6254:1: ( ( ruleTimeUnit ) )
+            // InternalMyLanguage.g:6255:2: ( ruleTimeUnit )
             {
-            // InternalMyLanguage.g:6228:2: ( ruleTimeUnit )
-            // InternalMyLanguage.g:6229:3: ruleTimeUnit
+            // InternalMyLanguage.g:6255:2: ( ruleTimeUnit )
+            // InternalMyLanguage.g:6256:3: ruleTimeUnit
             {
              before(grammarAccess.getTimeIntervalAccess().getFirstTimeUnitParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -18812,17 +18905,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TimeInterval__SecondAssignment_5"
-    // InternalMyLanguage.g:6238:1: rule__TimeInterval__SecondAssignment_5 : ( ruleTimeUnit ) ;
+    // InternalMyLanguage.g:6265:1: rule__TimeInterval__SecondAssignment_5 : ( ruleTimeUnit ) ;
     public final void rule__TimeInterval__SecondAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6242:1: ( ( ruleTimeUnit ) )
-            // InternalMyLanguage.g:6243:2: ( ruleTimeUnit )
+            // InternalMyLanguage.g:6269:1: ( ( ruleTimeUnit ) )
+            // InternalMyLanguage.g:6270:2: ( ruleTimeUnit )
             {
-            // InternalMyLanguage.g:6243:2: ( ruleTimeUnit )
-            // InternalMyLanguage.g:6244:3: ruleTimeUnit
+            // InternalMyLanguage.g:6270:2: ( ruleTimeUnit )
+            // InternalMyLanguage.g:6271:3: ruleTimeUnit
             {
              before(grammarAccess.getTimeIntervalAccess().getSecondTimeUnitParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -18853,21 +18946,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BatterySent__SentAssignment_3"
-    // InternalMyLanguage.g:6253:1: rule__BatterySent__SentAssignment_3 : ( ( rule__BatterySent__SentAlternatives_3_0 ) ) ;
+    // InternalMyLanguage.g:6280:1: rule__BatterySent__SentAssignment_3 : ( ( rule__BatterySent__SentAlternatives_3_0 ) ) ;
     public final void rule__BatterySent__SentAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6257:1: ( ( ( rule__BatterySent__SentAlternatives_3_0 ) ) )
-            // InternalMyLanguage.g:6258:2: ( ( rule__BatterySent__SentAlternatives_3_0 ) )
+            // InternalMyLanguage.g:6284:1: ( ( ( rule__BatterySent__SentAlternatives_3_0 ) ) )
+            // InternalMyLanguage.g:6285:2: ( ( rule__BatterySent__SentAlternatives_3_0 ) )
             {
-            // InternalMyLanguage.g:6258:2: ( ( rule__BatterySent__SentAlternatives_3_0 ) )
-            // InternalMyLanguage.g:6259:3: ( rule__BatterySent__SentAlternatives_3_0 )
+            // InternalMyLanguage.g:6285:2: ( ( rule__BatterySent__SentAlternatives_3_0 ) )
+            // InternalMyLanguage.g:6286:3: ( rule__BatterySent__SentAlternatives_3_0 )
             {
              before(grammarAccess.getBatterySentAccess().getSentAlternatives_3_0()); 
-            // InternalMyLanguage.g:6260:3: ( rule__BatterySent__SentAlternatives_3_0 )
-            // InternalMyLanguage.g:6260:4: rule__BatterySent__SentAlternatives_3_0
+            // InternalMyLanguage.g:6287:3: ( rule__BatterySent__SentAlternatives_3_0 )
+            // InternalMyLanguage.g:6287:4: rule__BatterySent__SentAlternatives_3_0
             {
             pushFollow(FOLLOW_2);
             rule__BatterySent__SentAlternatives_3_0();
@@ -18900,17 +18993,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PeoplePosSent__PosXAssignment_2"
-    // InternalMyLanguage.g:6268:1: rule__PeoplePosSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6295:1: rule__PeoplePosSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
     public final void rule__PeoplePosSent__PosXAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6272:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6273:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6299:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6300:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6273:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6274:3: ruleDOUBLE
+            // InternalMyLanguage.g:6300:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6301:3: ruleDOUBLE
             {
              before(grammarAccess.getPeoplePosSentAccess().getPosXDOUBLEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -18941,17 +19034,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PeoplePosSent__PosYAssignment_3"
-    // InternalMyLanguage.g:6283:1: rule__PeoplePosSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6310:1: rule__PeoplePosSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
     public final void rule__PeoplePosSent__PosYAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6287:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6288:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6314:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6315:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6288:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6289:3: ruleDOUBLE
+            // InternalMyLanguage.g:6315:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6316:3: ruleDOUBLE
             {
              before(grammarAccess.getPeoplePosSentAccess().getPosYDOUBLEParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -18982,17 +19075,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PeoplePosSent__PosZAssignment_4"
-    // InternalMyLanguage.g:6298:1: rule__PeoplePosSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6325:1: rule__PeoplePosSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
     public final void rule__PeoplePosSent__PosZAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6302:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6303:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6329:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6330:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6303:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6304:3: ruleDOUBLE
+            // InternalMyLanguage.g:6330:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6331:3: ruleDOUBLE
             {
              before(grammarAccess.getPeoplePosSentAccess().getPosZDOUBLEParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -19023,21 +19116,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PeoplePosSent__ToleranceAssignment_5"
-    // InternalMyLanguage.g:6313:1: rule__PeoplePosSent__ToleranceAssignment_5 : ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) ) ;
+    // InternalMyLanguage.g:6340:1: rule__PeoplePosSent__ToleranceAssignment_5 : ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) ) ;
     public final void rule__PeoplePosSent__ToleranceAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6317:1: ( ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) ) )
-            // InternalMyLanguage.g:6318:2: ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) )
+            // InternalMyLanguage.g:6344:1: ( ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) ) )
+            // InternalMyLanguage.g:6345:2: ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) )
             {
-            // InternalMyLanguage.g:6318:2: ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) )
-            // InternalMyLanguage.g:6319:3: ( rule__PeoplePosSent__ToleranceAlternatives_5_0 )
+            // InternalMyLanguage.g:6345:2: ( ( rule__PeoplePosSent__ToleranceAlternatives_5_0 ) )
+            // InternalMyLanguage.g:6346:3: ( rule__PeoplePosSent__ToleranceAlternatives_5_0 )
             {
              before(grammarAccess.getPeoplePosSentAccess().getToleranceAlternatives_5_0()); 
-            // InternalMyLanguage.g:6320:3: ( rule__PeoplePosSent__ToleranceAlternatives_5_0 )
-            // InternalMyLanguage.g:6320:4: rule__PeoplePosSent__ToleranceAlternatives_5_0
+            // InternalMyLanguage.g:6347:3: ( rule__PeoplePosSent__ToleranceAlternatives_5_0 )
+            // InternalMyLanguage.g:6347:4: rule__PeoplePosSent__ToleranceAlternatives_5_0
             {
             pushFollow(FOLLOW_2);
             rule__PeoplePosSent__ToleranceAlternatives_5_0();
@@ -19070,17 +19163,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PeopleNumbSent__AmountAssignment_2"
-    // InternalMyLanguage.g:6328:1: rule__PeopleNumbSent__AmountAssignment_2 : ( RULE_INT ) ;
+    // InternalMyLanguage.g:6355:1: rule__PeopleNumbSent__AmountAssignment_2 : ( RULE_INT ) ;
     public final void rule__PeopleNumbSent__AmountAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6332:1: ( ( RULE_INT ) )
-            // InternalMyLanguage.g:6333:2: ( RULE_INT )
+            // InternalMyLanguage.g:6359:1: ( ( RULE_INT ) )
+            // InternalMyLanguage.g:6360:2: ( RULE_INT )
             {
-            // InternalMyLanguage.g:6333:2: ( RULE_INT )
-            // InternalMyLanguage.g:6334:3: RULE_INT
+            // InternalMyLanguage.g:6360:2: ( RULE_INT )
+            // InternalMyLanguage.g:6361:3: RULE_INT
             {
              before(grammarAccess.getPeopleNumbSentAccess().getAmountINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -19107,17 +19200,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MissionGoalSent__PosXAssignment_2"
-    // InternalMyLanguage.g:6343:1: rule__MissionGoalSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6370:1: rule__MissionGoalSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
     public final void rule__MissionGoalSent__PosXAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6347:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6348:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6374:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6375:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6348:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6349:3: ruleDOUBLE
+            // InternalMyLanguage.g:6375:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6376:3: ruleDOUBLE
             {
              before(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -19148,17 +19241,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MissionGoalSent__PosYAssignment_3"
-    // InternalMyLanguage.g:6358:1: rule__MissionGoalSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6385:1: rule__MissionGoalSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
     public final void rule__MissionGoalSent__PosYAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6362:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6363:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6389:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6390:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6363:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6364:3: ruleDOUBLE
+            // InternalMyLanguage.g:6390:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6391:3: ruleDOUBLE
             {
              before(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -19189,17 +19282,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MissionGoalSent__PosZAssignment_4"
-    // InternalMyLanguage.g:6373:1: rule__MissionGoalSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6400:1: rule__MissionGoalSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
     public final void rule__MissionGoalSent__PosZAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6377:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6378:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6404:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6405:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6378:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6379:3: ruleDOUBLE
+            // InternalMyLanguage.g:6405:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6406:3: ruleDOUBLE
             {
              before(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -19230,17 +19323,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MissionRiskLevelSent__RisklevelAssignment_2"
-    // InternalMyLanguage.g:6388:1: rule__MissionRiskLevelSent__RisklevelAssignment_2 : ( ruleMISSIONRISKLEVEL ) ;
+    // InternalMyLanguage.g:6415:1: rule__MissionRiskLevelSent__RisklevelAssignment_2 : ( ruleMISSIONRISKLEVEL ) ;
     public final void rule__MissionRiskLevelSent__RisklevelAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6392:1: ( ( ruleMISSIONRISKLEVEL ) )
-            // InternalMyLanguage.g:6393:2: ( ruleMISSIONRISKLEVEL )
+            // InternalMyLanguage.g:6419:1: ( ( ruleMISSIONRISKLEVEL ) )
+            // InternalMyLanguage.g:6420:2: ( ruleMISSIONRISKLEVEL )
             {
-            // InternalMyLanguage.g:6393:2: ( ruleMISSIONRISKLEVEL )
-            // InternalMyLanguage.g:6394:3: ruleMISSIONRISKLEVEL
+            // InternalMyLanguage.g:6420:2: ( ruleMISSIONRISKLEVEL )
+            // InternalMyLanguage.g:6421:3: ruleMISSIONRISKLEVEL
             {
              before(grammarAccess.getMissionRiskLevelSentAccess().getRisklevelMISSIONRISKLEVELParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -19271,17 +19364,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MissionStatusSent__StateAssignment_2"
-    // InternalMyLanguage.g:6403:1: rule__MissionStatusSent__StateAssignment_2 : ( ruleMISSIONSTATUS ) ;
+    // InternalMyLanguage.g:6430:1: rule__MissionStatusSent__StateAssignment_2 : ( ruleMISSIONSTATUS ) ;
     public final void rule__MissionStatusSent__StateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6407:1: ( ( ruleMISSIONSTATUS ) )
-            // InternalMyLanguage.g:6408:2: ( ruleMISSIONSTATUS )
+            // InternalMyLanguage.g:6434:1: ( ( ruleMISSIONSTATUS ) )
+            // InternalMyLanguage.g:6435:2: ( ruleMISSIONSTATUS )
             {
-            // InternalMyLanguage.g:6408:2: ( ruleMISSIONSTATUS )
-            // InternalMyLanguage.g:6409:3: ruleMISSIONSTATUS
+            // InternalMyLanguage.g:6435:2: ( ruleMISSIONSTATUS )
+            // InternalMyLanguage.g:6436:3: ruleMISSIONSTATUS
             {
              before(grammarAccess.getMissionStatusSentAccess().getStateMISSIONSTATUSParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -19312,21 +19405,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotAutoPilot__StatusAssignment_2"
-    // InternalMyLanguage.g:6418:1: rule__RobotAutoPilot__StatusAssignment_2 : ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6445:1: rule__RobotAutoPilot__StatusAssignment_2 : ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) ) ;
     public final void rule__RobotAutoPilot__StatusAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6422:1: ( ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6423:2: ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6449:1: ( ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6450:2: ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6423:2: ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6424:3: ( rule__RobotAutoPilot__StatusAlternatives_2_0 )
+            // InternalMyLanguage.g:6450:2: ( ( rule__RobotAutoPilot__StatusAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6451:3: ( rule__RobotAutoPilot__StatusAlternatives_2_0 )
             {
              before(grammarAccess.getRobotAutoPilotAccess().getStatusAlternatives_2_0()); 
-            // InternalMyLanguage.g:6425:3: ( rule__RobotAutoPilot__StatusAlternatives_2_0 )
-            // InternalMyLanguage.g:6425:4: rule__RobotAutoPilot__StatusAlternatives_2_0
+            // InternalMyLanguage.g:6452:3: ( rule__RobotAutoPilot__StatusAlternatives_2_0 )
+            // InternalMyLanguage.g:6452:4: rule__RobotAutoPilot__StatusAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__RobotAutoPilot__StatusAlternatives_2_0();
@@ -19359,17 +19452,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RedundantComponent__ComponentAssignment_0"
-    // InternalMyLanguage.g:6433:1: rule__RedundantComponent__ComponentAssignment_0 : ( ruleCOMPONENT ) ;
+    // InternalMyLanguage.g:6460:1: rule__RedundantComponent__ComponentAssignment_0 : ( ruleCOMPONENT ) ;
     public final void rule__RedundantComponent__ComponentAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6437:1: ( ( ruleCOMPONENT ) )
-            // InternalMyLanguage.g:6438:2: ( ruleCOMPONENT )
+            // InternalMyLanguage.g:6464:1: ( ( ruleCOMPONENT ) )
+            // InternalMyLanguage.g:6465:2: ( ruleCOMPONENT )
             {
-            // InternalMyLanguage.g:6438:2: ( ruleCOMPONENT )
-            // InternalMyLanguage.g:6439:3: ruleCOMPONENT
+            // InternalMyLanguage.g:6465:2: ( ruleCOMPONENT )
+            // InternalMyLanguage.g:6466:3: ruleCOMPONENT
             {
              before(grammarAccess.getRedundantComponentAccess().getComponentCOMPONENTParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -19400,24 +19493,24 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PayloadSent__LoadAssignment_0"
-    // InternalMyLanguage.g:6448:1: rule__PayloadSent__LoadAssignment_0 : ( ( 'payload' ) ) ;
+    // InternalMyLanguage.g:6475:1: rule__PayloadSent__LoadAssignment_0 : ( ( 'payload' ) ) ;
     public final void rule__PayloadSent__LoadAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6452:1: ( ( ( 'payload' ) ) )
-            // InternalMyLanguage.g:6453:2: ( ( 'payload' ) )
+            // InternalMyLanguage.g:6479:1: ( ( ( 'payload' ) ) )
+            // InternalMyLanguage.g:6480:2: ( ( 'payload' ) )
             {
-            // InternalMyLanguage.g:6453:2: ( ( 'payload' ) )
-            // InternalMyLanguage.g:6454:3: ( 'payload' )
-            {
-             before(grammarAccess.getPayloadSentAccess().getLoadPayloadKeyword_0_0()); 
-            // InternalMyLanguage.g:6455:3: ( 'payload' )
-            // InternalMyLanguage.g:6456:4: 'payload'
+            // InternalMyLanguage.g:6480:2: ( ( 'payload' ) )
+            // InternalMyLanguage.g:6481:3: ( 'payload' )
             {
              before(grammarAccess.getPayloadSentAccess().getLoadPayloadKeyword_0_0()); 
-            match(input,86,FOLLOW_2); 
+            // InternalMyLanguage.g:6482:3: ( 'payload' )
+            // InternalMyLanguage.g:6483:4: 'payload'
+            {
+             before(grammarAccess.getPayloadSentAccess().getLoadPayloadKeyword_0_0()); 
+            match(input,87,FOLLOW_2); 
              after(grammarAccess.getPayloadSentAccess().getLoadPayloadKeyword_0_0()); 
 
             }
@@ -19445,21 +19538,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotDistanceSent__SentAssignment_2"
-    // InternalMyLanguage.g:6467:1: rule__RobotDistanceSent__SentAssignment_2 : ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6494:1: rule__RobotDistanceSent__SentAssignment_2 : ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) ) ;
     public final void rule__RobotDistanceSent__SentAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6471:1: ( ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6472:2: ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6498:1: ( ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6499:2: ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6472:2: ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6473:3: ( rule__RobotDistanceSent__SentAlternatives_2_0 )
+            // InternalMyLanguage.g:6499:2: ( ( rule__RobotDistanceSent__SentAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6500:3: ( rule__RobotDistanceSent__SentAlternatives_2_0 )
             {
              before(grammarAccess.getRobotDistanceSentAccess().getSentAlternatives_2_0()); 
-            // InternalMyLanguage.g:6474:3: ( rule__RobotDistanceSent__SentAlternatives_2_0 )
-            // InternalMyLanguage.g:6474:4: rule__RobotDistanceSent__SentAlternatives_2_0
+            // InternalMyLanguage.g:6501:3: ( rule__RobotDistanceSent__SentAlternatives_2_0 )
+            // InternalMyLanguage.g:6501:4: rule__RobotDistanceSent__SentAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__RobotDistanceSent__SentAlternatives_2_0();
@@ -19492,17 +19585,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToLocationSent__PosXAssignment_0"
-    // InternalMyLanguage.g:6482:1: rule__DistanceToLocationSent__PosXAssignment_0 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6509:1: rule__DistanceToLocationSent__PosXAssignment_0 : ( ruleDOUBLE ) ;
     public final void rule__DistanceToLocationSent__PosXAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6486:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6487:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6513:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6514:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6487:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6488:3: ruleDOUBLE
+            // InternalMyLanguage.g:6514:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6515:3: ruleDOUBLE
             {
              before(grammarAccess.getDistanceToLocationSentAccess().getPosXDOUBLEParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -19533,17 +19626,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToLocationSent__PosYAssignment_1"
-    // InternalMyLanguage.g:6497:1: rule__DistanceToLocationSent__PosYAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6524:1: rule__DistanceToLocationSent__PosYAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__DistanceToLocationSent__PosYAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6501:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6502:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6528:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6529:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6502:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6503:3: ruleDOUBLE
+            // InternalMyLanguage.g:6529:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6530:3: ruleDOUBLE
             {
              before(grammarAccess.getDistanceToLocationSentAccess().getPosYDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -19574,17 +19667,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToLocationSent__PosZAssignment_2"
-    // InternalMyLanguage.g:6512:1: rule__DistanceToLocationSent__PosZAssignment_2 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6539:1: rule__DistanceToLocationSent__PosZAssignment_2 : ( ruleDOUBLE ) ;
     public final void rule__DistanceToLocationSent__PosZAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6516:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6517:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6543:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6544:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6517:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6518:3: ruleDOUBLE
+            // InternalMyLanguage.g:6544:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6545:3: ruleDOUBLE
             {
              before(grammarAccess.getDistanceToLocationSentAccess().getPosZDOUBLEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -19615,21 +19708,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToLocationSent__BodyAssignment_4"
-    // InternalMyLanguage.g:6527:1: rule__DistanceToLocationSent__BodyAssignment_4 : ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) ) ;
+    // InternalMyLanguage.g:6554:1: rule__DistanceToLocationSent__BodyAssignment_4 : ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) ) ;
     public final void rule__DistanceToLocationSent__BodyAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6531:1: ( ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) ) )
-            // InternalMyLanguage.g:6532:2: ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) )
+            // InternalMyLanguage.g:6558:1: ( ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) ) )
+            // InternalMyLanguage.g:6559:2: ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) )
             {
-            // InternalMyLanguage.g:6532:2: ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) )
-            // InternalMyLanguage.g:6533:3: ( rule__DistanceToLocationSent__BodyAlternatives_4_0 )
+            // InternalMyLanguage.g:6559:2: ( ( rule__DistanceToLocationSent__BodyAlternatives_4_0 ) )
+            // InternalMyLanguage.g:6560:3: ( rule__DistanceToLocationSent__BodyAlternatives_4_0 )
             {
              before(grammarAccess.getDistanceToLocationSentAccess().getBodyAlternatives_4_0()); 
-            // InternalMyLanguage.g:6534:3: ( rule__DistanceToLocationSent__BodyAlternatives_4_0 )
-            // InternalMyLanguage.g:6534:4: rule__DistanceToLocationSent__BodyAlternatives_4_0
+            // InternalMyLanguage.g:6561:3: ( rule__DistanceToLocationSent__BodyAlternatives_4_0 )
+            // InternalMyLanguage.g:6561:4: rule__DistanceToLocationSent__BodyAlternatives_4_0
             {
             pushFollow(FOLLOW_2);
             rule__DistanceToLocationSent__BodyAlternatives_4_0();
@@ -19662,17 +19755,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToLocationSent__ToleranceAssignment_5"
-    // InternalMyLanguage.g:6542:1: rule__DistanceToLocationSent__ToleranceAssignment_5 : ( ruleToleranceSent ) ;
+    // InternalMyLanguage.g:6569:1: rule__DistanceToLocationSent__ToleranceAssignment_5 : ( ruleToleranceSent ) ;
     public final void rule__DistanceToLocationSent__ToleranceAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6546:1: ( ( ruleToleranceSent ) )
-            // InternalMyLanguage.g:6547:2: ( ruleToleranceSent )
+            // InternalMyLanguage.g:6573:1: ( ( ruleToleranceSent ) )
+            // InternalMyLanguage.g:6574:2: ( ruleToleranceSent )
             {
-            // InternalMyLanguage.g:6547:2: ( ruleToleranceSent )
-            // InternalMyLanguage.g:6548:3: ruleToleranceSent
+            // InternalMyLanguage.g:6574:2: ( ruleToleranceSent )
+            // InternalMyLanguage.g:6575:3: ruleToleranceSent
             {
              before(grammarAccess.getDistanceToLocationSentAccess().getToleranceToleranceSentParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -19703,21 +19796,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToObstaclesSent__BodyAssignment_2"
-    // InternalMyLanguage.g:6557:1: rule__DistanceToObstaclesSent__BodyAssignment_2 : ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6584:1: rule__DistanceToObstaclesSent__BodyAssignment_2 : ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) ) ;
     public final void rule__DistanceToObstaclesSent__BodyAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6561:1: ( ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6562:2: ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6588:1: ( ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6589:2: ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6562:2: ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6563:3: ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 )
+            // InternalMyLanguage.g:6589:2: ( ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6590:3: ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 )
             {
              before(grammarAccess.getDistanceToObstaclesSentAccess().getBodyAlternatives_2_0()); 
-            // InternalMyLanguage.g:6564:3: ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 )
-            // InternalMyLanguage.g:6564:4: rule__DistanceToObstaclesSent__BodyAlternatives_2_0
+            // InternalMyLanguage.g:6591:3: ( rule__DistanceToObstaclesSent__BodyAlternatives_2_0 )
+            // InternalMyLanguage.g:6591:4: rule__DistanceToObstaclesSent__BodyAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__DistanceToObstaclesSent__BodyAlternatives_2_0();
@@ -19750,17 +19843,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DistanceToObstaclesSent__ToleranceAssignment_3"
-    // InternalMyLanguage.g:6572:1: rule__DistanceToObstaclesSent__ToleranceAssignment_3 : ( ruleToleranceSent ) ;
+    // InternalMyLanguage.g:6599:1: rule__DistanceToObstaclesSent__ToleranceAssignment_3 : ( ruleToleranceSent ) ;
     public final void rule__DistanceToObstaclesSent__ToleranceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6576:1: ( ( ruleToleranceSent ) )
-            // InternalMyLanguage.g:6577:2: ( ruleToleranceSent )
+            // InternalMyLanguage.g:6603:1: ( ( ruleToleranceSent ) )
+            // InternalMyLanguage.g:6604:2: ( ruleToleranceSent )
             {
-            // InternalMyLanguage.g:6577:2: ( ruleToleranceSent )
-            // InternalMyLanguage.g:6578:3: ruleToleranceSent
+            // InternalMyLanguage.g:6604:2: ( ruleToleranceSent )
+            // InternalMyLanguage.g:6605:3: ruleToleranceSent
             {
              before(grammarAccess.getDistanceToObstaclesSentAccess().getToleranceToleranceSentParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -19791,21 +19884,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EqualSent__AmountAssignment_2"
-    // InternalMyLanguage.g:6587:1: rule__EqualSent__AmountAssignment_2 : ( ( rule__EqualSent__AmountAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6614:1: rule__EqualSent__AmountAssignment_2 : ( ( rule__EqualSent__AmountAlternatives_2_0 ) ) ;
     public final void rule__EqualSent__AmountAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6591:1: ( ( ( rule__EqualSent__AmountAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6592:2: ( ( rule__EqualSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6618:1: ( ( ( rule__EqualSent__AmountAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6619:2: ( ( rule__EqualSent__AmountAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6592:2: ( ( rule__EqualSent__AmountAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6593:3: ( rule__EqualSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6619:2: ( ( rule__EqualSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6620:3: ( rule__EqualSent__AmountAlternatives_2_0 )
             {
              before(grammarAccess.getEqualSentAccess().getAmountAlternatives_2_0()); 
-            // InternalMyLanguage.g:6594:3: ( rule__EqualSent__AmountAlternatives_2_0 )
-            // InternalMyLanguage.g:6594:4: rule__EqualSent__AmountAlternatives_2_0
+            // InternalMyLanguage.g:6621:3: ( rule__EqualSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6621:4: rule__EqualSent__AmountAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__EqualSent__AmountAlternatives_2_0();
@@ -19838,21 +19931,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LessSent__AmountAssignment_2"
-    // InternalMyLanguage.g:6602:1: rule__LessSent__AmountAssignment_2 : ( ( rule__LessSent__AmountAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6629:1: rule__LessSent__AmountAssignment_2 : ( ( rule__LessSent__AmountAlternatives_2_0 ) ) ;
     public final void rule__LessSent__AmountAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6606:1: ( ( ( rule__LessSent__AmountAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6607:2: ( ( rule__LessSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6633:1: ( ( ( rule__LessSent__AmountAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6634:2: ( ( rule__LessSent__AmountAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6607:2: ( ( rule__LessSent__AmountAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6608:3: ( rule__LessSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6634:2: ( ( rule__LessSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6635:3: ( rule__LessSent__AmountAlternatives_2_0 )
             {
              before(grammarAccess.getLessSentAccess().getAmountAlternatives_2_0()); 
-            // InternalMyLanguage.g:6609:3: ( rule__LessSent__AmountAlternatives_2_0 )
-            // InternalMyLanguage.g:6609:4: rule__LessSent__AmountAlternatives_2_0
+            // InternalMyLanguage.g:6636:3: ( rule__LessSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6636:4: rule__LessSent__AmountAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__LessSent__AmountAlternatives_2_0();
@@ -19885,21 +19978,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GreaterSent__AmountAssignment_2"
-    // InternalMyLanguage.g:6617:1: rule__GreaterSent__AmountAssignment_2 : ( ( rule__GreaterSent__AmountAlternatives_2_0 ) ) ;
+    // InternalMyLanguage.g:6644:1: rule__GreaterSent__AmountAssignment_2 : ( ( rule__GreaterSent__AmountAlternatives_2_0 ) ) ;
     public final void rule__GreaterSent__AmountAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6621:1: ( ( ( rule__GreaterSent__AmountAlternatives_2_0 ) ) )
-            // InternalMyLanguage.g:6622:2: ( ( rule__GreaterSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6648:1: ( ( ( rule__GreaterSent__AmountAlternatives_2_0 ) ) )
+            // InternalMyLanguage.g:6649:2: ( ( rule__GreaterSent__AmountAlternatives_2_0 ) )
             {
-            // InternalMyLanguage.g:6622:2: ( ( rule__GreaterSent__AmountAlternatives_2_0 ) )
-            // InternalMyLanguage.g:6623:3: ( rule__GreaterSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6649:2: ( ( rule__GreaterSent__AmountAlternatives_2_0 ) )
+            // InternalMyLanguage.g:6650:3: ( rule__GreaterSent__AmountAlternatives_2_0 )
             {
              before(grammarAccess.getGreaterSentAccess().getAmountAlternatives_2_0()); 
-            // InternalMyLanguage.g:6624:3: ( rule__GreaterSent__AmountAlternatives_2_0 )
-            // InternalMyLanguage.g:6624:4: rule__GreaterSent__AmountAlternatives_2_0
+            // InternalMyLanguage.g:6651:3: ( rule__GreaterSent__AmountAlternatives_2_0 )
+            // InternalMyLanguage.g:6651:4: rule__GreaterSent__AmountAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__GreaterSent__AmountAlternatives_2_0();
@@ -19932,17 +20025,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotStateSent__StateAssignment_2"
-    // InternalMyLanguage.g:6632:1: rule__RobotStateSent__StateAssignment_2 : ( RULE_ID ) ;
+    // InternalMyLanguage.g:6659:1: rule__RobotStateSent__StateAssignment_2 : ( RULE_ID ) ;
     public final void rule__RobotStateSent__StateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6636:1: ( ( RULE_ID ) )
-            // InternalMyLanguage.g:6637:2: ( RULE_ID )
+            // InternalMyLanguage.g:6663:1: ( ( RULE_ID ) )
+            // InternalMyLanguage.g:6664:2: ( RULE_ID )
             {
-            // InternalMyLanguage.g:6637:2: ( RULE_ID )
-            // InternalMyLanguage.g:6638:3: RULE_ID
+            // InternalMyLanguage.g:6664:2: ( RULE_ID )
+            // InternalMyLanguage.g:6665:3: RULE_ID
             {
              before(grammarAccess.getRobotStateSentAccess().getStateIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -19969,17 +20062,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotPositionSent__PosXAssignment_2"
-    // InternalMyLanguage.g:6647:1: rule__RobotPositionSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6674:1: rule__RobotPositionSent__PosXAssignment_2 : ( ruleDOUBLE ) ;
     public final void rule__RobotPositionSent__PosXAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6651:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6652:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6678:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6679:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6652:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6653:3: ruleDOUBLE
+            // InternalMyLanguage.g:6679:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6680:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotPositionSentAccess().getPosXDOUBLEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -20010,17 +20103,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotPositionSent__PosYAssignment_3"
-    // InternalMyLanguage.g:6662:1: rule__RobotPositionSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6689:1: rule__RobotPositionSent__PosYAssignment_3 : ( ruleDOUBLE ) ;
     public final void rule__RobotPositionSent__PosYAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6666:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6667:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6693:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6694:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6667:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6668:3: ruleDOUBLE
+            // InternalMyLanguage.g:6694:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6695:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotPositionSentAccess().getPosYDOUBLEParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -20051,17 +20144,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotPositionSent__PosZAssignment_4"
-    // InternalMyLanguage.g:6677:1: rule__RobotPositionSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6704:1: rule__RobotPositionSent__PosZAssignment_4 : ( ruleDOUBLE ) ;
     public final void rule__RobotPositionSent__PosZAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6681:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6682:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6708:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6709:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6682:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6683:3: ruleDOUBLE
+            // InternalMyLanguage.g:6709:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6710:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotPositionSentAccess().getPosZDOUBLEParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -20092,21 +20185,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotPositionSent__ToleranceAssignment_5"
-    // InternalMyLanguage.g:6692:1: rule__RobotPositionSent__ToleranceAssignment_5 : ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) ) ;
+    // InternalMyLanguage.g:6719:1: rule__RobotPositionSent__ToleranceAssignment_5 : ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) ) ;
     public final void rule__RobotPositionSent__ToleranceAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6696:1: ( ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) ) )
-            // InternalMyLanguage.g:6697:2: ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) )
+            // InternalMyLanguage.g:6723:1: ( ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) ) )
+            // InternalMyLanguage.g:6724:2: ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) )
             {
-            // InternalMyLanguage.g:6697:2: ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) )
-            // InternalMyLanguage.g:6698:3: ( rule__RobotPositionSent__ToleranceAlternatives_5_0 )
+            // InternalMyLanguage.g:6724:2: ( ( rule__RobotPositionSent__ToleranceAlternatives_5_0 ) )
+            // InternalMyLanguage.g:6725:3: ( rule__RobotPositionSent__ToleranceAlternatives_5_0 )
             {
              before(grammarAccess.getRobotPositionSentAccess().getToleranceAlternatives_5_0()); 
-            // InternalMyLanguage.g:6699:3: ( rule__RobotPositionSent__ToleranceAlternatives_5_0 )
-            // InternalMyLanguage.g:6699:4: rule__RobotPositionSent__ToleranceAlternatives_5_0
+            // InternalMyLanguage.g:6726:3: ( rule__RobotPositionSent__ToleranceAlternatives_5_0 )
+            // InternalMyLanguage.g:6726:4: rule__RobotPositionSent__ToleranceAlternatives_5_0
             {
             pushFollow(FOLLOW_2);
             rule__RobotPositionSent__ToleranceAlternatives_5_0();
@@ -20139,17 +20232,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CirclePosition__ToleranceAssignment_4"
-    // InternalMyLanguage.g:6707:1: rule__CirclePosition__ToleranceAssignment_4 : ( ruleDistanceUnit ) ;
+    // InternalMyLanguage.g:6734:1: rule__CirclePosition__ToleranceAssignment_4 : ( ruleDistanceUnit ) ;
     public final void rule__CirclePosition__ToleranceAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6711:1: ( ( ruleDistanceUnit ) )
-            // InternalMyLanguage.g:6712:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6738:1: ( ( ruleDistanceUnit ) )
+            // InternalMyLanguage.g:6739:2: ( ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:6712:2: ( ruleDistanceUnit )
-            // InternalMyLanguage.g:6713:3: ruleDistanceUnit
+            // InternalMyLanguage.g:6739:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6740:3: ruleDistanceUnit
             {
              before(grammarAccess.getCirclePositionAccess().getToleranceDistanceUnitParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -20180,17 +20273,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SpherePosition__ToleranceAssignment_4"
-    // InternalMyLanguage.g:6722:1: rule__SpherePosition__ToleranceAssignment_4 : ( ruleDistanceUnit ) ;
+    // InternalMyLanguage.g:6749:1: rule__SpherePosition__ToleranceAssignment_4 : ( ruleDistanceUnit ) ;
     public final void rule__SpherePosition__ToleranceAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6726:1: ( ( ruleDistanceUnit ) )
-            // InternalMyLanguage.g:6727:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6753:1: ( ( ruleDistanceUnit ) )
+            // InternalMyLanguage.g:6754:2: ( ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:6727:2: ( ruleDistanceUnit )
-            // InternalMyLanguage.g:6728:3: ruleDistanceUnit
+            // InternalMyLanguage.g:6754:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6755:3: ruleDistanceUnit
             {
              before(grammarAccess.getSpherePositionAccess().getToleranceDistanceUnitParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -20221,17 +20314,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotSpeedSent__SpeedXAssignment_2"
-    // InternalMyLanguage.g:6737:1: rule__RobotSpeedSent__SpeedXAssignment_2 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6764:1: rule__RobotSpeedSent__SpeedXAssignment_2 : ( ruleDOUBLE ) ;
     public final void rule__RobotSpeedSent__SpeedXAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6741:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6742:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6768:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6769:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6742:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6743:3: ruleDOUBLE
+            // InternalMyLanguage.g:6769:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6770:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotSpeedSentAccess().getSpeedXDOUBLEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -20262,17 +20355,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotSpeedSent__SpeedYAssignment_3"
-    // InternalMyLanguage.g:6752:1: rule__RobotSpeedSent__SpeedYAssignment_3 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6779:1: rule__RobotSpeedSent__SpeedYAssignment_3 : ( ruleDOUBLE ) ;
     public final void rule__RobotSpeedSent__SpeedYAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6756:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6757:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6783:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6784:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6757:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6758:3: ruleDOUBLE
+            // InternalMyLanguage.g:6784:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6785:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotSpeedSentAccess().getSpeedYDOUBLEParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -20303,17 +20396,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RobotSpeedSent__SpeedZAssignment_4"
-    // InternalMyLanguage.g:6767:1: rule__RobotSpeedSent__SpeedZAssignment_4 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6794:1: rule__RobotSpeedSent__SpeedZAssignment_4 : ( ruleDOUBLE ) ;
     public final void rule__RobotSpeedSent__SpeedZAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6771:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6772:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6798:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6799:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6772:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6773:3: ruleDOUBLE
+            // InternalMyLanguage.g:6799:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6800:3: ruleDOUBLE
             {
              before(grammarAccess.getRobotSpeedSentAccess().getSpeedZDOUBLEParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -20344,21 +20437,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EnvironmentSent__BodyAssignment_3"
-    // InternalMyLanguage.g:6782:1: rule__EnvironmentSent__BodyAssignment_3 : ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) ) ;
+    // InternalMyLanguage.g:6809:1: rule__EnvironmentSent__BodyAssignment_3 : ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) ) ;
     public final void rule__EnvironmentSent__BodyAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6786:1: ( ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) ) )
-            // InternalMyLanguage.g:6787:2: ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) )
+            // InternalMyLanguage.g:6813:1: ( ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) ) )
+            // InternalMyLanguage.g:6814:2: ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) )
             {
-            // InternalMyLanguage.g:6787:2: ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) )
-            // InternalMyLanguage.g:6788:3: ( rule__EnvironmentSent__BodyAlternatives_3_0 )
+            // InternalMyLanguage.g:6814:2: ( ( rule__EnvironmentSent__BodyAlternatives_3_0 ) )
+            // InternalMyLanguage.g:6815:3: ( rule__EnvironmentSent__BodyAlternatives_3_0 )
             {
              before(grammarAccess.getEnvironmentSentAccess().getBodyAlternatives_3_0()); 
-            // InternalMyLanguage.g:6789:3: ( rule__EnvironmentSent__BodyAlternatives_3_0 )
-            // InternalMyLanguage.g:6789:4: rule__EnvironmentSent__BodyAlternatives_3_0
+            // InternalMyLanguage.g:6816:3: ( rule__EnvironmentSent__BodyAlternatives_3_0 )
+            // InternalMyLanguage.g:6816:4: rule__EnvironmentSent__BodyAlternatives_3_0
             {
             pushFollow(FOLLOW_2);
             rule__EnvironmentSent__BodyAlternatives_3_0();
@@ -20391,17 +20484,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FailingComponentSent__ComponentAssignment_0"
-    // InternalMyLanguage.g:6797:1: rule__FailingComponentSent__ComponentAssignment_0 : ( ruleCOMPONENT ) ;
+    // InternalMyLanguage.g:6824:1: rule__FailingComponentSent__ComponentAssignment_0 : ( ruleCOMPONENT ) ;
     public final void rule__FailingComponentSent__ComponentAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6801:1: ( ( ruleCOMPONENT ) )
-            // InternalMyLanguage.g:6802:2: ( ruleCOMPONENT )
+            // InternalMyLanguage.g:6828:1: ( ( ruleCOMPONENT ) )
+            // InternalMyLanguage.g:6829:2: ( ruleCOMPONENT )
             {
-            // InternalMyLanguage.g:6802:2: ( ruleCOMPONENT )
-            // InternalMyLanguage.g:6803:3: ruleCOMPONENT
+            // InternalMyLanguage.g:6829:2: ( ruleCOMPONENT )
+            // InternalMyLanguage.g:6830:3: ruleCOMPONENT
             {
              before(grammarAccess.getFailingComponentSentAccess().getComponentCOMPONENTParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -20432,17 +20525,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RiskSent__LevelAssignment_2"
-    // InternalMyLanguage.g:6812:1: rule__RiskSent__LevelAssignment_2 : ( ruleCOLLISIONRISKLEVEL ) ;
+    // InternalMyLanguage.g:6839:1: rule__RiskSent__LevelAssignment_2 : ( ruleCOLLISIONRISKLEVEL ) ;
     public final void rule__RiskSent__LevelAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6816:1: ( ( ruleCOLLISIONRISKLEVEL ) )
-            // InternalMyLanguage.g:6817:2: ( ruleCOLLISIONRISKLEVEL )
+            // InternalMyLanguage.g:6843:1: ( ( ruleCOLLISIONRISKLEVEL ) )
+            // InternalMyLanguage.g:6844:2: ( ruleCOLLISIONRISKLEVEL )
             {
-            // InternalMyLanguage.g:6817:2: ( ruleCOLLISIONRISKLEVEL )
-            // InternalMyLanguage.g:6818:3: ruleCOLLISIONRISKLEVEL
+            // InternalMyLanguage.g:6844:2: ( ruleCOLLISIONRISKLEVEL )
+            // InternalMyLanguage.g:6845:3: ruleCOLLISIONRISKLEVEL
             {
              before(grammarAccess.getRiskSentAccess().getLevelCOLLISIONRISKLEVELParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -20473,17 +20566,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ToleranceSent__UnitAssignment_2"
-    // InternalMyLanguage.g:6827:1: rule__ToleranceSent__UnitAssignment_2 : ( ruleDistanceUnit ) ;
+    // InternalMyLanguage.g:6854:1: rule__ToleranceSent__UnitAssignment_2 : ( ruleDistanceUnit ) ;
     public final void rule__ToleranceSent__UnitAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6831:1: ( ( ruleDistanceUnit ) )
-            // InternalMyLanguage.g:6832:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6858:1: ( ( ruleDistanceUnit ) )
+            // InternalMyLanguage.g:6859:2: ( ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:6832:2: ( ruleDistanceUnit )
-            // InternalMyLanguage.g:6833:3: ruleDistanceUnit
+            // InternalMyLanguage.g:6859:2: ( ruleDistanceUnit )
+            // InternalMyLanguage.g:6860:3: ruleDistanceUnit
             {
              before(grammarAccess.getToleranceSentAccess().getUnitDistanceUnitParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -20514,17 +20607,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SECONDS__ValueAssignment_1"
-    // InternalMyLanguage.g:6842:1: rule__SECONDS__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6869:1: rule__SECONDS__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__SECONDS__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6846:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6847:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6873:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6874:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6847:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6848:3: ruleDOUBLE
+            // InternalMyLanguage.g:6874:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6875:3: ruleDOUBLE
             {
              before(grammarAccess.getSECONDSAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20555,17 +20648,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__HOUR__ValueAssignment_1"
-    // InternalMyLanguage.g:6857:1: rule__HOUR__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6884:1: rule__HOUR__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__HOUR__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6861:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6862:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6888:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6889:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6862:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6863:3: ruleDOUBLE
+            // InternalMyLanguage.g:6889:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6890:3: ruleDOUBLE
             {
              before(grammarAccess.getHOURAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20596,17 +20689,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MINUTES__ValueAssignment_1"
-    // InternalMyLanguage.g:6872:1: rule__MINUTES__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6899:1: rule__MINUTES__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__MINUTES__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6876:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6877:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6903:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6904:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6877:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6878:3: ruleDOUBLE
+            // InternalMyLanguage.g:6904:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6905:3: ruleDOUBLE
             {
              before(grammarAccess.getMINUTESAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20637,17 +20730,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__METER__ValueAssignment_1"
-    // InternalMyLanguage.g:6887:1: rule__METER__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6914:1: rule__METER__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__METER__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6891:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6892:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6918:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6919:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6892:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6893:3: ruleDOUBLE
+            // InternalMyLanguage.g:6919:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6920:3: ruleDOUBLE
             {
              before(grammarAccess.getMETERAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20678,17 +20771,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CENTIMETER__ValueAssignment_1"
-    // InternalMyLanguage.g:6902:1: rule__CENTIMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6929:1: rule__CENTIMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__CENTIMETER__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6906:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6907:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6933:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6934:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6907:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6908:3: ruleDOUBLE
+            // InternalMyLanguage.g:6934:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6935:3: ruleDOUBLE
             {
              before(grammarAccess.getCENTIMETERAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20719,17 +20812,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MILLIMETER__ValueAssignment_1"
-    // InternalMyLanguage.g:6917:1: rule__MILLIMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6944:1: rule__MILLIMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__MILLIMETER__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6921:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6922:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6948:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6949:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6922:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6923:3: ruleDOUBLE
+            // InternalMyLanguage.g:6949:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6950:3: ruleDOUBLE
             {
              before(grammarAccess.getMILLIMETERAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20760,17 +20853,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__KILOMETER__ValueAssignment_1"
-    // InternalMyLanguage.g:6932:1: rule__KILOMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6959:1: rule__KILOMETER__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__KILOMETER__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6936:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6937:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6963:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6964:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6937:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6938:3: ruleDOUBLE
+            // InternalMyLanguage.g:6964:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6965:3: ruleDOUBLE
             {
              before(grammarAccess.getKILOMETERAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20801,17 +20894,17 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PercentUnit__ValueAssignment_1"
-    // InternalMyLanguage.g:6947:1: rule__PercentUnit__ValueAssignment_1 : ( ruleDOUBLE ) ;
+    // InternalMyLanguage.g:6974:1: rule__PercentUnit__ValueAssignment_1 : ( ruleDOUBLE ) ;
     public final void rule__PercentUnit__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:6951:1: ( ( ruleDOUBLE ) )
-            // InternalMyLanguage.g:6952:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6978:1: ( ( ruleDOUBLE ) )
+            // InternalMyLanguage.g:6979:2: ( ruleDOUBLE )
             {
-            // InternalMyLanguage.g:6952:2: ( ruleDOUBLE )
-            // InternalMyLanguage.g:6953:3: ruleDOUBLE
+            // InternalMyLanguage.g:6979:2: ( ruleDOUBLE )
+            // InternalMyLanguage.g:6980:3: ruleDOUBLE
             {
              before(grammarAccess.getPercentUnitAccess().getValueDOUBLEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20846,11 +20939,11 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
     protected DFA8 dfa8 = new DFA8(this);
     static final String dfa_1s = "\23\uffff";
     static final String dfa_2s = "\1\24\6\uffff\10\42\2\uffff\1\13\1\uffff";
-    static final String dfa_3s = "\1\126\6\uffff\10\110\2\uffff\1\63\1\uffff";
+    static final String dfa_3s = "\1\127\6\uffff\10\110\2\uffff\1\63\1\uffff";
     static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\10\uffff\1\7\1\10\1\uffff\1\11";
     static final String dfa_5s = "\23\uffff}>";
     static final String[] dfa_6s = {
-            "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\21\uffff\1\1\12\uffff\1\4\6\uffff\1\3\5\uffff\1\2\3\uffff\1\5\14\uffff\1\6",
+            "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\21\uffff\1\1\12\uffff\1\4\6\uffff\1\3\5\uffff\1\2\3\uffff\1\5\15\uffff\1\6",
             "",
             "",
             "",
@@ -20904,7 +20997,7 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000001E0000000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000001E0000002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0004941000000000L,0x0000000000200040L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0004941000000000L,0x0000000000400040L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000800000000L});
@@ -20917,32 +21010,33 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x5800000000000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000600000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000010L,0x0000000000100000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0003000200000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x000000000000E000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x810020000FF00000L,0x0000000000400220L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0400000000000010L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x00000000000F8000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000000000000L,0x0000000000078000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x00000000000D0000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0003000200000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x000000000000E000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x810020000FF00000L,0x0000000000800220L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0400000000000010L,0x0000000000100000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x00000000000F8000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x0000000000078000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x00000000000D0000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
 
 }

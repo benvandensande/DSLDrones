@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Notification'", "'status'", "'is'", "'sent'", "'Time'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'autopilot'", "'ON'", "'OFF'", "'used'", "'as'", "'redundant'", "'component'", "'payload'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'fails'", "'collisionrisk'", "'tolerance'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'motor'", "'camera'", "'GPS'", "'battery'", "'barometer'", "'scanner'", "'sonar'", "'seconds('", "')'", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Notification'", "'status'", "'is'", "'sent'", "'Time'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'autopilot'", "'ON'", "'OFF'", "'used'", "'as'", "'redundant'", "'component'", "'payload'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'fails'", "'collisionrisk'", "'tolerance'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'motor'", "'camera'", "'GPS'", "'battery'", "'barometer'", "'scanner'", "'sonar'", "'seconds('", "')'", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -83,6 +83,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final int T__85=85;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__84=84;
+    public static final int T__87=87;
     public static final int T__86=86;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__30=30;
@@ -2296,7 +2297,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getPeopleNumbSentAccess().getNumberKeyword_0());
             		
-            otherlv_1=(Token)match(input,18,FOLLOW_21); 
+            otherlv_1=(Token)match(input,18,FOLLOW_23); 
 
             			newLeafNode(otherlv_1, grammarAccess.getPeopleNumbSentAccess().getIsKeyword_1());
             		
@@ -2407,7 +2408,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:895:2: (otherlv_0= 'Mission' (this_MissionStatusSent_1= ruleMissionStatusSent | this_MissionRiskLevelSent_2= ruleMissionRiskLevelSent | this_MissionGoalSent_3= ruleMissionGoalSent ) )
             // InternalMyLanguage.g:896:3: otherlv_0= 'Mission' (this_MissionStatusSent_1= ruleMissionStatusSent | this_MissionRiskLevelSent_2= ruleMissionRiskLevelSent | this_MissionGoalSent_3= ruleMissionGoalSent )
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_23); 
+            otherlv_0=(Token)match(input,31,FOLLOW_24); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMissionSentAccess().getMissionKeyword_0());
             		
@@ -2759,7 +2760,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getMissionRiskLevelSentAccess().getMissionsafetyKeyword_0());
             		
-            otherlv_1=(Token)match(input,18,FOLLOW_24); 
+            otherlv_1=(Token)match(input,18,FOLLOW_25); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMissionRiskLevelSentAccess().getIsKeyword_1());
             		
@@ -2876,7 +2877,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getMissionStatusSentAccess().getStatusKeyword_0());
             		
-            otherlv_1=(Token)match(input,18,FOLLOW_25); 
+            otherlv_1=(Token)match(input,18,FOLLOW_26); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMissionStatusSentAccess().getIsKeyword_1());
             		
@@ -3004,7 +3005,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1122:2: (otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_FailingComponentSent_7= ruleFailingComponentSent | this_RedundantComponent_8= ruleRedundantComponent | this_RobotAutoPilot_9= ruleRobotAutoPilot ) )
             // InternalMyLanguage.g:1123:3: otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_FailingComponentSent_7= ruleFailingComponentSent | this_RedundantComponent_8= ruleRedundantComponent | this_RobotAutoPilot_9= ruleRobotAutoPilot )
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_26); 
+            otherlv_0=(Token)match(input,34,FOLLOW_27); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRobotAccess().getRobotKeyword_0());
             		
@@ -3259,7 +3260,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getRobotAutoPilotAccess().getAutopilotKeyword_0());
             		
-            otherlv_1=(Token)match(input,18,FOLLOW_27); 
+            otherlv_1=(Token)match(input,18,FOLLOW_28); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRobotAutoPilotAccess().getIsKeyword_1());
             		
@@ -3439,19 +3440,19 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_28); 
+            otherlv_1=(Token)match(input,18,FOLLOW_29); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRedundantComponentAccess().getIsKeyword_1());
             		
-            otherlv_2=(Token)match(input,38,FOLLOW_29); 
+            otherlv_2=(Token)match(input,38,FOLLOW_30); 
 
             			newLeafNode(otherlv_2, grammarAccess.getRedundantComponentAccess().getUsedKeyword_2());
             		
-            otherlv_3=(Token)match(input,39,FOLLOW_30); 
+            otherlv_3=(Token)match(input,39,FOLLOW_31); 
 
             			newLeafNode(otherlv_3, grammarAccess.getRedundantComponentAccess().getAsKeyword_3());
             		
-            otherlv_4=(Token)match(input,40,FOLLOW_31); 
+            otherlv_4=(Token)match(input,40,FOLLOW_32); 
 
             			newLeafNode(otherlv_4, grammarAccess.getRedundantComponentAccess().getRedundantKeyword_4());
             		
@@ -3541,7 +3542,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1341:4: (lv_load_0_0= 'payload' )
             // InternalMyLanguage.g:1342:5: lv_load_0_0= 'payload'
             {
-            lv_load_0_0=(Token)match(input,42,FOLLOW_32); 
+            lv_load_0_0=(Token)match(input,42,FOLLOW_33); 
 
             					newLeafNode(lv_load_0_0, grammarAccess.getPayloadSentAccess().getLoadPayloadKeyword_0_0());
             				
@@ -3641,11 +3642,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1376:2: (otherlv_0= 'distance' otherlv_1= 'to' ( ( (lv_sent_2_1= ruleDistanceToObstaclesSent | lv_sent_2_2= ruleDistanceToLocationSent ) ) ) )
             // InternalMyLanguage.g:1377:3: otherlv_0= 'distance' otherlv_1= 'to' ( ( (lv_sent_2_1= ruleDistanceToObstaclesSent | lv_sent_2_2= ruleDistanceToLocationSent ) ) )
             {
-            otherlv_0=(Token)match(input,44,FOLLOW_33); 
+            otherlv_0=(Token)match(input,44,FOLLOW_34); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRobotDistanceSentAccess().getDistanceKeyword_0());
             		
-            otherlv_1=(Token)match(input,45,FOLLOW_34); 
+            otherlv_1=(Token)match(input,45,FOLLOW_35); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRobotDistanceSentAccess().getToKeyword_1());
             		
@@ -3662,7 +3663,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             if ( (LA13_0==46) ) {
                 alt13=1;
             }
-            else if ( (LA13_0==RULE_INT) ) {
+            else if ( (LA13_0==RULE_INT||LA13_0==86) ) {
                 alt13=2;
             }
             else {
@@ -3955,7 +3956,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getBodyGreaterSentParserRuleCall_4_0_0());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_4_1=ruleGreaterSent();
 
                     state._fsp--;
@@ -3980,7 +3981,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getBodyLessSentParserRuleCall_4_0_1());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_4_2=ruleLessSent();
 
                     state._fsp--;
@@ -4005,7 +4006,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getBodyEqualSentParserRuleCall_4_0_2());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_4_3=ruleEqualSent();
 
                     state._fsp--;
@@ -4205,7 +4206,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToObstaclesSentAccess().getBodyGreaterSentParserRuleCall_2_0_0());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_2_1=ruleGreaterSent();
 
                     state._fsp--;
@@ -4230,7 +4231,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToObstaclesSentAccess().getBodyLessSentParserRuleCall_2_0_1());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_2_2=ruleLessSent();
 
                     state._fsp--;
@@ -4255,7 +4256,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getDistanceToObstaclesSentAccess().getBodyEqualSentParserRuleCall_2_0_2());
                     					
-                    pushFollow(FOLLOW_35);
+                    pushFollow(FOLLOW_36);
                     lv_body_2_3=ruleEqualSent();
 
                     state._fsp--;
@@ -4405,11 +4406,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1691:2: (otherlv_0= 'equal' otherlv_1= 'to' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) ) )
             // InternalMyLanguage.g:1692:3: otherlv_0= 'equal' otherlv_1= 'to' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) )
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_33); 
+            otherlv_0=(Token)match(input,47,FOLLOW_34); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEqualSentAccess().getEqualKeyword_0());
             		
-            otherlv_1=(Token)match(input,45,FOLLOW_36); 
+            otherlv_1=(Token)match(input,45,FOLLOW_37); 
 
             			newLeafNode(otherlv_1, grammarAccess.getEqualSentAccess().getToKeyword_1());
             		
@@ -4575,11 +4576,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1755:2: (otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) ) )
             // InternalMyLanguage.g:1756:3: otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) )
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_37); 
+            otherlv_0=(Token)match(input,48,FOLLOW_38); 
 
             			newLeafNode(otherlv_0, grammarAccess.getLessSentAccess().getLowerKeyword_0());
             		
-            otherlv_1=(Token)match(input,49,FOLLOW_36); 
+            otherlv_1=(Token)match(input,49,FOLLOW_37); 
 
             			newLeafNode(otherlv_1, grammarAccess.getLessSentAccess().getThenKeyword_1());
             		
@@ -4745,11 +4746,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:1819:2: (otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) ) )
             // InternalMyLanguage.g:1820:3: otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit ) ) )
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_37); 
+            otherlv_0=(Token)match(input,50,FOLLOW_38); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGreaterSentAccess().getGreaterKeyword_0());
             		
-            otherlv_1=(Token)match(input,49,FOLLOW_36); 
+            otherlv_1=(Token)match(input,49,FOLLOW_37); 
 
             			newLeafNode(otherlv_1, grammarAccess.getGreaterSentAccess().getThenKeyword_1());
             		
@@ -5316,19 +5317,19 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:2049:2: (otherlv_0= 'within' otherlv_1= 'circle' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) ) )
             // InternalMyLanguage.g:2050:3: otherlv_0= 'within' otherlv_1= 'circle' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) )
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_38); 
+            otherlv_0=(Token)match(input,52,FOLLOW_39); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCirclePositionAccess().getWithinKeyword_0());
             		
-            otherlv_1=(Token)match(input,53,FOLLOW_39); 
+            otherlv_1=(Token)match(input,53,FOLLOW_40); 
 
             			newLeafNode(otherlv_1, grammarAccess.getCirclePositionAccess().getCircleKeyword_1());
             		
-            otherlv_2=(Token)match(input,54,FOLLOW_40); 
+            otherlv_2=(Token)match(input,54,FOLLOW_41); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCirclePositionAccess().getWithKeyword_2());
             		
-            otherlv_3=(Token)match(input,55,FOLLOW_41); 
+            otherlv_3=(Token)match(input,55,FOLLOW_42); 
 
             			newLeafNode(otherlv_3, grammarAccess.getCirclePositionAccess().getRadiusKeyword_3());
             		
@@ -5443,19 +5444,19 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:2103:2: (otherlv_0= 'within' otherlv_1= 'sphere' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) ) )
             // InternalMyLanguage.g:2104:3: otherlv_0= 'within' otherlv_1= 'sphere' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) )
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_42); 
+            otherlv_0=(Token)match(input,52,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSpherePositionAccess().getWithinKeyword_0());
             		
-            otherlv_1=(Token)match(input,56,FOLLOW_39); 
+            otherlv_1=(Token)match(input,56,FOLLOW_40); 
 
             			newLeafNode(otherlv_1, grammarAccess.getSpherePositionAccess().getSphereKeyword_1());
             		
-            otherlv_2=(Token)match(input,54,FOLLOW_40); 
+            otherlv_2=(Token)match(input,54,FOLLOW_41); 
 
             			newLeafNode(otherlv_2, grammarAccess.getSpherePositionAccess().getWithKeyword_2());
             		
-            otherlv_3=(Token)match(input,55,FOLLOW_41); 
+            otherlv_3=(Token)match(input,55,FOLLOW_42); 
 
             			newLeafNode(otherlv_3, grammarAccess.getSpherePositionAccess().getRadiusKeyword_3());
             		
@@ -5756,7 +5757,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:2241:2: (otherlv_0= 'Environment' otherlv_1= 'windspeed' otherlv_2= 'is' ( ( (lv_body_3_1= ruleGreaterSent | lv_body_3_2= ruleLessSent | lv_body_3_3= ruleEqualSent ) ) ) )
             // InternalMyLanguage.g:2242:3: otherlv_0= 'Environment' otherlv_1= 'windspeed' otherlv_2= 'is' ( ( (lv_body_3_1= ruleGreaterSent | lv_body_3_2= ruleLessSent | lv_body_3_3= ruleEqualSent ) ) )
             {
-            otherlv_0=(Token)match(input,58,FOLLOW_43); 
+            otherlv_0=(Token)match(input,58,FOLLOW_44); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEnvironmentSentAccess().getEnvironmentKeyword_0());
             		
@@ -5970,7 +5971,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getFailingComponentSentAccess().getComponentCOMPONENTParserRuleCall_0_0());
             				
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_45);
             lv_component_0_0=ruleCOMPONENT();
 
             state._fsp--;
@@ -6078,7 +6079,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getRiskSentAccess().getCollisionriskKeyword_0());
             		
-            otherlv_1=(Token)match(input,18,FOLLOW_45); 
+            otherlv_1=(Token)match(input,18,FOLLOW_46); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRiskSentAccess().getIsKeyword_1());
             		
@@ -6191,11 +6192,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:2413:2: (otherlv_0= 'with' otherlv_1= 'tolerance' ( (lv_unit_2_0= ruleDistanceUnit ) ) )
             // InternalMyLanguage.g:2414:3: otherlv_0= 'with' otherlv_1= 'tolerance' ( (lv_unit_2_0= ruleDistanceUnit ) )
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_46); 
+            otherlv_0=(Token)match(input,54,FOLLOW_47); 
 
             			newLeafNode(otherlv_0, grammarAccess.getToleranceSentAccess().getWithKeyword_0());
             		
-            otherlv_1=(Token)match(input,62,FOLLOW_41); 
+            otherlv_1=(Token)match(input,62,FOLLOW_42); 
 
             			newLeafNode(otherlv_1, grammarAccess.getToleranceSentAccess().getToleranceKeyword_1());
             		
@@ -7244,7 +7245,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getSECONDSAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7361,7 +7362,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getHOURAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7478,7 +7479,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMINUTESAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7595,7 +7596,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMETERAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7712,7 +7713,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getCENTIMETERAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7829,7 +7830,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMILLIMETERAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7946,7 +7947,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getKILOMETERAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -8063,7 +8064,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getPercentUnitAccess().getValueDOUBLEParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_48);
             lv_value_1_0=ruleDOUBLE();
 
             state._fsp--;
@@ -8148,32 +8149,25 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDOUBLE"
-    // InternalMyLanguage.g:3087:1: ruleDOUBLE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) ;
+    // InternalMyLanguage.g:3087:1: ruleDOUBLE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleDOUBLE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token this_INT_0=null;
         Token kw=null;
-        Token this_INT_2=null;
+        Token this_INT_1=null;
+        Token this_INT_3=null;
 
 
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:3093:2: ( (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) )
-            // InternalMyLanguage.g:3094:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
+            // InternalMyLanguage.g:3093:2: ( ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ) )
+            // InternalMyLanguage.g:3094:2: ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? )
             {
-            // InternalMyLanguage.g:3094:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
-            // InternalMyLanguage.g:3095:3: this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )?
+            // InternalMyLanguage.g:3094:2: ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? )
+            // InternalMyLanguage.g:3095:3: (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )?
             {
-            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_48); 
-
-            			current.merge(this_INT_0);
-            		
-
-            			newLeafNode(this_INT_0, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_0());
-            		
-            // InternalMyLanguage.g:3102:3: (kw= '.' this_INT_2= RULE_INT )?
+            // InternalMyLanguage.g:3095:3: (kw= '-' )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -8182,19 +8176,48 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalMyLanguage.g:3103:4: kw= '.' this_INT_2= RULE_INT
+                    // InternalMyLanguage.g:3096:4: kw= '-'
                     {
-                    kw=(Token)match(input,86,FOLLOW_21); 
+                    kw=(Token)match(input,86,FOLLOW_23); 
 
                     				current.merge(kw);
-                    				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_1_0());
-                    			
-                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-                    				current.merge(this_INT_2);
+                    				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getHyphenMinusKeyword_0());
                     			
 
-                    				newLeafNode(this_INT_2, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1_1());
+                    }
+                    break;
+
+            }
+
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_49); 
+
+            			current.merge(this_INT_1);
+            		
+
+            			newLeafNode(this_INT_1, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_1());
+            		
+            // InternalMyLanguage.g:3109:3: (kw= '.' this_INT_3= RULE_INT )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
+
+            if ( (LA31_0==87) ) {
+                alt31=1;
+            }
+            switch (alt31) {
+                case 1 :
+                    // InternalMyLanguage.g:3110:4: kw= '.' this_INT_3= RULE_INT
+                    {
+                    kw=(Token)match(input,87,FOLLOW_23); 
+
+                    				current.merge(kw);
+                    				newLeafNode(kw, grammarAccess.getDOUBLEAccess().getFullStopKeyword_2_0());
+                    			
+                    this_INT_3=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+                    				current.merge(this_INT_3);
+                    			
+
+                    				newLeafNode(this_INT_3, grammarAccess.getDOUBLEAccess().getINTTerminalRuleCall_2_1());
                     			
 
                     }
@@ -8300,33 +8323,34 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0005800000000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000040L,0x0000000000400000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000300020000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000000L,0x000000000000000CL});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000003L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x2208140820000000L,0x0000000000001FC0L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000003000000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000400000000040L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x00000000003E0000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x00000000001E0000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000034L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000300020000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000000L,0x000000000000000CL});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000003L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x2208140820000000L,0x0000000000001FC0L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000400000000040L,0x0000000000400000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x00000000003E0000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x00000000001E0000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000034L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
 
 }

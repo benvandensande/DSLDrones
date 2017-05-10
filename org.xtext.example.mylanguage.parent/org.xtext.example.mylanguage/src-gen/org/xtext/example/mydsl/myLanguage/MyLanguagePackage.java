@@ -263,6 +263,34 @@ public interface MyLanguagePackage extends EPackage
   int STATEMENT_BODY_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.SonarSentImpl <em>Sonar Sent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.SonarSentImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSonarSent()
+   * @generated
+   */
+  int SONAR_SENT = 7;
+
+  /**
+   * The feature id for the '<em><b>Sent</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SONAR_SENT__SENT = STATEMENT_BODY_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Sonar Sent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SONAR_SENT_FEATURE_COUNT = STATEMENT_BODY_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.NotificationSentImpl <em>Notification Sent</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -270,7 +298,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getNotificationSent()
    * @generated
    */
-  int NOTIFICATION_SENT = 7;
+  int NOTIFICATION_SENT = 8;
 
   /**
    * The feature id for the '<em><b>Not</b></em>' attribute.
@@ -298,7 +326,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeSent()
    * @generated
    */
-  int TIME_SENT = 8;
+  int TIME_SENT = 9;
 
   /**
    * The number of structural features of the '<em>Time Sent</em>' class.
@@ -317,7 +345,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeInterval()
    * @generated
    */
-  int TIME_INTERVAL = 9;
+  int TIME_INTERVAL = 10;
 
   /**
    * The feature id for the '<em><b>First</b></em>' containment reference.
@@ -354,7 +382,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getBatterySent()
    * @generated
    */
-  int BATTERY_SENT = 10;
+  int BATTERY_SENT = 11;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -382,7 +410,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeopleSent()
    * @generated
    */
-  int PEOPLE_SENT = 11;
+  int PEOPLE_SENT = 12;
 
   /**
    * The number of structural features of the '<em>People Sent</em>' class.
@@ -401,7 +429,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeoplePosSent()
    * @generated
    */
-  int PEOPLE_POS_SENT = 12;
+  int PEOPLE_POS_SENT = 13;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -456,7 +484,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeopleNumbSent()
    * @generated
    */
-  int PEOPLE_NUMB_SENT = 13;
+  int PEOPLE_NUMB_SENT = 14;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' attribute.
@@ -484,7 +512,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionSent()
    * @generated
    */
-  int MISSION_SENT = 14;
+  int MISSION_SENT = 15;
 
   /**
    * The number of structural features of the '<em>Mission Sent</em>' class.
@@ -503,7 +531,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionGoalSent()
    * @generated
    */
-  int MISSION_GOAL_SENT = 15;
+  int MISSION_GOAL_SENT = 16;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -549,7 +577,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionRiskLevelSent()
    * @generated
    */
-  int MISSION_RISK_LEVEL_SENT = 16;
+  int MISSION_RISK_LEVEL_SENT = 17;
 
   /**
    * The feature id for the '<em><b>Risklevel</b></em>' attribute.
@@ -577,7 +605,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionStatusSent()
    * @generated
    */
-  int MISSION_STATUS_SENT = 17;
+  int MISSION_STATUS_SENT = 18;
 
   /**
    * The feature id for the '<em><b>State</b></em>' attribute.
@@ -605,7 +633,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobot()
    * @generated
    */
-  int ROBOT = 18;
+  int ROBOT = 19;
 
   /**
    * The number of structural features of the '<em>Robot</em>' class.
@@ -624,7 +652,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotAutoPilot()
    * @generated
    */
-  int ROBOT_AUTO_PILOT = 19;
+  int ROBOT_AUTO_PILOT = 20;
 
   /**
    * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -652,7 +680,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRedundantComponent()
    * @generated
    */
-  int REDUNDANT_COMPONENT = 20;
+  int REDUNDANT_COMPONENT = 21;
 
   /**
    * The feature id for the '<em><b>Component</b></em>' attribute.
@@ -680,7 +708,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPayloadSent()
    * @generated
    */
-  int PAYLOAD_SENT = 21;
+  int PAYLOAD_SENT = 22;
 
   /**
    * The feature id for the '<em><b>Load</b></em>' attribute.
@@ -708,7 +736,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotDistanceSent()
    * @generated
    */
-  int ROBOT_DISTANCE_SENT = 22;
+  int ROBOT_DISTANCE_SENT = 23;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -736,7 +764,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceToLocationSent()
    * @generated
    */
-  int DISTANCE_TO_LOCATION_SENT = 23;
+  int DISTANCE_TO_LOCATION_SENT = 24;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -800,7 +828,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceToObstaclesSent()
    * @generated
    */
-  int DISTANCE_TO_OBSTACLES_SENT = 24;
+  int DISTANCE_TO_OBSTACLES_SENT = 25;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -837,7 +865,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getEqualSent()
    * @generated
    */
-  int EQUAL_SENT = 25;
+  int EQUAL_SENT = 26;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -865,7 +893,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getLessSent()
    * @generated
    */
-  int LESS_SENT = 26;
+  int LESS_SENT = 27;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -893,7 +921,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGreaterSent()
    * @generated
    */
-  int GREATER_SENT = 27;
+  int GREATER_SENT = 28;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -921,7 +949,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotStateSent()
    * @generated
    */
-  int ROBOT_STATE_SENT = 28;
+  int ROBOT_STATE_SENT = 29;
 
   /**
    * The feature id for the '<em><b>State</b></em>' attribute.
@@ -949,7 +977,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotPositionSent()
    * @generated
    */
-  int ROBOT_POSITION_SENT = 29;
+  int ROBOT_POSITION_SENT = 30;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -1004,7 +1032,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getCirclePosition()
    * @generated
    */
-  int CIRCLE_POSITION = 30;
+  int CIRCLE_POSITION = 31;
 
   /**
    * The feature id for the '<em><b>Tolerance</b></em>' containment reference.
@@ -1032,7 +1060,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSpherePosition()
    * @generated
    */
-  int SPHERE_POSITION = 31;
+  int SPHERE_POSITION = 32;
 
   /**
    * The feature id for the '<em><b>Tolerance</b></em>' containment reference.
@@ -1060,7 +1088,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotSpeedSent()
    * @generated
    */
-  int ROBOT_SPEED_SENT = 32;
+  int ROBOT_SPEED_SENT = 33;
 
   /**
    * The feature id for the '<em><b>Speed X</b></em>' attribute.
@@ -1106,7 +1134,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getEnvironmentSent()
    * @generated
    */
-  int ENVIRONMENT_SENT = 33;
+  int ENVIRONMENT_SENT = 34;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1134,7 +1162,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getFailingComponentSent()
    * @generated
    */
-  int FAILING_COMPONENT_SENT = 34;
+  int FAILING_COMPONENT_SENT = 35;
 
   /**
    * The feature id for the '<em><b>Component</b></em>' attribute.
@@ -1162,7 +1190,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRiskSent()
    * @generated
    */
-  int RISK_SENT = 35;
+  int RISK_SENT = 36;
 
   /**
    * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -1190,7 +1218,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getToleranceSent()
    * @generated
    */
-  int TOLERANCE_SENT = 36;
+  int TOLERANCE_SENT = 37;
 
   /**
    * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -1218,7 +1246,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceUnit()
    * @generated
    */
-  int DISTANCE_UNIT = 37;
+  int DISTANCE_UNIT = 38;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1246,7 +1274,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeUnit()
    * @generated
    */
-  int TIME_UNIT = 38;
+  int TIME_UNIT = 39;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1274,7 +1302,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSECONDS()
    * @generated
    */
-  int SECONDS = 39;
+  int SECONDS = 40;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1302,7 +1330,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getHOUR()
    * @generated
    */
-  int HOUR = 40;
+  int HOUR = 41;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1330,7 +1358,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMINUTES()
    * @generated
    */
-  int MINUTES = 41;
+  int MINUTES = 42;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1358,7 +1386,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMETER()
    * @generated
    */
-  int METER = 42;
+  int METER = 43;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1386,7 +1414,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getCENTIMETER()
    * @generated
    */
-  int CENTIMETER = 43;
+  int CENTIMETER = 44;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1414,7 +1442,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMILLIMETER()
    * @generated
    */
-  int MILLIMETER = 44;
+  int MILLIMETER = 45;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1442,7 +1470,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKILOMETER()
    * @generated
    */
-  int KILOMETER = 45;
+  int KILOMETER = 46;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1470,7 +1498,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPercentUnit()
    * @generated
    */
-  int PERCENT_UNIT = 46;
+  int PERCENT_UNIT = 47;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1615,6 +1643,27 @@ public interface MyLanguagePackage extends EPackage
    * @generated
    */
   EClass getStatementBody();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.SonarSent <em>Sonar Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sonar Sent</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SonarSent
+   * @generated
+   */
+  EClass getSonarSent();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.SonarSent#getSent <em>Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sent</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SonarSent#getSent()
+   * @see #getSonarSent()
+   * @generated
+   */
+  EReference getSonarSent_Sent();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.NotificationSent <em>Notification Sent</em>}'.
@@ -2643,6 +2692,24 @@ public interface MyLanguagePackage extends EPackage
      * @generated
      */
     EClass STATEMENT_BODY = eINSTANCE.getStatementBody();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.SonarSentImpl <em>Sonar Sent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.SonarSentImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSonarSent()
+     * @generated
+     */
+    EClass SONAR_SENT = eINSTANCE.getSonarSent();
+
+    /**
+     * The meta object literal for the '<em><b>Sent</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SONAR_SENT__SENT = eINSTANCE.getSonarSent_Sent();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.NotificationSentImpl <em>Notification Sent</em>}' class.

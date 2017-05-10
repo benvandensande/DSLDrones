@@ -40,6 +40,7 @@ import org.xtext.example.mydsl.myLanguage.Then
 import org.xtext.example.mydsl.myLanguage.TimeInterval
 import org.xtext.example.mydsl.myLanguage.TimeUnit
 import org.xtext.example.mydsl.myLanguage.When
+import org.xtext.example.mydsl.myLanguage.SonarSent
 
 /**
  * Generates code from your model files on save.
@@ -128,6 +129,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 			RobotStateSent case (bod instanceof RobotStateSent): '''«bod.createRunStat()»'''
 			RobotDistanceSent case (bod instanceof RobotDistanceSent): '''«bod.createRunStat()»'''
 			BatterySent case (bod instanceof BatterySent): '''«bod.createRunStat()»'''
+			SonarSent case (bod instanceof SonarSent): '''«bod.createRunStat()»'''
 			MissionGoalSent case (bod instanceof MissionGoalSent): '''«bod.createRunStat()»'''
 			MissionRiskLevelSent case (bod instanceof MissionRiskLevelSent): '''«bod.createRunStat()»'''
 			MissionStatusSent case (bod instanceof MissionStatusSent): '''«bod.createRunStat()»'''
@@ -224,6 +226,18 @@ class MyLanguageGenerator extends AbstractGenerator {
 			default: '''foutje'''
 		}
 	}
+	
+	def createRunStat(SonarSent s) {
+		var body = s.sent;
+		switch body{
+			EqualSent case (body instanceof EqualSent): '''new SonarSentence(«body.createRunStat» , this.app, this.drone)'''
+			GreaterSent case (body instanceof GreaterSent): '''new SonarSentence(«body.createRunStat» , this.app, this.drone)'''
+			LessSent case (body instanceof LessSent): '''new SonarSentence(«body.createRunStat» , this.app, this.drone)'''
+			default: '''foutje'''
+		}
+	}
+	
+	
 	
 	def createRunStat(EnvironmentSent s) {
 		var sent = s.body;

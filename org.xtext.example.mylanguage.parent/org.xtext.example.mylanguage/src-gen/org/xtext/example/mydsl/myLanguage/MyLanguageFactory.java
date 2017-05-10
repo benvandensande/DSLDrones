@@ -87,6 +87,15 @@ public interface MyLanguageFactory extends EFactory
   StatementBody createStatementBody();
 
   /**
+   * Returns a new object of class '<em>Sonar Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sonar Sent</em>'.
+   * @generated
+   */
+  SonarSent createSonarSent();
+
+  /**
    * Returns a new object of class '<em>Notification Sent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

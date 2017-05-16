@@ -87,6 +87,15 @@ public interface MyLanguageFactory extends EFactory
   StatementBody createStatementBody();
 
   /**
+   * Returns a new object of class '<em>Comp Status Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Comp Status Sent</em>'.
+   * @generated
+   */
+  CompStatusSent createCompStatusSent();
+
+  /**
    * Returns a new object of class '<em>Baro Sent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -96,6 +105,15 @@ public interface MyLanguageFactory extends EFactory
   BaroSent createBaroSent();
 
   /**
+   * Returns a new object of class '<em>Baro Alt Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Baro Alt Sent</em>'.
+   * @generated
+   */
+  BaroAltSent createBaroAltSent();
+
+  /**
    * Returns a new object of class '<em>Sonar Sent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -103,6 +121,15 @@ public interface MyLanguageFactory extends EFactory
    * @generated
    */
   SonarSent createSonarSent();
+
+  /**
+   * Returns a new object of class '<em>Sonar Distance Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sonar Distance Sent</em>'.
+   * @generated
+   */
+  SonarDistanceSent createSonarDistanceSent();
 
   /**
    * Returns a new object of class '<em>Notification Sent</em>'.
@@ -139,6 +166,15 @@ public interface MyLanguageFactory extends EFactory
    * @generated
    */
   BatterySent createBatterySent();
+
+  /**
+   * Returns a new object of class '<em>Battery Level Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Battery Level Sent</em>'.
+   * @generated
+   */
+  BatteryLevelSent createBatteryLevelSent();
 
   /**
    * Returns a new object of class '<em>People Sent</em>'.
@@ -220,15 +256,6 @@ public interface MyLanguageFactory extends EFactory
    * @generated
    */
   RobotAutoPilot createRobotAutoPilot();
-
-  /**
-   * Returns a new object of class '<em>Redundant Component</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Redundant Component</em>'.
-   * @generated
-   */
-  RedundantComponent createRedundantComponent();
 
   /**
    * Returns a new object of class '<em>Payload Sent</em>'.
@@ -346,15 +373,6 @@ public interface MyLanguageFactory extends EFactory
    * @generated
    */
   EnvironmentSent createEnvironmentSent();
-
-  /**
-   * Returns a new object of class '<em>Failing Component Sent</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Failing Component Sent</em>'.
-   * @generated
-   */
-  FailingComponentSent createFailingComponentSent();
 
   /**
    * Returns a new object of class '<em>Risk Sent</em>'.

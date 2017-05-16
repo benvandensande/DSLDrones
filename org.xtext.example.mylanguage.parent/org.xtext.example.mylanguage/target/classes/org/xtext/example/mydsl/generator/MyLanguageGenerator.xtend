@@ -7,10 +7,13 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.example.mydsl.myLanguage.BaroAltSent
 import org.xtext.example.mydsl.myLanguage.BaroSent
+import org.xtext.example.mydsl.myLanguage.BatteryLevelSent
 import org.xtext.example.mydsl.myLanguage.BatterySent
 import org.xtext.example.mydsl.myLanguage.CENTIMETER
 import org.xtext.example.mydsl.myLanguage.CirclePosition
+import org.xtext.example.mydsl.myLanguage.CompStatusSent
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent
 import org.xtext.example.mydsl.myLanguage.DistanceUnit
@@ -33,6 +36,7 @@ import org.xtext.example.mydsl.myLanguage.RobotPositionSent
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent
 import org.xtext.example.mydsl.myLanguage.RobotStateSent
 import org.xtext.example.mydsl.myLanguage.SECONDS
+import org.xtext.example.mydsl.myLanguage.SonarDistanceSent
 import org.xtext.example.mydsl.myLanguage.SonarSent
 import org.xtext.example.mydsl.myLanguage.SpherePosition
 import org.xtext.example.mydsl.myLanguage.Statement
@@ -222,6 +226,15 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(BatterySent s) {
 		var body = s.sent;
 		switch body{
+			BatteryLevelSent case (body instanceof BatteryLevelSent): '''«body.createRunStat»'''
+			CompStatusSent case (body instanceof CompStatusSent): '''«body.createRunStat»,new BatterySentence(this.app,this.drone))'''
+			default: '''foutje'''
+		}
+	}
+	
+	def createRunStat(BatteryLevelSent s) {
+		var body = s.sent;
+		switch body{
 			EqualSent case (body instanceof EqualSent): '''new BatterySentence(«body.createRunStat» , this.app, this.drone)'''
 			GreaterSent case (body instanceof GreaterSent): '''new BatterySentence(«body.createRunStat» , this.app, this.drone)'''
 			LessSent case (body instanceof LessSent): '''new BatterySentence(«body.createRunStat» , this.app, this.drone)'''
@@ -230,6 +243,15 @@ class MyLanguageGenerator extends AbstractGenerator {
 	}
 	
 	def createRunStat(SonarSent s) {
+		var body = s.sent;
+		switch body{
+			SonarDistanceSent case (body instanceof SonarDistanceSent): '''«body.createRunStat»'''
+			CompStatusSent case (body instanceof CompStatusSent): '''«body.createRunStat»,new SonarSentence(this.app,this.drone))'''
+			default: '''foutje'''
+		}
+	}
+	
+	def createRunStat(SonarDistanceSent s) {
 		var body = s.sent;
 		switch body{
 			EqualSent case (body instanceof EqualSent): '''new SonarSentence(«body.createRunStat» , this.app, this.drone)'''
@@ -242,11 +264,24 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(BaroSent s) {
 		var body = s.sent;
 		switch body{
+			BaroAltSent case (body instanceof BaroAltSent): '''«body.createRunStat»'''
+			CompStatusSent case (body instanceof CompStatusSent): '''«body.createRunStat»,new BaroSentence(this.app,this.drone))'''
+			default: '''foutje'''
+		}
+	}
+	
+	def createRunStat(BaroAltSent s) {
+		var body = s.sent;
+		switch body{
 			EqualSent case (body instanceof EqualSent): '''new BaroSentence(«body.createRunStat» , this.app, this.drone)'''
 			GreaterSent case (body instanceof GreaterSent): '''new BaroSentence(«body.createRunStat» , this.app, this.drone)'''
 			LessSent case (body instanceof LessSent): '''new BaroSentence(«body.createRunStat» , this.app, this.drone)'''
 			default: '''foutje'''
 		}
+	}
+	
+	def createRunStat(CompStatusSent s) {
+		'''new CompStatusSentence("«s.status»"'''
 	}
 	
 	

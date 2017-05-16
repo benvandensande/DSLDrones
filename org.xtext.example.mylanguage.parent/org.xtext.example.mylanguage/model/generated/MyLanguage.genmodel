@@ -21,11 +21,20 @@
     <genClasses ecoreClass="MyLanguage.ecore#//Then"/>
     <genClasses ecoreClass="MyLanguage.ecore#//When"/>
     <genClasses ecoreClass="MyLanguage.ecore#//StatementBody"/>
+    <genClasses ecoreClass="MyLanguage.ecore#//CompStatusSent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//CompStatusSent/status"/>
+    </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//BaroSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BaroSent/sent"/>
     </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//BaroAltSent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BaroAltSent/sent"/>
+    </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//SonarSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//SonarSent/sent"/>
+    </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//SonarDistanceSent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//SonarDistanceSent/sent"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//NotificationSent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//NotificationSent/not"/>
@@ -37,6 +46,9 @@
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//BatterySent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BatterySent/sent"/>
+    </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//BatteryLevelSent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BatteryLevelSent/sent"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//PeopleSent"/>
     <genClasses ecoreClass="MyLanguage.ecore#//PeoplePosSent">
@@ -63,9 +75,6 @@
     <genClasses ecoreClass="MyLanguage.ecore#//Robot"/>
     <genClasses ecoreClass="MyLanguage.ecore#//RobotAutoPilot">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotAutoPilot/status"/>
-    </genClasses>
-    <genClasses ecoreClass="MyLanguage.ecore#//RedundantComponent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RedundantComponent/component"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//PayloadSent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//PayloadSent/load"/>
@@ -115,9 +124,6 @@
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//EnvironmentSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//EnvironmentSent/body"/>
-    </genClasses>
-    <genClasses ecoreClass="MyLanguage.ecore#//FailingComponentSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//FailingComponentSent/component"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//RiskSent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RiskSent/level"/>

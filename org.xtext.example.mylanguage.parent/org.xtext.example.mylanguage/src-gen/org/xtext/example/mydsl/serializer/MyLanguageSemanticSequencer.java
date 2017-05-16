@@ -14,15 +14,17 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.example.mydsl.myLanguage.BaroAltSent;
 import org.xtext.example.mydsl.myLanguage.BaroSent;
+import org.xtext.example.mydsl.myLanguage.BatteryLevelSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
+import org.xtext.example.mydsl.myLanguage.CompStatusSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
 import org.xtext.example.mydsl.myLanguage.EqualSent;
-import org.xtext.example.mydsl.myLanguage.FailingComponentSent;
 import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.HOUR;
@@ -40,7 +42,6 @@ import org.xtext.example.mydsl.myLanguage.PayloadSent;
 import org.xtext.example.mydsl.myLanguage.PeopleNumbSent;
 import org.xtext.example.mydsl.myLanguage.PeoplePosSent;
 import org.xtext.example.mydsl.myLanguage.PercentUnit;
-import org.xtext.example.mydsl.myLanguage.RedundantComponent;
 import org.xtext.example.mydsl.myLanguage.RiskSent;
 import org.xtext.example.mydsl.myLanguage.RobotAutoPilot;
 import org.xtext.example.mydsl.myLanguage.RobotDistanceSent;
@@ -48,6 +49,7 @@ import org.xtext.example.mydsl.myLanguage.RobotPositionSent;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
 import org.xtext.example.mydsl.myLanguage.SECONDS;
+import org.xtext.example.mydsl.myLanguage.SonarDistanceSent;
 import org.xtext.example.mydsl.myLanguage.SonarSent;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Test;
@@ -72,8 +74,14 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == MyLanguagePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case MyLanguagePackage.BARO_ALT_SENT:
+				sequence_BaroAltSent(context, (BaroAltSent) semanticObject); 
+				return; 
 			case MyLanguagePackage.BARO_SENT:
 				sequence_BaroSent(context, (BaroSent) semanticObject); 
+				return; 
+			case MyLanguagePackage.BATTERY_LEVEL_SENT:
+				sequence_BatteryLevelSent(context, (BatteryLevelSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.BATTERY_SENT:
 				sequence_BatterySent(context, (BatterySent) semanticObject); 
@@ -83,6 +91,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.CIRCLE_POSITION:
 				sequence_CirclePosition(context, (CirclePosition) semanticObject); 
+				return; 
+			case MyLanguagePackage.COMP_STATUS_SENT:
+				sequence_CompStatusSent(context, (CompStatusSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.DISTANCE_TO_LOCATION_SENT:
 				sequence_DistanceToLocationSent(context, (DistanceToLocationSent) semanticObject); 
@@ -95,9 +106,6 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.EQUAL_SENT:
 				sequence_EqualSent(context, (EqualSent) semanticObject); 
-				return; 
-			case MyLanguagePackage.FAILING_COMPONENT_SENT:
-				sequence_FailingComponentSent(context, (FailingComponentSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.GIVEN:
 				sequence_Given(context, (Given) semanticObject); 
@@ -147,9 +155,6 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MyLanguagePackage.PERCENT_UNIT:
 				sequence_PercentUnit(context, (PercentUnit) semanticObject); 
 				return; 
-			case MyLanguagePackage.REDUNDANT_COMPONENT:
-				sequence_RedundantComponent(context, (RedundantComponent) semanticObject); 
-				return; 
 			case MyLanguagePackage.RISK_SENT:
 				sequence_RiskSent(context, (RiskSent) semanticObject); 
 				return; 
@@ -170,6 +175,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.SECONDS:
 				sequence_SECONDS(context, (SECONDS) semanticObject); 
+				return; 
+			case MyLanguagePackage.SONAR_DISTANCE_SENT:
+				sequence_SonarDistanceSent(context, (SonarDistanceSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.SONAR_SENT:
 				sequence_SonarSent(context, (SonarSent) semanticObject); 
@@ -202,13 +210,37 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     StatementBody returns BaroSent
-	 *     BaroSent returns BaroSent
+	 *     BaroAltSent returns BaroAltSent
 	 *
 	 * Constraint:
 	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
 	 */
+	protected void sequence_BaroAltSent(ISerializationContext context, BaroAltSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StatementBody returns BaroSent
+	 *     BaroSent returns BaroSent
+	 *
+	 * Constraint:
+	 *     (sent=BaroAltSent | sent=CompStatusSent)
+	 */
 	protected void sequence_BaroSent(ISerializationContext context, BaroSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     BatteryLevelSent returns BatteryLevelSent
+	 *
+	 * Constraint:
+	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 */
+	protected void sequence_BatteryLevelSent(ISerializationContext context, BatteryLevelSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -219,7 +251,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     BatterySent returns BatterySent
 	 *
 	 * Constraint:
-	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 *     (sent=BatteryLevelSent | sent=CompStatusSent)
 	 */
 	protected void sequence_BatterySent(ISerializationContext context, BatterySent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -259,6 +291,24 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCirclePositionAccess().getToleranceDistanceUnitParserRuleCall_4_0(), semanticObject.getTolerance());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CompStatusSent returns CompStatusSent
+	 *
+	 * Constraint:
+	 *     status=COMPSTATUS
+	 */
+	protected void sequence_CompStatusSent(ISerializationContext context, CompStatusSent semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.COMP_STATUS_SENT__STATUS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.COMP_STATUS_SENT__STATUS));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCompStatusSentAccess().getStatusCOMPSTATUSParserRuleCall_2_0(), semanticObject.getStatus());
 		feeder.finish();
 	}
 	
@@ -314,26 +364,6 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     StatementBody returns FailingComponentSent
-	 *     Robot returns FailingComponentSent
-	 *     FailingComponentSent returns FailingComponentSent
-	 *
-	 * Constraint:
-	 *     component=COMPONENT
-	 */
-	protected void sequence_FailingComponentSent(ISerializationContext context, FailingComponentSent semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.FAILING_COMPONENT_SENT__COMPONENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.FAILING_COMPONENT_SENT__COMPONENT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFailingComponentSentAccess().getComponentCOMPONENTParserRuleCall_0_0(), semanticObject.getComponent());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Statement returns Given
 	 *     Given returns Given
 	 *
@@ -369,7 +399,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     HOUR returns HOUR
 	 *
 	 * Constraint:
-	 *     value=DOUBLE
+	 *     value=PositiveDouble
 	 */
 	protected void sequence_HOUR(ISerializationContext context, HOUR semanticObject) {
 		if (errorAcceptor != null) {
@@ -377,7 +407,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.TIME_UNIT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getHOURAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getHOURAccess().getValuePositiveDoubleParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -457,7 +487,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     MINUTES returns MINUTES
 	 *
 	 * Constraint:
-	 *     value=DOUBLE
+	 *     value=PositiveDouble
 	 */
 	protected void sequence_MINUTES(ISerializationContext context, MINUTES semanticObject) {
 		if (errorAcceptor != null) {
@@ -465,7 +495,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.TIME_UNIT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMINUTESAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getMINUTESAccess().getValuePositiveDoubleParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -614,7 +644,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     PercentUnit returns PercentUnit
 	 *
 	 * Constraint:
-	 *     value=DOUBLE
+	 *     value=PositiveDouble
 	 */
 	protected void sequence_PercentUnit(ISerializationContext context, PercentUnit semanticObject) {
 		if (errorAcceptor != null) {
@@ -622,27 +652,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.PERCENT_UNIT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPercentUnitAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     StatementBody returns RedundantComponent
-	 *     Robot returns RedundantComponent
-	 *     RedundantComponent returns RedundantComponent
-	 *
-	 * Constraint:
-	 *     component=COMPONENT
-	 */
-	protected void sequence_RedundantComponent(ISerializationContext context, RedundantComponent semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.REDUNDANT_COMPONENT__COMPONENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.REDUNDANT_COMPONENT__COMPONENT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRedundantComponentAccess().getComponentCOMPONENTParserRuleCall_0_0(), semanticObject.getComponent());
+		feeder.accept(grammarAccess.getPercentUnitAccess().getValuePositiveDoubleParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -761,7 +771,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     SECONDS returns SECONDS
 	 *
 	 * Constraint:
-	 *     value=DOUBLE
+	 *     value=PositiveDouble
 	 */
 	protected void sequence_SECONDS(ISerializationContext context, SECONDS semanticObject) {
 		if (errorAcceptor != null) {
@@ -769,8 +779,20 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.TIME_UNIT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSECONDSAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getSECONDSAccess().getValuePositiveDoubleParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SonarDistanceSent returns SonarDistanceSent
+	 *
+	 * Constraint:
+	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 */
+	protected void sequence_SonarDistanceSent(ISerializationContext context, SonarDistanceSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -780,7 +802,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     SonarSent returns SonarSent
 	 *
 	 * Constraint:
-	 *     (sent=GreaterSent | sent=LessSent | sent=EqualSent)
+	 *     (sent=SonarDistanceSent | sent=CompStatusSent)
 	 */
 	protected void sequence_SonarSent(ISerializationContext context, SonarSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

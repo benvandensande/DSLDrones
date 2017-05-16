@@ -37,9 +37,12 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getStatementBodyAccess().getAlternatives(), "rule__StatementBody__Alternatives");
-					put(grammarAccess.getBaroSentAccess().getSentAlternatives_3_0(), "rule__BaroSent__SentAlternatives_3_0");
-					put(grammarAccess.getSonarSentAccess().getSentAlternatives_3_0(), "rule__SonarSent__SentAlternatives_3_0");
-					put(grammarAccess.getBatterySentAccess().getSentAlternatives_3_0(), "rule__BatterySent__SentAlternatives_3_0");
+					put(grammarAccess.getBaroSentAccess().getSentAlternatives_1_0(), "rule__BaroSent__SentAlternatives_1_0");
+					put(grammarAccess.getBaroAltSentAccess().getSentAlternatives_2_0(), "rule__BaroAltSent__SentAlternatives_2_0");
+					put(grammarAccess.getSonarSentAccess().getSentAlternatives_1_0(), "rule__SonarSent__SentAlternatives_1_0");
+					put(grammarAccess.getSonarDistanceSentAccess().getSentAlternatives_2_0(), "rule__SonarDistanceSent__SentAlternatives_2_0");
+					put(grammarAccess.getBatterySentAccess().getSentAlternatives_1_0(), "rule__BatterySent__SentAlternatives_1_0");
+					put(grammarAccess.getBatteryLevelSentAccess().getSentAlternatives_2_0(), "rule__BatteryLevelSent__SentAlternatives_2_0");
 					put(grammarAccess.getPeopleSentAccess().getAlternatives_1(), "rule__PeopleSent__Alternatives_1");
 					put(grammarAccess.getPeoplePosSentAccess().getToleranceAlternatives_5_0(), "rule__PeoplePosSent__ToleranceAlternatives_5_0");
 					put(grammarAccess.getMissionSentAccess().getAlternatives_1(), "rule__MissionSent__Alternatives_1");
@@ -56,7 +59,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMISSIONSTATUSAccess().getAlternatives(), "rule__MISSIONSTATUS__Alternatives");
 					put(grammarAccess.getMISSIONRISKLEVELAccess().getAlternatives(), "rule__MISSIONRISKLEVEL__Alternatives");
 					put(grammarAccess.getCOLLISIONRISKLEVELAccess().getAlternatives(), "rule__COLLISIONRISKLEVEL__Alternatives");
-					put(grammarAccess.getCOMPONENTAccess().getAlternatives(), "rule__COMPONENT__Alternatives");
+					put(grammarAccess.getCOMPSTATUSAccess().getAlternatives(), "rule__COMPSTATUS__Alternatives");
 					put(grammarAccess.getDistanceUnitAccess().getAlternatives(), "rule__DistanceUnit__Alternatives");
 					put(grammarAccess.getTimeUnitAccess().getAlternatives(), "rule__TimeUnit__Alternatives");
 					put(grammarAccess.getTestAccess().getGroup(), "rule__Test__Group__0");
@@ -64,12 +67,16 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getGroup(), "rule__Given__Group__0");
 					put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
 					put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
+					put(grammarAccess.getCompStatusSentAccess().getGroup(), "rule__CompStatusSent__Group__0");
 					put(grammarAccess.getBaroSentAccess().getGroup(), "rule__BaroSent__Group__0");
+					put(grammarAccess.getBaroAltSentAccess().getGroup(), "rule__BaroAltSent__Group__0");
 					put(grammarAccess.getSonarSentAccess().getGroup(), "rule__SonarSent__Group__0");
+					put(grammarAccess.getSonarDistanceSentAccess().getGroup(), "rule__SonarDistanceSent__Group__0");
 					put(grammarAccess.getNotificationSentAccess().getGroup(), "rule__NotificationSent__Group__0");
 					put(grammarAccess.getTimeSentAccess().getGroup(), "rule__TimeSent__Group__0");
 					put(grammarAccess.getTimeIntervalAccess().getGroup(), "rule__TimeInterval__Group__0");
 					put(grammarAccess.getBatterySentAccess().getGroup(), "rule__BatterySent__Group__0");
+					put(grammarAccess.getBatteryLevelSentAccess().getGroup(), "rule__BatteryLevelSent__Group__0");
 					put(grammarAccess.getPeopleSentAccess().getGroup(), "rule__PeopleSent__Group__0");
 					put(grammarAccess.getPeoplePosSentAccess().getGroup(), "rule__PeoplePosSent__Group__0");
 					put(grammarAccess.getPeopleNumbSentAccess().getGroup(), "rule__PeopleNumbSent__Group__0");
@@ -79,7 +86,6 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMissionStatusSentAccess().getGroup(), "rule__MissionStatusSent__Group__0");
 					put(grammarAccess.getRobotAccess().getGroup(), "rule__Robot__Group__0");
 					put(grammarAccess.getRobotAutoPilotAccess().getGroup(), "rule__RobotAutoPilot__Group__0");
-					put(grammarAccess.getRedundantComponentAccess().getGroup(), "rule__RedundantComponent__Group__0");
 					put(grammarAccess.getPayloadSentAccess().getGroup(), "rule__PayloadSent__Group__0");
 					put(grammarAccess.getRobotDistanceSentAccess().getGroup(), "rule__RobotDistanceSent__Group__0");
 					put(grammarAccess.getDistanceToLocationSentAccess().getGroup(), "rule__DistanceToLocationSent__Group__0");
@@ -93,7 +99,6 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSpherePositionAccess().getGroup(), "rule__SpherePosition__Group__0");
 					put(grammarAccess.getRobotSpeedSentAccess().getGroup(), "rule__RobotSpeedSent__Group__0");
 					put(grammarAccess.getEnvironmentSentAccess().getGroup(), "rule__EnvironmentSent__Group__0");
-					put(grammarAccess.getFailingComponentSentAccess().getGroup(), "rule__FailingComponentSent__Group__0");
 					put(grammarAccess.getRiskSentAccess().getGroup(), "rule__RiskSent__Group__0");
 					put(grammarAccess.getToleranceSentAccess().getGroup(), "rule__ToleranceSent__Group__0");
 					put(grammarAccess.getSECONDSAccess().getGroup(), "rule__SECONDS__Group__0");
@@ -106,6 +111,8 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPercentUnitAccess().getGroup(), "rule__PercentUnit__Group__0");
 					put(grammarAccess.getDOUBLEAccess().getGroup(), "rule__DOUBLE__Group__0");
 					put(grammarAccess.getDOUBLEAccess().getGroup_2(), "rule__DOUBLE__Group_2__0");
+					put(grammarAccess.getPositiveDoubleAccess().getGroup(), "rule__PositiveDouble__Group__0");
+					put(grammarAccess.getPositiveDoubleAccess().getGroup_1(), "rule__PositiveDouble__Group_1__0");
 					put(grammarAccess.getTestFileAccess().getTestsAssignment(), "rule__TestFile__TestsAssignment");
 					put(grammarAccess.getTestAccess().getNameAssignment_1(), "rule__Test__NameAssignment_1");
 					put(grammarAccess.getTestAccess().getDescriptionAssignment_2_1(), "rule__Test__DescriptionAssignment_2_1");
@@ -113,12 +120,16 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getBodyAssignment_1(), "rule__Given__BodyAssignment_1");
 					put(grammarAccess.getThenAccess().getBodyAssignment_1(), "rule__Then__BodyAssignment_1");
 					put(grammarAccess.getWhenAccess().getBodyAssignment_1(), "rule__When__BodyAssignment_1");
-					put(grammarAccess.getBaroSentAccess().getSentAssignment_3(), "rule__BaroSent__SentAssignment_3");
-					put(grammarAccess.getSonarSentAccess().getSentAssignment_3(), "rule__SonarSent__SentAssignment_3");
+					put(grammarAccess.getCompStatusSentAccess().getStatusAssignment_2(), "rule__CompStatusSent__StatusAssignment_2");
+					put(grammarAccess.getBaroSentAccess().getSentAssignment_1(), "rule__BaroSent__SentAssignment_1");
+					put(grammarAccess.getBaroAltSentAccess().getSentAssignment_2(), "rule__BaroAltSent__SentAssignment_2");
+					put(grammarAccess.getSonarSentAccess().getSentAssignment_1(), "rule__SonarSent__SentAssignment_1");
+					put(grammarAccess.getSonarDistanceSentAccess().getSentAssignment_2(), "rule__SonarDistanceSent__SentAssignment_2");
 					put(grammarAccess.getNotificationSentAccess().getNotAssignment_0(), "rule__NotificationSent__NotAssignment_0");
 					put(grammarAccess.getTimeIntervalAccess().getFirstAssignment_3(), "rule__TimeInterval__FirstAssignment_3");
 					put(grammarAccess.getTimeIntervalAccess().getSecondAssignment_5(), "rule__TimeInterval__SecondAssignment_5");
-					put(grammarAccess.getBatterySentAccess().getSentAssignment_3(), "rule__BatterySent__SentAssignment_3");
+					put(grammarAccess.getBatterySentAccess().getSentAssignment_1(), "rule__BatterySent__SentAssignment_1");
+					put(grammarAccess.getBatteryLevelSentAccess().getSentAssignment_2(), "rule__BatteryLevelSent__SentAssignment_2");
 					put(grammarAccess.getPeoplePosSentAccess().getPosXAssignment_2(), "rule__PeoplePosSent__PosXAssignment_2");
 					put(grammarAccess.getPeoplePosSentAccess().getPosYAssignment_3(), "rule__PeoplePosSent__PosYAssignment_3");
 					put(grammarAccess.getPeoplePosSentAccess().getPosZAssignment_4(), "rule__PeoplePosSent__PosZAssignment_4");
@@ -130,7 +141,6 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMissionRiskLevelSentAccess().getRisklevelAssignment_2(), "rule__MissionRiskLevelSent__RisklevelAssignment_2");
 					put(grammarAccess.getMissionStatusSentAccess().getStateAssignment_2(), "rule__MissionStatusSent__StateAssignment_2");
 					put(grammarAccess.getRobotAutoPilotAccess().getStatusAssignment_2(), "rule__RobotAutoPilot__StatusAssignment_2");
-					put(grammarAccess.getRedundantComponentAccess().getComponentAssignment_0(), "rule__RedundantComponent__ComponentAssignment_0");
 					put(grammarAccess.getPayloadSentAccess().getLoadAssignment_0(), "rule__PayloadSent__LoadAssignment_0");
 					put(grammarAccess.getRobotDistanceSentAccess().getSentAssignment_2(), "rule__RobotDistanceSent__SentAssignment_2");
 					put(grammarAccess.getDistanceToLocationSentAccess().getPosXAssignment_0(), "rule__DistanceToLocationSent__PosXAssignment_0");
@@ -154,7 +164,6 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRobotSpeedSentAccess().getSpeedYAssignment_3(), "rule__RobotSpeedSent__SpeedYAssignment_3");
 					put(grammarAccess.getRobotSpeedSentAccess().getSpeedZAssignment_4(), "rule__RobotSpeedSent__SpeedZAssignment_4");
 					put(grammarAccess.getEnvironmentSentAccess().getBodyAssignment_3(), "rule__EnvironmentSent__BodyAssignment_3");
-					put(grammarAccess.getFailingComponentSentAccess().getComponentAssignment_0(), "rule__FailingComponentSent__ComponentAssignment_0");
 					put(grammarAccess.getRiskSentAccess().getLevelAssignment_2(), "rule__RiskSent__LevelAssignment_2");
 					put(grammarAccess.getToleranceSentAccess().getUnitAssignment_2(), "rule__ToleranceSent__UnitAssignment_2");
 					put(grammarAccess.getSECONDSAccess().getValueAssignment_1(), "rule__SECONDS__ValueAssignment_1");

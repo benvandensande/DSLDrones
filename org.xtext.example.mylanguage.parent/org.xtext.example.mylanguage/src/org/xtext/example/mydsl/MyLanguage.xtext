@@ -30,14 +30,31 @@ When:
 StatementBody:
 	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
 	| NotificationSent | BatterySent | SonarSent | BaroSent;
+	
+
+CompStatusSent:
+	'status''is'
+	status = COMPSTATUS
+;
+
 
 BaroSent:
-	'Barometer''altitudereading''is'
+	'Barometer'
+	sent = (BaroAltSent|CompStatusSent)
+;
+
+BaroAltSent:
+	'altitudereading''is'
 	sent = (GreaterSent | LessSent | EqualSent)
 ;
 
 SonarSent:
-	'Sonar''distancereading''is'
+	'Sonar'
+	sent = (SonarDistanceSent|CompStatusSent)
+;
+
+SonarDistanceSent:
+	'distancereading''is'
 	sent = (GreaterSent | LessSent | EqualSent)
 ;
 
@@ -57,7 +74,12 @@ TimeInterval:
 ;
 
 BatterySent:
-	'Battery''level' 'is'
+	'Battery'
+	sent = (BatteryLevelSent|CompStatusSent)
+;
+
+BatteryLevelSent:
+	'level' 'is'
 	sent = (GreaterSent | LessSent | EqualSent)
 ;
 
@@ -105,18 +127,13 @@ Robot:
 	'Robot'
 	(RobotPositionSent | RobotSpeedSent | RobotStateSent 
 		| RobotDistanceSent | RiskSent  | PayloadSent
-		| FailingComponentSent | RedundantComponent | RobotAutoPilot
+		| RobotAutoPilot
 	)
 ;
 
 RobotAutoPilot:
 	'autopilot''is'
 	status=('ON'|'OFF')
-;
-
-RedundantComponent:
-	component=COMPONENT
-	'is''used''as''redundant''component'
 ;
 
 PayloadSent:
@@ -193,11 +210,6 @@ EnvironmentSent:
 	body=(GreaterSent | LessSent | EqualSent)
 ;
 
-FailingComponentSent:
-	component=COMPONENT
-	'fails'
-;
-
 
 RiskSent:
 	'collisionrisk''is' level=COLLISIONRISKLEVEL
@@ -220,21 +232,23 @@ COLLISIONRISKLEVEL:
 	('SAFE'|'WARNING'|'CRITICAL')
 ;
 
-COMPONENT: ('motor' | 'camera' | 'GPS' | 'battery' | 'barometer' | 'scanner' | 'sonar' | 'autopilot');
+COMPSTATUS:
+	('ACTIVE' | 'FAILING' |'REDUNDANT')
+;
 
 DistanceUnit: (METER|CENTIMETER|MILLIMETER|KILOMETER);
 TimeUnit : (SECONDS|HOUR|MINUTES);
 
 SECONDS:
-	'seconds('value = DOUBLE')'
+	'seconds('value = PositiveDouble')'
 ;
 
 HOUR:
-	'hours('value = DOUBLE')'
+	'hours('value = PositiveDouble')'
 ;
 
 MINUTES:
-	'minutes('value = DOUBLE')'
+	'minutes('value = PositiveDouble')'
 ;
 
 METER:
@@ -251,9 +265,13 @@ KILOMETER:
 ;
 
 PercentUnit:
-	'percent('value=DOUBLE')'
+	'percent('value=PositiveDouble')'
 ;
 
 DOUBLE :
 	('-')? INT ('.' INT)?
+;
+
+PositiveDouble:
+	INT ('.' INT)?
 ;

@@ -20,11 +20,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="Then" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="When" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatementBody"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompStatusSent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BaroSent" eSuperTypes="#//StatementBody">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaroAltSent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SonarSent" eSuperTypes="#//StatementBody">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SonarDistanceSent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
@@ -39,6 +50,10 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BatterySent" eSuperTypes="#//StatementBody">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BatteryLevelSent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
@@ -68,9 +83,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Robot" eSuperTypes="#//StatementBody"/>
   <eClassifiers xsi:type="ecore:EClass" name="RobotAutoPilot" eSuperTypes="#//Robot">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RedundantComponent" eSuperTypes="#//Robot">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="component" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PayloadSent" eSuperTypes="#//Robot">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="load" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -132,9 +144,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="EnvironmentSent" eSuperTypes="#//StatementBody">
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FailingComponentSent" eSuperTypes="#//Robot">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="component" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RiskSent" eSuperTypes="#//Robot">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

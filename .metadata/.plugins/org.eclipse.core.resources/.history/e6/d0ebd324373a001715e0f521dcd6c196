@@ -1,0 +1,268 @@
+grammar org.xtext.example.mydsl.MyLanguage with org.eclipse.xtext.common.Terminals
+
+generate myLanguage "http://www.xtext.org/example/mydsl/MyLanguage"
+
+TestFile :
+    (tests+=Test)*;
+  
+Test:
+	'Test:' 
+	name=ID
+	('Description:' (description=STRING))?
+	(statements+=Statement)+
+	;
+
+Statement:
+	Given | When | Then;
+
+Given:
+	'Given:'
+	body=StatementBody;
+
+Then:
+	'Then:'
+	body=StatementBody;
+	
+When:
+	'When:'
+	body=StatementBody;
+	
+StatementBody:
+	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
+	| NotificationSent | BatterySent | SonarSent | BaroSent;
+
+
+BaroSent:
+	'Barometer'
+	(BaroAltSent|CompStatusSent)
+;
+
+BaroAltSent:
+	'altitudereading''is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+CompStatusSent:
+	status = ('fails'|'is active')
+;
+
+SonarSent:
+	'Sonar''distancereading''is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+
+NotificationSent:
+	not='Notification''status''is''sent'
+;
+	
+TimeSent:
+	'Time'
+	TimeInterval;
+
+TimeInterval:
+	'interval''in''['
+	first=TimeUnit ',' second=TimeUnit
+	']'
+;
+
+BatterySent:
+	'Battery''level' 'is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+PeopleSent:
+	'Person'
+	(PeopleNumbSent | PeoplePosSent)
+;
+
+PeoplePosSent:
+	'position''is'
+	posX=DOUBLE
+	posY=DOUBLE
+	posZ=DOUBLE
+	tolerance =(CirclePosition|SpherePosition)?
+;
+
+PeopleNumbSent:
+	'number''is'
+	amount=INT
+;
+
+MissionSent:
+	'Mission' 
+	(MissionStatusSent | MissionRiskLevelSent | MissionGoalSent)
+;
+
+MissionGoalSent:
+	'goal''is'
+	posX=DOUBLE
+	posY=DOUBLE
+	posZ=DOUBLE
+;
+
+MissionRiskLevelSent:
+	'missionsafety''is'
+	risklevel = MISSIONRISKLEVEL
+;
+
+MissionStatusSent:
+	'status''is' 
+	state=MISSIONSTATUS 
+;
+
+Robot:
+	'Robot'
+	(RobotPositionSent | RobotSpeedSent | RobotStateSent 
+		| RobotDistanceSent | RiskSent  | PayloadSent
+		| RedundantComponent | RobotAutoPilot
+	)
+;
+
+RobotAutoPilot:
+	'autopilot''is'
+	status=('ON'|'OFF')
+;
+
+RedundantComponent:
+	component=COMPONENT
+	'is''used''as''redundant''component'
+;
+
+PayloadSent:
+	load='payload''drops'
+;
+
+RobotDistanceSent:
+	'distance''to'
+	sent=(DistanceToObstaclesSent|DistanceToLocationSent)
+;
+
+DistanceToLocationSent:
+	posX=DOUBLE
+	posY=DOUBLE
+	posZ=DOUBLE
+	'is'
+	body=(GreaterSent | LessSent | EqualSent)
+	(tolerance=ToleranceSent)?
+;
+
+DistanceToObstaclesSent:
+	'obstacles''is'
+	body=(GreaterSent | LessSent | EqualSent)
+	(tolerance=ToleranceSent)?
+;
+
+EqualSent:
+	'equal''to'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+LessSent:
+	'lower''then'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+GreaterSent:
+	'greater''then'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+RobotStateSent:
+	'state''is' state = ID
+;
+
+RobotPositionSent:
+	'position''is'
+	posX=DOUBLE
+	posY=DOUBLE
+	posZ=DOUBLE
+	tolerance =(CirclePosition|SpherePosition)?
+;
+
+CirclePosition:
+	'within''circle''with''radius'
+	tolerance=DistanceUnit
+;
+
+
+SpherePosition:
+	'within''sphere''with''radius'
+	tolerance=DistanceUnit
+;
+
+RobotSpeedSent:
+	'speed''is'
+	speedX=DOUBLE
+	speedY=DOUBLE
+	speedZ=DOUBLE
+;
+
+EnvironmentSent:
+	'Environment''windspeed''is' 
+	body=(GreaterSent | LessSent | EqualSent)
+;
+
+
+RiskSent:
+	'collisionrisk''is' level=COLLISIONRISKLEVEL
+;
+
+ToleranceSent:
+	'with''tolerance'
+	unit = DistanceUnit
+;
+
+MISSIONSTATUS:
+	('ACTIVE' | 'UNACTIVE'| 'PAUSED')
+;
+
+MISSIONRISKLEVEL:
+	('SAFE' | 'UNSAFE')
+;
+
+COLLISIONRISKLEVEL:
+	('SAFE'|'WARNING'|'CRITICAL')
+;
+
+COMPONENT: ('motor' | 'camera' | 'GPS' | 'battery' | 'barometer' | 'scanner' | 'sonar' | 'autopilot');
+
+DistanceUnit: (METER|CENTIMETER|MILLIMETER|KILOMETER);
+TimeUnit : (SECONDS|HOUR|MINUTES);
+
+SECONDS:
+	'seconds('value = PositiveDouble')'
+;
+
+HOUR:
+	'hours('value = PositiveDouble')'
+;
+
+MINUTES:
+	'minutes('value = PositiveDouble')'
+;
+
+METER:
+	'meter('value = DOUBLE')'
+;
+CENTIMETER:
+	'centimeter('value = DOUBLE')'
+;
+MILLIMETER:
+	'millimeter('value = DOUBLE')'
+;
+KILOMETER:
+	'kilometer('value = DOUBLE')'
+;
+
+PercentUnit:
+	'percent('value=PositiveDouble')'
+;
+
+DOUBLE :
+	('-')? INT ('.' INT)?
+;
+
+PositiveDouble:
+	INT ('.' INT)?
+;

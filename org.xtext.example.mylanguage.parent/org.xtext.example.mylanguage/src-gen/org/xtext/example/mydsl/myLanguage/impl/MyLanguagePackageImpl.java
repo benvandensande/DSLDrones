@@ -10,15 +10,17 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.example.mydsl.myLanguage.BaroAltSent;
 import org.xtext.example.mydsl.myLanguage.BaroSent;
+import org.xtext.example.mydsl.myLanguage.BatteryLevelSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
+import org.xtext.example.mydsl.myLanguage.CompStatusSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
 import org.xtext.example.mydsl.myLanguage.EqualSent;
-import org.xtext.example.mydsl.myLanguage.FailingComponentSent;
 import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.LessSent;
@@ -34,7 +36,6 @@ import org.xtext.example.mydsl.myLanguage.PeopleNumbSent;
 import org.xtext.example.mydsl.myLanguage.PeoplePosSent;
 import org.xtext.example.mydsl.myLanguage.PeopleSent;
 import org.xtext.example.mydsl.myLanguage.PercentUnit;
-import org.xtext.example.mydsl.myLanguage.RedundantComponent;
 import org.xtext.example.mydsl.myLanguage.RiskSent;
 import org.xtext.example.mydsl.myLanguage.Robot;
 import org.xtext.example.mydsl.myLanguage.RobotAutoPilot;
@@ -42,6 +43,7 @@ import org.xtext.example.mydsl.myLanguage.RobotDistanceSent;
 import org.xtext.example.mydsl.myLanguage.RobotPositionSent;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
+import org.xtext.example.mydsl.myLanguage.SonarDistanceSent;
 import org.xtext.example.mydsl.myLanguage.SonarSent;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Statement;
@@ -117,6 +119,13 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass compStatusSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass baroSentEClass = null;
 
   /**
@@ -124,7 +133,21 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass baroAltSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass sonarSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sonarDistanceSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -153,6 +176,13 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass batterySentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass batteryLevelSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -216,13 +246,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass robotAutoPilotEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass redundantComponentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -314,13 +337,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass environmentSentEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass failingComponentSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -594,6 +610,26 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getCompStatusSent()
+  {
+    return compStatusSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCompStatusSent_Status()
+  {
+    return (EAttribute)compStatusSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getBaroSent()
   {
     return baroSentEClass;
@@ -614,6 +650,26 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBaroAltSent()
+  {
+    return baroAltSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBaroAltSent_Sent()
+  {
+    return (EReference)baroAltSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getSonarSent()
   {
     return sonarSentEClass;
@@ -627,6 +683,26 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EReference getSonarSent_Sent()
   {
     return (EReference)sonarSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSonarDistanceSent()
+  {
+    return sonarDistanceSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSonarDistanceSent_Sent()
+  {
+    return (EReference)sonarDistanceSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -707,6 +783,26 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EReference getBatterySent_Sent()
   {
     return (EReference)batterySentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBatteryLevelSent()
+  {
+    return batteryLevelSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBatteryLevelSent_Sent()
+  {
+    return (EReference)batteryLevelSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -907,26 +1003,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EAttribute getRobotAutoPilot_Status()
   {
     return (EAttribute)robotAutoPilotEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRedundantComponent()
-  {
-    return redundantComponentEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRedundantComponent_Component()
-  {
-    return (EAttribute)redundantComponentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1294,26 +1370,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFailingComponentSent()
-  {
-    return failingComponentSentEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFailingComponentSent_Component()
-  {
-    return (EAttribute)failingComponentSentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getRiskSent()
   {
     return riskSentEClass;
@@ -1528,11 +1584,20 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     statementBodyEClass = createEClass(STATEMENT_BODY);
 
+    compStatusSentEClass = createEClass(COMP_STATUS_SENT);
+    createEAttribute(compStatusSentEClass, COMP_STATUS_SENT__STATUS);
+
     baroSentEClass = createEClass(BARO_SENT);
     createEReference(baroSentEClass, BARO_SENT__SENT);
 
+    baroAltSentEClass = createEClass(BARO_ALT_SENT);
+    createEReference(baroAltSentEClass, BARO_ALT_SENT__SENT);
+
     sonarSentEClass = createEClass(SONAR_SENT);
     createEReference(sonarSentEClass, SONAR_SENT__SENT);
+
+    sonarDistanceSentEClass = createEClass(SONAR_DISTANCE_SENT);
+    createEReference(sonarDistanceSentEClass, SONAR_DISTANCE_SENT__SENT);
 
     notificationSentEClass = createEClass(NOTIFICATION_SENT);
     createEAttribute(notificationSentEClass, NOTIFICATION_SENT__NOT);
@@ -1545,6 +1610,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     batterySentEClass = createEClass(BATTERY_SENT);
     createEReference(batterySentEClass, BATTERY_SENT__SENT);
+
+    batteryLevelSentEClass = createEClass(BATTERY_LEVEL_SENT);
+    createEReference(batteryLevelSentEClass, BATTERY_LEVEL_SENT__SENT);
 
     peopleSentEClass = createEClass(PEOPLE_SENT);
 
@@ -1574,9 +1642,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     robotAutoPilotEClass = createEClass(ROBOT_AUTO_PILOT);
     createEAttribute(robotAutoPilotEClass, ROBOT_AUTO_PILOT__STATUS);
-
-    redundantComponentEClass = createEClass(REDUNDANT_COMPONENT);
-    createEAttribute(redundantComponentEClass, REDUNDANT_COMPONENT__COMPONENT);
 
     payloadSentEClass = createEClass(PAYLOAD_SENT);
     createEAttribute(payloadSentEClass, PAYLOAD_SENT__LOAD);
@@ -1626,9 +1691,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     environmentSentEClass = createEClass(ENVIRONMENT_SENT);
     createEReference(environmentSentEClass, ENVIRONMENT_SENT__BODY);
-
-    failingComponentSentEClass = createEClass(FAILING_COMPONENT_SENT);
-    createEAttribute(failingComponentSentEClass, FAILING_COMPONENT_SENT__COMPONENT);
 
     riskSentEClass = createEClass(RISK_SENT);
     createEAttribute(riskSentEClass, RISK_SENT__LEVEL);
@@ -1707,14 +1769,12 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     missionStatusSentEClass.getESuperTypes().add(this.getMissionSent());
     robotEClass.getESuperTypes().add(this.getStatementBody());
     robotAutoPilotEClass.getESuperTypes().add(this.getRobot());
-    redundantComponentEClass.getESuperTypes().add(this.getRobot());
     payloadSentEClass.getESuperTypes().add(this.getRobot());
     robotDistanceSentEClass.getESuperTypes().add(this.getRobot());
     robotStateSentEClass.getESuperTypes().add(this.getRobot());
     robotPositionSentEClass.getESuperTypes().add(this.getRobot());
     robotSpeedSentEClass.getESuperTypes().add(this.getRobot());
     environmentSentEClass.getESuperTypes().add(this.getStatementBody());
-    failingComponentSentEClass.getESuperTypes().add(this.getRobot());
     riskSentEClass.getESuperTypes().add(this.getRobot());
     secondsEClass.getESuperTypes().add(this.getTimeUnit());
     hourEClass.getESuperTypes().add(this.getTimeUnit());
@@ -1744,11 +1804,20 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(statementBodyEClass, StatementBody.class, "StatementBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(compStatusSentEClass, CompStatusSent.class, "CompStatusSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCompStatusSent_Status(), ecorePackage.getEString(), "status", null, 0, 1, CompStatusSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(baroSentEClass, BaroSent.class, "BaroSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBaroSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, BaroSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(baroAltSentEClass, BaroAltSent.class, "BaroAltSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBaroAltSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, BaroAltSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(sonarSentEClass, SonarSent.class, "SonarSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSonarSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, SonarSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sonarDistanceSentEClass, SonarDistanceSent.class, "SonarDistanceSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSonarDistanceSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, SonarDistanceSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notificationSentEClass, NotificationSent.class, "NotificationSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNotificationSent_Not(), ecorePackage.getEString(), "not", null, 0, 1, NotificationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1761,6 +1830,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(batterySentEClass, BatterySent.class, "BatterySent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBatterySent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, BatterySent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(batteryLevelSentEClass, BatteryLevelSent.class, "BatteryLevelSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBatteryLevelSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, BatteryLevelSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(peopleSentEClass, PeopleSent.class, "PeopleSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1790,9 +1862,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(robotAutoPilotEClass, RobotAutoPilot.class, "RobotAutoPilot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRobotAutoPilot_Status(), ecorePackage.getEString(), "status", null, 0, 1, RobotAutoPilot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(redundantComponentEClass, RedundantComponent.class, "RedundantComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRedundantComponent_Component(), ecorePackage.getEString(), "component", null, 0, 1, RedundantComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(payloadSentEClass, PayloadSent.class, "PayloadSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPayloadSent_Load(), ecorePackage.getEString(), "load", null, 0, 1, PayloadSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1842,9 +1911,6 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(environmentSentEClass, EnvironmentSent.class, "EnvironmentSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEnvironmentSent_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, EnvironmentSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(failingComponentSentEClass, FailingComponentSent.class, "FailingComponentSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFailingComponentSent_Component(), ecorePackage.getEString(), "component", null, 0, 1, FailingComponentSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(riskSentEClass, RiskSent.class, "RiskSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRiskSent_Level(), ecorePackage.getEString(), "level", null, 0, 1, RiskSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

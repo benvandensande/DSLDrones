@@ -229,93 +229,177 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//BaroSent
 		public RuleCall getBaroSentParserRuleCall_8() { return cBaroSentParserRuleCall_8; }
 	}
+	public class CompStatusSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.CompStatusSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStatusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cStatusAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cStatusCOMPSTATUSParserRuleCall_2_0 = (RuleCall)cStatusAssignment_2.eContents().get(0);
+		
+		//CompStatusSent:
+		//	'status' 'is'
+		//	status=COMPSTATUS;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'status' 'is' status=COMPSTATUS
+		public Group getGroup() { return cGroup; }
+		
+		//'status'
+		public Keyword getStatusKeyword_0() { return cStatusKeyword_0; }
+		
+		//'is'
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
+		
+		//status=COMPSTATUS
+		public Assignment getStatusAssignment_2() { return cStatusAssignment_2; }
+		
+		//COMPSTATUS
+		public RuleCall getStatusCOMPSTATUSParserRuleCall_2_0() { return cStatusCOMPSTATUSParserRuleCall_2_0; }
+	}
 	public class BaroSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.BaroSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBarometerKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cAltitudereadingKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSentAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Alternatives cSentAlternatives_3_0 = (Alternatives)cSentAssignment_3.eContents().get(0);
-		private final RuleCall cSentGreaterSentParserRuleCall_3_0_0 = (RuleCall)cSentAlternatives_3_0.eContents().get(0);
-		private final RuleCall cSentLessSentParserRuleCall_3_0_1 = (RuleCall)cSentAlternatives_3_0.eContents().get(1);
-		private final RuleCall cSentEqualSentParserRuleCall_3_0_2 = (RuleCall)cSentAlternatives_3_0.eContents().get(2);
+		private final Assignment cSentAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cSentAlternatives_1_0 = (Alternatives)cSentAssignment_1.eContents().get(0);
+		private final RuleCall cSentBaroAltSentParserRuleCall_1_0_0 = (RuleCall)cSentAlternatives_1_0.eContents().get(0);
+		private final RuleCall cSentCompStatusSentParserRuleCall_1_0_1 = (RuleCall)cSentAlternatives_1_0.eContents().get(1);
 		
 		//BaroSent:
-		//	'Barometer' 'altitudereading' 'is'
-		//	sent=(GreaterSent | LessSent | EqualSent);
+		//	'Barometer'
+		//	sent=(BaroAltSent | CompStatusSent);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Barometer' 'altitudereading' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		//'Barometer' sent=(BaroAltSent | CompStatusSent)
 		public Group getGroup() { return cGroup; }
 		
 		//'Barometer'
 		public Keyword getBarometerKeyword_0() { return cBarometerKeyword_0; }
 		
+		//sent=(BaroAltSent | CompStatusSent)
+		public Assignment getSentAssignment_1() { return cSentAssignment_1; }
+		
+		//(BaroAltSent | CompStatusSent)
+		public Alternatives getSentAlternatives_1_0() { return cSentAlternatives_1_0; }
+		
+		//BaroAltSent
+		public RuleCall getSentBaroAltSentParserRuleCall_1_0_0() { return cSentBaroAltSentParserRuleCall_1_0_0; }
+		
+		//CompStatusSent
+		public RuleCall getSentCompStatusSentParserRuleCall_1_0_1() { return cSentCompStatusSentParserRuleCall_1_0_1; }
+	}
+	public class BaroAltSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.BaroAltSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAltitudereadingKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cSentAlternatives_2_0 = (Alternatives)cSentAssignment_2.eContents().get(0);
+		private final RuleCall cSentGreaterSentParserRuleCall_2_0_0 = (RuleCall)cSentAlternatives_2_0.eContents().get(0);
+		private final RuleCall cSentLessSentParserRuleCall_2_0_1 = (RuleCall)cSentAlternatives_2_0.eContents().get(1);
+		private final RuleCall cSentEqualSentParserRuleCall_2_0_2 = (RuleCall)cSentAlternatives_2_0.eContents().get(2);
+		
+		//BaroAltSent:
+		//	'altitudereading' 'is'
+		//	sent=(GreaterSent | LessSent | EqualSent);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'altitudereading' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		public Group getGroup() { return cGroup; }
+		
 		//'altitudereading'
-		public Keyword getAltitudereadingKeyword_1() { return cAltitudereadingKeyword_1; }
+		public Keyword getAltitudereadingKeyword_0() { return cAltitudereadingKeyword_0; }
 		
 		//'is'
-		public Keyword getIsKeyword_2() { return cIsKeyword_2; }
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
 		//sent=(GreaterSent | LessSent | EqualSent)
-		public Assignment getSentAssignment_3() { return cSentAssignment_3; }
+		public Assignment getSentAssignment_2() { return cSentAssignment_2; }
 		
 		//(GreaterSent | LessSent | EqualSent)
-		public Alternatives getSentAlternatives_3_0() { return cSentAlternatives_3_0; }
+		public Alternatives getSentAlternatives_2_0() { return cSentAlternatives_2_0; }
 		
 		//GreaterSent
-		public RuleCall getSentGreaterSentParserRuleCall_3_0_0() { return cSentGreaterSentParserRuleCall_3_0_0; }
+		public RuleCall getSentGreaterSentParserRuleCall_2_0_0() { return cSentGreaterSentParserRuleCall_2_0_0; }
 		
 		//LessSent
-		public RuleCall getSentLessSentParserRuleCall_3_0_1() { return cSentLessSentParserRuleCall_3_0_1; }
+		public RuleCall getSentLessSentParserRuleCall_2_0_1() { return cSentLessSentParserRuleCall_2_0_1; }
 		
 		//EqualSent
-		public RuleCall getSentEqualSentParserRuleCall_3_0_2() { return cSentEqualSentParserRuleCall_3_0_2; }
+		public RuleCall getSentEqualSentParserRuleCall_2_0_2() { return cSentEqualSentParserRuleCall_2_0_2; }
 	}
 	public class SonarSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.SonarSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSonarKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cDistancereadingKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSentAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Alternatives cSentAlternatives_3_0 = (Alternatives)cSentAssignment_3.eContents().get(0);
-		private final RuleCall cSentGreaterSentParserRuleCall_3_0_0 = (RuleCall)cSentAlternatives_3_0.eContents().get(0);
-		private final RuleCall cSentLessSentParserRuleCall_3_0_1 = (RuleCall)cSentAlternatives_3_0.eContents().get(1);
-		private final RuleCall cSentEqualSentParserRuleCall_3_0_2 = (RuleCall)cSentAlternatives_3_0.eContents().get(2);
+		private final Assignment cSentAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cSentAlternatives_1_0 = (Alternatives)cSentAssignment_1.eContents().get(0);
+		private final RuleCall cSentSonarDistanceSentParserRuleCall_1_0_0 = (RuleCall)cSentAlternatives_1_0.eContents().get(0);
+		private final RuleCall cSentCompStatusSentParserRuleCall_1_0_1 = (RuleCall)cSentAlternatives_1_0.eContents().get(1);
 		
 		//SonarSent:
-		//	'Sonar' 'distancereading' 'is'
-		//	sent=(GreaterSent | LessSent | EqualSent);
+		//	'Sonar'
+		//	sent=(SonarDistanceSent | CompStatusSent);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Sonar' 'distancereading' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		//'Sonar' sent=(SonarDistanceSent | CompStatusSent)
 		public Group getGroup() { return cGroup; }
 		
 		//'Sonar'
 		public Keyword getSonarKeyword_0() { return cSonarKeyword_0; }
 		
+		//sent=(SonarDistanceSent | CompStatusSent)
+		public Assignment getSentAssignment_1() { return cSentAssignment_1; }
+		
+		//(SonarDistanceSent | CompStatusSent)
+		public Alternatives getSentAlternatives_1_0() { return cSentAlternatives_1_0; }
+		
+		//SonarDistanceSent
+		public RuleCall getSentSonarDistanceSentParserRuleCall_1_0_0() { return cSentSonarDistanceSentParserRuleCall_1_0_0; }
+		
+		//CompStatusSent
+		public RuleCall getSentCompStatusSentParserRuleCall_1_0_1() { return cSentCompStatusSentParserRuleCall_1_0_1; }
+	}
+	public class SonarDistanceSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.SonarDistanceSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDistancereadingKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cSentAlternatives_2_0 = (Alternatives)cSentAssignment_2.eContents().get(0);
+		private final RuleCall cSentGreaterSentParserRuleCall_2_0_0 = (RuleCall)cSentAlternatives_2_0.eContents().get(0);
+		private final RuleCall cSentLessSentParserRuleCall_2_0_1 = (RuleCall)cSentAlternatives_2_0.eContents().get(1);
+		private final RuleCall cSentEqualSentParserRuleCall_2_0_2 = (RuleCall)cSentAlternatives_2_0.eContents().get(2);
+		
+		//SonarDistanceSent:
+		//	'distancereading' 'is'
+		//	sent=(GreaterSent | LessSent | EqualSent);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'distancereading' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		public Group getGroup() { return cGroup; }
+		
 		//'distancereading'
-		public Keyword getDistancereadingKeyword_1() { return cDistancereadingKeyword_1; }
+		public Keyword getDistancereadingKeyword_0() { return cDistancereadingKeyword_0; }
 		
 		//'is'
-		public Keyword getIsKeyword_2() { return cIsKeyword_2; }
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
 		//sent=(GreaterSent | LessSent | EqualSent)
-		public Assignment getSentAssignment_3() { return cSentAssignment_3; }
+		public Assignment getSentAssignment_2() { return cSentAssignment_2; }
 		
 		//(GreaterSent | LessSent | EqualSent)
-		public Alternatives getSentAlternatives_3_0() { return cSentAlternatives_3_0; }
+		public Alternatives getSentAlternatives_2_0() { return cSentAlternatives_2_0; }
 		
 		//GreaterSent
-		public RuleCall getSentGreaterSentParserRuleCall_3_0_0() { return cSentGreaterSentParserRuleCall_3_0_0; }
+		public RuleCall getSentGreaterSentParserRuleCall_2_0_0() { return cSentGreaterSentParserRuleCall_2_0_0; }
 		
 		//LessSent
-		public RuleCall getSentLessSentParserRuleCall_3_0_1() { return cSentLessSentParserRuleCall_3_0_1; }
+		public RuleCall getSentLessSentParserRuleCall_2_0_1() { return cSentLessSentParserRuleCall_2_0_1; }
 		
 		//EqualSent
-		public RuleCall getSentEqualSentParserRuleCall_3_0_2() { return cSentEqualSentParserRuleCall_3_0_2; }
+		public RuleCall getSentEqualSentParserRuleCall_2_0_2() { return cSentEqualSentParserRuleCall_2_0_2; }
 	}
 	public class NotificationSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.NotificationSent");
@@ -421,45 +505,73 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.BatterySent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBatteryKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLevelKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSentAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Alternatives cSentAlternatives_3_0 = (Alternatives)cSentAssignment_3.eContents().get(0);
-		private final RuleCall cSentGreaterSentParserRuleCall_3_0_0 = (RuleCall)cSentAlternatives_3_0.eContents().get(0);
-		private final RuleCall cSentLessSentParserRuleCall_3_0_1 = (RuleCall)cSentAlternatives_3_0.eContents().get(1);
-		private final RuleCall cSentEqualSentParserRuleCall_3_0_2 = (RuleCall)cSentAlternatives_3_0.eContents().get(2);
+		private final Assignment cSentAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cSentAlternatives_1_0 = (Alternatives)cSentAssignment_1.eContents().get(0);
+		private final RuleCall cSentBatteryLevelSentParserRuleCall_1_0_0 = (RuleCall)cSentAlternatives_1_0.eContents().get(0);
+		private final RuleCall cSentCompStatusSentParserRuleCall_1_0_1 = (RuleCall)cSentAlternatives_1_0.eContents().get(1);
 		
 		//BatterySent:
-		//	'Battery' 'level' 'is'
-		//	sent=(GreaterSent | LessSent | EqualSent);
+		//	'Battery'
+		//	sent=(BatteryLevelSent | CompStatusSent);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Battery' 'level' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		//'Battery' sent=(BatteryLevelSent | CompStatusSent)
 		public Group getGroup() { return cGroup; }
 		
 		//'Battery'
 		public Keyword getBatteryKeyword_0() { return cBatteryKeyword_0; }
 		
+		//sent=(BatteryLevelSent | CompStatusSent)
+		public Assignment getSentAssignment_1() { return cSentAssignment_1; }
+		
+		//(BatteryLevelSent | CompStatusSent)
+		public Alternatives getSentAlternatives_1_0() { return cSentAlternatives_1_0; }
+		
+		//BatteryLevelSent
+		public RuleCall getSentBatteryLevelSentParserRuleCall_1_0_0() { return cSentBatteryLevelSentParserRuleCall_1_0_0; }
+		
+		//CompStatusSent
+		public RuleCall getSentCompStatusSentParserRuleCall_1_0_1() { return cSentCompStatusSentParserRuleCall_1_0_1; }
+	}
+	public class BatteryLevelSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.BatteryLevelSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLevelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cSentAlternatives_2_0 = (Alternatives)cSentAssignment_2.eContents().get(0);
+		private final RuleCall cSentGreaterSentParserRuleCall_2_0_0 = (RuleCall)cSentAlternatives_2_0.eContents().get(0);
+		private final RuleCall cSentLessSentParserRuleCall_2_0_1 = (RuleCall)cSentAlternatives_2_0.eContents().get(1);
+		private final RuleCall cSentEqualSentParserRuleCall_2_0_2 = (RuleCall)cSentAlternatives_2_0.eContents().get(2);
+		
+		//BatteryLevelSent:
+		//	'level' 'is'
+		//	sent=(GreaterSent | LessSent | EqualSent);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'level' 'is' sent=(GreaterSent | LessSent | EqualSent)
+		public Group getGroup() { return cGroup; }
+		
 		//'level'
-		public Keyword getLevelKeyword_1() { return cLevelKeyword_1; }
+		public Keyword getLevelKeyword_0() { return cLevelKeyword_0; }
 		
 		//'is'
-		public Keyword getIsKeyword_2() { return cIsKeyword_2; }
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
 		//sent=(GreaterSent | LessSent | EqualSent)
-		public Assignment getSentAssignment_3() { return cSentAssignment_3; }
+		public Assignment getSentAssignment_2() { return cSentAssignment_2; }
 		
 		//(GreaterSent | LessSent | EqualSent)
-		public Alternatives getSentAlternatives_3_0() { return cSentAlternatives_3_0; }
+		public Alternatives getSentAlternatives_2_0() { return cSentAlternatives_2_0; }
 		
 		//GreaterSent
-		public RuleCall getSentGreaterSentParserRuleCall_3_0_0() { return cSentGreaterSentParserRuleCall_3_0_0; }
+		public RuleCall getSentGreaterSentParserRuleCall_2_0_0() { return cSentGreaterSentParserRuleCall_2_0_0; }
 		
 		//LessSent
-		public RuleCall getSentLessSentParserRuleCall_3_0_1() { return cSentLessSentParserRuleCall_3_0_1; }
+		public RuleCall getSentLessSentParserRuleCall_2_0_1() { return cSentLessSentParserRuleCall_2_0_1; }
 		
 		//EqualSent
-		public RuleCall getSentEqualSentParserRuleCall_3_0_2() { return cSentEqualSentParserRuleCall_3_0_2; }
+		public RuleCall getSentEqualSentParserRuleCall_2_0_2() { return cSentEqualSentParserRuleCall_2_0_2; }
 	}
 	public class PeopleSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.PeopleSent");
@@ -723,25 +835,22 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRobotDistanceSentParserRuleCall_1_3 = (RuleCall)cAlternatives_1.eContents().get(3);
 		private final RuleCall cRiskSentParserRuleCall_1_4 = (RuleCall)cAlternatives_1.eContents().get(4);
 		private final RuleCall cPayloadSentParserRuleCall_1_5 = (RuleCall)cAlternatives_1.eContents().get(5);
-		private final RuleCall cFailingComponentSentParserRuleCall_1_6 = (RuleCall)cAlternatives_1.eContents().get(6);
-		private final RuleCall cRedundantComponentParserRuleCall_1_7 = (RuleCall)cAlternatives_1.eContents().get(7);
-		private final RuleCall cRobotAutoPilotParserRuleCall_1_8 = (RuleCall)cAlternatives_1.eContents().get(8);
+		private final RuleCall cRobotAutoPilotParserRuleCall_1_6 = (RuleCall)cAlternatives_1.eContents().get(6);
 		
 		//Robot:
 		//	'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent
 		//	| RobotDistanceSent | RiskSent | PayloadSent
-		//	| FailingComponentSent | RedundantComponent | RobotAutoPilot);
+		//	| RobotAutoPilot);
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent |
-		//FailingComponentSent | RedundantComponent | RobotAutoPilot)
+		//RobotAutoPilot)
 		public Group getGroup() { return cGroup; }
 		
 		//'Robot'
 		public Keyword getRobotKeyword_0() { return cRobotKeyword_0; }
 		
-		//RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent | FailingComponentSent
-		//| RedundantComponent | RobotAutoPilot
+		//RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent | RobotAutoPilot
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
 		//RobotPositionSent
@@ -762,14 +871,8 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//PayloadSent
 		public RuleCall getPayloadSentParserRuleCall_1_5() { return cPayloadSentParserRuleCall_1_5; }
 		
-		//FailingComponentSent
-		public RuleCall getFailingComponentSentParserRuleCall_1_6() { return cFailingComponentSentParserRuleCall_1_6; }
-		
-		//RedundantComponent
-		public RuleCall getRedundantComponentParserRuleCall_1_7() { return cRedundantComponentParserRuleCall_1_7; }
-		
 		//RobotAutoPilot
-		public RuleCall getRobotAutoPilotParserRuleCall_1_8() { return cRobotAutoPilotParserRuleCall_1_8; }
+		public RuleCall getRobotAutoPilotParserRuleCall_1_6() { return cRobotAutoPilotParserRuleCall_1_6; }
 	}
 	public class RobotAutoPilotElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.RobotAutoPilot");
@@ -806,46 +909,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'OFF'
 		public Keyword getStatusOFFKeyword_2_0_1() { return cStatusOFFKeyword_2_0_1; }
-	}
-	public class RedundantComponentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.RedundantComponent");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cComponentAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cComponentCOMPONENTParserRuleCall_0_0 = (RuleCall)cComponentAssignment_0.eContents().get(0);
-		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cUsedKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cAsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cRedundantKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cComponentKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//RedundantComponent:
-		//	component=COMPONENT
-		//	'is' 'used' 'as' 'redundant' 'component';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//component=COMPONENT 'is' 'used' 'as' 'redundant' 'component'
-		public Group getGroup() { return cGroup; }
-		
-		//component=COMPONENT
-		public Assignment getComponentAssignment_0() { return cComponentAssignment_0; }
-		
-		//COMPONENT
-		public RuleCall getComponentCOMPONENTParserRuleCall_0_0() { return cComponentCOMPONENTParserRuleCall_0_0; }
-		
-		//'is'
-		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
-		
-		//'used'
-		public Keyword getUsedKeyword_2() { return cUsedKeyword_2; }
-		
-		//'as'
-		public Keyword getAsKeyword_3() { return cAsKeyword_3; }
-		
-		//'redundant'
-		public Keyword getRedundantKeyword_4() { return cRedundantKeyword_4; }
-		
-		//'component'
-		public Keyword getComponentKeyword_5() { return cComponentKeyword_5; }
 	}
 	public class PayloadSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.PayloadSent");
@@ -1385,30 +1448,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//EqualSent
 		public RuleCall getBodyEqualSentParserRuleCall_3_0_2() { return cBodyEqualSentParserRuleCall_3_0_2; }
 	}
-	public class FailingComponentSentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.FailingComponentSent");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cComponentAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cComponentCOMPONENTParserRuleCall_0_0 = (RuleCall)cComponentAssignment_0.eContents().get(0);
-		private final Keyword cFailsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		
-		//FailingComponentSent:
-		//	component=COMPONENT
-		//	'fails';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//component=COMPONENT 'fails'
-		public Group getGroup() { return cGroup; }
-		
-		//component=COMPONENT
-		public Assignment getComponentAssignment_0() { return cComponentAssignment_0; }
-		
-		//COMPONENT
-		public RuleCall getComponentCOMPONENTParserRuleCall_0_0() { return cComponentCOMPONENTParserRuleCall_0_0; }
-		
-		//'fails'
-		public Keyword getFailsKeyword_1() { return cFailsKeyword_1; }
-	}
 	public class RiskSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.RiskSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1529,48 +1568,28 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'CRITICAL'
 		public Keyword getCRITICALKeyword_2() { return cCRITICALKeyword_2; }
 	}
-	public class COMPONENTElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.COMPONENT");
+	public class COMPSTATUSElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.COMPSTATUS");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cMotorKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cCameraKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final Keyword cGPSKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
-		private final Keyword cBatteryKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
-		private final Keyword cBarometerKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
-		private final Keyword cScannerKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
-		private final Keyword cSonarKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
-		private final Keyword cAutopilotKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Keyword cACTIVEKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cFAILINGKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cREDUNDANTKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		
-		//COMPONENT:
-		//	'motor' | 'camera' | 'GPS' | 'battery' | 'barometer' | 'scanner' | 'sonar' | 'autopilot';
+		//COMPSTATUS:
+		//	'ACTIVE' | 'FAILING' | 'REDUNDANT';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'motor' | 'camera' | 'GPS' | 'battery' | 'barometer' | 'scanner' | 'sonar' | 'autopilot'
+		//'ACTIVE' | 'FAILING' | 'REDUNDANT'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'motor'
-		public Keyword getMotorKeyword_0() { return cMotorKeyword_0; }
+		//'ACTIVE'
+		public Keyword getACTIVEKeyword_0() { return cACTIVEKeyword_0; }
 		
-		//'camera'
-		public Keyword getCameraKeyword_1() { return cCameraKeyword_1; }
+		//'FAILING'
+		public Keyword getFAILINGKeyword_1() { return cFAILINGKeyword_1; }
 		
-		//'GPS'
-		public Keyword getGPSKeyword_2() { return cGPSKeyword_2; }
-		
-		//'battery'
-		public Keyword getBatteryKeyword_3() { return cBatteryKeyword_3; }
-		
-		//'barometer'
-		public Keyword getBarometerKeyword_4() { return cBarometerKeyword_4; }
-		
-		//'scanner'
-		public Keyword getScannerKeyword_5() { return cScannerKeyword_5; }
-		
-		//'sonar'
-		public Keyword getSonarKeyword_6() { return cSonarKeyword_6; }
-		
-		//'autopilot'
-		public Keyword getAutopilotKeyword_7() { return cAutopilotKeyword_7; }
+		//'REDUNDANT'
+		public Keyword getREDUNDANTKeyword_2() { return cREDUNDANTKeyword_2; }
 	}
 	public class DistanceUnitElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.DistanceUnit");
@@ -1627,24 +1646,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSecondsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueDOUBLEParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValuePositiveDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//SECONDS:
-		//	'seconds(' value=DOUBLE ')';
+		//	'seconds(' value=PositiveDouble ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'seconds(' value=DOUBLE ')'
+		//'seconds(' value=PositiveDouble ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'seconds('
 		public Keyword getSecondsKeyword_0() { return cSecondsKeyword_0; }
 		
-		//value=DOUBLE
+		//value=PositiveDouble
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//DOUBLE
-		public RuleCall getValueDOUBLEParserRuleCall_1_0() { return cValueDOUBLEParserRuleCall_1_0; }
+		//PositiveDouble
+		public RuleCall getValuePositiveDoubleParserRuleCall_1_0() { return cValuePositiveDoubleParserRuleCall_1_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
@@ -1654,24 +1673,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHoursKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueDOUBLEParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValuePositiveDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//HOUR:
-		//	'hours(' value=DOUBLE ')';
+		//	'hours(' value=PositiveDouble ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'hours(' value=DOUBLE ')'
+		//'hours(' value=PositiveDouble ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'hours('
 		public Keyword getHoursKeyword_0() { return cHoursKeyword_0; }
 		
-		//value=DOUBLE
+		//value=PositiveDouble
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//DOUBLE
-		public RuleCall getValueDOUBLEParserRuleCall_1_0() { return cValueDOUBLEParserRuleCall_1_0; }
+		//PositiveDouble
+		public RuleCall getValuePositiveDoubleParserRuleCall_1_0() { return cValuePositiveDoubleParserRuleCall_1_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
@@ -1681,24 +1700,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMinutesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueDOUBLEParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValuePositiveDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//MINUTES:
-		//	'minutes(' value=DOUBLE ')';
+		//	'minutes(' value=PositiveDouble ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'minutes(' value=DOUBLE ')'
+		//'minutes(' value=PositiveDouble ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'minutes('
 		public Keyword getMinutesKeyword_0() { return cMinutesKeyword_0; }
 		
-		//value=DOUBLE
+		//value=PositiveDouble
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//DOUBLE
-		public RuleCall getValueDOUBLEParserRuleCall_1_0() { return cValueDOUBLEParserRuleCall_1_0; }
+		//PositiveDouble
+		public RuleCall getValuePositiveDoubleParserRuleCall_1_0() { return cValuePositiveDoubleParserRuleCall_1_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
@@ -1816,24 +1835,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPercentKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueDOUBLEParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValuePositiveDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//PercentUnit:
-		//	'percent(' value=DOUBLE ')';
+		//	'percent(' value=PositiveDouble ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'percent(' value=DOUBLE ')'
+		//'percent(' value=PositiveDouble ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'percent('
 		public Keyword getPercentKeyword_0() { return cPercentKeyword_0; }
 		
-		//value=DOUBLE
+		//value=PositiveDouble
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//DOUBLE
-		public RuleCall getValueDOUBLEParserRuleCall_1_0() { return cValueDOUBLEParserRuleCall_1_0; }
+		//PositiveDouble
+		public RuleCall getValuePositiveDoubleParserRuleCall_1_0() { return cValuePositiveDoubleParserRuleCall_1_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
@@ -1869,6 +1888,33 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getINTTerminalRuleCall_2_1() { return cINTTerminalRuleCall_2_1; }
 	}
+	public class PositiveDoubleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.PositiveDouble");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//PositiveDouble:
+		//	INT ('.' INT)?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//INT ('.' INT)?
+		public Group getGroup() { return cGroup; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		
+		//('.' INT)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_1_1() { return cINTTerminalRuleCall_1_1; }
+	}
 	
 	
 	private final TestFileElements pTestFile;
@@ -1878,12 +1924,16 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final ThenElements pThen;
 	private final WhenElements pWhen;
 	private final StatementBodyElements pStatementBody;
+	private final CompStatusSentElements pCompStatusSent;
 	private final BaroSentElements pBaroSent;
+	private final BaroAltSentElements pBaroAltSent;
 	private final SonarSentElements pSonarSent;
+	private final SonarDistanceSentElements pSonarDistanceSent;
 	private final NotificationSentElements pNotificationSent;
 	private final TimeSentElements pTimeSent;
 	private final TimeIntervalElements pTimeInterval;
 	private final BatterySentElements pBatterySent;
+	private final BatteryLevelSentElements pBatteryLevelSent;
 	private final PeopleSentElements pPeopleSent;
 	private final PeoplePosSentElements pPeoplePosSent;
 	private final PeopleNumbSentElements pPeopleNumbSent;
@@ -1893,7 +1943,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final MissionStatusSentElements pMissionStatusSent;
 	private final RobotElements pRobot;
 	private final RobotAutoPilotElements pRobotAutoPilot;
-	private final RedundantComponentElements pRedundantComponent;
 	private final PayloadSentElements pPayloadSent;
 	private final RobotDistanceSentElements pRobotDistanceSent;
 	private final DistanceToLocationSentElements pDistanceToLocationSent;
@@ -1907,13 +1956,12 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final SpherePositionElements pSpherePosition;
 	private final RobotSpeedSentElements pRobotSpeedSent;
 	private final EnvironmentSentElements pEnvironmentSent;
-	private final FailingComponentSentElements pFailingComponentSent;
 	private final RiskSentElements pRiskSent;
 	private final ToleranceSentElements pToleranceSent;
 	private final MISSIONSTATUSElements pMISSIONSTATUS;
 	private final MISSIONRISKLEVELElements pMISSIONRISKLEVEL;
 	private final COLLISIONRISKLEVELElements pCOLLISIONRISKLEVEL;
-	private final COMPONENTElements pCOMPONENT;
+	private final COMPSTATUSElements pCOMPSTATUS;
 	private final DistanceUnitElements pDistanceUnit;
 	private final TimeUnitElements pTimeUnit;
 	private final SECONDSElements pSECONDS;
@@ -1925,6 +1973,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final KILOMETERElements pKILOMETER;
 	private final PercentUnitElements pPercentUnit;
 	private final DOUBLEElements pDOUBLE;
+	private final PositiveDoubleElements pPositiveDouble;
 	
 	private final Grammar grammar;
 	
@@ -1942,12 +1991,16 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pThen = new ThenElements();
 		this.pWhen = new WhenElements();
 		this.pStatementBody = new StatementBodyElements();
+		this.pCompStatusSent = new CompStatusSentElements();
 		this.pBaroSent = new BaroSentElements();
+		this.pBaroAltSent = new BaroAltSentElements();
 		this.pSonarSent = new SonarSentElements();
+		this.pSonarDistanceSent = new SonarDistanceSentElements();
 		this.pNotificationSent = new NotificationSentElements();
 		this.pTimeSent = new TimeSentElements();
 		this.pTimeInterval = new TimeIntervalElements();
 		this.pBatterySent = new BatterySentElements();
+		this.pBatteryLevelSent = new BatteryLevelSentElements();
 		this.pPeopleSent = new PeopleSentElements();
 		this.pPeoplePosSent = new PeoplePosSentElements();
 		this.pPeopleNumbSent = new PeopleNumbSentElements();
@@ -1957,7 +2010,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMissionStatusSent = new MissionStatusSentElements();
 		this.pRobot = new RobotElements();
 		this.pRobotAutoPilot = new RobotAutoPilotElements();
-		this.pRedundantComponent = new RedundantComponentElements();
 		this.pPayloadSent = new PayloadSentElements();
 		this.pRobotDistanceSent = new RobotDistanceSentElements();
 		this.pDistanceToLocationSent = new DistanceToLocationSentElements();
@@ -1971,13 +2023,12 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSpherePosition = new SpherePositionElements();
 		this.pRobotSpeedSent = new RobotSpeedSentElements();
 		this.pEnvironmentSent = new EnvironmentSentElements();
-		this.pFailingComponentSent = new FailingComponentSentElements();
 		this.pRiskSent = new RiskSentElements();
 		this.pToleranceSent = new ToleranceSentElements();
 		this.pMISSIONSTATUS = new MISSIONSTATUSElements();
 		this.pMISSIONRISKLEVEL = new MISSIONRISKLEVELElements();
 		this.pCOLLISIONRISKLEVEL = new COLLISIONRISKLEVELElements();
-		this.pCOMPONENT = new COMPONENTElements();
+		this.pCOMPSTATUS = new COMPSTATUSElements();
 		this.pDistanceUnit = new DistanceUnitElements();
 		this.pTimeUnit = new TimeUnitElements();
 		this.pSECONDS = new SECONDSElements();
@@ -1989,6 +2040,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pKILOMETER = new KILOMETERElements();
 		this.pPercentUnit = new PercentUnitElements();
 		this.pDOUBLE = new DOUBLEElements();
+		this.pPositiveDouble = new PositiveDoubleElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -2094,9 +2146,20 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		return getStatementBodyAccess().getRule();
 	}
 	
+	//CompStatusSent:
+	//	'status' 'is'
+	//	status=COMPSTATUS;
+	public CompStatusSentElements getCompStatusSentAccess() {
+		return pCompStatusSent;
+	}
+	
+	public ParserRule getCompStatusSentRule() {
+		return getCompStatusSentAccess().getRule();
+	}
+	
 	//BaroSent:
-	//	'Barometer' 'altitudereading' 'is'
-	//	sent=(GreaterSent | LessSent | EqualSent);
+	//	'Barometer'
+	//	sent=(BaroAltSent | CompStatusSent);
 	public BaroSentElements getBaroSentAccess() {
 		return pBaroSent;
 	}
@@ -2105,15 +2168,37 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		return getBaroSentAccess().getRule();
 	}
 	
-	//SonarSent:
-	//	'Sonar' 'distancereading' 'is'
+	//BaroAltSent:
+	//	'altitudereading' 'is'
 	//	sent=(GreaterSent | LessSent | EqualSent);
+	public BaroAltSentElements getBaroAltSentAccess() {
+		return pBaroAltSent;
+	}
+	
+	public ParserRule getBaroAltSentRule() {
+		return getBaroAltSentAccess().getRule();
+	}
+	
+	//SonarSent:
+	//	'Sonar'
+	//	sent=(SonarDistanceSent | CompStatusSent);
 	public SonarSentElements getSonarSentAccess() {
 		return pSonarSent;
 	}
 	
 	public ParserRule getSonarSentRule() {
 		return getSonarSentAccess().getRule();
+	}
+	
+	//SonarDistanceSent:
+	//	'distancereading' 'is'
+	//	sent=(GreaterSent | LessSent | EqualSent);
+	public SonarDistanceSentElements getSonarDistanceSentAccess() {
+		return pSonarDistanceSent;
+	}
+	
+	public ParserRule getSonarDistanceSentRule() {
+		return getSonarDistanceSentAccess().getRule();
 	}
 	
 	//NotificationSent:
@@ -2150,14 +2235,25 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//BatterySent:
-	//	'Battery' 'level' 'is'
-	//	sent=(GreaterSent | LessSent | EqualSent);
+	//	'Battery'
+	//	sent=(BatteryLevelSent | CompStatusSent);
 	public BatterySentElements getBatterySentAccess() {
 		return pBatterySent;
 	}
 	
 	public ParserRule getBatterySentRule() {
 		return getBatterySentAccess().getRule();
+	}
+	
+	//BatteryLevelSent:
+	//	'level' 'is'
+	//	sent=(GreaterSent | LessSent | EqualSent);
+	public BatteryLevelSentElements getBatteryLevelSentAccess() {
+		return pBatteryLevelSent;
+	}
+	
+	public ParserRule getBatteryLevelSentRule() {
+		return getBatteryLevelSentAccess().getRule();
 	}
 	
 	//PeopleSent:
@@ -2243,7 +2339,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	//Robot:
 	//	'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent
 	//	| RobotDistanceSent | RiskSent | PayloadSent
-	//	| FailingComponentSent | RedundantComponent | RobotAutoPilot);
+	//	| RobotAutoPilot);
 	public RobotElements getRobotAccess() {
 		return pRobot;
 	}
@@ -2261,17 +2357,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRobotAutoPilotRule() {
 		return getRobotAutoPilotAccess().getRule();
-	}
-	
-	//RedundantComponent:
-	//	component=COMPONENT
-	//	'is' 'used' 'as' 'redundant' 'component';
-	public RedundantComponentElements getRedundantComponentAccess() {
-		return pRedundantComponent;
-	}
-	
-	public ParserRule getRedundantComponentRule() {
-		return getRedundantComponentAccess().getRule();
 	}
 	
 	//PayloadSent:
@@ -2423,17 +2508,6 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnvironmentSentAccess().getRule();
 	}
 	
-	//FailingComponentSent:
-	//	component=COMPONENT
-	//	'fails';
-	public FailingComponentSentElements getFailingComponentSentAccess() {
-		return pFailingComponentSent;
-	}
-	
-	public ParserRule getFailingComponentSentRule() {
-		return getFailingComponentSentAccess().getRule();
-	}
-	
 	//RiskSent:
 	//	'collisionrisk' 'is' level=COLLISIONRISKLEVEL;
 	public RiskSentElements getRiskSentAccess() {
@@ -2485,14 +2559,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		return getCOLLISIONRISKLEVELAccess().getRule();
 	}
 	
-	//COMPONENT:
-	//	'motor' | 'camera' | 'GPS' | 'battery' | 'barometer' | 'scanner' | 'sonar' | 'autopilot';
-	public COMPONENTElements getCOMPONENTAccess() {
-		return pCOMPONENT;
+	//COMPSTATUS:
+	//	'ACTIVE' | 'FAILING' | 'REDUNDANT';
+	public COMPSTATUSElements getCOMPSTATUSAccess() {
+		return pCOMPSTATUS;
 	}
 	
-	public ParserRule getCOMPONENTRule() {
-		return getCOMPONENTAccess().getRule();
+	public ParserRule getCOMPSTATUSRule() {
+		return getCOMPSTATUSAccess().getRule();
 	}
 	
 	//DistanceUnit:
@@ -2516,7 +2590,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//SECONDS:
-	//	'seconds(' value=DOUBLE ')';
+	//	'seconds(' value=PositiveDouble ')';
 	public SECONDSElements getSECONDSAccess() {
 		return pSECONDS;
 	}
@@ -2526,7 +2600,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//HOUR:
-	//	'hours(' value=DOUBLE ')';
+	//	'hours(' value=PositiveDouble ')';
 	public HOURElements getHOURAccess() {
 		return pHOUR;
 	}
@@ -2536,7 +2610,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MINUTES:
-	//	'minutes(' value=DOUBLE ')';
+	//	'minutes(' value=PositiveDouble ')';
 	public MINUTESElements getMINUTESAccess() {
 		return pMINUTES;
 	}
@@ -2586,7 +2660,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//PercentUnit:
-	//	'percent(' value=DOUBLE ')';
+	//	'percent(' value=PositiveDouble ')';
 	public PercentUnitElements getPercentUnitAccess() {
 		return pPercentUnit;
 	}
@@ -2603,6 +2677,16 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDOUBLERule() {
 		return getDOUBLEAccess().getRule();
+	}
+	
+	//PositiveDouble:
+	//	INT ('.' INT)?;
+	public PositiveDoubleElements getPositiveDoubleAccess() {
+		return pPositiveDouble;
+	}
+	
+	public ParserRule getPositiveDoubleRule() {
+		return getPositiveDoubleAccess().getRule();
 	}
 	
 	//terminal ID:

@@ -12,15 +12,30 @@ import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
-class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {override void complete_DOUBLE(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {
+	
+	override void complete_PositiveDouble(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("0.0","Natural number" , null, context))
+	}
+	
+	override void complete_DOUBLE(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		acceptor.accept(createCompletionProposal("0.0","DOUBLE" , null, context))
 	}
 	
-	override void complete_DistanceUnit(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		acceptor.accept(createCompletionProposal("kilometer","km" , null, context))
-		acceptor.accept(createCompletionProposal("meter","m" , null, context))
-		acceptor.accept(createCompletionProposal("centimeter","cm" , null, context))
-		acceptor.accept(createCompletionProposal("millimeter","mm" , null, context))
+	override void complete_METER(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("meter(0)","m" , null, context))
+	}
+	
+	override void complete_CENTIMETER(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("centimeter(0)","cm" , null, context))
+	}
+	
+	override void complete_MILLIMETER(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("millimeter(0)","mm" , null, context))
+	}
+	
+	override void complete_KILOMETER(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("kilometer(0)","km" , null, context))
 	}
 	
 	override void complete_MISSIONSTATUS(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
@@ -40,16 +55,6 @@ class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {ove
 		acceptor.accept(createCompletionProposal("UNSAFE","Unsafe" , null, context))
 	}
 	
-	override void complete_COMPONENT(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		acceptor.accept(createCompletionProposal("motor","Component - motor" , null, context))
-		acceptor.accept(createCompletionProposal("sonar","Component - sonar" , null, context))
-		acceptor.accept(createCompletionProposal("barometer","Component - barometer" , null, context))
-		acceptor.accept(createCompletionProposal("GPS","Component - GPS" , null, context))
-		acceptor.accept(createCompletionProposal("scanner","Component - scanner" , null, context))
-		acceptor.accept(createCompletionProposal("battery","Component - battery" , null, context))
-		acceptor.accept(createCompletionProposal("camera","Component - camera" , null, context))
-		acceptor.accept(createCompletionProposal("autopilot","Component - autopilot" , null, context))
-	}
 	
 	override void complete_NotificationSent(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		acceptor.accept(createCompletionProposal("Notification status is sent","Notification" , null, context))

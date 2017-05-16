@@ -72,12 +72,16 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.THEN: return createThen();
       case MyLanguagePackage.WHEN: return createWhen();
       case MyLanguagePackage.STATEMENT_BODY: return createStatementBody();
+      case MyLanguagePackage.COMP_STATUS_SENT: return createCompStatusSent();
       case MyLanguagePackage.BARO_SENT: return createBaroSent();
+      case MyLanguagePackage.BARO_ALT_SENT: return createBaroAltSent();
       case MyLanguagePackage.SONAR_SENT: return createSonarSent();
+      case MyLanguagePackage.SONAR_DISTANCE_SENT: return createSonarDistanceSent();
       case MyLanguagePackage.NOTIFICATION_SENT: return createNotificationSent();
       case MyLanguagePackage.TIME_SENT: return createTimeSent();
       case MyLanguagePackage.TIME_INTERVAL: return createTimeInterval();
       case MyLanguagePackage.BATTERY_SENT: return createBatterySent();
+      case MyLanguagePackage.BATTERY_LEVEL_SENT: return createBatteryLevelSent();
       case MyLanguagePackage.PEOPLE_SENT: return createPeopleSent();
       case MyLanguagePackage.PEOPLE_POS_SENT: return createPeoplePosSent();
       case MyLanguagePackage.PEOPLE_NUMB_SENT: return createPeopleNumbSent();
@@ -87,7 +91,6 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.MISSION_STATUS_SENT: return createMissionStatusSent();
       case MyLanguagePackage.ROBOT: return createRobot();
       case MyLanguagePackage.ROBOT_AUTO_PILOT: return createRobotAutoPilot();
-      case MyLanguagePackage.REDUNDANT_COMPONENT: return createRedundantComponent();
       case MyLanguagePackage.PAYLOAD_SENT: return createPayloadSent();
       case MyLanguagePackage.ROBOT_DISTANCE_SENT: return createRobotDistanceSent();
       case MyLanguagePackage.DISTANCE_TO_LOCATION_SENT: return createDistanceToLocationSent();
@@ -101,7 +104,6 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.SPHERE_POSITION: return createSpherePosition();
       case MyLanguagePackage.ROBOT_SPEED_SENT: return createRobotSpeedSent();
       case MyLanguagePackage.ENVIRONMENT_SENT: return createEnvironmentSent();
-      case MyLanguagePackage.FAILING_COMPONENT_SENT: return createFailingComponentSent();
       case MyLanguagePackage.RISK_SENT: return createRiskSent();
       case MyLanguagePackage.TOLERANCE_SENT: return createToleranceSent();
       case MyLanguagePackage.DISTANCE_UNIT: return createDistanceUnit();
@@ -201,6 +203,17 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public CompStatusSent createCompStatusSent()
+  {
+    CompStatusSentImpl compStatusSent = new CompStatusSentImpl();
+    return compStatusSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BaroSent createBaroSent()
   {
     BaroSentImpl baroSent = new BaroSentImpl();
@@ -212,10 +225,32 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public BaroAltSent createBaroAltSent()
+  {
+    BaroAltSentImpl baroAltSent = new BaroAltSentImpl();
+    return baroAltSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SonarSent createSonarSent()
   {
     SonarSentImpl sonarSent = new SonarSentImpl();
     return sonarSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SonarDistanceSent createSonarDistanceSent()
+  {
+    SonarDistanceSentImpl sonarDistanceSent = new SonarDistanceSentImpl();
+    return sonarDistanceSent;
   }
 
   /**
@@ -260,6 +295,17 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     BatterySentImpl batterySent = new BatterySentImpl();
     return batterySent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BatteryLevelSent createBatteryLevelSent()
+  {
+    BatteryLevelSentImpl batteryLevelSent = new BatteryLevelSentImpl();
+    return batteryLevelSent;
   }
 
   /**
@@ -359,17 +405,6 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     RobotAutoPilotImpl robotAutoPilot = new RobotAutoPilotImpl();
     return robotAutoPilot;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RedundantComponent createRedundantComponent()
-  {
-    RedundantComponentImpl redundantComponent = new RedundantComponentImpl();
-    return redundantComponent;
   }
 
   /**
@@ -513,17 +548,6 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     EnvironmentSentImpl environmentSent = new EnvironmentSentImpl();
     return environmentSent;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FailingComponentSent createFailingComponentSent()
-  {
-    FailingComponentSentImpl failingComponentSent = new FailingComponentSentImpl();
-    return failingComponentSent;
   }
 
   /**

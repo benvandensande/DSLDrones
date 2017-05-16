@@ -17,21 +17,39 @@ import org.xtext.example.mydsl.ui.contentassist.AbstractMyLanguageProposalProvid
 @SuppressWarnings("all")
 public class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {
   @Override
+  public void complete_PositiveDouble(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("0.0", "Natural number", null, context);
+    acceptor.accept(_createCompletionProposal);
+  }
+  
+  @Override
   public void complete_DOUBLE(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     ICompletionProposal _createCompletionProposal = this.createCompletionProposal("0.0", "DOUBLE", null, context);
     acceptor.accept(_createCompletionProposal);
   }
   
   @Override
-  public void complete_DistanceUnit(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
-    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("kilometer", "km", null, context);
+  public void complete_METER(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("meter(0)", "m", null, context);
     acceptor.accept(_createCompletionProposal);
-    ICompletionProposal _createCompletionProposal_1 = this.createCompletionProposal("meter", "m", null, context);
-    acceptor.accept(_createCompletionProposal_1);
-    ICompletionProposal _createCompletionProposal_2 = this.createCompletionProposal("centimeter", "cm", null, context);
-    acceptor.accept(_createCompletionProposal_2);
-    ICompletionProposal _createCompletionProposal_3 = this.createCompletionProposal("millimeter", "mm", null, context);
-    acceptor.accept(_createCompletionProposal_3);
+  }
+  
+  @Override
+  public void complete_CENTIMETER(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("centimeter(0)", "cm", null, context);
+    acceptor.accept(_createCompletionProposal);
+  }
+  
+  @Override
+  public void complete_MILLIMETER(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("millimeter(0)", "mm", null, context);
+    acceptor.accept(_createCompletionProposal);
+  }
+  
+  @Override
+  public void complete_KILOMETER(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("kilometer(0)", "km", null, context);
+    acceptor.accept(_createCompletionProposal);
   }
   
   @Override
@@ -60,26 +78,6 @@ public class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvid
     acceptor.accept(_createCompletionProposal);
     ICompletionProposal _createCompletionProposal_1 = this.createCompletionProposal("UNSAFE", "Unsafe", null, context);
     acceptor.accept(_createCompletionProposal_1);
-  }
-  
-  @Override
-  public void complete_COMPONENT(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
-    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("motor", "Component - motor", null, context);
-    acceptor.accept(_createCompletionProposal);
-    ICompletionProposal _createCompletionProposal_1 = this.createCompletionProposal("sonar", "Component - sonar", null, context);
-    acceptor.accept(_createCompletionProposal_1);
-    ICompletionProposal _createCompletionProposal_2 = this.createCompletionProposal("barometer", "Component - barometer", null, context);
-    acceptor.accept(_createCompletionProposal_2);
-    ICompletionProposal _createCompletionProposal_3 = this.createCompletionProposal("GPS", "Component - GPS", null, context);
-    acceptor.accept(_createCompletionProposal_3);
-    ICompletionProposal _createCompletionProposal_4 = this.createCompletionProposal("scanner", "Component - scanner", null, context);
-    acceptor.accept(_createCompletionProposal_4);
-    ICompletionProposal _createCompletionProposal_5 = this.createCompletionProposal("battery", "Component - battery", null, context);
-    acceptor.accept(_createCompletionProposal_5);
-    ICompletionProposal _createCompletionProposal_6 = this.createCompletionProposal("camera", "Component - camera", null, context);
-    acceptor.accept(_createCompletionProposal_6);
-    ICompletionProposal _createCompletionProposal_7 = this.createCompletionProposal("autopilot", "Component - autopilot", null, context);
-    acceptor.accept(_createCompletionProposal_7);
   }
   
   @Override

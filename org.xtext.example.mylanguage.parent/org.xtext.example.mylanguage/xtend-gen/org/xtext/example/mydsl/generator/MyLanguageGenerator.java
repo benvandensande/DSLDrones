@@ -14,10 +14,13 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.myLanguage.BaroAltSent;
 import org.xtext.example.mydsl.myLanguage.BaroSent;
+import org.xtext.example.mydsl.myLanguage.BatteryLevelSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
+import org.xtext.example.mydsl.myLanguage.CompStatusSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
@@ -40,6 +43,7 @@ import org.xtext.example.mydsl.myLanguage.RobotPositionSent;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
 import org.xtext.example.mydsl.myLanguage.SECONDS;
+import org.xtext.example.mydsl.myLanguage.SonarDistanceSent;
 import org.xtext.example.mydsl.myLanguage.SonarSent;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Statement;
@@ -869,6 +873,43 @@ public class MyLanguageGenerator extends AbstractGenerator {
       EObject body = s.getSent();
       CharSequence _switchResult = null;
       boolean _matched = false;
+      if (body instanceof BatteryLevelSent) {
+        if ((body instanceof BatteryLevelSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((BatteryLevelSent)body));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof CompStatusSent) {
+          if ((body instanceof CompStatusSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((CompStatusSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(",new BatterySentence(this.app,this.drone))");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final BatteryLevelSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getSent();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
       if (body instanceof EqualSent) {
         if ((body instanceof EqualSent)) {
           _matched=true;
@@ -917,6 +958,43 @@ public class MyLanguageGenerator extends AbstractGenerator {
   }
   
   public CharSequence createRunStat(final SonarSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getSent();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (body instanceof SonarDistanceSent) {
+        if ((body instanceof SonarDistanceSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((SonarDistanceSent)body));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof CompStatusSent) {
+          if ((body instanceof CompStatusSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((CompStatusSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(",new SonarSentence(this.app,this.drone))");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final SonarDistanceSent s) {
     CharSequence _xblockexpression = null;
     {
       EObject body = s.getSent();
@@ -975,6 +1053,43 @@ public class MyLanguageGenerator extends AbstractGenerator {
       EObject body = s.getSent();
       CharSequence _switchResult = null;
       boolean _matched = false;
+      if (body instanceof BaroAltSent) {
+        if ((body instanceof BaroAltSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((BaroAltSent)body));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof CompStatusSent) {
+          if ((body instanceof CompStatusSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((CompStatusSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(",new BaroSentence(this.app,this.drone))");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final BaroAltSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getSent();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
       if (body instanceof EqualSent) {
         if ((body instanceof EqualSent)) {
           _matched=true;
@@ -1020,6 +1135,15 @@ public class MyLanguageGenerator extends AbstractGenerator {
       _xblockexpression = _switchResult;
     }
     return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final CompStatusSent s) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new CompStatusSentence(\"");
+    String _status = s.getStatus();
+    _builder.append(_status, "");
+    _builder.append("\"");
+    return _builder;
   }
   
   public CharSequence createRunStat(final EnvironmentSent s) {

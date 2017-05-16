@@ -111,14 +111,29 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
         return createStatementBodyAdapter();
       }
       @Override
+      public Adapter caseCompStatusSent(CompStatusSent object)
+      {
+        return createCompStatusSentAdapter();
+      }
+      @Override
       public Adapter caseBaroSent(BaroSent object)
       {
         return createBaroSentAdapter();
       }
       @Override
+      public Adapter caseBaroAltSent(BaroAltSent object)
+      {
+        return createBaroAltSentAdapter();
+      }
+      @Override
       public Adapter caseSonarSent(SonarSent object)
       {
         return createSonarSentAdapter();
+      }
+      @Override
+      public Adapter caseSonarDistanceSent(SonarDistanceSent object)
+      {
+        return createSonarDistanceSentAdapter();
       }
       @Override
       public Adapter caseNotificationSent(NotificationSent object)
@@ -139,6 +154,11 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBatterySent(BatterySent object)
       {
         return createBatterySentAdapter();
+      }
+      @Override
+      public Adapter caseBatteryLevelSent(BatteryLevelSent object)
+      {
+        return createBatteryLevelSentAdapter();
       }
       @Override
       public Adapter casePeopleSent(PeopleSent object)
@@ -184,11 +204,6 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRobotAutoPilot(RobotAutoPilot object)
       {
         return createRobotAutoPilotAdapter();
-      }
-      @Override
-      public Adapter caseRedundantComponent(RedundantComponent object)
-      {
-        return createRedundantComponentAdapter();
       }
       @Override
       public Adapter casePayloadSent(PayloadSent object)
@@ -254,11 +269,6 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEnvironmentSent(EnvironmentSent object)
       {
         return createEnvironmentSentAdapter();
-      }
-      @Override
-      public Adapter caseFailingComponentSent(FailingComponentSent object)
-      {
-        return createFailingComponentSentAdapter();
       }
       @Override
       public Adapter caseRiskSent(RiskSent object)
@@ -448,6 +458,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.CompStatusSent <em>Comp Status Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.CompStatusSent
+   * @generated
+   */
+  public Adapter createCompStatusSentAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.BaroSent <em>Baro Sent</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -463,6 +488,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.BaroAltSent <em>Baro Alt Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.BaroAltSent
+   * @generated
+   */
+  public Adapter createBaroAltSentAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.SonarSent <em>Sonar Sent</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -473,6 +513,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSonarSentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.SonarDistanceSent <em>Sonar Distance Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.SonarDistanceSent
+   * @generated
+   */
+  public Adapter createSonarDistanceSentAdapter()
   {
     return null;
   }
@@ -533,6 +588,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBatterySentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.BatteryLevelSent <em>Battery Level Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.BatteryLevelSent
+   * @generated
+   */
+  public Adapter createBatteryLevelSentAdapter()
   {
     return null;
   }
@@ -668,21 +738,6 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRobotAutoPilotAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.RedundantComponent <em>Redundant Component</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myLanguage.RedundantComponent
-   * @generated
-   */
-  public Adapter createRedundantComponentAdapter()
   {
     return null;
   }
@@ -878,21 +933,6 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEnvironmentSentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.FailingComponentSent <em>Failing Component Sent</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.myLanguage.FailingComponentSent
-   * @generated
-   */
-  public Adapter createFailingComponentSentAdapter()
   {
     return null;
   }

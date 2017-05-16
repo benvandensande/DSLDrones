@@ -125,6 +125,13 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.COMP_STATUS_SENT:
+      {
+        CompStatusSent compStatusSent = (CompStatusSent)theEObject;
+        T result = caseCompStatusSent(compStatusSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.BARO_SENT:
       {
         BaroSent baroSent = (BaroSent)theEObject;
@@ -133,11 +140,25 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.BARO_ALT_SENT:
+      {
+        BaroAltSent baroAltSent = (BaroAltSent)theEObject;
+        T result = caseBaroAltSent(baroAltSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.SONAR_SENT:
       {
         SonarSent sonarSent = (SonarSent)theEObject;
         T result = caseSonarSent(sonarSent);
         if (result == null) result = caseStatementBody(sonarSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.SONAR_DISTANCE_SENT:
+      {
+        SonarDistanceSent sonarDistanceSent = (SonarDistanceSent)theEObject;
+        T result = caseSonarDistanceSent(sonarDistanceSent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -171,6 +192,13 @@ public class MyLanguageSwitch<T> extends Switch<T>
         BatterySent batterySent = (BatterySent)theEObject;
         T result = caseBatterySent(batterySent);
         if (result == null) result = caseStatementBody(batterySent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.BATTERY_LEVEL_SENT:
+      {
+        BatteryLevelSent batteryLevelSent = (BatteryLevelSent)theEObject;
+        T result = caseBatteryLevelSent(batteryLevelSent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -249,15 +277,6 @@ public class MyLanguageSwitch<T> extends Switch<T>
         T result = caseRobotAutoPilot(robotAutoPilot);
         if (result == null) result = caseRobot(robotAutoPilot);
         if (result == null) result = caseStatementBody(robotAutoPilot);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyLanguagePackage.REDUNDANT_COMPONENT:
-      {
-        RedundantComponent redundantComponent = (RedundantComponent)theEObject;
-        T result = caseRedundantComponent(redundantComponent);
-        if (result == null) result = caseRobot(redundantComponent);
-        if (result == null) result = caseStatementBody(redundantComponent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,15 +379,6 @@ public class MyLanguageSwitch<T> extends Switch<T>
         EnvironmentSent environmentSent = (EnvironmentSent)theEObject;
         T result = caseEnvironmentSent(environmentSent);
         if (result == null) result = caseStatementBody(environmentSent);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MyLanguagePackage.FAILING_COMPONENT_SENT:
-      {
-        FailingComponentSent failingComponentSent = (FailingComponentSent)theEObject;
-        T result = caseFailingComponentSent(failingComponentSent);
-        if (result == null) result = caseRobot(failingComponentSent);
-        if (result == null) result = caseStatementBody(failingComponentSent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -582,6 +592,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Comp Status Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Comp Status Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCompStatusSent(CompStatusSent object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Baro Sent</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -598,6 +624,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Baro Alt Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Baro Alt Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBaroAltSent(BaroAltSent object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Sonar Sent</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -609,6 +651,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSonarSent(SonarSent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sonar Distance Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sonar Distance Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSonarDistanceSent(SonarDistanceSent object)
   {
     return null;
   }
@@ -673,6 +731,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBatterySent(BatterySent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Battery Level Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Battery Level Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBatteryLevelSent(BatteryLevelSent object)
   {
     return null;
   }
@@ -817,22 +891,6 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRobotAutoPilot(RobotAutoPilot object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Redundant Component</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Redundant Component</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRedundantComponent(RedundantComponent object)
   {
     return null;
   }
@@ -1041,22 +1099,6 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEnvironmentSent(EnvironmentSent object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Failing Component Sent</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Failing Component Sent</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFailingComponentSent(FailingComponentSent object)
   {
     return null;
   }

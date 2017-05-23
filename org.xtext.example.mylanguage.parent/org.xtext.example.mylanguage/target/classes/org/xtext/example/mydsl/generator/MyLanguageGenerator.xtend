@@ -57,11 +57,11 @@ import org.xtext.example.mydsl.myLanguage.When
 class MyLanguageGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-		var name = resource.toString.split("\\.").get(resource.toString.split("\\.").length - 2).replaceAll("[^A-Za-z0-9]", "");
+		var name = resource.toString.split("\\.").get(resource.toString.split("\\.").length - 2).replaceAll("[^A-Za-z0-9]", "").toLowerCase;
 		var index = name.indexOf("javafeatures");
 		name = name.substring(index+12);
 		for (e : resource.allContents.toIterable.filter(TestFile)) {
-			fsa.generateFile(name + ".java", e.compile(name))
+			fsa.generateFile(name.toLowerCase + ".java", e.compile(name))
 		}
 	}
 

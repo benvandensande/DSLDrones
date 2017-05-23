@@ -73,7 +73,8 @@ public class MyLanguageGenerator extends AbstractGenerator {
     int _length = _split_1.length;
     int _minus = (_length - 2);
     String _get = _split[_minus];
-    String name = _get.replaceAll("[^A-Za-z0-9]", "");
+    String _replaceAll = _get.replaceAll("[^A-Za-z0-9]", "");
+    String name = _replaceAll.toLowerCase();
     int index = name.indexOf("javafeatures");
     String _substring = name.substring((index + 12));
     name = _substring;
@@ -81,8 +82,10 @@ public class MyLanguageGenerator extends AbstractGenerator {
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<TestFile> _filter = Iterables.<TestFile>filter(_iterable, TestFile.class);
     for (final TestFile e : _filter) {
+      String _lowerCase = name.toLowerCase();
+      String _plus = (_lowerCase + ".java");
       CharSequence _compile = this.compile(e, name);
-      fsa.generateFile((name + ".java"), _compile);
+      fsa.generateFile(_plus, _compile);
     }
   }
   

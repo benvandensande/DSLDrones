@@ -61,7 +61,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 		var index = name.indexOf("javafeatures");
 		name = name.substring(index+12);
 		for (e : resource.allContents.toIterable.filter(TestFile)) {
-			fsa.generateFile(name.toLowerCase + ".java", e.compile(name))
+			fsa.generateFile(name + ".java", e.compile(name))
 		}
 	}
 

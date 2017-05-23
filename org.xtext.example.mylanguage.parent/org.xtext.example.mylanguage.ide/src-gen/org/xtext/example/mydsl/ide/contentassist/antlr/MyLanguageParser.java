@@ -57,6 +57,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLessSentAccess().getAmountAlternatives_2_0(), "rule__LessSent__AmountAlternatives_2_0");
 					put(grammarAccess.getGreaterSentAccess().getAmountAlternatives_2_0(), "rule__GreaterSent__AmountAlternatives_2_0");
 					put(grammarAccess.getRobotPositionSentAccess().getToleranceAlternatives_5_0(), "rule__RobotPositionSent__ToleranceAlternatives_5_0");
+					put(grammarAccess.getRobotSpeedSentAccess().getBodyAlternatives_2_0(), "rule__RobotSpeedSent__BodyAlternatives_2_0");
 					put(grammarAccess.getEnvironmentSentAccess().getBodyAlternatives_3_0(), "rule__EnvironmentSent__BodyAlternatives_3_0");
 					put(grammarAccess.getMISSIONSTATUSAccess().getAlternatives(), "rule__MISSIONSTATUS__Alternatives");
 					put(grammarAccess.getMISSIONRISKLEVELAccess().getAlternatives(), "rule__MISSIONRISKLEVEL__Alternatives");
@@ -174,7 +175,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRobotPositionSentAccess().getToleranceAssignment_5(), "rule__RobotPositionSent__ToleranceAssignment_5");
 					put(grammarAccess.getCirclePositionAccess().getToleranceAssignment_4(), "rule__CirclePosition__ToleranceAssignment_4");
 					put(grammarAccess.getSpherePositionAccess().getToleranceAssignment_4(), "rule__SpherePosition__ToleranceAssignment_4");
-					put(grammarAccess.getRobotSpeedSentAccess().getSpeedAssignment_2(), "rule__RobotSpeedSent__SpeedAssignment_2");
+					put(grammarAccess.getRobotSpeedSentAccess().getBodyAssignment_2(), "rule__RobotSpeedSent__BodyAssignment_2");
 					put(grammarAccess.getEnvironmentSentAccess().getBodyAssignment_3(), "rule__EnvironmentSent__BodyAssignment_3");
 					put(grammarAccess.getRiskSentAccess().getLevelAssignment_2(), "rule__RiskSent__LevelAssignment_2");
 					put(grammarAccess.getToleranceSentAccess().getUnitAssignment_2(), "rule__ToleranceSent__UnitAssignment_2");

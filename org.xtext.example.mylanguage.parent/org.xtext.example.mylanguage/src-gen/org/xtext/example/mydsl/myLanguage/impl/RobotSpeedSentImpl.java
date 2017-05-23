@@ -7,13 +7,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.mydsl.myLanguage.MyLanguagePackage;
 import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
-import org.xtext.example.mydsl.myLanguage.SpeedUnit;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.xtext.example.mydsl.myLanguage.SpeedUnit;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myLanguage.impl.RobotSpeedSentImpl#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myLanguage.impl.RobotSpeedSentImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import org.xtext.example.mydsl.myLanguage.SpeedUnit;
 public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
 {
   /**
-   * The cached value of the '{@link #getSpeed() <em>Speed</em>}' containment reference.
+   * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSpeed()
+   * @see #getBody()
    * @generated
    * @ordered
    */
-  protected SpeedUnit speed;
+  protected EObject body;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public SpeedUnit getSpeed()
+  public EObject getBody()
   {
-    return speed;
+    return body;
   }
 
   /**
@@ -76,13 +76,13 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSpeed(SpeedUnit newSpeed, NotificationChain msgs)
+  public NotificationChain basicSetBody(EObject newBody, NotificationChain msgs)
   {
-    SpeedUnit oldSpeed = speed;
-    speed = newSpeed;
+    EObject oldBody = body;
+    body = newBody;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyLanguagePackage.ROBOT_SPEED_SENT__SPEED, oldSpeed, newSpeed);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyLanguagePackage.ROBOT_SPEED_SENT__BODY, oldBody, newBody);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSpeed(SpeedUnit newSpeed)
+  public void setBody(EObject newBody)
   {
-    if (newSpeed != speed)
+    if (newBody != body)
     {
       NotificationChain msgs = null;
-      if (speed != null)
-        msgs = ((InternalEObject)speed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.ROBOT_SPEED_SENT__SPEED, null, msgs);
-      if (newSpeed != null)
-        msgs = ((InternalEObject)newSpeed).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.ROBOT_SPEED_SENT__SPEED, null, msgs);
-      msgs = basicSetSpeed(newSpeed, msgs);
+      if (body != null)
+        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.ROBOT_SPEED_SENT__BODY, null, msgs);
+      if (newBody != null)
+        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.ROBOT_SPEED_SENT__BODY, null, msgs);
+      msgs = basicSetBody(newBody, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.ROBOT_SPEED_SENT__SPEED, newSpeed, newSpeed));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.ROBOT_SPEED_SENT__BODY, newBody, newBody));
   }
 
   /**
@@ -119,8 +119,8 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
   {
     switch (featureID)
     {
-      case MyLanguagePackage.ROBOT_SPEED_SENT__SPEED:
-        return basicSetSpeed(null, msgs);
+      case MyLanguagePackage.ROBOT_SPEED_SENT__BODY:
+        return basicSetBody(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
   {
     switch (featureID)
     {
-      case MyLanguagePackage.ROBOT_SPEED_SENT__SPEED:
-        return getSpeed();
+      case MyLanguagePackage.ROBOT_SPEED_SENT__BODY:
+        return getBody();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
   {
     switch (featureID)
     {
-      case MyLanguagePackage.ROBOT_SPEED_SENT__SPEED:
-        setSpeed((SpeedUnit)newValue);
+      case MyLanguagePackage.ROBOT_SPEED_SENT__BODY:
+        setBody((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
   {
     switch (featureID)
     {
-      case MyLanguagePackage.ROBOT_SPEED_SENT__SPEED:
-        setSpeed((SpeedUnit)null);
+      case MyLanguagePackage.ROBOT_SPEED_SENT__BODY:
+        setBody((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +185,8 @@ public class RobotSpeedSentImpl extends RobotImpl implements RobotSpeedSent
   {
     switch (featureID)
     {
-      case MyLanguagePackage.ROBOT_SPEED_SENT__SPEED:
-        return speed != null;
+      case MyLanguagePackage.ROBOT_SPEED_SENT__BODY:
+        return body != null;
     }
     return super.eIsSet(featureID);
   }

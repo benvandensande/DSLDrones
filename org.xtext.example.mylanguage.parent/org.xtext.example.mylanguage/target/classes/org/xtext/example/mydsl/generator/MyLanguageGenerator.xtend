@@ -168,7 +168,22 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(CirclePosition sent) '''new CirclePosition(«sent.tolerance.createRunStat»)'''
 	def createRunStat(SpherePosition sent) '''new SpherePosition(«sent.tolerance.createRunStat»)'''
 		
-	def createRunStat(RobotSpeedSent body) '''new RobotSpdSentence(«body.speed.createRunStat», this.app, this.drone)'''
+	def createRunStat(RobotSpeedSent s) {
+		var body = s.body;
+		switch body{
+			EqualSent case (body instanceof EqualSent): '''new RobotSpdSentence(«body.createRunStat», this.app, this.drone)'''
+			GreaterSent case (body instanceof GreaterSent): '''new RobotSpdSentence(«body.createRunStat», this.app, this.drone)'''
+			LessSent case (body instanceof LessSent): '''new RobotSpdSentence(«body.createRunStat», this.app, this.drone)'''
+			default: '''foutje'''
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
 	def createRunStat(RobotStateSent body) '''new RobotStSentence("«body.state»", this.app, this.drone)'''
 	def createRunStat(RobotDistanceSent body) {
 		var sent = body.sent
@@ -208,6 +223,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 		switch amount{
 			DistanceUnit case (amount instanceof DistanceUnit): '''new EqualSentence(«amount.createRunStat»)'''
 			PercentUnit case (amount instanceof PercentUnit): '''new EqualSentence(«amount.createRunStat»)'''
+			SpeedUnit case (amount instanceof SpeedUnit): '''new EqualSentence(«amount.createRunStat»)'''
 		}
 	
 	}
@@ -216,6 +232,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 		switch amount{
 			DistanceUnit case (amount instanceof DistanceUnit): '''new GreaterSentence(«amount.createRunStat»)'''
 			PercentUnit case (amount instanceof PercentUnit): '''new GreaterSentence(«amount.createRunStat»)'''
+			SpeedUnit case (amount instanceof SpeedUnit): '''new GreaterSentence(«amount.createRunStat»)'''
 		}
 	}
 	def createRunStat(LessSent sent) {
@@ -223,6 +240,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 		switch amount{
 			DistanceUnit case (amount instanceof DistanceUnit): '''new LessSentence(«amount.createRunStat»)'''
 			PercentUnit case (amount instanceof PercentUnit): '''new LessSentence(«amount.createRunStat»)'''
+			SpeedUnit case (amount instanceof SpeedUnit): '''new LessSentence(«amount.createRunStat»)'''
 		}
 	}
 	

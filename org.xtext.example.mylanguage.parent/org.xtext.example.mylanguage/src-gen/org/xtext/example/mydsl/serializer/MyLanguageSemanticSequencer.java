@@ -379,7 +379,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     EqualSent returns EqualSent
 	 *
 	 * Constraint:
-	 *     (amount=DistanceUnit | amount=PercentUnit)
+	 *     (amount=DistanceUnit | amount=PercentUnit | amount=SpeedUnit)
 	 */
 	protected void sequence_EqualSent(ISerializationContext context, EqualSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -435,7 +435,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     GreaterSent returns GreaterSent
 	 *
 	 * Constraint:
-	 *     (amount=DistanceUnit | amount=PercentUnit)
+	 *     (amount=DistanceUnit | amount=PercentUnit | amount=SpeedUnit)
 	 */
 	protected void sequence_GreaterSent(ISerializationContext context, GreaterSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -535,7 +535,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     LessSent returns LessSent
 	 *
 	 * Constraint:
-	 *     (amount=DistanceUnit | amount=PercentUnit)
+	 *     (amount=DistanceUnit | amount=PercentUnit | amount=SpeedUnit)
 	 */
 	protected void sequence_LessSent(ISerializationContext context, LessSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -875,16 +875,10 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     RobotSpeedSent returns RobotSpeedSent
 	 *
 	 * Constraint:
-	 *     speed=SpeedUnit
+	 *     (body=GreaterSent | body=LessSent | body=EqualSent)
 	 */
 	protected void sequence_RobotSpeedSent(ISerializationContext context, RobotSpeedSent semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRobotSpeedSentAccess().getSpeedSpeedUnitParserRuleCall_2_0(), semanticObject.getSpeed());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

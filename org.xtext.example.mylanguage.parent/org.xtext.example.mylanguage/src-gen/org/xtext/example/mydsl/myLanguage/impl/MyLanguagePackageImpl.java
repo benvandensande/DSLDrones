@@ -1442,7 +1442,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRobotSpeedSent_Speed()
+  public EReference getRobotSpeedSent_Body()
   {
     return (EReference)robotSpeedSentEClass.getEStructuralFeatures().get(0);
   }
@@ -1876,7 +1876,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEReference(spherePositionEClass, SPHERE_POSITION__TOLERANCE);
 
     robotSpeedSentEClass = createEClass(ROBOT_SPEED_SENT);
-    createEReference(robotSpeedSentEClass, ROBOT_SPEED_SENT__SPEED);
+    createEReference(robotSpeedSentEClass, ROBOT_SPEED_SENT__BODY);
 
     environmentSentEClass = createEClass(ENVIRONMENT_SENT);
     createEReference(environmentSentEClass, ENVIRONMENT_SENT__BODY);
@@ -2121,7 +2121,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEReference(getSpherePosition_Tolerance(), this.getDistanceUnit(), null, "tolerance", null, 0, 1, SpherePosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(robotSpeedSentEClass, RobotSpeedSent.class, "RobotSpeedSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRobotSpeedSent_Speed(), this.getSpeedUnit(), null, "speed", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobotSpeedSent_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(environmentSentEClass, EnvironmentSent.class, "EnvironmentSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEnvironmentSent_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, EnvironmentSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

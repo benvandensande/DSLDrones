@@ -1199,13 +1199,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAmountAlternatives_2_0 = (Alternatives)cAmountAssignment_2.eContents().get(0);
 		private final RuleCall cAmountDistanceUnitParserRuleCall_2_0_0 = (RuleCall)cAmountAlternatives_2_0.eContents().get(0);
 		private final RuleCall cAmountPercentUnitParserRuleCall_2_0_1 = (RuleCall)cAmountAlternatives_2_0.eContents().get(1);
+		private final RuleCall cAmountSpeedUnitParserRuleCall_2_0_2 = (RuleCall)cAmountAlternatives_2_0.eContents().get(2);
 		
 		//EqualSent:
 		//	'equal' 'to'
-		//	amount=(DistanceUnit | PercentUnit);
+		//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'equal' 'to' amount=(DistanceUnit | PercentUnit)
+		//'equal' 'to' amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Group getGroup() { return cGroup; }
 		
 		//'equal'
@@ -1214,10 +1215,10 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'to'
 		public Keyword getToKeyword_1() { return cToKeyword_1; }
 		
-		//amount=(DistanceUnit | PercentUnit)
+		//amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Assignment getAmountAssignment_2() { return cAmountAssignment_2; }
 		
-		//(DistanceUnit | PercentUnit)
+		//(DistanceUnit | PercentUnit | SpeedUnit)
 		public Alternatives getAmountAlternatives_2_0() { return cAmountAlternatives_2_0; }
 		
 		//DistanceUnit
@@ -1225,6 +1226,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//PercentUnit
 		public RuleCall getAmountPercentUnitParserRuleCall_2_0_1() { return cAmountPercentUnitParserRuleCall_2_0_1; }
+		
+		//SpeedUnit
+		public RuleCall getAmountSpeedUnitParserRuleCall_2_0_2() { return cAmountSpeedUnitParserRuleCall_2_0_2; }
 	}
 	public class LessSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.LessSent");
@@ -1235,13 +1239,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAmountAlternatives_2_0 = (Alternatives)cAmountAssignment_2.eContents().get(0);
 		private final RuleCall cAmountDistanceUnitParserRuleCall_2_0_0 = (RuleCall)cAmountAlternatives_2_0.eContents().get(0);
 		private final RuleCall cAmountPercentUnitParserRuleCall_2_0_1 = (RuleCall)cAmountAlternatives_2_0.eContents().get(1);
+		private final RuleCall cAmountSpeedUnitParserRuleCall_2_0_2 = (RuleCall)cAmountAlternatives_2_0.eContents().get(2);
 		
 		//LessSent:
 		//	'lower' 'then'
-		//	amount=(DistanceUnit | PercentUnit);
+		//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'lower' 'then' amount=(DistanceUnit | PercentUnit)
+		//'lower' 'then' amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Group getGroup() { return cGroup; }
 		
 		//'lower'
@@ -1250,10 +1255,10 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'then'
 		public Keyword getThenKeyword_1() { return cThenKeyword_1; }
 		
-		//amount=(DistanceUnit | PercentUnit)
+		//amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Assignment getAmountAssignment_2() { return cAmountAssignment_2; }
 		
-		//(DistanceUnit | PercentUnit)
+		//(DistanceUnit | PercentUnit | SpeedUnit)
 		public Alternatives getAmountAlternatives_2_0() { return cAmountAlternatives_2_0; }
 		
 		//DistanceUnit
@@ -1261,6 +1266,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//PercentUnit
 		public RuleCall getAmountPercentUnitParserRuleCall_2_0_1() { return cAmountPercentUnitParserRuleCall_2_0_1; }
+		
+		//SpeedUnit
+		public RuleCall getAmountSpeedUnitParserRuleCall_2_0_2() { return cAmountSpeedUnitParserRuleCall_2_0_2; }
 	}
 	public class GreaterSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.GreaterSent");
@@ -1271,13 +1279,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAmountAlternatives_2_0 = (Alternatives)cAmountAssignment_2.eContents().get(0);
 		private final RuleCall cAmountDistanceUnitParserRuleCall_2_0_0 = (RuleCall)cAmountAlternatives_2_0.eContents().get(0);
 		private final RuleCall cAmountPercentUnitParserRuleCall_2_0_1 = (RuleCall)cAmountAlternatives_2_0.eContents().get(1);
+		private final RuleCall cAmountSpeedUnitParserRuleCall_2_0_2 = (RuleCall)cAmountAlternatives_2_0.eContents().get(2);
 		
 		//GreaterSent:
 		//	'greater' 'then'
-		//	amount=(DistanceUnit | PercentUnit);
+		//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'greater' 'then' amount=(DistanceUnit | PercentUnit)
+		//'greater' 'then' amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Group getGroup() { return cGroup; }
 		
 		//'greater'
@@ -1286,10 +1295,10 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'then'
 		public Keyword getThenKeyword_1() { return cThenKeyword_1; }
 		
-		//amount=(DistanceUnit | PercentUnit)
+		//amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Assignment getAmountAssignment_2() { return cAmountAssignment_2; }
 		
-		//(DistanceUnit | PercentUnit)
+		//(DistanceUnit | PercentUnit | SpeedUnit)
 		public Alternatives getAmountAlternatives_2_0() { return cAmountAlternatives_2_0; }
 		
 		//DistanceUnit
@@ -1297,6 +1306,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//PercentUnit
 		public RuleCall getAmountPercentUnitParserRuleCall_2_0_1() { return cAmountPercentUnitParserRuleCall_2_0_1; }
+		
+		//SpeedUnit
+		public RuleCall getAmountSpeedUnitParserRuleCall_2_0_2() { return cAmountSpeedUnitParserRuleCall_2_0_2; }
 	}
 	public class RobotStateSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.RobotStateSent");
@@ -1465,15 +1477,18 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpeedKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSpeedAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpeedSpeedUnitParserRuleCall_2_0 = (RuleCall)cSpeedAssignment_2.eContents().get(0);
+		private final Assignment cBodyAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cBodyAlternatives_2_0 = (Alternatives)cBodyAssignment_2.eContents().get(0);
+		private final RuleCall cBodyGreaterSentParserRuleCall_2_0_0 = (RuleCall)cBodyAlternatives_2_0.eContents().get(0);
+		private final RuleCall cBodyLessSentParserRuleCall_2_0_1 = (RuleCall)cBodyAlternatives_2_0.eContents().get(1);
+		private final RuleCall cBodyEqualSentParserRuleCall_2_0_2 = (RuleCall)cBodyAlternatives_2_0.eContents().get(2);
 		
 		//RobotSpeedSent:
 		//	'speed' 'is'
-		//	speed=SpeedUnit;
+		//	body=(GreaterSent | LessSent | EqualSent);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'speed' 'is' speed=SpeedUnit
+		//'speed' 'is' body=(GreaterSent | LessSent | EqualSent)
 		public Group getGroup() { return cGroup; }
 		
 		//'speed'
@@ -1482,11 +1497,20 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//speed=SpeedUnit
-		public Assignment getSpeedAssignment_2() { return cSpeedAssignment_2; }
+		//body=(GreaterSent | LessSent | EqualSent)
+		public Assignment getBodyAssignment_2() { return cBodyAssignment_2; }
 		
-		//SpeedUnit
-		public RuleCall getSpeedSpeedUnitParserRuleCall_2_0() { return cSpeedSpeedUnitParserRuleCall_2_0; }
+		//(GreaterSent | LessSent | EqualSent)
+		public Alternatives getBodyAlternatives_2_0() { return cBodyAlternatives_2_0; }
+		
+		//GreaterSent
+		public RuleCall getBodyGreaterSentParserRuleCall_2_0_0() { return cBodyGreaterSentParserRuleCall_2_0_0; }
+		
+		//LessSent
+		public RuleCall getBodyLessSentParserRuleCall_2_0_1() { return cBodyLessSentParserRuleCall_2_0_1; }
+		
+		//EqualSent
+		public RuleCall getBodyEqualSentParserRuleCall_2_0_2() { return cBodyEqualSentParserRuleCall_2_0_2; }
 	}
 	public class EnvironmentSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.EnvironmentSent");
@@ -2761,7 +2785,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//EqualSent:
 	//	'equal' 'to'
-	//	amount=(DistanceUnit | PercentUnit);
+	//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 	public EqualSentElements getEqualSentAccess() {
 		return pEqualSent;
 	}
@@ -2772,7 +2796,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//LessSent:
 	//	'lower' 'then'
-	//	amount=(DistanceUnit | PercentUnit);
+	//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 	public LessSentElements getLessSentAccess() {
 		return pLessSent;
 	}
@@ -2783,7 +2807,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GreaterSent:
 	//	'greater' 'then'
-	//	amount=(DistanceUnit | PercentUnit);
+	//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 	public GreaterSentElements getGreaterSentAccess() {
 		return pGreaterSent;
 	}
@@ -2840,7 +2864,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//RobotSpeedSent:
 	//	'speed' 'is'
-	//	speed=SpeedUnit;
+	//	body=(GreaterSent | LessSent | EqualSent);
 	public RobotSpeedSentElements getRobotSpeedSentAccess() {
 		return pRobotSpeedSent;
 	}

@@ -175,17 +175,17 @@ DistanceToObstaclesSent:
 
 EqualSent:
 	'equal''to'
-	amount = (DistanceUnit|PercentUnit)
+	amount = (DistanceUnit|PercentUnit|SpeedUnit)
 ;
 
 LessSent:
 	'lower''then'
-	amount = (DistanceUnit|PercentUnit)
+	amount = (DistanceUnit|PercentUnit|SpeedUnit)
 ;
 
 GreaterSent:
 	'greater''then'
-	amount = (DistanceUnit|PercentUnit)
+	amount = (DistanceUnit|PercentUnit|SpeedUnit)
 ;
 
 RobotStateSent:
@@ -213,7 +213,7 @@ SpherePosition:
 
 RobotSpeedSent:
 	'speed''is'
-	speed=SpeedUnit
+	body=(GreaterSent | LessSent | EqualSent)
 ;
 
 EnvironmentSent:

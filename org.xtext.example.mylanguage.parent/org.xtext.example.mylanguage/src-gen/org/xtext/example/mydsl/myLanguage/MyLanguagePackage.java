@@ -1286,13 +1286,13 @@ public interface MyLanguagePackage extends EPackage
   int ROBOT_SPEED_SENT = 39;
 
   /**
-   * The feature id for the '<em><b>Speed</b></em>' containment reference.
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROBOT_SPEED_SENT__SPEED = ROBOT_FEATURE_COUNT + 0;
+  int ROBOT_SPEED_SENT__BODY = ROBOT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Robot Speed Sent</em>' class.
@@ -2849,15 +2849,15 @@ public interface MyLanguagePackage extends EPackage
   EClass getRobotSpeedSent();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getBody <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Speed</em>'.
-   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed()
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getBody()
    * @see #getRobotSpeedSent()
    * @generated
    */
-  EReference getRobotSpeedSent_Speed();
+  EReference getRobotSpeedSent_Body();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.EnvironmentSent <em>Environment Sent</em>}'.
@@ -3962,12 +3962,12 @@ public interface MyLanguagePackage extends EPackage
     EClass ROBOT_SPEED_SENT = eINSTANCE.getRobotSpeedSent();
 
     /**
-     * The meta object literal for the '<em><b>Speed</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROBOT_SPEED_SENT__SPEED = eINSTANCE.getRobotSpeedSent_Speed();
+    EReference ROBOT_SPEED_SENT__BODY = eINSTANCE.getRobotSpeedSent_Body();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.EnvironmentSentImpl <em>Environment Sent</em>}' class.

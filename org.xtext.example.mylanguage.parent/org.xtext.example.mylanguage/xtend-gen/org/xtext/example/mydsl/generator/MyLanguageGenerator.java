@@ -551,14 +551,57 @@ public class MyLanguageGenerator extends AbstractGenerator {
     return _builder;
   }
   
-  public CharSequence createRunStat(final RobotSpeedSent body) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("new RobotSpdSentence(");
-    SpeedUnit _speed = body.getSpeed();
-    CharSequence _createRunStat = this.createRunStat(_speed);
-    _builder.append(_createRunStat, "");
-    _builder.append(", this.app, this.drone)");
-    return _builder;
+  public CharSequence createRunStat(final RobotSpeedSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getBody();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (body instanceof EqualSent) {
+        if ((body instanceof EqualSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          _builder.append("new RobotSpdSentence(");
+          CharSequence _createRunStat = this.createRunStat(((EqualSent)body));
+          _builder.append(_createRunStat, "");
+          _builder.append(", this.app, this.drone)");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof GreaterSent) {
+          if ((body instanceof GreaterSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new RobotSpdSentence(");
+            CharSequence _createRunStat = this.createRunStat(((GreaterSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(", this.app, this.drone)");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        if (body instanceof LessSent) {
+          if ((body instanceof LessSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new RobotSpdSentence(");
+            CharSequence _createRunStat = this.createRunStat(((LessSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(", this.app, this.drone)");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
   }
   
   public CharSequence createRunStat(final RobotStateSent body) {
@@ -779,6 +822,19 @@ public class MyLanguageGenerator extends AbstractGenerator {
           }
         }
       }
+      if (!_matched) {
+        if (amount instanceof SpeedUnit) {
+          if ((amount instanceof SpeedUnit)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new EqualSentence(");
+            CharSequence _createRunStat = this.createRunStat(((SpeedUnit)amount));
+            _builder.append(_createRunStat, "");
+            _builder.append(")");
+            _switchResult = _builder;
+          }
+        }
+      }
       _xblockexpression = _switchResult;
     }
     return _xblockexpression;
@@ -814,6 +870,19 @@ public class MyLanguageGenerator extends AbstractGenerator {
           }
         }
       }
+      if (!_matched) {
+        if (amount instanceof SpeedUnit) {
+          if ((amount instanceof SpeedUnit)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new GreaterSentence(");
+            CharSequence _createRunStat = this.createRunStat(((SpeedUnit)amount));
+            _builder.append(_createRunStat, "");
+            _builder.append(")");
+            _switchResult = _builder;
+          }
+        }
+      }
       _xblockexpression = _switchResult;
     }
     return _xblockexpression;
@@ -843,6 +912,19 @@ public class MyLanguageGenerator extends AbstractGenerator {
             StringConcatenation _builder = new StringConcatenation();
             _builder.append("new LessSentence(");
             CharSequence _createRunStat = this.createRunStat(((PercentUnit)amount));
+            _builder.append(_createRunStat, "");
+            _builder.append(")");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        if (amount instanceof SpeedUnit) {
+          if ((amount instanceof SpeedUnit)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("new LessSentence(");
+            CharSequence _createRunStat = this.createRunStat(((SpeedUnit)amount));
             _builder.append(_createRunStat, "");
             _builder.append(")");
             _switchResult = _builder;

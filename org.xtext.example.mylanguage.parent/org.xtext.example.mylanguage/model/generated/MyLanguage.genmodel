@@ -127,7 +127,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//SpherePosition/tolerance"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//RobotSpeedSent">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotSpeedSent/speed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotSpeedSent/body"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//EnvironmentSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//EnvironmentSent/body"/>

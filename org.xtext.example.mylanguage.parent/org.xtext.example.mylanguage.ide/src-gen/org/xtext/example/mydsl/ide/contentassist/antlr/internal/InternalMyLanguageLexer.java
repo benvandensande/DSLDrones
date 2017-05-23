@@ -1727,10 +1727,10 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8930:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalMyLanguage.g:8930:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalMyLanguage.g:8975:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalMyLanguage.g:8975:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalMyLanguage.g:8930:11: ( '^' )?
+            // InternalMyLanguage.g:8975:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1739,7 +1739,7 @@ public class InternalMyLanguageLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalMyLanguage.g:8930:11: '^'
+                    // InternalMyLanguage.g:8975:11: '^'
                     {
                     match('^'); 
 
@@ -1757,7 +1757,7 @@ public class InternalMyLanguageLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalMyLanguage.g:8930:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalMyLanguage.g:8975:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1806,10 +1806,10 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8932:10: ( ( '0' .. '9' )+ )
-            // InternalMyLanguage.g:8932:12: ( '0' .. '9' )+
+            // InternalMyLanguage.g:8977:10: ( ( '0' .. '9' )+ )
+            // InternalMyLanguage.g:8977:12: ( '0' .. '9' )+
             {
-            // InternalMyLanguage.g:8932:12: ( '0' .. '9' )+
+            // InternalMyLanguage.g:8977:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1823,7 +1823,7 @@ public class InternalMyLanguageLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalMyLanguage.g:8932:13: '0' .. '9'
+            	    // InternalMyLanguage.g:8977:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1855,10 +1855,10 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8934:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalMyLanguage.g:8934:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalMyLanguage.g:8979:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalMyLanguage.g:8979:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalMyLanguage.g:8934:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalMyLanguage.g:8979:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1876,10 +1876,10 @@ public class InternalMyLanguageLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalMyLanguage.g:8934:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalMyLanguage.g:8979:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalMyLanguage.g:8934:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalMyLanguage.g:8979:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1895,7 +1895,7 @@ public class InternalMyLanguageLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalMyLanguage.g:8934:21: '\\\\' .
+                    	    // InternalMyLanguage.g:8979:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1903,7 +1903,7 @@ public class InternalMyLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalMyLanguage.g:8934:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalMyLanguage.g:8979:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1928,10 +1928,10 @@ public class InternalMyLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalMyLanguage.g:8934:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalMyLanguage.g:8979:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalMyLanguage.g:8934:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalMyLanguage.g:8979:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1947,7 +1947,7 @@ public class InternalMyLanguageLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalMyLanguage.g:8934:54: '\\\\' .
+                    	    // InternalMyLanguage.g:8979:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1955,7 +1955,7 @@ public class InternalMyLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalMyLanguage.g:8934:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalMyLanguage.g:8979:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1998,12 +1998,12 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8936:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalMyLanguage.g:8936:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalMyLanguage.g:8981:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalMyLanguage.g:8981:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalMyLanguage.g:8936:24: ( options {greedy=false; } : . )*
+            // InternalMyLanguage.g:8981:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -2028,7 +2028,7 @@ public class InternalMyLanguageLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalMyLanguage.g:8936:52: .
+            	    // InternalMyLanguage.g:8981:52: .
             	    {
             	    matchAny(); 
 
@@ -2058,12 +2058,12 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8938:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalMyLanguage.g:8938:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalMyLanguage.g:8983:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalMyLanguage.g:8983:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalMyLanguage.g:8938:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalMyLanguage.g:8983:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -2076,7 +2076,7 @@ public class InternalMyLanguageLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalMyLanguage.g:8938:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalMyLanguage.g:8983:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2096,7 +2096,7 @@ public class InternalMyLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalMyLanguage.g:8938:40: ( ( '\\r' )? '\\n' )?
+            // InternalMyLanguage.g:8983:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2105,9 +2105,9 @@ public class InternalMyLanguageLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalMyLanguage.g:8938:41: ( '\\r' )? '\\n'
+                    // InternalMyLanguage.g:8983:41: ( '\\r' )? '\\n'
                     {
-                    // InternalMyLanguage.g:8938:41: ( '\\r' )?
+                    // InternalMyLanguage.g:8983:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2116,7 +2116,7 @@ public class InternalMyLanguageLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalMyLanguage.g:8938:41: '\\r'
+                            // InternalMyLanguage.g:8983:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2148,10 +2148,10 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8940:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalMyLanguage.g:8940:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalMyLanguage.g:8985:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalMyLanguage.g:8985:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalMyLanguage.g:8940:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalMyLanguage.g:8985:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -2205,8 +2205,8 @@ public class InternalMyLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMyLanguage.g:8942:16: ( . )
-            // InternalMyLanguage.g:8942:18: .
+            // InternalMyLanguage.g:8987:16: ( . )
+            // InternalMyLanguage.g:8987:18: .
             {
             matchAny(); 
 

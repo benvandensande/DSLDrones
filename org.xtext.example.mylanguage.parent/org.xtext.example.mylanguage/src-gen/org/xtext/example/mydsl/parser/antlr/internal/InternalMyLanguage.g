@@ -2245,6 +2245,22 @@ ruleEqualSent returns [EObject current=null]
 							"org.xtext.example.mydsl.MyLanguage.PercentUnit");
 						afterParserOrEnumRuleCall();
 					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getEqualSentAccess().getAmountSpeedUnitParserRuleCall_2_0_2());
+					}
+					lv_amount_2_3=ruleSpeedUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEqualSentRule());
+						}
+						set(
+							$current,
+							"amount",
+							lv_amount_2_3,
+							"org.xtext.example.mydsl.MyLanguage.SpeedUnit");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)
 		)
@@ -2309,6 +2325,22 @@ ruleLessSent returns [EObject current=null]
 							"org.xtext.example.mydsl.MyLanguage.PercentUnit");
 						afterParserOrEnumRuleCall();
 					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getLessSentAccess().getAmountSpeedUnitParserRuleCall_2_0_2());
+					}
+					lv_amount_2_3=ruleSpeedUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getLessSentRule());
+						}
+						set(
+							$current,
+							"amount",
+							lv_amount_2_3,
+							"org.xtext.example.mydsl.MyLanguage.SpeedUnit");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)
 		)
@@ -2371,6 +2403,22 @@ ruleGreaterSent returns [EObject current=null]
 							"amount",
 							lv_amount_2_2,
 							"org.xtext.example.mydsl.MyLanguage.PercentUnit");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getGreaterSentAccess().getAmountSpeedUnitParserRuleCall_2_0_2());
+					}
+					lv_amount_2_3=ruleSpeedUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGreaterSentRule());
+						}
+						set(
+							$current,
+							"amount",
+							lv_amount_2_3,
+							"org.xtext.example.mydsl.MyLanguage.SpeedUnit");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -2679,21 +2727,55 @@ ruleRobotSpeedSent returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedSpeedUnitParserRuleCall_2_0());
-				}
-				lv_speed_2_0=ruleSpeedUnit
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getBodyGreaterSentParserRuleCall_2_0_0());
 					}
-					set(
-						$current,
-						"speed",
-						lv_speed_2_0,
-						"org.xtext.example.mydsl.MyLanguage.SpeedUnit");
-					afterParserOrEnumRuleCall();
-				}
+					lv_body_2_1=ruleGreaterSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
+						}
+						set(
+							$current,
+							"body",
+							lv_body_2_1,
+							"org.xtext.example.mydsl.MyLanguage.GreaterSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getBodyLessSentParserRuleCall_2_0_1());
+					}
+					lv_body_2_2=ruleLessSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
+						}
+						set(
+							$current,
+							"body",
+							lv_body_2_2,
+							"org.xtext.example.mydsl.MyLanguage.LessSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getBodyEqualSentParserRuleCall_2_0_2());
+					}
+					lv_body_2_3=ruleEqualSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
+						}
+						set(
+							$current,
+							"body",
+							lv_body_2_3,
+							"org.xtext.example.mydsl.MyLanguage.EqualSent");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 	)

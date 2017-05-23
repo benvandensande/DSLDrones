@@ -3,6 +3,7 @@
  */
 package org.xtext.example.mydsl.myLanguage;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,7 @@ package org.xtext.example.mydsl.myLanguage;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent()
@@ -23,29 +24,29 @@ package org.xtext.example.mydsl.myLanguage;
 public interface RobotSpeedSent extends Robot
 {
   /**
-   * Returns the value of the '<em><b>Speed</b></em>' containment reference.
+   * Returns the value of the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Speed</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Body</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Speed</em>' containment reference.
-   * @see #setSpeed(SpeedUnit)
-   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_Speed()
+   * @return the value of the '<em>Body</em>' containment reference.
+   * @see #setBody(EObject)
+   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_Body()
    * @model containment="true"
    * @generated
    */
-  SpeedUnit getSpeed();
+  EObject getBody();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getBody <em>Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Speed</em>' containment reference.
-   * @see #getSpeed()
+   * @param value the new value of the '<em>Body</em>' containment reference.
+   * @see #getBody()
    * @generated
    */
-  void setSpeed(SpeedUnit value);
+  void setBody(EObject value);
 
 } // RobotSpeedSent

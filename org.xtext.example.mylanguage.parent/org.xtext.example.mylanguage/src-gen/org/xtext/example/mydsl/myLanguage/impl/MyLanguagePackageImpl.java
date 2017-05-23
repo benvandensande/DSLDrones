@@ -47,6 +47,7 @@ import org.xtext.example.mydsl.myLanguage.RobotSpeedSent;
 import org.xtext.example.mydsl.myLanguage.RobotStateSent;
 import org.xtext.example.mydsl.myLanguage.SonarDistanceSent;
 import org.xtext.example.mydsl.myLanguage.SonarSent;
+import org.xtext.example.mydsl.myLanguage.SpeedUnit;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Statement;
 import org.xtext.example.mydsl.myLanguage.StatementBody;
@@ -367,6 +368,41 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass toleranceSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass speedUnitEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass msEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass kmsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mhEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass kmhEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1406,29 +1442,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRobotSpeedSent_SpeedX()
+  public EReference getRobotSpeedSent_Speed()
   {
-    return (EAttribute)robotSpeedSentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRobotSpeedSent_SpeedY()
-  {
-    return (EAttribute)robotSpeedSentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRobotSpeedSent_SpeedZ()
-  {
-    return (EAttribute)robotSpeedSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)robotSpeedSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1489,6 +1505,86 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EReference getToleranceSent_Unit()
   {
     return (EReference)toleranceSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSpeedUnit()
+  {
+    return speedUnitEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeedUnit_X()
+  {
+    return (EAttribute)speedUnitEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeedUnit_Y()
+  {
+    return (EAttribute)speedUnitEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeedUnit_Z()
+  {
+    return (EAttribute)speedUnitEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMS()
+  {
+    return msEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getKMS()
+  {
+    return kmsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMH()
+  {
+    return mhEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getKMH()
+  {
+    return kmhEClass;
   }
 
   /**
@@ -1780,9 +1876,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEReference(spherePositionEClass, SPHERE_POSITION__TOLERANCE);
 
     robotSpeedSentEClass = createEClass(ROBOT_SPEED_SENT);
-    createEAttribute(robotSpeedSentEClass, ROBOT_SPEED_SENT__SPEED_X);
-    createEAttribute(robotSpeedSentEClass, ROBOT_SPEED_SENT__SPEED_Y);
-    createEAttribute(robotSpeedSentEClass, ROBOT_SPEED_SENT__SPEED_Z);
+    createEReference(robotSpeedSentEClass, ROBOT_SPEED_SENT__SPEED);
 
     environmentSentEClass = createEClass(ENVIRONMENT_SENT);
     createEReference(environmentSentEClass, ENVIRONMENT_SENT__BODY);
@@ -1792,6 +1886,19 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     toleranceSentEClass = createEClass(TOLERANCE_SENT);
     createEReference(toleranceSentEClass, TOLERANCE_SENT__UNIT);
+
+    speedUnitEClass = createEClass(SPEED_UNIT);
+    createEAttribute(speedUnitEClass, SPEED_UNIT__X);
+    createEAttribute(speedUnitEClass, SPEED_UNIT__Y);
+    createEAttribute(speedUnitEClass, SPEED_UNIT__Z);
+
+    msEClass = createEClass(MS);
+
+    kmsEClass = createEClass(KMS);
+
+    mhEClass = createEClass(MH);
+
+    kmhEClass = createEClass(KMH);
 
     distanceUnitEClass = createEClass(DISTANCE_UNIT);
     createEAttribute(distanceUnitEClass, DISTANCE_UNIT__VALUE);
@@ -1872,6 +1979,10 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     robotSpeedSentEClass.getESuperTypes().add(this.getRobot());
     environmentSentEClass.getESuperTypes().add(this.getStatementBody());
     riskSentEClass.getESuperTypes().add(this.getRobot());
+    msEClass.getESuperTypes().add(this.getSpeedUnit());
+    kmsEClass.getESuperTypes().add(this.getSpeedUnit());
+    mhEClass.getESuperTypes().add(this.getSpeedUnit());
+    kmhEClass.getESuperTypes().add(this.getSpeedUnit());
     secondsEClass.getESuperTypes().add(this.getTimeUnit());
     hourEClass.getESuperTypes().add(this.getTimeUnit());
     minutesEClass.getESuperTypes().add(this.getTimeUnit());
@@ -2010,9 +2121,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEReference(getSpherePosition_Tolerance(), this.getDistanceUnit(), null, "tolerance", null, 0, 1, SpherePosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(robotSpeedSentEClass, RobotSpeedSent.class, "RobotSpeedSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRobotSpeedSent_SpeedX(), ecorePackage.getEString(), "speedX", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRobotSpeedSent_SpeedY(), ecorePackage.getEString(), "speedY", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRobotSpeedSent_SpeedZ(), ecorePackage.getEString(), "speedZ", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobotSpeedSent_Speed(), this.getSpeedUnit(), null, "speed", null, 0, 1, RobotSpeedSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(environmentSentEClass, EnvironmentSent.class, "EnvironmentSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEnvironmentSent_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, EnvironmentSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2022,6 +2131,19 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(toleranceSentEClass, ToleranceSent.class, "ToleranceSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getToleranceSent_Unit(), this.getDistanceUnit(), null, "unit", null, 0, 1, ToleranceSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(speedUnitEClass, SpeedUnit.class, "SpeedUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSpeedUnit_X(), ecorePackage.getEString(), "x", null, 0, 1, SpeedUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeedUnit_Y(), ecorePackage.getEString(), "y", null, 0, 1, SpeedUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeedUnit_Z(), ecorePackage.getEString(), "z", null, 0, 1, SpeedUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(msEClass, org.xtext.example.mydsl.myLanguage.MS.class, "MS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(kmsEClass, org.xtext.example.mydsl.myLanguage.KMS.class, "KMS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(mhEClass, org.xtext.example.mydsl.myLanguage.MH.class, "MH", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(kmhEClass, org.xtext.example.mydsl.myLanguage.KMH.class, "KMH", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(distanceUnitEClass, DistanceUnit.class, "DistanceUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDistanceUnit_Value(), ecorePackage.getEString(), "value", null, 0, 1, DistanceUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

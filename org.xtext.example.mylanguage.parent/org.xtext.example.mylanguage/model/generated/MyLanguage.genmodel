@@ -127,9 +127,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//SpherePosition/tolerance"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//RobotSpeedSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotSpeedSent/speedX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotSpeedSent/speedY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotSpeedSent/speedZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotSpeedSent/speed"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//EnvironmentSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//EnvironmentSent/body"/>
@@ -140,6 +138,15 @@
     <genClasses ecoreClass="MyLanguage.ecore#//ToleranceSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//ToleranceSent/unit"/>
     </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//SpeedUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//SpeedUnit/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//SpeedUnit/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//SpeedUnit/z"/>
+    </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//MS"/>
+    <genClasses ecoreClass="MyLanguage.ecore#//KMS"/>
+    <genClasses ecoreClass="MyLanguage.ecore#//MH"/>
+    <genClasses ecoreClass="MyLanguage.ecore#//KMH"/>
     <genClasses ecoreClass="MyLanguage.ecore#//DistanceUnit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//DistanceUnit/value"/>
     </genClasses>

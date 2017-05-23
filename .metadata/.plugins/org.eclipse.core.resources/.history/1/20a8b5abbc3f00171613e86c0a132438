@@ -1,0 +1,306 @@
+grammar org.xtext.example.mydsl.MyLanguage with org.eclipse.xtext.common.Terminals
+
+generate myLanguage "http://www.xtext.org/example/mydsl/MyLanguage"
+
+TestFile :
+    (tests+=Test)*;
+  
+Test:
+	'Test:' 
+	name=ID
+	('Description:' (description=STRING))?
+	(statements+=Statement)+
+	;
+
+Statement:
+	Given | When | Then;
+
+Given:
+	'Given:'
+	body=StatementBody;
+
+Then:
+	'Then:'
+	body=StatementBody;
+	
+When:
+	'When:'
+	body=StatementBody;
+	
+StatementBody:
+	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
+	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
+	
+
+CompStatusSent:
+	'status''is'
+	status = COMPSTATUS
+;
+
+GPSSent:
+	'GPS'
+	sent = (GPSReadingSent|CompStatusSent)
+;
+
+GPSReadingSent:
+	'positionReading''is'
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
+	tolerance =(CirclePosition|SpherePosition)?
+;
+
+
+BaroSent:
+	'Barometer'
+	sent = (BaroAltSent|CompStatusSent)
+;
+
+BaroAltSent:
+	'altitudereading''is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+SonarSent:
+	'Sonar'
+	sent = (SonarDistanceSent|CompStatusSent)
+;
+
+SonarDistanceSent:
+	'distancereading''is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+
+NotificationSent:
+	not='Notification''status''is''sent'
+;
+	
+TimeSent:
+	'Time'
+	TimeInterval;
+
+TimeInterval:
+	'interval''in''['
+	first=TimeUnit ',' second=TimeUnit
+	']'
+;
+
+BatterySent:
+	'Battery'
+	sent = (BatteryLevelSent|CompStatusSent)
+;
+
+BatteryLevelSent:
+	'level' 'is'
+	sent = (GreaterSent | LessSent | EqualSent)
+;
+
+PeopleSent:
+	'Person'
+	(PeopleNumbSent | PeoplePosSent)
+;
+
+PeoplePosSent:
+	'position''is'
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
+	tolerance =(CirclePosition|SpherePosition)?
+;
+
+PeopleNumbSent:
+	'number''is'
+	amount=INT
+;
+
+MissionSent:
+	'Mission' 
+	(MissionStatusSent | MissionRiskLevelSent | MissionGoalSent)
+;
+
+MissionGoalSent:
+	'goal''is'
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
+;
+
+MissionRiskLevelSent:
+	'missionsafety''is'
+	risklevel = MISSIONRISKLEVEL
+;
+
+MissionStatusSent:
+	'status''is' 
+	state=MISSIONSTATUS 
+;
+
+Robot:
+	'Robot'
+	(RobotPositionSent | RobotSpeedSent | RobotStateSent 
+		| RobotDistanceSent | RiskSent  | PayloadSent
+		| RobotAutoPilot
+	)
+;
+
+RobotAutoPilot:
+	'autopilot''is'
+	status=('ON'|'OFF')
+;
+
+PayloadSent:
+	load='payload''drops'
+;
+
+RobotDistanceSent:
+	'distance''to'
+	sent=(DistanceToObstaclesSent|DistanceToLocationSent)
+;
+
+DistanceToLocationSent:
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
+	'is'
+	body=(GreaterSent | LessSent | EqualSent)
+	(tolerance=ToleranceSent)?
+;
+
+DistanceToObstaclesSent:
+	'obstacles''is'
+	body=(GreaterSent | LessSent | EqualSent)
+	(tolerance=ToleranceSent)?
+;
+
+EqualSent:
+	'equal''to'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+LessSent:
+	'lower''then'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+GreaterSent:
+	'greater''then'
+	amount = (DistanceUnit|PercentUnit)
+;
+
+RobotStateSent:
+	'state''is' state = ID
+;
+
+RobotPositionSent:
+	'position''is'
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
+	tolerance =(CirclePosition|SpherePosition)?
+;
+
+CirclePosition:
+	'within''circle''with''radius'
+	tolerance=DistanceUnit
+;
+
+
+SpherePosition:
+	'within''sphere''with''radius'
+	tolerance=DistanceUnit
+;
+
+RobotSpeedSent:
+	'speed''is'
+	speed=SpeedUnit
+;
+
+EnvironmentSent:
+	'Environment''windspeed''is' 
+	body=(GreaterSent | LessSent | EqualSent)
+;
+
+
+RiskSent:
+	'collisionrisk''is' level=COLLISIONRISKLEVEL
+;
+
+ToleranceSent:
+	'with''tolerance'
+	unit = DistanceUnit
+;
+
+MISSIONSTATUS:
+	('ACTIVE' | 'UNACTIVE'| 'PAUSED')
+;
+
+MISSIONRISKLEVEL:
+	('SAFE' | 'UNSAFE')
+;
+
+COLLISIONRISKLEVEL:
+	('SAFE'|'WARNING'|'CRITICAL')
+;
+
+COMPSTATUS:
+	('ACTIVE' | 'FAILING' |'REDUNDANT')
+;
+
+SpeedUnit: (MS | KMS | MH | KMH);
+
+MS:
+	'm/s('x = PositiveDouble',' y = PositiveDouble ',' z = PositiveDouble ')'
+;
+
+KMS:
+	'km/s('value = PositiveDouble')'
+;
+
+MH:
+	'm/h('value = PositiveDouble')'
+;
+
+KMH:
+	'km/h('value = PositiveDouble')'
+;
+
+DistanceUnit: (METER|CENTIMETER|MILLIMETER|KILOMETER);
+TimeUnit : (SECONDS|HOUR|MINUTES);
+
+SECONDS:
+	'seconds('value = PositiveDouble')'
+;
+
+HOUR:
+	'hours('value = PositiveDouble')'
+;
+
+MINUTES:
+	'minutes('value = PositiveDouble')'
+;
+
+METER:
+	'meter('value = DOUBLE')'
+;
+CENTIMETER:
+	'centimeter('value = DOUBLE')'
+;
+MILLIMETER:
+	'millimeter('value = DOUBLE')'
+;
+KILOMETER:
+	'kilometer('value = DOUBLE')'
+;
+
+PercentUnit:
+	'percent('value=PositiveDouble')'
+;
+
+DOUBLE :
+	('-')? INT ('.' INT)?
+;
+
+PositiveDouble:
+	INT ('.' INT)?
+;

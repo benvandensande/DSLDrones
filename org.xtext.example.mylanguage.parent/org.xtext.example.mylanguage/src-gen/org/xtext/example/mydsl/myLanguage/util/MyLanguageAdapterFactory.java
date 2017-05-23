@@ -291,6 +291,31 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
         return createToleranceSentAdapter();
       }
       @Override
+      public Adapter caseSpeedUnit(SpeedUnit object)
+      {
+        return createSpeedUnitAdapter();
+      }
+      @Override
+      public Adapter caseMS(MS object)
+      {
+        return createMSAdapter();
+      }
+      @Override
+      public Adapter caseKMS(KMS object)
+      {
+        return createKMSAdapter();
+      }
+      @Override
+      public Adapter caseMH(MH object)
+      {
+        return createMHAdapter();
+      }
+      @Override
+      public Adapter caseKMH(KMH object)
+      {
+        return createKMHAdapter();
+      }
+      @Override
       public Adapter caseDistanceUnit(DistanceUnit object)
       {
         return createDistanceUnitAdapter();
@@ -1003,6 +1028,81 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createToleranceSentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.SpeedUnit <em>Speed Unit</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.SpeedUnit
+   * @generated
+   */
+  public Adapter createSpeedUnitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.MS <em>MS</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.MS
+   * @generated
+   */
+  public Adapter createMSAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.KMS <em>KMS</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.KMS
+   * @generated
+   */
+  public Adapter createKMSAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.MH <em>MH</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.MH
+   * @generated
+   */
+  public Adapter createMHAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.KMH <em>KMH</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.KMH
+   * @generated
+   */
+  public Adapter createKMHAdapter()
   {
     return null;
   }

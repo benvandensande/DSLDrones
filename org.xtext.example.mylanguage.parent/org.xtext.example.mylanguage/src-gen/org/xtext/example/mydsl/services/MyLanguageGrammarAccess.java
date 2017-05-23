@@ -1465,21 +1465,15 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpeedKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSpeedXAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpeedXDOUBLEParserRuleCall_2_0 = (RuleCall)cSpeedXAssignment_2.eContents().get(0);
-		private final Assignment cSpeedYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSpeedYDOUBLEParserRuleCall_3_0 = (RuleCall)cSpeedYAssignment_3.eContents().get(0);
-		private final Assignment cSpeedZAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cSpeedZDOUBLEParserRuleCall_4_0 = (RuleCall)cSpeedZAssignment_4.eContents().get(0);
+		private final Assignment cSpeedAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSpeedSpeedUnitParserRuleCall_2_0 = (RuleCall)cSpeedAssignment_2.eContents().get(0);
 		
 		//RobotSpeedSent:
 		//	'speed' 'is'
-		//	speedX=DOUBLE
-		//	speedY=DOUBLE
-		//	speedZ=DOUBLE;
+		//	speed=SpeedUnit;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'speed' 'is' speedX=DOUBLE speedY=DOUBLE speedZ=DOUBLE
+		//'speed' 'is' speed=SpeedUnit
 		public Group getGroup() { return cGroup; }
 		
 		//'speed'
@@ -1488,23 +1482,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//speedX=DOUBLE
-		public Assignment getSpeedXAssignment_2() { return cSpeedXAssignment_2; }
+		//speed=SpeedUnit
+		public Assignment getSpeedAssignment_2() { return cSpeedAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getSpeedXDOUBLEParserRuleCall_2_0() { return cSpeedXDOUBLEParserRuleCall_2_0; }
-		
-		//speedY=DOUBLE
-		public Assignment getSpeedYAssignment_3() { return cSpeedYAssignment_3; }
-		
-		//DOUBLE
-		public RuleCall getSpeedYDOUBLEParserRuleCall_3_0() { return cSpeedYDOUBLEParserRuleCall_3_0; }
-		
-		//speedZ=DOUBLE
-		public Assignment getSpeedZAssignment_4() { return cSpeedZAssignment_4; }
-		
-		//DOUBLE
-		public RuleCall getSpeedZDOUBLEParserRuleCall_4_0() { return cSpeedZDOUBLEParserRuleCall_4_0; }
+		//SpeedUnit
+		public RuleCall getSpeedSpeedUnitParserRuleCall_2_0() { return cSpeedSpeedUnitParserRuleCall_2_0; }
 	}
 	public class EnvironmentSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.EnvironmentSent");
@@ -1692,6 +1674,237 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'REDUNDANT'
 		public Keyword getREDUNDANTKeyword_2() { return cREDUNDANTKeyword_2; }
+	}
+	public class SpeedUnitElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.SpeedUnit");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cMSParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cKMSParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cMHParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cKMHParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//SpeedUnit:
+		//	MS | KMS | MH | KMH;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//MS | KMS | MH | KMH
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//MS
+		public RuleCall getMSParserRuleCall_0() { return cMSParserRuleCall_0; }
+		
+		//KMS
+		public RuleCall getKMSParserRuleCall_1() { return cKMSParserRuleCall_1; }
+		
+		//MH
+		public RuleCall getMHParserRuleCall_2() { return cMHParserRuleCall_2; }
+		
+		//KMH
+		public RuleCall getKMHParserRuleCall_3() { return cKMHParserRuleCall_3; }
+	}
+	public class MSElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.MS");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMSKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cXDOUBLEParserRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cYDOUBLEParserRuleCall_3_0 = (RuleCall)cYAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cZAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cZDOUBLEParserRuleCall_5_0 = (RuleCall)cZAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//MS:
+		//	'm/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'m/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')'
+		public Group getGroup() { return cGroup; }
+		
+		//'m/s('
+		public Keyword getMSKeyword_0() { return cMSKeyword_0; }
+		
+		//x=DOUBLE
+		public Assignment getXAssignment_1() { return cXAssignment_1; }
+		
+		//DOUBLE
+		public RuleCall getXDOUBLEParserRuleCall_1_0() { return cXDOUBLEParserRuleCall_1_0; }
+		
+		//','
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		
+		//y=DOUBLE
+		public Assignment getYAssignment_3() { return cYAssignment_3; }
+		
+		//DOUBLE
+		public RuleCall getYDOUBLEParserRuleCall_3_0() { return cYDOUBLEParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//z=DOUBLE
+		public Assignment getZAssignment_5() { return cZAssignment_5; }
+		
+		//DOUBLE
+		public RuleCall getZDOUBLEParserRuleCall_5_0() { return cZDOUBLEParserRuleCall_5_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+	}
+	public class KMSElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.KMS");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cKmSKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cXDOUBLEParserRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cYDOUBLEParserRuleCall_3_0 = (RuleCall)cYAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cZAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cZDOUBLEParserRuleCall_5_0 = (RuleCall)cZAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//KMS:
+		//	'km/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'km/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')'
+		public Group getGroup() { return cGroup; }
+		
+		//'km/s('
+		public Keyword getKmSKeyword_0() { return cKmSKeyword_0; }
+		
+		//x=DOUBLE
+		public Assignment getXAssignment_1() { return cXAssignment_1; }
+		
+		//DOUBLE
+		public RuleCall getXDOUBLEParserRuleCall_1_0() { return cXDOUBLEParserRuleCall_1_0; }
+		
+		//','
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		
+		//y=DOUBLE
+		public Assignment getYAssignment_3() { return cYAssignment_3; }
+		
+		//DOUBLE
+		public RuleCall getYDOUBLEParserRuleCall_3_0() { return cYDOUBLEParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//z=DOUBLE
+		public Assignment getZAssignment_5() { return cZAssignment_5; }
+		
+		//DOUBLE
+		public RuleCall getZDOUBLEParserRuleCall_5_0() { return cZDOUBLEParserRuleCall_5_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+	}
+	public class MHElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.MH");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMHKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cXDOUBLEParserRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cYDOUBLEParserRuleCall_3_0 = (RuleCall)cYAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cZAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cZDOUBLEParserRuleCall_5_0 = (RuleCall)cZAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//MH:
+		//	'm/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'m/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')'
+		public Group getGroup() { return cGroup; }
+		
+		//'m/h('
+		public Keyword getMHKeyword_0() { return cMHKeyword_0; }
+		
+		//x=DOUBLE
+		public Assignment getXAssignment_1() { return cXAssignment_1; }
+		
+		//DOUBLE
+		public RuleCall getXDOUBLEParserRuleCall_1_0() { return cXDOUBLEParserRuleCall_1_0; }
+		
+		//','
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		
+		//y=DOUBLE
+		public Assignment getYAssignment_3() { return cYAssignment_3; }
+		
+		//DOUBLE
+		public RuleCall getYDOUBLEParserRuleCall_3_0() { return cYDOUBLEParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//z=DOUBLE
+		public Assignment getZAssignment_5() { return cZAssignment_5; }
+		
+		//DOUBLE
+		public RuleCall getZDOUBLEParserRuleCall_5_0() { return cZDOUBLEParserRuleCall_5_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+	}
+	public class KMHElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.KMH");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cKmHKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cXDOUBLEParserRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cYDOUBLEParserRuleCall_3_0 = (RuleCall)cYAssignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cZAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cZDOUBLEParserRuleCall_5_0 = (RuleCall)cZAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//KMH:
+		//	'km/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'km/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')'
+		public Group getGroup() { return cGroup; }
+		
+		//'km/h('
+		public Keyword getKmHKeyword_0() { return cKmHKeyword_0; }
+		
+		//x=DOUBLE
+		public Assignment getXAssignment_1() { return cXAssignment_1; }
+		
+		//DOUBLE
+		public RuleCall getXDOUBLEParserRuleCall_1_0() { return cXDOUBLEParserRuleCall_1_0; }
+		
+		//','
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		
+		//y=DOUBLE
+		public Assignment getYAssignment_3() { return cYAssignment_3; }
+		
+		//DOUBLE
+		public RuleCall getYDOUBLEParserRuleCall_3_0() { return cYDOUBLEParserRuleCall_3_0; }
+		
+		//','
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		
+		//z=DOUBLE
+		public Assignment getZAssignment_5() { return cZAssignment_5; }
+		
+		//DOUBLE
+		public RuleCall getZDOUBLEParserRuleCall_5_0() { return cZDOUBLEParserRuleCall_5_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 	}
 	public class DistanceUnitElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.DistanceUnit");
@@ -2066,6 +2279,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final MISSIONRISKLEVELElements pMISSIONRISKLEVEL;
 	private final COLLISIONRISKLEVELElements pCOLLISIONRISKLEVEL;
 	private final COMPSTATUSElements pCOMPSTATUS;
+	private final SpeedUnitElements pSpeedUnit;
+	private final MSElements pMS;
+	private final KMSElements pKMS;
+	private final MHElements pMH;
+	private final KMHElements pKMH;
 	private final DistanceUnitElements pDistanceUnit;
 	private final TimeUnitElements pTimeUnit;
 	private final SECONDSElements pSECONDS;
@@ -2135,6 +2353,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMISSIONRISKLEVEL = new MISSIONRISKLEVELElements();
 		this.pCOLLISIONRISKLEVEL = new COLLISIONRISKLEVELElements();
 		this.pCOMPSTATUS = new COMPSTATUSElements();
+		this.pSpeedUnit = new SpeedUnitElements();
+		this.pMS = new MSElements();
+		this.pKMS = new KMSElements();
+		this.pMH = new MHElements();
+		this.pKMH = new KMHElements();
 		this.pDistanceUnit = new DistanceUnitElements();
 		this.pTimeUnit = new TimeUnitElements();
 		this.pSECONDS = new SECONDSElements();
@@ -2617,9 +2840,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//RobotSpeedSent:
 	//	'speed' 'is'
-	//	speedX=DOUBLE
-	//	speedY=DOUBLE
-	//	speedZ=DOUBLE;
+	//	speed=SpeedUnit;
 	public RobotSpeedSentElements getRobotSpeedSentAccess() {
 		return pRobotSpeedSent;
 	}
@@ -2698,6 +2919,56 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCOMPSTATUSRule() {
 		return getCOMPSTATUSAccess().getRule();
+	}
+	
+	//SpeedUnit:
+	//	MS | KMS | MH | KMH;
+	public SpeedUnitElements getSpeedUnitAccess() {
+		return pSpeedUnit;
+	}
+	
+	public ParserRule getSpeedUnitRule() {
+		return getSpeedUnitAccess().getRule();
+	}
+	
+	//MS:
+	//	'm/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+	public MSElements getMSAccess() {
+		return pMS;
+	}
+	
+	public ParserRule getMSRule() {
+		return getMSAccess().getRule();
+	}
+	
+	//KMS:
+	//	'km/s(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+	public KMSElements getKMSAccess() {
+		return pKMS;
+	}
+	
+	public ParserRule getKMSRule() {
+		return getKMSAccess().getRule();
+	}
+	
+	//MH:
+	//	'm/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+	public MHElements getMHAccess() {
+		return pMH;
+	}
+	
+	public ParserRule getMHRule() {
+		return getMHAccess().getRule();
+	}
+	
+	//KMH:
+	//	'km/h(' x=DOUBLE ',' y=DOUBLE ',' z=DOUBLE ')';
+	public KMHElements getKMHAccess() {
+		return pKMH;
+	}
+	
+	public ParserRule getKMHRule() {
+		return getKMHAccess().getRule();
 	}
 	
 	//DistanceUnit:

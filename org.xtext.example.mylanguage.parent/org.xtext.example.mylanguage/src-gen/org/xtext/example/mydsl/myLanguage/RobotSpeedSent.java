@@ -13,9 +13,7 @@ package org.xtext.example.mydsl.myLanguage;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedX <em>Speed X</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedY <em>Speed Y</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedZ <em>Speed Z</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent()
@@ -25,81 +23,29 @@ package org.xtext.example.mydsl.myLanguage;
 public interface RobotSpeedSent extends Robot
 {
   /**
-   * Returns the value of the '<em><b>Speed X</b></em>' attribute.
+   * Returns the value of the '<em><b>Speed</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Speed X</em>' attribute isn't clear,
+   * If the meaning of the '<em>Speed</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Speed X</em>' attribute.
-   * @see #setSpeedX(String)
-   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_SpeedX()
-   * @model
+   * @return the value of the '<em>Speed</em>' containment reference.
+   * @see #setSpeed(SpeedUnit)
+   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_Speed()
+   * @model containment="true"
    * @generated
    */
-  String getSpeedX();
+  SpeedUnit getSpeed();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedX <em>Speed X</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Speed X</em>' attribute.
-   * @see #getSpeedX()
+   * @param value the new value of the '<em>Speed</em>' containment reference.
+   * @see #getSpeed()
    * @generated
    */
-  void setSpeedX(String value);
-
-  /**
-   * Returns the value of the '<em><b>Speed Y</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Speed Y</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Speed Y</em>' attribute.
-   * @see #setSpeedY(String)
-   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_SpeedY()
-   * @model
-   * @generated
-   */
-  String getSpeedY();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedY <em>Speed Y</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Speed Y</em>' attribute.
-   * @see #getSpeedY()
-   * @generated
-   */
-  void setSpeedY(String value);
-
-  /**
-   * Returns the value of the '<em><b>Speed Z</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Speed Z</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Speed Z</em>' attribute.
-   * @see #setSpeedZ(String)
-   * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getRobotSpeedSent_SpeedZ()
-   * @model
-   * @generated
-   */
-  String getSpeedZ();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedZ <em>Speed Z</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Speed Z</em>' attribute.
-   * @see #getSpeedZ()
-   * @generated
-   */
-  void setSpeedZ(String value);
+  void setSpeed(SpeedUnit value);
 
 } // RobotSpeedSent

@@ -1286,31 +1286,13 @@ public interface MyLanguagePackage extends EPackage
   int ROBOT_SPEED_SENT = 39;
 
   /**
-   * The feature id for the '<em><b>Speed X</b></em>' attribute.
+   * The feature id for the '<em><b>Speed</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROBOT_SPEED_SENT__SPEED_X = ROBOT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Speed Y</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROBOT_SPEED_SENT__SPEED_Y = ROBOT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Speed Z</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROBOT_SPEED_SENT__SPEED_Z = ROBOT_FEATURE_COUNT + 2;
+  int ROBOT_SPEED_SENT__SPEED = ROBOT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Robot Speed Sent</em>' class.
@@ -1319,7 +1301,7 @@ public interface MyLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROBOT_SPEED_SENT_FEATURE_COUNT = ROBOT_FEATURE_COUNT + 3;
+  int ROBOT_SPEED_SENT_FEATURE_COUNT = ROBOT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.EnvironmentSentImpl <em>Environment Sent</em>}' class.
@@ -1406,6 +1388,236 @@ public interface MyLanguagePackage extends EPackage
   int TOLERANCE_SENT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.SpeedUnitImpl <em>Speed Unit</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.SpeedUnitImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSpeedUnit()
+   * @generated
+   */
+  int SPEED_UNIT = 43;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_UNIT__X = 0;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_UNIT__Y = 1;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_UNIT__Z = 2;
+
+  /**
+   * The number of structural features of the '<em>Speed Unit</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_UNIT_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.MSImpl <em>MS</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.MSImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMS()
+   * @generated
+   */
+  int MS = 44;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MS__X = SPEED_UNIT__X;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MS__Y = SPEED_UNIT__Y;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MS__Z = SPEED_UNIT__Z;
+
+  /**
+   * The number of structural features of the '<em>MS</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MS_FEATURE_COUNT = SPEED_UNIT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.KMSImpl <em>KMS</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.KMSImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKMS()
+   * @generated
+   */
+  int KMS = 45;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMS__X = SPEED_UNIT__X;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMS__Y = SPEED_UNIT__Y;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMS__Z = SPEED_UNIT__Z;
+
+  /**
+   * The number of structural features of the '<em>KMS</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMS_FEATURE_COUNT = SPEED_UNIT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.MHImpl <em>MH</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.MHImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMH()
+   * @generated
+   */
+  int MH = 46;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MH__X = SPEED_UNIT__X;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MH__Y = SPEED_UNIT__Y;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MH__Z = SPEED_UNIT__Z;
+
+  /**
+   * The number of structural features of the '<em>MH</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MH_FEATURE_COUNT = SPEED_UNIT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.KMHImpl <em>KMH</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.KMHImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKMH()
+   * @generated
+   */
+  int KMH = 47;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMH__X = SPEED_UNIT__X;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMH__Y = SPEED_UNIT__Y;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMH__Z = SPEED_UNIT__Z;
+
+  /**
+   * The number of structural features of the '<em>KMH</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KMH_FEATURE_COUNT = SPEED_UNIT_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.DistanceUnitImpl <em>Distance Unit</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1413,7 +1625,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceUnit()
    * @generated
    */
-  int DISTANCE_UNIT = 43;
+  int DISTANCE_UNIT = 48;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1441,7 +1653,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeUnit()
    * @generated
    */
-  int TIME_UNIT = 44;
+  int TIME_UNIT = 49;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1469,7 +1681,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSECONDS()
    * @generated
    */
-  int SECONDS = 45;
+  int SECONDS = 50;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1497,7 +1709,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getHOUR()
    * @generated
    */
-  int HOUR = 46;
+  int HOUR = 51;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1525,7 +1737,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMINUTES()
    * @generated
    */
-  int MINUTES = 47;
+  int MINUTES = 52;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1553,7 +1765,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMETER()
    * @generated
    */
-  int METER = 48;
+  int METER = 53;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1581,7 +1793,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getCENTIMETER()
    * @generated
    */
-  int CENTIMETER = 49;
+  int CENTIMETER = 54;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1609,7 +1821,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMILLIMETER()
    * @generated
    */
-  int MILLIMETER = 50;
+  int MILLIMETER = 55;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1637,7 +1849,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKILOMETER()
    * @generated
    */
-  int KILOMETER = 51;
+  int KILOMETER = 56;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1665,7 +1877,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPercentUnit()
    * @generated
    */
-  int PERCENT_UNIT = 52;
+  int PERCENT_UNIT = 57;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2637,37 +2849,15 @@ public interface MyLanguagePackage extends EPackage
   EClass getRobotSpeedSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedX <em>Speed X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed <em>Speed</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Speed X</em>'.
-   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedX()
+   * @return the meta object for the containment reference '<em>Speed</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeed()
    * @see #getRobotSpeedSent()
    * @generated
    */
-  EAttribute getRobotSpeedSent_SpeedX();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedY <em>Speed Y</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Speed Y</em>'.
-   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedY()
-   * @see #getRobotSpeedSent()
-   * @generated
-   */
-  EAttribute getRobotSpeedSent_SpeedY();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedZ <em>Speed Z</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Speed Z</em>'.
-   * @see org.xtext.example.mydsl.myLanguage.RobotSpeedSent#getSpeedZ()
-   * @see #getRobotSpeedSent()
-   * @generated
-   */
-  EAttribute getRobotSpeedSent_SpeedZ();
+  EReference getRobotSpeedSent_Speed();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.EnvironmentSent <em>Environment Sent</em>}'.
@@ -2731,6 +2921,89 @@ public interface MyLanguagePackage extends EPackage
    * @generated
    */
   EReference getToleranceSent_Unit();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.SpeedUnit <em>Speed Unit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Speed Unit</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SpeedUnit
+   * @generated
+   */
+  EClass getSpeedUnit();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.SpeedUnit#getX <em>X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>X</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SpeedUnit#getX()
+   * @see #getSpeedUnit()
+   * @generated
+   */
+  EAttribute getSpeedUnit_X();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.SpeedUnit#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SpeedUnit#getY()
+   * @see #getSpeedUnit()
+   * @generated
+   */
+  EAttribute getSpeedUnit_Y();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.SpeedUnit#getZ <em>Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Z</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.SpeedUnit#getZ()
+   * @see #getSpeedUnit()
+   * @generated
+   */
+  EAttribute getSpeedUnit_Z();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.MS <em>MS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MS</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.MS
+   * @generated
+   */
+  EClass getMS();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.KMS <em>KMS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>KMS</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.KMS
+   * @generated
+   */
+  EClass getKMS();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.MH <em>MH</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MH</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.MH
+   * @generated
+   */
+  EClass getMH();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.KMH <em>KMH</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>KMH</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.KMH
+   * @generated
+   */
+  EClass getKMH();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.DistanceUnit <em>Distance Unit</em>}'.
@@ -3689,28 +3962,12 @@ public interface MyLanguagePackage extends EPackage
     EClass ROBOT_SPEED_SENT = eINSTANCE.getRobotSpeedSent();
 
     /**
-     * The meta object literal for the '<em><b>Speed X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Speed</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROBOT_SPEED_SENT__SPEED_X = eINSTANCE.getRobotSpeedSent_SpeedX();
-
-    /**
-     * The meta object literal for the '<em><b>Speed Y</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ROBOT_SPEED_SENT__SPEED_Y = eINSTANCE.getRobotSpeedSent_SpeedY();
-
-    /**
-     * The meta object literal for the '<em><b>Speed Z</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ROBOT_SPEED_SENT__SPEED_Z = eINSTANCE.getRobotSpeedSent_SpeedZ();
+    EReference ROBOT_SPEED_SENT__SPEED = eINSTANCE.getRobotSpeedSent_Speed();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.EnvironmentSentImpl <em>Environment Sent</em>}' class.
@@ -3765,6 +4022,80 @@ public interface MyLanguagePackage extends EPackage
      * @generated
      */
     EReference TOLERANCE_SENT__UNIT = eINSTANCE.getToleranceSent_Unit();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.SpeedUnitImpl <em>Speed Unit</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.SpeedUnitImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSpeedUnit()
+     * @generated
+     */
+    EClass SPEED_UNIT = eINSTANCE.getSpeedUnit();
+
+    /**
+     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED_UNIT__X = eINSTANCE.getSpeedUnit_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED_UNIT__Y = eINSTANCE.getSpeedUnit_Y();
+
+    /**
+     * The meta object literal for the '<em><b>Z</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED_UNIT__Z = eINSTANCE.getSpeedUnit_Z();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.MSImpl <em>MS</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.MSImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMS()
+     * @generated
+     */
+    EClass MS = eINSTANCE.getMS();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.KMSImpl <em>KMS</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.KMSImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKMS()
+     * @generated
+     */
+    EClass KMS = eINSTANCE.getKMS();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.MHImpl <em>MH</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.MHImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMH()
+     * @generated
+     */
+    EClass MH = eINSTANCE.getMH();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.KMHImpl <em>KMH</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.KMHImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKMH()
+     * @generated
+     */
+    EClass KMH = eINSTANCE.getKMH();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.DistanceUnitImpl <em>Distance Unit</em>}' class.

@@ -413,6 +413,45 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.SPEED_UNIT:
+      {
+        SpeedUnit speedUnit = (SpeedUnit)theEObject;
+        T result = caseSpeedUnit(speedUnit);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.MS:
+      {
+        MS ms = (MS)theEObject;
+        T result = caseMS(ms);
+        if (result == null) result = caseSpeedUnit(ms);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.KMS:
+      {
+        KMS kms = (KMS)theEObject;
+        T result = caseKMS(kms);
+        if (result == null) result = caseSpeedUnit(kms);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.MH:
+      {
+        MH mh = (MH)theEObject;
+        T result = caseMH(mh);
+        if (result == null) result = caseSpeedUnit(mh);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.KMH:
+      {
+        KMH kmh = (KMH)theEObject;
+        T result = caseKMH(kmh);
+        if (result == null) result = caseSpeedUnit(kmh);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.DISTANCE_UNIT:
       {
         DistanceUnit distanceUnit = (DistanceUnit)theEObject;
@@ -1178,6 +1217,86 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseToleranceSent(ToleranceSent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Speed Unit</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Speed Unit</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpeedUnit(SpeedUnit object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MS</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MS</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMS(MS object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KMS</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KMS</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKMS(KMS object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MH</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MH</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMH(MH object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KMH</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KMH</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKMH(KMH object)
   {
     return null;
   }

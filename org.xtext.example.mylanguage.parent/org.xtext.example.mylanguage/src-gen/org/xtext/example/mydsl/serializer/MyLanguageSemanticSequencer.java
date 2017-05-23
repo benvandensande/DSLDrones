@@ -31,10 +31,14 @@ import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.HOUR;
 import org.xtext.example.mydsl.myLanguage.KILOMETER;
+import org.xtext.example.mydsl.myLanguage.KMH;
+import org.xtext.example.mydsl.myLanguage.KMS;
 import org.xtext.example.mydsl.myLanguage.LessSent;
 import org.xtext.example.mydsl.myLanguage.METER;
+import org.xtext.example.mydsl.myLanguage.MH;
 import org.xtext.example.mydsl.myLanguage.MILLIMETER;
 import org.xtext.example.mydsl.myLanguage.MINUTES;
+import org.xtext.example.mydsl.myLanguage.MS;
 import org.xtext.example.mydsl.myLanguage.MissionGoalSent;
 import org.xtext.example.mydsl.myLanguage.MissionRiskLevelSent;
 import org.xtext.example.mydsl.myLanguage.MissionStatusSent;
@@ -127,17 +131,29 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MyLanguagePackage.KILOMETER:
 				sequence_KILOMETER(context, (KILOMETER) semanticObject); 
 				return; 
+			case MyLanguagePackage.KMH:
+				sequence_KMH(context, (KMH) semanticObject); 
+				return; 
+			case MyLanguagePackage.KMS:
+				sequence_KMS(context, (KMS) semanticObject); 
+				return; 
 			case MyLanguagePackage.LESS_SENT:
 				sequence_LessSent(context, (LessSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.METER:
 				sequence_METER(context, (METER) semanticObject); 
 				return; 
+			case MyLanguagePackage.MH:
+				sequence_MH(context, (MH) semanticObject); 
+				return; 
 			case MyLanguagePackage.MILLIMETER:
 				sequence_MILLIMETER(context, (MILLIMETER) semanticObject); 
 				return; 
 			case MyLanguagePackage.MINUTES:
 				sequence_MINUTES(context, (MINUTES) semanticObject); 
+				return; 
+			case MyLanguagePackage.MS:
+				sequence_MS(context, (MS) semanticObject); 
 				return; 
 			case MyLanguagePackage.MISSION_GOAL_SENT:
 				sequence_MissionGoalSent(context, (MissionGoalSent) semanticObject); 
@@ -466,6 +482,56 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     SpeedUnit returns KMH
+	 *     KMH returns KMH
+	 *
+	 * Constraint:
+	 *     (x=DOUBLE y=DOUBLE z=DOUBLE)
+	 */
+	protected void sequence_KMH(ISerializationContext context, KMH semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getKMHAccess().getXDOUBLEParserRuleCall_1_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getKMHAccess().getYDOUBLEParserRuleCall_3_0(), semanticObject.getY());
+		feeder.accept(grammarAccess.getKMHAccess().getZDOUBLEParserRuleCall_5_0(), semanticObject.getZ());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SpeedUnit returns KMS
+	 *     KMS returns KMS
+	 *
+	 * Constraint:
+	 *     (x=DOUBLE y=DOUBLE z=DOUBLE)
+	 */
+	protected void sequence_KMS(ISerializationContext context, KMS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getKMSAccess().getXDOUBLEParserRuleCall_1_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getKMSAccess().getYDOUBLEParserRuleCall_3_0(), semanticObject.getY());
+		feeder.accept(grammarAccess.getKMSAccess().getZDOUBLEParserRuleCall_5_0(), semanticObject.getZ());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     LessSent returns LessSent
 	 *
 	 * Constraint:
@@ -491,6 +557,31 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMETERAccess().getValueDOUBLEParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SpeedUnit returns MH
+	 *     MH returns MH
+	 *
+	 * Constraint:
+	 *     (x=DOUBLE y=DOUBLE z=DOUBLE)
+	 */
+	protected void sequence_MH(ISerializationContext context, MH semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMHAccess().getXDOUBLEParserRuleCall_1_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getMHAccess().getYDOUBLEParserRuleCall_3_0(), semanticObject.getY());
+		feeder.accept(grammarAccess.getMHAccess().getZDOUBLEParserRuleCall_5_0(), semanticObject.getZ());
 		feeder.finish();
 	}
 	
@@ -529,6 +620,31 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMINUTESAccess().getValuePositiveDoubleParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SpeedUnit returns MS
+	 *     MS returns MS
+	 *
+	 * Constraint:
+	 *     (x=DOUBLE y=DOUBLE z=DOUBLE)
+	 */
+	protected void sequence_MS(ISerializationContext context, MS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__X));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Y));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.SPEED_UNIT__Z));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMSAccess().getXDOUBLEParserRuleCall_1_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getMSAccess().getYDOUBLEParserRuleCall_3_0(), semanticObject.getY());
+		feeder.accept(grammarAccess.getMSAccess().getZDOUBLEParserRuleCall_5_0(), semanticObject.getZ());
 		feeder.finish();
 	}
 	
@@ -759,21 +875,15 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     RobotSpeedSent returns RobotSpeedSent
 	 *
 	 * Constraint:
-	 *     (speedX=DOUBLE speedY=DOUBLE speedZ=DOUBLE)
+	 *     speed=SpeedUnit
 	 */
 	protected void sequence_RobotSpeedSent(ISerializationContext context, RobotSpeedSent semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_X));
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_Y) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_Y));
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_Z) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED_Z));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.ROBOT_SPEED_SENT__SPEED));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRobotSpeedSentAccess().getSpeedXDOUBLEParserRuleCall_2_0(), semanticObject.getSpeedX());
-		feeder.accept(grammarAccess.getRobotSpeedSentAccess().getSpeedYDOUBLEParserRuleCall_3_0(), semanticObject.getSpeedY());
-		feeder.accept(grammarAccess.getRobotSpeedSentAccess().getSpeedZDOUBLEParserRuleCall_4_0(), semanticObject.getSpeedZ());
+		feeder.accept(grammarAccess.getRobotSpeedSentAccess().getSpeedSpeedUnitParserRuleCall_2_0(), semanticObject.getSpeed());
 		feeder.finish();
 	}
 	

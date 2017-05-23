@@ -2680,56 +2680,18 @@ ruleRobotSpeedSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedXDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedSpeedUnitParserRuleCall_2_0());
 				}
-				lv_speedX_2_0=ruleDOUBLE
+				lv_speed_2_0=ruleSpeedUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
 					}
 					set(
 						$current,
-						"speedX",
-						lv_speedX_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedYDOUBLEParserRuleCall_3_0());
-				}
-				lv_speedY_3_0=ruleDOUBLE
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
-					}
-					set(
-						$current,
-						"speedY",
-						lv_speedY_3_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedZDOUBLEParserRuleCall_4_0());
-				}
-				lv_speedZ_4_0=ruleDOUBLE
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRobotSpeedSentRule());
-					}
-					set(
-						$current,
-						"speedZ",
-						lv_speedZ_4_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"speed",
+						lv_speed_2_0,
+						"org.xtext.example.mydsl.MyLanguage.SpeedUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3047,6 +3009,428 @@ ruleCOMPSTATUS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 		{
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getCOMPSTATUSAccess().getREDUNDANTKeyword_2());
+		}
+	)
+;
+
+// Entry rule entryRuleSpeedUnit
+entryRuleSpeedUnit returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSpeedUnitRule()); }
+	iv_ruleSpeedUnit=ruleSpeedUnit
+	{ $current=$iv_ruleSpeedUnit.current; }
+	EOF;
+
+// Rule SpeedUnit
+ruleSpeedUnit returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getSpeedUnitAccess().getMSParserRuleCall_0());
+		}
+		this_MS_0=ruleMS
+		{
+			$current = $this_MS_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSpeedUnitAccess().getKMSParserRuleCall_1());
+		}
+		this_KMS_1=ruleKMS
+		{
+			$current = $this_KMS_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSpeedUnitAccess().getMHParserRuleCall_2());
+		}
+		this_MH_2=ruleMH
+		{
+			$current = $this_MH_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSpeedUnitAccess().getKMHParserRuleCall_3());
+		}
+		this_KMH_3=ruleKMH
+		{
+			$current = $this_KMH_3.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleMS
+entryRuleMS returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMSRule()); }
+	iv_ruleMS=ruleMS
+	{ $current=$iv_ruleMS.current; }
+	EOF;
+
+// Rule MS
+ruleMS returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='m/s('
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMSAccess().getMSKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMSAccess().getXDOUBLEParserRuleCall_1_0());
+				}
+				lv_x_1_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMSRule());
+					}
+					set(
+						$current,
+						"x",
+						lv_x_1_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_2=','
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMSAccess().getCommaKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMSAccess().getYDOUBLEParserRuleCall_3_0());
+				}
+				lv_y_3_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMSRule());
+					}
+					set(
+						$current,
+						"y",
+						lv_y_3_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=','
+		{
+			newLeafNode(otherlv_4, grammarAccess.getMSAccess().getCommaKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMSAccess().getZDOUBLEParserRuleCall_5_0());
+				}
+				lv_z_5_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMSRule());
+					}
+					set(
+						$current,
+						"z",
+						lv_z_5_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=')'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getMSAccess().getRightParenthesisKeyword_6());
+		}
+	)
+;
+
+// Entry rule entryRuleKMS
+entryRuleKMS returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getKMSRule()); }
+	iv_ruleKMS=ruleKMS
+	{ $current=$iv_ruleKMS.current; }
+	EOF;
+
+// Rule KMS
+ruleKMS returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='km/s('
+		{
+			newLeafNode(otherlv_0, grammarAccess.getKMSAccess().getKmSKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMSAccess().getXDOUBLEParserRuleCall_1_0());
+				}
+				lv_x_1_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMSRule());
+					}
+					set(
+						$current,
+						"x",
+						lv_x_1_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_2=','
+		{
+			newLeafNode(otherlv_2, grammarAccess.getKMSAccess().getCommaKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMSAccess().getYDOUBLEParserRuleCall_3_0());
+				}
+				lv_y_3_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMSRule());
+					}
+					set(
+						$current,
+						"y",
+						lv_y_3_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=','
+		{
+			newLeafNode(otherlv_4, grammarAccess.getKMSAccess().getCommaKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMSAccess().getZDOUBLEParserRuleCall_5_0());
+				}
+				lv_z_5_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMSRule());
+					}
+					set(
+						$current,
+						"z",
+						lv_z_5_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=')'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getKMSAccess().getRightParenthesisKeyword_6());
+		}
+	)
+;
+
+// Entry rule entryRuleMH
+entryRuleMH returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMHRule()); }
+	iv_ruleMH=ruleMH
+	{ $current=$iv_ruleMH.current; }
+	EOF;
+
+// Rule MH
+ruleMH returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='m/h('
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMHAccess().getMHKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMHAccess().getXDOUBLEParserRuleCall_1_0());
+				}
+				lv_x_1_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMHRule());
+					}
+					set(
+						$current,
+						"x",
+						lv_x_1_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_2=','
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMHAccess().getCommaKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMHAccess().getYDOUBLEParserRuleCall_3_0());
+				}
+				lv_y_3_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMHRule());
+					}
+					set(
+						$current,
+						"y",
+						lv_y_3_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=','
+		{
+			newLeafNode(otherlv_4, grammarAccess.getMHAccess().getCommaKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMHAccess().getZDOUBLEParserRuleCall_5_0());
+				}
+				lv_z_5_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMHRule());
+					}
+					set(
+						$current,
+						"z",
+						lv_z_5_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=')'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getMHAccess().getRightParenthesisKeyword_6());
+		}
+	)
+;
+
+// Entry rule entryRuleKMH
+entryRuleKMH returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getKMHRule()); }
+	iv_ruleKMH=ruleKMH
+	{ $current=$iv_ruleKMH.current; }
+	EOF;
+
+// Rule KMH
+ruleKMH returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='km/h('
+		{
+			newLeafNode(otherlv_0, grammarAccess.getKMHAccess().getKmHKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMHAccess().getXDOUBLEParserRuleCall_1_0());
+				}
+				lv_x_1_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMHRule());
+					}
+					set(
+						$current,
+						"x",
+						lv_x_1_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_2=','
+		{
+			newLeafNode(otherlv_2, grammarAccess.getKMHAccess().getCommaKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMHAccess().getYDOUBLEParserRuleCall_3_0());
+				}
+				lv_y_3_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMHRule());
+					}
+					set(
+						$current,
+						"y",
+						lv_y_3_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=','
+		{
+			newLeafNode(otherlv_4, grammarAccess.getKMHAccess().getCommaKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKMHAccess().getZDOUBLEParserRuleCall_5_0());
+				}
+				lv_z_5_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKMHRule());
+					}
+					set(
+						$current,
+						"z",
+						lv_z_5_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=')'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getKMHAccess().getRightParenthesisKeyword_6());
 		}
 	)
 ;

@@ -32,10 +32,14 @@ import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.HOUR;
 import org.xtext.example.mydsl.myLanguage.KILOMETER;
+import org.xtext.example.mydsl.myLanguage.KMH;
+import org.xtext.example.mydsl.myLanguage.KMS;
 import org.xtext.example.mydsl.myLanguage.LessSent;
 import org.xtext.example.mydsl.myLanguage.METER;
+import org.xtext.example.mydsl.myLanguage.MH;
 import org.xtext.example.mydsl.myLanguage.MILLIMETER;
 import org.xtext.example.mydsl.myLanguage.MINUTES;
+import org.xtext.example.mydsl.myLanguage.MS;
 import org.xtext.example.mydsl.myLanguage.MissionGoalSent;
 import org.xtext.example.mydsl.myLanguage.MissionRiskLevelSent;
 import org.xtext.example.mydsl.myLanguage.MissionStatusSent;
@@ -47,6 +51,7 @@ import org.xtext.example.mydsl.myLanguage.RobotStateSent;
 import org.xtext.example.mydsl.myLanguage.SECONDS;
 import org.xtext.example.mydsl.myLanguage.SonarDistanceSent;
 import org.xtext.example.mydsl.myLanguage.SonarSent;
+import org.xtext.example.mydsl.myLanguage.SpeedUnit;
 import org.xtext.example.mydsl.myLanguage.SpherePosition;
 import org.xtext.example.mydsl.myLanguage.Statement;
 import org.xtext.example.mydsl.myLanguage.StatementBody;
@@ -549,14 +554,9 @@ public class MyLanguageGenerator extends AbstractGenerator {
   public CharSequence createRunStat(final RobotSpeedSent body) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("new RobotSpdSentence(");
-    String _speedX = body.getSpeedX();
-    _builder.append(_speedX, "");
-    _builder.append(", ");
-    String _speedY = body.getSpeedY();
-    _builder.append(_speedY, "");
-    _builder.append(" , ");
-    String _speedZ = body.getSpeedZ();
-    _builder.append(_speedZ, "");
+    SpeedUnit _speed = body.getSpeed();
+    CharSequence _createRunStat = this.createRunStat(_speed);
+    _builder.append(_createRunStat, "");
     _builder.append(", this.app, this.drone)");
     return _builder;
   }
@@ -877,7 +877,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("new MissionRiskLevelSentence(\"");
     String _risklevel = sent.getRisklevel();
     _builder.append(_risklevel, "");
-    _builder.append("\"\", this.app, this.drone)");
+    _builder.append("\", this.app, this.drone)");
     return _builder;
   }
   
@@ -1358,6 +1358,58 @@ public class MyLanguageGenerator extends AbstractGenerator {
     return _xblockexpression;
   }
   
+  public CharSequence createRunStat(final SpeedUnit s) {
+    CharSequence _switchResult = null;
+    boolean _matched = false;
+    if (s instanceof MS) {
+      if ((s instanceof MS)) {
+        _matched=true;
+        StringConcatenation _builder = new StringConcatenation();
+        CharSequence _createRunStat = this.createRunStat(((MS)s));
+        _builder.append(_createRunStat, "");
+        _switchResult = _builder;
+      }
+    }
+    if (!_matched) {
+      if (s instanceof KMS) {
+        if ((s instanceof KMS)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((KMS)s));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (s instanceof MH) {
+        if ((s instanceof MH)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((MH)s));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (s instanceof KMH) {
+        if ((s instanceof KMH)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((KMH)s));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      StringConcatenation _builder = new StringConcatenation();
+      _switchResult = _builder;
+    }
+    return _switchResult;
+  }
+  
   public CharSequence createRunStat(final DistanceUnit s) {
     CharSequence _switchResult = null;
     boolean _matched = false;
@@ -1519,6 +1571,66 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("new Percent(");
     String _value = sent.getValue();
     _builder.append(_value, "");
+    _builder.append(")");
+    return _builder;
+  }
+  
+  public CharSequence createRunStat(final MS sent) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new MS\"(");
+    String _x = sent.getX();
+    _builder.append(_x, "");
+    _builder.append(", ");
+    String _y = sent.getY();
+    _builder.append(_y, "");
+    _builder.append(", ");
+    String _z = sent.getZ();
+    _builder.append(_z, "");
+    _builder.append(")");
+    return _builder;
+  }
+  
+  public CharSequence createRunStat(final KMS sent) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new KMS(");
+    String _x = sent.getX();
+    _builder.append(_x, "");
+    _builder.append(", ");
+    String _y = sent.getY();
+    _builder.append(_y, "");
+    _builder.append(", ");
+    String _z = sent.getZ();
+    _builder.append(_z, "");
+    _builder.append(")");
+    return _builder;
+  }
+  
+  public CharSequence createRunStat(final MH sent) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new MH(");
+    String _x = sent.getX();
+    _builder.append(_x, "");
+    _builder.append(", ");
+    String _y = sent.getY();
+    _builder.append(_y, "");
+    _builder.append(", ");
+    String _z = sent.getZ();
+    _builder.append(_z, "");
+    _builder.append(")");
+    return _builder;
+  }
+  
+  public CharSequence createRunStat(final KMH sent) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new KMH(");
+    String _x = sent.getX();
+    _builder.append(_x, "");
+    _builder.append(", ");
+    String _y = sent.getY();
+    _builder.append(_y, "");
+    _builder.append(", ");
+    String _z = sent.getZ();
+    _builder.append(_z, "");
     _builder.append(")");
     return _builder;
   }

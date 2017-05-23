@@ -411,6 +411,51 @@ public interface MyLanguageFactory extends EFactory
   ToleranceSent createToleranceSent();
 
   /**
+   * Returns a new object of class '<em>Speed Unit</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Speed Unit</em>'.
+   * @generated
+   */
+  SpeedUnit createSpeedUnit();
+
+  /**
+   * Returns a new object of class '<em>MS</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MS</em>'.
+   * @generated
+   */
+  MS createMS();
+
+  /**
+   * Returns a new object of class '<em>KMS</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KMS</em>'.
+   * @generated
+   */
+  KMS createKMS();
+
+  /**
+   * Returns a new object of class '<em>MH</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MH</em>'.
+   * @generated
+   */
+  MH createMH();
+
+  /**
+   * Returns a new object of class '<em>KMH</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KMH</em>'.
+   * @generated
+   */
+  KMH createKMH();
+
+  /**
    * Returns a new object of class '<em>Distance Unit</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

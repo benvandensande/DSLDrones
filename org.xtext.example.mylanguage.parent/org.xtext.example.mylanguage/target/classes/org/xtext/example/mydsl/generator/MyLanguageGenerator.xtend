@@ -25,10 +25,14 @@ import org.xtext.example.mydsl.myLanguage.Given
 import org.xtext.example.mydsl.myLanguage.GreaterSent
 import org.xtext.example.mydsl.myLanguage.HOUR
 import org.xtext.example.mydsl.myLanguage.KILOMETER
+import org.xtext.example.mydsl.myLanguage.KMH
+import org.xtext.example.mydsl.myLanguage.KMS
 import org.xtext.example.mydsl.myLanguage.LessSent
 import org.xtext.example.mydsl.myLanguage.METER
+import org.xtext.example.mydsl.myLanguage.MH
 import org.xtext.example.mydsl.myLanguage.MILLIMETER
 import org.xtext.example.mydsl.myLanguage.MINUTES
+import org.xtext.example.mydsl.myLanguage.MS
 import org.xtext.example.mydsl.myLanguage.MissionGoalSent
 import org.xtext.example.mydsl.myLanguage.MissionRiskLevelSent
 import org.xtext.example.mydsl.myLanguage.MissionStatusSent
@@ -40,6 +44,7 @@ import org.xtext.example.mydsl.myLanguage.RobotStateSent
 import org.xtext.example.mydsl.myLanguage.SECONDS
 import org.xtext.example.mydsl.myLanguage.SonarDistanceSent
 import org.xtext.example.mydsl.myLanguage.SonarSent
+import org.xtext.example.mydsl.myLanguage.SpeedUnit
 import org.xtext.example.mydsl.myLanguage.SpherePosition
 import org.xtext.example.mydsl.myLanguage.Statement
 import org.xtext.example.mydsl.myLanguage.Test
@@ -163,7 +168,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(CirclePosition sent) '''new CirclePosition(«sent.tolerance.createRunStat»)'''
 	def createRunStat(SpherePosition sent) '''new SpherePosition(«sent.tolerance.createRunStat»)'''
 		
-	def createRunStat(RobotSpeedSent body) '''new RobotSpdSentence(«body.speedX», «body.speedY» , «body.speedZ», this.app, this.drone)'''
+	def createRunStat(RobotSpeedSent body) '''new RobotSpdSentence(«body.speed.createRunStat», this.app, this.drone)'''
 	def createRunStat(RobotStateSent body) '''new RobotStSentence("«body.state»", this.app, this.drone)'''
 	def createRunStat(RobotDistanceSent body) {
 		var sent = body.sent
@@ -222,7 +227,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 	}
 	
 	def createRunStat(MissionGoalSent sent) '''new MissionGoalSentence(«sent.posX.createRunStat», «sent.posY.createRunStat», «sent.posZ.createRunStat», this.app, this.drone)'''
-	def createRunStat(MissionRiskLevelSent sent) '''new MissionRiskLevelSentence("«sent.risklevel»"", this.app, this.drone)'''
+	def createRunStat(MissionRiskLevelSent sent) '''new MissionRiskLevelSentence("«sent.risklevel»", this.app, this.drone)'''
 	def createRunStat(MissionStatusSent sent) '''new MissionStatusSentence("«sent.state»", this.app, this.drone)'''
 	def createRunStat(TimeInterval sent) '''new timeIntervalSentence(«sent.first.createRunStat», «sent.second.createRunStat», this.app, this.drone, test)'''
 	
@@ -322,6 +327,16 @@ class MyLanguageGenerator extends AbstractGenerator {
 		}
 	}
 	
+	def createRunStat(SpeedUnit s){
+		switch s {
+			MS case (s instanceof MS): '''«s.createRunStat()»'''
+			KMS case (s instanceof KMS): '''«s.createRunStat()»'''
+			MH case (s instanceof MH): '''«s.createRunStat()»'''
+			KMH case (s instanceof KMH): '''«s.createRunStat()»'''
+			default: ''''''
+		}
+	}
+	
 	def createRunStat(DistanceUnit s){
 		switch s {
 			METER case (s instanceof METER): '''«s.createRunStat()»'''
@@ -350,6 +365,11 @@ class MyLanguageGenerator extends AbstractGenerator {
 	def createRunStat(CENTIMETER sent) '''new Centimeter(«sent.value»)'''
 	
 	def createRunStat(PercentUnit sent) '''new Percent(«sent.value»)'''
+	
+	def createRunStat(MS sent) '''new MS"(«sent.x», «sent.y», «sent.z»)'''
+	def createRunStat(KMS sent) '''new KMS(«sent.x», «sent.y», «sent.z»)'''
+	def createRunStat(MH sent) '''new MH(«sent.x», «sent.y», «sent.z»)'''
+	def createRunStat(KMH sent) '''new KMH(«sent.x», «sent.y», «sent.z»)'''
 	
 	
 }

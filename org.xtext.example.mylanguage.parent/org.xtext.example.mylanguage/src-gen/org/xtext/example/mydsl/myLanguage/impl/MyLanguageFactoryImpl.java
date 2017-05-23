@@ -108,6 +108,11 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.ENVIRONMENT_SENT: return createEnvironmentSent();
       case MyLanguagePackage.RISK_SENT: return createRiskSent();
       case MyLanguagePackage.TOLERANCE_SENT: return createToleranceSent();
+      case MyLanguagePackage.SPEED_UNIT: return createSpeedUnit();
+      case MyLanguagePackage.MS: return createMS();
+      case MyLanguagePackage.KMS: return createKMS();
+      case MyLanguagePackage.MH: return createMH();
+      case MyLanguagePackage.KMH: return createKMH();
       case MyLanguagePackage.DISTANCE_UNIT: return createDistanceUnit();
       case MyLanguagePackage.TIME_UNIT: return createTimeUnit();
       case MyLanguagePackage.SECONDS: return createSECONDS();
@@ -594,6 +599,61 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     ToleranceSentImpl toleranceSent = new ToleranceSentImpl();
     return toleranceSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SpeedUnit createSpeedUnit()
+  {
+    SpeedUnitImpl speedUnit = new SpeedUnitImpl();
+    return speedUnit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MS createMS()
+  {
+    MSImpl ms = new MSImpl();
+    return ms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KMS createKMS()
+  {
+    KMSImpl kms = new KMSImpl();
+    return kms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MH createMH()
+  {
+    MHImpl mh = new MHImpl();
+    return mh;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KMH createKMH()
+  {
+    KMHImpl kmh = new KMHImpl();
+    return kmh;
   }
 
   /**

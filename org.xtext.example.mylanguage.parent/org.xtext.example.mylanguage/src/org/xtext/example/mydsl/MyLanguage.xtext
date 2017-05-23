@@ -213,9 +213,7 @@ SpherePosition:
 
 RobotSpeedSent:
 	'speed''is'
-	speedX=DOUBLE
-	speedY=DOUBLE
-	speedZ=DOUBLE
+	speed=SpeedUnit
 ;
 
 EnvironmentSent:
@@ -247,6 +245,24 @@ COLLISIONRISKLEVEL:
 
 COMPSTATUS:
 	('ACTIVE' | 'FAILING' |'REDUNDANT')
+;
+
+SpeedUnit: (MS | KMS | MH | KMH);
+
+MS:
+	'm/s('x = DOUBLE',' y = DOUBLE ',' z = DOUBLE ')'
+;
+
+KMS:
+	'km/s('x = DOUBLE',' y = DOUBLE ',' z = DOUBLE ')'
+;
+
+MH:
+	'm/h('x = DOUBLE',' y = DOUBLE ',' z = DOUBLE ')'
+;
+
+KMH:
+	'km/h('x = DOUBLE',' y = DOUBLE ',' z = DOUBLE ')'
 ;
 
 DistanceUnit: (METER|CENTIMETER|MILLIMETER|KILOMETER);

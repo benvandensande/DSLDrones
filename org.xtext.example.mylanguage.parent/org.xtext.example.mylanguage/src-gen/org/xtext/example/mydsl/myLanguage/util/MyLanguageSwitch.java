@@ -132,6 +132,21 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.GPS_SENT:
+      {
+        GPSSent gpsSent = (GPSSent)theEObject;
+        T result = caseGPSSent(gpsSent);
+        if (result == null) result = caseStatementBody(gpsSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyLanguagePackage.GPS_READING_SENT:
+      {
+        GPSReadingSent gpsReadingSent = (GPSReadingSent)theEObject;
+        T result = caseGPSReadingSent(gpsReadingSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.BARO_SENT:
       {
         BaroSent baroSent = (BaroSent)theEObject;
@@ -603,6 +618,38 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCompStatusSent(CompStatusSent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GPS Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GPS Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGPSSent(GPSSent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GPS Reading Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GPS Reading Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGPSReadingSent(GPSReadingSent object)
   {
     return null;
   }

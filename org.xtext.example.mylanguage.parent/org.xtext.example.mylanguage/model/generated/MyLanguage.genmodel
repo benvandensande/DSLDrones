@@ -24,6 +24,15 @@
     <genClasses ecoreClass="MyLanguage.ecore#//CompStatusSent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//CompStatusSent/status"/>
     </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//GPSSent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSSent/sent"/>
+    </genClasses>
+    <genClasses ecoreClass="MyLanguage.ecore#//GPSReadingSent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSReadingSent/tolerance"/>
+    </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//BaroSent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//BaroSent/sent"/>
     </genClasses>

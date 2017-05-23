@@ -447,6 +447,15 @@ ruleStatementBody returns [EObject current=null]
 			$current = $this_BaroSent_8.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementBodyAccess().getGPSSentParserRuleCall_9());
+		}
+		this_GPSSent_9=ruleGPSSent
+		{
+			$current = $this_GPSSent_9.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -493,6 +502,187 @@ ruleCompStatusSent returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleGPSSent
+entryRuleGPSSent returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGPSSentRule()); }
+	iv_ruleGPSSent=ruleGPSSent
+	{ $current=$iv_ruleGPSSent.current; }
+	EOF;
+
+// Rule GPSSent
+ruleGPSSent returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GPS'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGPSSentAccess().getGPSKeyword_0());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getGPSSentAccess().getSentGPSReadingSentParserRuleCall_1_0_0());
+					}
+					lv_sent_1_1=ruleGPSReadingSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGPSSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_1_1,
+							"org.xtext.example.mydsl.MyLanguage.GPSReadingSent");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getGPSSentAccess().getSentCompStatusSentParserRuleCall_1_0_1());
+					}
+					lv_sent_1_2=ruleCompStatusSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGPSSentRule());
+						}
+						set(
+							$current,
+							"sent",
+							lv_sent_1_2,
+							"org.xtext.example.mydsl.MyLanguage.CompStatusSent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleGPSReadingSent
+entryRuleGPSReadingSent returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGPSReadingSentRule()); }
+	iv_ruleGPSReadingSent=ruleGPSReadingSent
+	{ $current=$iv_ruleGPSReadingSent.current; }
+	EOF;
+
+// Rule GPSReadingSent
+ruleGPSReadingSent returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='positionReading'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGPSReadingSentAccess().getPositionReadingKeyword_0());
+		}
+		otherlv_1='is'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGPSReadingSentAccess().getIsKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+				}
+				lv_posX_2_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
+					}
+					set(
+						$current,
+						"posX",
+						lv_posX_2_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+				}
+				lv_posY_3_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
+					}
+					set(
+						$current,
+						"posY",
+						lv_posY_3_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+				}
+				lv_posZ_4_0=ruleDOUBLE
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
+					}
+					set(
+						$current,
+						"posZ",
+						lv_posZ_4_0,
+						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getGPSReadingSentAccess().getToleranceCirclePositionParserRuleCall_5_0_0());
+					}
+					lv_tolerance_5_1=ruleCirclePosition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
+						}
+						set(
+							$current,
+							"tolerance",
+							lv_tolerance_5_1,
+							"org.xtext.example.mydsl.MyLanguage.CirclePosition");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getGPSReadingSentAccess().getToleranceSpherePositionParserRuleCall_5_0_1());
+					}
+					lv_tolerance_5_2=ruleSpherePosition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
+						}
+						set(
+							$current,
+							"tolerance",
+							lv_tolerance_5_2,
+							"org.xtext.example.mydsl.MyLanguage.SpherePosition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
 	)
 ;
 

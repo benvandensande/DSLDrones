@@ -21,6 +21,8 @@ import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
 import org.xtext.example.mydsl.myLanguage.EqualSent;
+import org.xtext.example.mydsl.myLanguage.GPSReadingSent;
+import org.xtext.example.mydsl.myLanguage.GPSSent;
 import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.LessSent;
@@ -120,6 +122,20 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass compStatusSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gpsSentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gpsReadingSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -623,6 +639,76 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
   public EAttribute getCompStatusSent_Status()
   {
     return (EAttribute)compStatusSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGPSSent()
+  {
+    return gpsSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGPSSent_Sent()
+  {
+    return (EReference)gpsSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGPSReadingSent()
+  {
+    return gpsReadingSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGPSReadingSent_PosX()
+  {
+    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGPSReadingSent_PosY()
+  {
+    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGPSReadingSent_PosZ()
+  {
+    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGPSReadingSent_Tolerance()
+  {
+    return (EReference)gpsReadingSentEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1587,6 +1673,15 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     compStatusSentEClass = createEClass(COMP_STATUS_SENT);
     createEAttribute(compStatusSentEClass, COMP_STATUS_SENT__STATUS);
 
+    gpsSentEClass = createEClass(GPS_SENT);
+    createEReference(gpsSentEClass, GPS_SENT__SENT);
+
+    gpsReadingSentEClass = createEClass(GPS_READING_SENT);
+    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_X);
+    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_Y);
+    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_Z);
+    createEReference(gpsReadingSentEClass, GPS_READING_SENT__TOLERANCE);
+
     baroSentEClass = createEClass(BARO_SENT);
     createEReference(baroSentEClass, BARO_SENT__SENT);
 
@@ -1754,6 +1849,7 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     givenEClass.getESuperTypes().add(this.getStatement());
     thenEClass.getESuperTypes().add(this.getStatement());
     whenEClass.getESuperTypes().add(this.getStatement());
+    gpsSentEClass.getESuperTypes().add(this.getStatementBody());
     baroSentEClass.getESuperTypes().add(this.getStatementBody());
     sonarSentEClass.getESuperTypes().add(this.getStatementBody());
     notificationSentEClass.getESuperTypes().add(this.getStatementBody());
@@ -1806,6 +1902,15 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
 
     initEClass(compStatusSentEClass, CompStatusSent.class, "CompStatusSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCompStatusSent_Status(), ecorePackage.getEString(), "status", null, 0, 1, CompStatusSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gpsSentEClass, GPSSent.class, "GPSSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGPSSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, GPSSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gpsReadingSentEClass, GPSReadingSent.class, "GPSReadingSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGPSReadingSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGPSReadingSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGPSReadingSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGPSReadingSent_Tolerance(), ecorePackage.getEObject(), null, "tolerance", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(baroSentEClass, BaroSent.class, "BaroSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBaroSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, BaroSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

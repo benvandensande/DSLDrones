@@ -19,6 +19,8 @@ import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent
 import org.xtext.example.mydsl.myLanguage.DistanceUnit
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent
 import org.xtext.example.mydsl.myLanguage.EqualSent
+import org.xtext.example.mydsl.myLanguage.GPSReadingSent
+import org.xtext.example.mydsl.myLanguage.GPSSent
 import org.xtext.example.mydsl.myLanguage.Given
 import org.xtext.example.mydsl.myLanguage.GreaterSent
 import org.xtext.example.mydsl.myLanguage.HOUR
@@ -136,6 +138,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 			BatterySent case (bod instanceof BatterySent): '''«bod.createRunStat()»'''
 			SonarSent case (bod instanceof SonarSent): '''«bod.createRunStat()»'''
 			BaroSent case (bod instanceof BaroSent): '''«bod.createRunStat()»'''
+			GPSSent case (bod instanceof GPSSent): '''«bod.createRunStat()»'''
 			MissionGoalSent case (bod instanceof MissionGoalSent): '''«bod.createRunStat()»'''
 			MissionRiskLevelSent case (bod instanceof MissionRiskLevelSent): '''«bod.createRunStat()»'''
 			MissionStatusSent case (bod instanceof MissionStatusSent): '''«bod.createRunStat()»'''
@@ -277,6 +280,29 @@ class MyLanguageGenerator extends AbstractGenerator {
 			GreaterSent case (body instanceof GreaterSent): '''new BaroSentence(«body.createRunStat» , this.app, this.drone)'''
 			LessSent case (body instanceof LessSent): '''new BaroSentence(«body.createRunStat» , this.app, this.drone)'''
 			default: '''foutje'''
+		}
+	}
+	
+	def createRunStat(GPSSent s) {
+		var body = s.sent;
+		switch body{
+			GPSReadingSent case (body instanceof GPSReadingSent): '''«body.createRunStat»'''
+			CompStatusSent case (body instanceof CompStatusSent): '''«body.createRunStat»,new GPSSentence(this.app,this.drone))'''
+			default: '''foutje'''
+		}
+	}
+	
+	def createRunStat(GPSReadingSent s) {
+		var tolerance = s.tolerance;
+		if (tolerance == null)
+		{
+			'''new GPSSentence(«s.posX», «s.posY» , «s.posZ», new SpherePosition(new Meter(0)), this.app , this.drone)'''
+		}else{
+			var sent = s.tolerance;
+			switch sent {
+				CirclePosition case (sent instanceof CirclePosition): '''new GPSSentence(«s.posX», «s.posY» , «s.posZ», «sent.createRunStat», this.app, this.drone)'''
+				SpherePosition case (sent instanceof SpherePosition): '''new GPSSentence(«s.posX», «s.posY» , «s.posZ», «sent.createRunStat», this.app, this.drone)'''
+			}
 		}
 	}
 	

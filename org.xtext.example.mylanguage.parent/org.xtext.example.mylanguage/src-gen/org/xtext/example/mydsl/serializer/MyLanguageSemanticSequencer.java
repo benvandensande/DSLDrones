@@ -25,6 +25,8 @@ import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
 import org.xtext.example.mydsl.myLanguage.EqualSent;
+import org.xtext.example.mydsl.myLanguage.GPSReadingSent;
+import org.xtext.example.mydsl.myLanguage.GPSSent;
 import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.HOUR;
@@ -106,6 +108,12 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.EQUAL_SENT:
 				sequence_EqualSent(context, (EqualSent) semanticObject); 
+				return; 
+			case MyLanguagePackage.GPS_READING_SENT:
+				sequence_GPSReadingSent(context, (GPSReadingSent) semanticObject); 
+				return; 
+			case MyLanguagePackage.GPS_SENT:
+				sequence_GPSSent(context, (GPSSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.GIVEN:
 				sequence_Given(context, (Given) semanticObject); 
@@ -358,6 +366,31 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (amount=DistanceUnit | amount=PercentUnit)
 	 */
 	protected void sequence_EqualSent(ISerializationContext context, EqualSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GPSReadingSent returns GPSReadingSent
+	 *
+	 * Constraint:
+	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE (tolerance=CirclePosition | tolerance=SpherePosition)?)
+	 */
+	protected void sequence_GPSReadingSent(ISerializationContext context, GPSReadingSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StatementBody returns GPSSent
+	 *     GPSSent returns GPSSent
+	 *
+	 * Constraint:
+	 *     (sent=GPSReadingSent | sent=CompStatusSent)
+	 */
+	protected void sequence_GPSSent(ISerializationContext context, GPSSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

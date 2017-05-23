@@ -73,6 +73,8 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.WHEN: return createWhen();
       case MyLanguagePackage.STATEMENT_BODY: return createStatementBody();
       case MyLanguagePackage.COMP_STATUS_SENT: return createCompStatusSent();
+      case MyLanguagePackage.GPS_SENT: return createGPSSent();
+      case MyLanguagePackage.GPS_READING_SENT: return createGPSReadingSent();
       case MyLanguagePackage.BARO_SENT: return createBaroSent();
       case MyLanguagePackage.BARO_ALT_SENT: return createBaroAltSent();
       case MyLanguagePackage.SONAR_SENT: return createSonarSent();
@@ -207,6 +209,28 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     CompStatusSentImpl compStatusSent = new CompStatusSentImpl();
     return compStatusSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GPSSent createGPSSent()
+  {
+    GPSSentImpl gpsSent = new GPSSentImpl();
+    return gpsSent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GPSReadingSent createGPSReadingSent()
+  {
+    GPSReadingSentImpl gpsReadingSent = new GPSReadingSentImpl();
+    return gpsReadingSent;
   }
 
   /**

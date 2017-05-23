@@ -116,6 +116,16 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
         return createCompStatusSentAdapter();
       }
       @Override
+      public Adapter caseGPSSent(GPSSent object)
+      {
+        return createGPSSentAdapter();
+      }
+      @Override
+      public Adapter caseGPSReadingSent(GPSReadingSent object)
+      {
+        return createGPSReadingSentAdapter();
+      }
+      @Override
       public Adapter caseBaroSent(BaroSent object)
       {
         return createBaroSentAdapter();
@@ -468,6 +478,36 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCompStatusSentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.GPSSent <em>GPS Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.GPSSent
+   * @generated
+   */
+  public Adapter createGPSSentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent <em>GPS Reading Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent
+   * @generated
+   */
+  public Adapter createGPSReadingSentAdapter()
   {
     return null;
   }

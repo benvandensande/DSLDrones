@@ -291,6 +291,89 @@ public interface MyLanguagePackage extends EPackage
   int COMP_STATUS_SENT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.GPSSentImpl <em>GPS Sent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.GPSSentImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGPSSent()
+   * @generated
+   */
+  int GPS_SENT = 8;
+
+  /**
+   * The feature id for the '<em><b>Sent</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_SENT__SENT = STATEMENT_BODY_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>GPS Sent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_SENT_FEATURE_COUNT = STATEMENT_BODY_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.GPSReadingSentImpl <em>GPS Reading Sent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myLanguage.impl.GPSReadingSentImpl
+   * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGPSReadingSent()
+   * @generated
+   */
+  int GPS_READING_SENT = 9;
+
+  /**
+   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_READING_SENT__POS_X = 0;
+
+  /**
+   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_READING_SENT__POS_Y = 1;
+
+  /**
+   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_READING_SENT__POS_Z = 2;
+
+  /**
+   * The feature id for the '<em><b>Tolerance</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_READING_SENT__TOLERANCE = 3;
+
+  /**
+   * The number of structural features of the '<em>GPS Reading Sent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GPS_READING_SENT_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myLanguage.impl.BaroSentImpl <em>Baro Sent</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -298,7 +381,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getBaroSent()
    * @generated
    */
-  int BARO_SENT = 8;
+  int BARO_SENT = 10;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -326,7 +409,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getBaroAltSent()
    * @generated
    */
-  int BARO_ALT_SENT = 9;
+  int BARO_ALT_SENT = 11;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -354,7 +437,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSonarSent()
    * @generated
    */
-  int SONAR_SENT = 10;
+  int SONAR_SENT = 12;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -382,7 +465,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSonarDistanceSent()
    * @generated
    */
-  int SONAR_DISTANCE_SENT = 11;
+  int SONAR_DISTANCE_SENT = 13;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -410,7 +493,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getNotificationSent()
    * @generated
    */
-  int NOTIFICATION_SENT = 12;
+  int NOTIFICATION_SENT = 14;
 
   /**
    * The feature id for the '<em><b>Not</b></em>' attribute.
@@ -438,7 +521,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeSent()
    * @generated
    */
-  int TIME_SENT = 13;
+  int TIME_SENT = 15;
 
   /**
    * The number of structural features of the '<em>Time Sent</em>' class.
@@ -457,7 +540,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeInterval()
    * @generated
    */
-  int TIME_INTERVAL = 14;
+  int TIME_INTERVAL = 16;
 
   /**
    * The feature id for the '<em><b>First</b></em>' containment reference.
@@ -494,7 +577,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getBatterySent()
    * @generated
    */
-  int BATTERY_SENT = 15;
+  int BATTERY_SENT = 17;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -522,7 +605,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getBatteryLevelSent()
    * @generated
    */
-  int BATTERY_LEVEL_SENT = 16;
+  int BATTERY_LEVEL_SENT = 18;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -550,7 +633,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeopleSent()
    * @generated
    */
-  int PEOPLE_SENT = 17;
+  int PEOPLE_SENT = 19;
 
   /**
    * The number of structural features of the '<em>People Sent</em>' class.
@@ -569,7 +652,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeoplePosSent()
    * @generated
    */
-  int PEOPLE_POS_SENT = 18;
+  int PEOPLE_POS_SENT = 20;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -624,7 +707,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPeopleNumbSent()
    * @generated
    */
-  int PEOPLE_NUMB_SENT = 19;
+  int PEOPLE_NUMB_SENT = 21;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' attribute.
@@ -652,7 +735,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionSent()
    * @generated
    */
-  int MISSION_SENT = 20;
+  int MISSION_SENT = 22;
 
   /**
    * The number of structural features of the '<em>Mission Sent</em>' class.
@@ -671,7 +754,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionGoalSent()
    * @generated
    */
-  int MISSION_GOAL_SENT = 21;
+  int MISSION_GOAL_SENT = 23;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -717,7 +800,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionRiskLevelSent()
    * @generated
    */
-  int MISSION_RISK_LEVEL_SENT = 22;
+  int MISSION_RISK_LEVEL_SENT = 24;
 
   /**
    * The feature id for the '<em><b>Risklevel</b></em>' attribute.
@@ -745,7 +828,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMissionStatusSent()
    * @generated
    */
-  int MISSION_STATUS_SENT = 23;
+  int MISSION_STATUS_SENT = 25;
 
   /**
    * The feature id for the '<em><b>State</b></em>' attribute.
@@ -773,7 +856,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobot()
    * @generated
    */
-  int ROBOT = 24;
+  int ROBOT = 26;
 
   /**
    * The number of structural features of the '<em>Robot</em>' class.
@@ -792,7 +875,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotAutoPilot()
    * @generated
    */
-  int ROBOT_AUTO_PILOT = 25;
+  int ROBOT_AUTO_PILOT = 27;
 
   /**
    * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -820,7 +903,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPayloadSent()
    * @generated
    */
-  int PAYLOAD_SENT = 26;
+  int PAYLOAD_SENT = 28;
 
   /**
    * The feature id for the '<em><b>Load</b></em>' attribute.
@@ -848,7 +931,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotDistanceSent()
    * @generated
    */
-  int ROBOT_DISTANCE_SENT = 27;
+  int ROBOT_DISTANCE_SENT = 29;
 
   /**
    * The feature id for the '<em><b>Sent</b></em>' containment reference.
@@ -876,7 +959,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceToLocationSent()
    * @generated
    */
-  int DISTANCE_TO_LOCATION_SENT = 28;
+  int DISTANCE_TO_LOCATION_SENT = 30;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -940,7 +1023,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceToObstaclesSent()
    * @generated
    */
-  int DISTANCE_TO_OBSTACLES_SENT = 29;
+  int DISTANCE_TO_OBSTACLES_SENT = 31;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -977,7 +1060,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getEqualSent()
    * @generated
    */
-  int EQUAL_SENT = 30;
+  int EQUAL_SENT = 32;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -1005,7 +1088,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getLessSent()
    * @generated
    */
-  int LESS_SENT = 31;
+  int LESS_SENT = 33;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -1033,7 +1116,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGreaterSent()
    * @generated
    */
-  int GREATER_SENT = 32;
+  int GREATER_SENT = 34;
 
   /**
    * The feature id for the '<em><b>Amount</b></em>' containment reference.
@@ -1061,7 +1144,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotStateSent()
    * @generated
    */
-  int ROBOT_STATE_SENT = 33;
+  int ROBOT_STATE_SENT = 35;
 
   /**
    * The feature id for the '<em><b>State</b></em>' attribute.
@@ -1089,7 +1172,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotPositionSent()
    * @generated
    */
-  int ROBOT_POSITION_SENT = 34;
+  int ROBOT_POSITION_SENT = 36;
 
   /**
    * The feature id for the '<em><b>Pos X</b></em>' attribute.
@@ -1144,7 +1227,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getCirclePosition()
    * @generated
    */
-  int CIRCLE_POSITION = 35;
+  int CIRCLE_POSITION = 37;
 
   /**
    * The feature id for the '<em><b>Tolerance</b></em>' containment reference.
@@ -1172,7 +1255,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSpherePosition()
    * @generated
    */
-  int SPHERE_POSITION = 36;
+  int SPHERE_POSITION = 38;
 
   /**
    * The feature id for the '<em><b>Tolerance</b></em>' containment reference.
@@ -1200,7 +1283,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRobotSpeedSent()
    * @generated
    */
-  int ROBOT_SPEED_SENT = 37;
+  int ROBOT_SPEED_SENT = 39;
 
   /**
    * The feature id for the '<em><b>Speed X</b></em>' attribute.
@@ -1246,7 +1329,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getEnvironmentSent()
    * @generated
    */
-  int ENVIRONMENT_SENT = 38;
+  int ENVIRONMENT_SENT = 40;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1274,7 +1357,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getRiskSent()
    * @generated
    */
-  int RISK_SENT = 39;
+  int RISK_SENT = 41;
 
   /**
    * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -1302,7 +1385,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getToleranceSent()
    * @generated
    */
-  int TOLERANCE_SENT = 40;
+  int TOLERANCE_SENT = 42;
 
   /**
    * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -1330,7 +1413,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getDistanceUnit()
    * @generated
    */
-  int DISTANCE_UNIT = 41;
+  int DISTANCE_UNIT = 43;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1358,7 +1441,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getTimeUnit()
    * @generated
    */
-  int TIME_UNIT = 42;
+  int TIME_UNIT = 44;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1386,7 +1469,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getSECONDS()
    * @generated
    */
-  int SECONDS = 43;
+  int SECONDS = 45;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1414,7 +1497,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getHOUR()
    * @generated
    */
-  int HOUR = 44;
+  int HOUR = 46;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1442,7 +1525,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMINUTES()
    * @generated
    */
-  int MINUTES = 45;
+  int MINUTES = 47;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1470,7 +1553,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMETER()
    * @generated
    */
-  int METER = 46;
+  int METER = 48;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1498,7 +1581,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getCENTIMETER()
    * @generated
    */
-  int CENTIMETER = 47;
+  int CENTIMETER = 49;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1526,7 +1609,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getMILLIMETER()
    * @generated
    */
-  int MILLIMETER = 48;
+  int MILLIMETER = 50;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1554,7 +1637,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getKILOMETER()
    * @generated
    */
-  int KILOMETER = 49;
+  int KILOMETER = 51;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1582,7 +1665,7 @@ public interface MyLanguagePackage extends EPackage
    * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getPercentUnit()
    * @generated
    */
-  int PERCENT_UNIT = 50;
+  int PERCENT_UNIT = 52;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1748,6 +1831,81 @@ public interface MyLanguagePackage extends EPackage
    * @generated
    */
   EAttribute getCompStatusSent_Status();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.GPSSent <em>GPS Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>GPS Sent</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSSent
+   * @generated
+   */
+  EClass getGPSSent();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSSent#getSent <em>Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sent</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSSent#getSent()
+   * @see #getGPSSent()
+   * @generated
+   */
+  EReference getGPSSent_Sent();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent <em>GPS Reading Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>GPS Reading Sent</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent
+   * @generated
+   */
+  EClass getGPSReadingSent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosX <em>Pos X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosX()
+   * @see #getGPSReadingSent()
+   * @generated
+   */
+  EAttribute getGPSReadingSent_PosX();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosY <em>Pos Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosY()
+   * @see #getGPSReadingSent()
+   * @generated
+   */
+  EAttribute getGPSReadingSent_PosY();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosZ <em>Pos Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosZ()
+   * @see #getGPSReadingSent()
+   * @generated
+   */
+  EAttribute getGPSReadingSent_PosZ();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getTolerance <em>Tolerance</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tolerance</em>'.
+   * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getTolerance()
+   * @see #getGPSReadingSent()
+   * @generated
+   */
+  EReference getGPSReadingSent_Tolerance();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.BaroSent <em>Baro Sent</em>}'.
@@ -2857,6 +3015,66 @@ public interface MyLanguagePackage extends EPackage
      * @generated
      */
     EAttribute COMP_STATUS_SENT__STATUS = eINSTANCE.getCompStatusSent_Status();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.GPSSentImpl <em>GPS Sent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.GPSSentImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGPSSent()
+     * @generated
+     */
+    EClass GPS_SENT = eINSTANCE.getGPSSent();
+
+    /**
+     * The meta object literal for the '<em><b>Sent</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GPS_SENT__SENT = eINSTANCE.getGPSSent_Sent();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.GPSReadingSentImpl <em>GPS Reading Sent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myLanguage.impl.GPSReadingSentImpl
+     * @see org.xtext.example.mydsl.myLanguage.impl.MyLanguagePackageImpl#getGPSReadingSent()
+     * @generated
+     */
+    EClass GPS_READING_SENT = eINSTANCE.getGPSReadingSent();
+
+    /**
+     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GPS_READING_SENT__POS_X = eINSTANCE.getGPSReadingSent_PosX();
+
+    /**
+     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GPS_READING_SENT__POS_Y = eINSTANCE.getGPSReadingSent_PosY();
+
+    /**
+     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GPS_READING_SENT__POS_Z = eINSTANCE.getGPSReadingSent_PosZ();
+
+    /**
+     * The meta object literal for the '<em><b>Tolerance</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GPS_READING_SENT__TOLERANCE = eINSTANCE.getGPSReadingSent_Tolerance();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.BaroSentImpl <em>Baro Sent</em>}' class.

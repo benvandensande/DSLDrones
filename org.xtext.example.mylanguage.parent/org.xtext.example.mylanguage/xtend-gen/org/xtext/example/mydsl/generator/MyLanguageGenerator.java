@@ -26,6 +26,8 @@ import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
 import org.xtext.example.mydsl.myLanguage.EqualSent;
+import org.xtext.example.mydsl.myLanguage.GPSReadingSent;
+import org.xtext.example.mydsl.myLanguage.GPSSent;
 import org.xtext.example.mydsl.myLanguage.Given;
 import org.xtext.example.mydsl.myLanguage.GreaterSent;
 import org.xtext.example.mydsl.myLanguage.HOUR;
@@ -367,6 +369,17 @@ public class MyLanguageGenerator extends AbstractGenerator {
             _matched=true;
             StringConcatenation _builder = new StringConcatenation();
             CharSequence _createRunStat = this.createRunStat(((BaroSent)bod));
+            _builder.append(_createRunStat, "");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        if (bod instanceof GPSSent) {
+          if ((bod instanceof GPSSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((GPSSent)bod));
             _builder.append(_createRunStat, "");
             _switchResult = _builder;
           }
@@ -1133,6 +1146,119 @@ public class MyLanguageGenerator extends AbstractGenerator {
         _switchResult = _builder;
       }
       _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final GPSSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject body = s.getSent();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (body instanceof GPSReadingSent) {
+        if ((body instanceof GPSReadingSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((GPSReadingSent)body));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (body instanceof CompStatusSent) {
+          if ((body instanceof CompStatusSent)) {
+            _matched=true;
+            StringConcatenation _builder = new StringConcatenation();
+            CharSequence _createRunStat = this.createRunStat(((CompStatusSent)body));
+            _builder.append(_createRunStat, "");
+            _builder.append(",new GPSSentence(this.app,this.drone))");
+            _switchResult = _builder;
+          }
+        }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("foutje");
+        _switchResult = _builder;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence createRunStat(final GPSReadingSent s) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject tolerance = s.getTolerance();
+      CharSequence _xifexpression = null;
+      boolean _equals = Objects.equal(tolerance, null);
+      if (_equals) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("new GPSSentence(");
+        String _posX = s.getPosX();
+        _builder.append(_posX, "");
+        _builder.append(", ");
+        String _posY = s.getPosY();
+        _builder.append(_posY, "");
+        _builder.append(" , ");
+        String _posZ = s.getPosZ();
+        _builder.append(_posZ, "");
+        _builder.append(", new SpherePosition(new Meter(0)), this.app , this.drone)");
+        _xifexpression = _builder;
+      } else {
+        CharSequence _xblockexpression_1 = null;
+        {
+          EObject sent = s.getTolerance();
+          CharSequence _switchResult = null;
+          boolean _matched = false;
+          if (sent instanceof CirclePosition) {
+            if ((sent instanceof CirclePosition)) {
+              _matched=true;
+              StringConcatenation _builder_1 = new StringConcatenation();
+              _builder_1.append("new GPSSentence(");
+              String _posX_1 = s.getPosX();
+              _builder_1.append(_posX_1, "");
+              _builder_1.append(", ");
+              String _posY_1 = s.getPosY();
+              _builder_1.append(_posY_1, "");
+              _builder_1.append(" , ");
+              String _posZ_1 = s.getPosZ();
+              _builder_1.append(_posZ_1, "");
+              _builder_1.append(", ");
+              CharSequence _createRunStat = this.createRunStat(((CirclePosition)sent));
+              _builder_1.append(_createRunStat, "");
+              _builder_1.append(", this.app, this.drone)");
+              _switchResult = _builder_1;
+            }
+          }
+          if (!_matched) {
+            if (sent instanceof SpherePosition) {
+              if ((sent instanceof SpherePosition)) {
+                _matched=true;
+                StringConcatenation _builder_1 = new StringConcatenation();
+                _builder_1.append("new GPSSentence(");
+                String _posX_1 = s.getPosX();
+                _builder_1.append(_posX_1, "");
+                _builder_1.append(", ");
+                String _posY_1 = s.getPosY();
+                _builder_1.append(_posY_1, "");
+                _builder_1.append(" , ");
+                String _posZ_1 = s.getPosZ();
+                _builder_1.append(_posZ_1, "");
+                _builder_1.append(", ");
+                CharSequence _createRunStat = this.createRunStat(((SpherePosition)sent));
+                _builder_1.append(_createRunStat, "");
+                _builder_1.append(", this.app, this.drone)");
+                _switchResult = _builder_1;
+              }
+            }
+          }
+          _xblockexpression_1 = _switchResult;
+        }
+        _xifexpression = _xblockexpression_1;
+      }
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }

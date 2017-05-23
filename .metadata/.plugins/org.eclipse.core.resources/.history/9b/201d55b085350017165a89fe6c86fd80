@@ -1,4 +1,0 @@
-grammar org.xtext.example.mydsl.MyTerminals with org.eclipse.xtext.common.Terminals
-
-terminal ID: ('^')?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*; 
-        

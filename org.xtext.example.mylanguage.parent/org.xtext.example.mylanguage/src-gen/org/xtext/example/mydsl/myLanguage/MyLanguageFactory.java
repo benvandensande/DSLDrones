@@ -96,6 +96,24 @@ public interface MyLanguageFactory extends EFactory
   CompStatusSent createCompStatusSent();
 
   /**
+   * Returns a new object of class '<em>GPS Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>GPS Sent</em>'.
+   * @generated
+   */
+  GPSSent createGPSSent();
+
+  /**
+   * Returns a new object of class '<em>GPS Reading Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>GPS Reading Sent</em>'.
+   * @generated
+   */
+  GPSReadingSent createGPSReadingSent();
+
+  /**
    * Returns a new object of class '<em>Baro Sent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

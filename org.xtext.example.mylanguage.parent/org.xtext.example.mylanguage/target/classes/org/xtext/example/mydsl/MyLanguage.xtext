@@ -29,12 +29,25 @@ When:
 	
 StatementBody:
 	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-	| NotificationSent | BatterySent | SonarSent | BaroSent;
+	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
 	
 
 CompStatusSent:
 	'status''is'
 	status = COMPSTATUS
+;
+
+GPSSent:
+	'GPS'
+	sent = (GPSReadingSent|CompStatusSent)
+;
+
+GPSReadingSent:
+	'positionReading''is'
+	posX=DOUBLE
+	posY=DOUBLE
+	posZ=DOUBLE
+	tolerance =(CirclePosition|SpherePosition)?
 ;
 
 

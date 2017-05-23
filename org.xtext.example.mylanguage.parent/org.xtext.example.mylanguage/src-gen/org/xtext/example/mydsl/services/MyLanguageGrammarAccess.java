@@ -193,13 +193,15 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBatterySentParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cSonarSentParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cBaroSentParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cGPSSentParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
 		//StatementBody:
 		//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-		//	| NotificationSent | BatterySent | SonarSent | BaroSent;
+		//	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent | NotificationSent | BatterySent | SonarSent | BaroSent
+		//Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent | NotificationSent | BatterySent | SonarSent | BaroSent |
+		//GPSSent
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Robot
@@ -228,6 +230,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//BaroSent
 		public RuleCall getBaroSentParserRuleCall_8() { return cBaroSentParserRuleCall_8; }
+		
+		//GPSSent
+		public RuleCall getGPSSentParserRuleCall_9() { return cGPSSentParserRuleCall_9; }
 	}
 	public class CompStatusSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.CompStatusSent");
@@ -256,6 +261,101 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//COMPSTATUS
 		public RuleCall getStatusCOMPSTATUSParserRuleCall_2_0() { return cStatusCOMPSTATUSParserRuleCall_2_0; }
+	}
+	public class GPSSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.GPSSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGPSKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSentAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cSentAlternatives_1_0 = (Alternatives)cSentAssignment_1.eContents().get(0);
+		private final RuleCall cSentGPSReadingSentParserRuleCall_1_0_0 = (RuleCall)cSentAlternatives_1_0.eContents().get(0);
+		private final RuleCall cSentCompStatusSentParserRuleCall_1_0_1 = (RuleCall)cSentAlternatives_1_0.eContents().get(1);
+		
+		//GPSSent:
+		//	'GPS'
+		//	sent=(GPSReadingSent | CompStatusSent);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'GPS' sent=(GPSReadingSent | CompStatusSent)
+		public Group getGroup() { return cGroup; }
+		
+		//'GPS'
+		public Keyword getGPSKeyword_0() { return cGPSKeyword_0; }
+		
+		//sent=(GPSReadingSent | CompStatusSent)
+		public Assignment getSentAssignment_1() { return cSentAssignment_1; }
+		
+		//(GPSReadingSent | CompStatusSent)
+		public Alternatives getSentAlternatives_1_0() { return cSentAlternatives_1_0; }
+		
+		//GPSReadingSent
+		public RuleCall getSentGPSReadingSentParserRuleCall_1_0_0() { return cSentGPSReadingSentParserRuleCall_1_0_0; }
+		
+		//CompStatusSent
+		public RuleCall getSentCompStatusSentParserRuleCall_1_0_1() { return cSentCompStatusSentParserRuleCall_1_0_1; }
+	}
+	public class GPSReadingSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.GPSReadingSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPositionReadingKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cPosXAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPosXDOUBLEParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
+		private final Assignment cPosYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPosYDOUBLEParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
+		private final Assignment cPosZAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPosZDOUBLEParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
+		private final Assignment cToleranceAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final Alternatives cToleranceAlternatives_5_0 = (Alternatives)cToleranceAssignment_5.eContents().get(0);
+		private final RuleCall cToleranceCirclePositionParserRuleCall_5_0_0 = (RuleCall)cToleranceAlternatives_5_0.eContents().get(0);
+		private final RuleCall cToleranceSpherePositionParserRuleCall_5_0_1 = (RuleCall)cToleranceAlternatives_5_0.eContents().get(1);
+		
+		//GPSReadingSent:
+		//	'positionReading' 'is'
+		//	posX=DOUBLE
+		//	posY=DOUBLE
+		//	posZ=DOUBLE
+		//	tolerance=(CirclePosition | SpherePosition)?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'positionReading' 'is' posX=DOUBLE posY=DOUBLE posZ=DOUBLE tolerance=(CirclePosition | SpherePosition)?
+		public Group getGroup() { return cGroup; }
+		
+		//'positionReading'
+		public Keyword getPositionReadingKeyword_0() { return cPositionReadingKeyword_0; }
+		
+		//'is'
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
+		
+		//posX=DOUBLE
+		public Assignment getPosXAssignment_2() { return cPosXAssignment_2; }
+		
+		//DOUBLE
+		public RuleCall getPosXDOUBLEParserRuleCall_2_0() { return cPosXDOUBLEParserRuleCall_2_0; }
+		
+		//posY=DOUBLE
+		public Assignment getPosYAssignment_3() { return cPosYAssignment_3; }
+		
+		//DOUBLE
+		public RuleCall getPosYDOUBLEParserRuleCall_3_0() { return cPosYDOUBLEParserRuleCall_3_0; }
+		
+		//posZ=DOUBLE
+		public Assignment getPosZAssignment_4() { return cPosZAssignment_4; }
+		
+		//DOUBLE
+		public RuleCall getPosZDOUBLEParserRuleCall_4_0() { return cPosZDOUBLEParserRuleCall_4_0; }
+		
+		//tolerance=(CirclePosition | SpherePosition)?
+		public Assignment getToleranceAssignment_5() { return cToleranceAssignment_5; }
+		
+		//(CirclePosition | SpherePosition)
+		public Alternatives getToleranceAlternatives_5_0() { return cToleranceAlternatives_5_0; }
+		
+		//CirclePosition
+		public RuleCall getToleranceCirclePositionParserRuleCall_5_0_0() { return cToleranceCirclePositionParserRuleCall_5_0_0; }
+		
+		//SpherePosition
+		public RuleCall getToleranceSpherePositionParserRuleCall_5_0_1() { return cToleranceSpherePositionParserRuleCall_5_0_1; }
 	}
 	public class BaroSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.BaroSent");
@@ -1925,6 +2025,8 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final WhenElements pWhen;
 	private final StatementBodyElements pStatementBody;
 	private final CompStatusSentElements pCompStatusSent;
+	private final GPSSentElements pGPSSent;
+	private final GPSReadingSentElements pGPSReadingSent;
 	private final BaroSentElements pBaroSent;
 	private final BaroAltSentElements pBaroAltSent;
 	private final SonarSentElements pSonarSent;
@@ -1992,6 +2094,8 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pWhen = new WhenElements();
 		this.pStatementBody = new StatementBodyElements();
 		this.pCompStatusSent = new CompStatusSentElements();
+		this.pGPSSent = new GPSSentElements();
+		this.pGPSReadingSent = new GPSReadingSentElements();
 		this.pBaroSent = new BaroSentElements();
 		this.pBaroAltSent = new BaroAltSentElements();
 		this.pSonarSent = new SonarSentElements();
@@ -2137,7 +2241,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//StatementBody:
 	//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-	//	| NotificationSent | BatterySent | SonarSent | BaroSent;
+	//	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
 	public StatementBodyElements getStatementBodyAccess() {
 		return pStatementBody;
 	}
@@ -2155,6 +2259,31 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCompStatusSentRule() {
 		return getCompStatusSentAccess().getRule();
+	}
+	
+	//GPSSent:
+	//	'GPS'
+	//	sent=(GPSReadingSent | CompStatusSent);
+	public GPSSentElements getGPSSentAccess() {
+		return pGPSSent;
+	}
+	
+	public ParserRule getGPSSentRule() {
+		return getGPSSentAccess().getRule();
+	}
+	
+	//GPSReadingSent:
+	//	'positionReading' 'is'
+	//	posX=DOUBLE
+	//	posY=DOUBLE
+	//	posZ=DOUBLE
+	//	tolerance=(CirclePosition | SpherePosition)?;
+	public GPSReadingSentElements getGPSReadingSentAccess() {
+		return pGPSReadingSent;
+	}
+	
+	public ParserRule getGPSReadingSentRule() {
+		return getGPSReadingSentAccess().getRule();
 	}
 	
 	//BaroSent:

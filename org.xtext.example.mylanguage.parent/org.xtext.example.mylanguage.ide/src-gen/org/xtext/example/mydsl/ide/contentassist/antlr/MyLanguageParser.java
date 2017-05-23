@@ -37,6 +37,8 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getStatementBodyAccess().getAlternatives(), "rule__StatementBody__Alternatives");
+					put(grammarAccess.getGPSSentAccess().getSentAlternatives_1_0(), "rule__GPSSent__SentAlternatives_1_0");
+					put(grammarAccess.getGPSReadingSentAccess().getToleranceAlternatives_5_0(), "rule__GPSReadingSent__ToleranceAlternatives_5_0");
 					put(grammarAccess.getBaroSentAccess().getSentAlternatives_1_0(), "rule__BaroSent__SentAlternatives_1_0");
 					put(grammarAccess.getBaroAltSentAccess().getSentAlternatives_2_0(), "rule__BaroAltSent__SentAlternatives_2_0");
 					put(grammarAccess.getSonarSentAccess().getSentAlternatives_1_0(), "rule__SonarSent__SentAlternatives_1_0");
@@ -68,6 +70,8 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
 					put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
 					put(grammarAccess.getCompStatusSentAccess().getGroup(), "rule__CompStatusSent__Group__0");
+					put(grammarAccess.getGPSSentAccess().getGroup(), "rule__GPSSent__Group__0");
+					put(grammarAccess.getGPSReadingSentAccess().getGroup(), "rule__GPSReadingSent__Group__0");
 					put(grammarAccess.getBaroSentAccess().getGroup(), "rule__BaroSent__Group__0");
 					put(grammarAccess.getBaroAltSentAccess().getGroup(), "rule__BaroAltSent__Group__0");
 					put(grammarAccess.getSonarSentAccess().getGroup(), "rule__SonarSent__Group__0");
@@ -121,6 +125,11 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getThenAccess().getBodyAssignment_1(), "rule__Then__BodyAssignment_1");
 					put(grammarAccess.getWhenAccess().getBodyAssignment_1(), "rule__When__BodyAssignment_1");
 					put(grammarAccess.getCompStatusSentAccess().getStatusAssignment_2(), "rule__CompStatusSent__StatusAssignment_2");
+					put(grammarAccess.getGPSSentAccess().getSentAssignment_1(), "rule__GPSSent__SentAssignment_1");
+					put(grammarAccess.getGPSReadingSentAccess().getPosXAssignment_2(), "rule__GPSReadingSent__PosXAssignment_2");
+					put(grammarAccess.getGPSReadingSentAccess().getPosYAssignment_3(), "rule__GPSReadingSent__PosYAssignment_3");
+					put(grammarAccess.getGPSReadingSentAccess().getPosZAssignment_4(), "rule__GPSReadingSent__PosZAssignment_4");
+					put(grammarAccess.getGPSReadingSentAccess().getToleranceAssignment_5(), "rule__GPSReadingSent__ToleranceAssignment_5");
 					put(grammarAccess.getBaroSentAccess().getSentAssignment_1(), "rule__BaroSent__SentAssignment_1");
 					put(grammarAccess.getBaroAltSentAccess().getSentAssignment_2(), "rule__BaroAltSent__SentAssignment_2");
 					put(grammarAccess.getSonarSentAccess().getSentAssignment_1(), "rule__SonarSent__SentAssignment_1");

@@ -28,9 +28,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GPSReadingSent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posX" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posY" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posZ" eType="#//DistanceUnit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tolerance" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
@@ -70,9 +73,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PeopleSent" eSuperTypes="#//StatementBody"/>
   <eClassifiers xsi:type="ecore:EClass" name="PeoplePosSent" eSuperTypes="#//PeopleSent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posX" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posY" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posZ" eType="#//DistanceUnit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tolerance" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
@@ -81,9 +87,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MissionSent" eSuperTypes="#//StatementBody"/>
   <eClassifiers xsi:type="ecore:EClass" name="MissionGoalSent" eSuperTypes="#//MissionSent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posX" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posY" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posZ" eType="#//DistanceUnit"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MissionRiskLevelSent" eSuperTypes="#//MissionSent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="risklevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -103,9 +112,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DistanceToLocationSent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posX" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posY" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posZ" eType="#//DistanceUnit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tolerance" eType="#//ToleranceSent"
@@ -133,9 +145,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RobotPositionSent" eSuperTypes="#//Robot">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posX" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posY" eType="#//DistanceUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posZ" eType="#//DistanceUnit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tolerance" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>

@@ -44,9 +44,9 @@ GPSSent:
 
 GPSReadingSent:
 	'positionReading''is'
-	posX=DOUBLE
-	posY=DOUBLE
-	posZ=DOUBLE
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
 	tolerance =(CirclePosition|SpherePosition)?
 ;
 
@@ -103,9 +103,9 @@ PeopleSent:
 
 PeoplePosSent:
 	'position''is'
-	posX=DOUBLE
-	posY=DOUBLE
-	posZ=DOUBLE
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
 	tolerance =(CirclePosition|SpherePosition)?
 ;
 
@@ -121,9 +121,9 @@ MissionSent:
 
 MissionGoalSent:
 	'goal''is'
-	posX=DOUBLE
-	posY=DOUBLE
-	posZ=DOUBLE
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
 ;
 
 MissionRiskLevelSent:
@@ -159,9 +159,9 @@ RobotDistanceSent:
 ;
 
 DistanceToLocationSent:
-	posX=DOUBLE
-	posY=DOUBLE
-	posZ=DOUBLE
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
 	'is'
 	body=(GreaterSent | LessSent | EqualSent)
 	(tolerance=ToleranceSent)?
@@ -194,9 +194,9 @@ RobotStateSent:
 
 RobotPositionSent:
 	'position''is'
-	posX=DOUBLE
-	posY=DOUBLE
-	posZ=DOUBLE
+	posX=DistanceUnit
+	posY=DistanceUnit
+	posZ=DistanceUnit
 	tolerance =(CirclePosition|SpherePosition)?
 ;
 

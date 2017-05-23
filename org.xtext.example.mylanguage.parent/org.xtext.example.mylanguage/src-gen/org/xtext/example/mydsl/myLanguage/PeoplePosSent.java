@@ -27,82 +27,82 @@ import org.eclipse.emf.ecore.EObject;
 public interface PeoplePosSent extends PeopleSent
 {
   /**
-   * Returns the value of the '<em><b>Pos X</b></em>' attribute.
+   * Returns the value of the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Pos X</em>' attribute isn't clear,
+   * If the meaning of the '<em>Pos X</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pos X</em>' attribute.
-   * @see #setPosX(String)
+   * @return the value of the '<em>Pos X</em>' containment reference.
+   * @see #setPosX(DistanceUnit)
    * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getPeoplePosSent_PosX()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getPosX();
+  DistanceUnit getPosX();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosX <em>Pos X</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosX <em>Pos X</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pos X</em>' attribute.
+   * @param value the new value of the '<em>Pos X</em>' containment reference.
    * @see #getPosX()
    * @generated
    */
-  void setPosX(String value);
+  void setPosX(DistanceUnit value);
 
   /**
-   * Returns the value of the '<em><b>Pos Y</b></em>' attribute.
+   * Returns the value of the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Pos Y</em>' attribute isn't clear,
+   * If the meaning of the '<em>Pos Y</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pos Y</em>' attribute.
-   * @see #setPosY(String)
+   * @return the value of the '<em>Pos Y</em>' containment reference.
+   * @see #setPosY(DistanceUnit)
    * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getPeoplePosSent_PosY()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getPosY();
+  DistanceUnit getPosY();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosY <em>Pos Y</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosY <em>Pos Y</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pos Y</em>' attribute.
+   * @param value the new value of the '<em>Pos Y</em>' containment reference.
    * @see #getPosY()
    * @generated
    */
-  void setPosY(String value);
+  void setPosY(DistanceUnit value);
 
   /**
-   * Returns the value of the '<em><b>Pos Z</b></em>' attribute.
+   * Returns the value of the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Pos Z</em>' attribute isn't clear,
+   * If the meaning of the '<em>Pos Z</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pos Z</em>' attribute.
-   * @see #setPosZ(String)
+   * @return the value of the '<em>Pos Z</em>' containment reference.
+   * @see #setPosZ(DistanceUnit)
    * @see org.xtext.example.mydsl.myLanguage.MyLanguagePackage#getPeoplePosSent_PosZ()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getPosZ();
+  DistanceUnit getPosZ();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosZ <em>Pos Z</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosZ <em>Pos Z</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pos Z</em>' attribute.
+   * @param value the new value of the '<em>Pos Z</em>' containment reference.
    * @see #getPosZ()
    * @generated
    */
-  void setPosZ(String value);
+  void setPosZ(DistanceUnit value);
 
   /**
    * Returns the value of the '<em><b>Tolerance</b></em>' containment reference.

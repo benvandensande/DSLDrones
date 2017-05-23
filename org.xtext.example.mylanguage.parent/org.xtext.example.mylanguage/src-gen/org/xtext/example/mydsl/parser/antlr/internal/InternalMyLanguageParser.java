@@ -1618,17 +1618,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGPSReadingSent"
-    // InternalMyLanguage.g:576:1: ruleGPSReadingSent returns [EObject current=null] : (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
+    // InternalMyLanguage.g:576:1: ruleGPSReadingSent returns [EObject current=null] : (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
     public final EObject ruleGPSReadingSent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        AntlrDatatypeRuleToken lv_posX_2_0 = null;
+        EObject lv_posX_2_0 = null;
 
-        AntlrDatatypeRuleToken lv_posY_3_0 = null;
+        EObject lv_posY_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_posZ_4_0 = null;
+        EObject lv_posZ_4_0 = null;
 
         EObject lv_tolerance_5_1 = null;
 
@@ -1639,11 +1639,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:582:2: ( (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
-            // InternalMyLanguage.g:583:2: (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:582:2: ( (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
+            // InternalMyLanguage.g:583:2: (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
             {
-            // InternalMyLanguage.g:583:2: (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
-            // InternalMyLanguage.g:584:3: otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
+            // InternalMyLanguage.g:583:2: (otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:584:3: otherlv_0= 'positionReading' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
             {
             otherlv_0=(Token)match(input,19,FOLLOW_9); 
 
@@ -1653,17 +1653,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getGPSReadingSentAccess().getIsKeyword_1());
             		
-            // InternalMyLanguage.g:592:3: ( (lv_posX_2_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:593:4: (lv_posX_2_0= ruleDOUBLE )
+            // InternalMyLanguage.g:592:3: ( (lv_posX_2_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:593:4: (lv_posX_2_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:593:4: (lv_posX_2_0= ruleDOUBLE )
-            // InternalMyLanguage.g:594:5: lv_posX_2_0= ruleDOUBLE
+            // InternalMyLanguage.g:593:4: (lv_posX_2_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:594:5: lv_posX_2_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posX_2_0=ruleDOUBLE();
+            lv_posX_2_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -1675,7 +1675,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posX",
             						lv_posX_2_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1684,17 +1684,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:611:3: ( (lv_posY_3_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:612:4: (lv_posY_3_0= ruleDOUBLE )
+            // InternalMyLanguage.g:611:3: ( (lv_posY_3_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:612:4: (lv_posY_3_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:612:4: (lv_posY_3_0= ruleDOUBLE )
-            // InternalMyLanguage.g:613:5: lv_posY_3_0= ruleDOUBLE
+            // InternalMyLanguage.g:612:4: (lv_posY_3_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:613:5: lv_posY_3_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posY_3_0=ruleDOUBLE();
+            lv_posY_3_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -1706,7 +1706,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posY",
             						lv_posY_3_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1715,17 +1715,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:630:3: ( (lv_posZ_4_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:631:4: (lv_posZ_4_0= ruleDOUBLE )
+            // InternalMyLanguage.g:630:3: ( (lv_posZ_4_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:631:4: (lv_posZ_4_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:631:4: (lv_posZ_4_0= ruleDOUBLE )
-            // InternalMyLanguage.g:632:5: lv_posZ_4_0= ruleDOUBLE
+            // InternalMyLanguage.g:631:4: (lv_posZ_4_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:632:5: lv_posZ_4_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_13);
-            lv_posZ_4_0=ruleDOUBLE();
+            lv_posZ_4_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -1737,7 +1737,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posZ",
             						lv_posZ_4_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1767,11 +1767,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
                     if ( (LA7_0==54) ) {
                         int LA7_1 = input.LA(2);
 
-                        if ( (LA7_1==58) ) {
-                            alt7=2;
-                        }
-                        else if ( (LA7_1==55) ) {
+                        if ( (LA7_1==55) ) {
                             alt7=1;
+                        }
+                        else if ( (LA7_1==58) ) {
+                            alt7=2;
                         }
                         else {
                             NoViableAltException nvae =
@@ -3530,17 +3530,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePeoplePosSent"
-    // InternalMyLanguage.g:1312:1: rulePeoplePosSent returns [EObject current=null] : (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
+    // InternalMyLanguage.g:1312:1: rulePeoplePosSent returns [EObject current=null] : (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
     public final EObject rulePeoplePosSent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        AntlrDatatypeRuleToken lv_posX_2_0 = null;
+        EObject lv_posX_2_0 = null;
 
-        AntlrDatatypeRuleToken lv_posY_3_0 = null;
+        EObject lv_posY_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_posZ_4_0 = null;
+        EObject lv_posZ_4_0 = null;
 
         EObject lv_tolerance_5_1 = null;
 
@@ -3551,11 +3551,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:1318:2: ( (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
-            // InternalMyLanguage.g:1319:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:1318:2: ( (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
+            // InternalMyLanguage.g:1319:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
             {
-            // InternalMyLanguage.g:1319:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
-            // InternalMyLanguage.g:1320:3: otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
+            // InternalMyLanguage.g:1319:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:1320:3: otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
             {
             otherlv_0=(Token)match(input,35,FOLLOW_9); 
 
@@ -3565,17 +3565,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getPeoplePosSentAccess().getIsKeyword_1());
             		
-            // InternalMyLanguage.g:1328:3: ( (lv_posX_2_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1329:4: (lv_posX_2_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1328:3: ( (lv_posX_2_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1329:4: (lv_posX_2_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1329:4: (lv_posX_2_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1330:5: lv_posX_2_0= ruleDOUBLE
+            // InternalMyLanguage.g:1329:4: (lv_posX_2_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1330:5: lv_posX_2_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posX_2_0=ruleDOUBLE();
+            lv_posX_2_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -3587,7 +3587,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posX",
             						lv_posX_2_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -3596,17 +3596,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1347:3: ( (lv_posY_3_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1348:4: (lv_posY_3_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1347:3: ( (lv_posY_3_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1348:4: (lv_posY_3_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1348:4: (lv_posY_3_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1349:5: lv_posY_3_0= ruleDOUBLE
+            // InternalMyLanguage.g:1348:4: (lv_posY_3_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1349:5: lv_posY_3_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posY_3_0=ruleDOUBLE();
+            lv_posY_3_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -3618,7 +3618,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posY",
             						lv_posY_3_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -3627,17 +3627,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1366:3: ( (lv_posZ_4_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1367:4: (lv_posZ_4_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1366:3: ( (lv_posZ_4_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1367:4: (lv_posZ_4_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1367:4: (lv_posZ_4_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1368:5: lv_posZ_4_0= ruleDOUBLE
+            // InternalMyLanguage.g:1367:4: (lv_posZ_4_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1368:5: lv_posZ_4_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_13);
-            lv_posZ_4_0=ruleDOUBLE();
+            lv_posZ_4_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -3649,7 +3649,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posZ",
             						lv_posZ_4_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -4099,28 +4099,28 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMissionGoalSent"
-    // InternalMyLanguage.g:1529:1: ruleMissionGoalSent returns [EObject current=null] : (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ) ;
+    // InternalMyLanguage.g:1529:1: ruleMissionGoalSent returns [EObject current=null] : (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ) ;
     public final EObject ruleMissionGoalSent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        AntlrDatatypeRuleToken lv_posX_2_0 = null;
+        EObject lv_posX_2_0 = null;
 
-        AntlrDatatypeRuleToken lv_posY_3_0 = null;
+        EObject lv_posY_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_posZ_4_0 = null;
+        EObject lv_posZ_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:1535:2: ( (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ) )
-            // InternalMyLanguage.g:1536:2: (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) )
+            // InternalMyLanguage.g:1535:2: ( (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ) )
+            // InternalMyLanguage.g:1536:2: (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) )
             {
-            // InternalMyLanguage.g:1536:2: (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) )
-            // InternalMyLanguage.g:1537:3: otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) )
+            // InternalMyLanguage.g:1536:2: (otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) )
+            // InternalMyLanguage.g:1537:3: otherlv_0= 'goal' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) )
             {
             otherlv_0=(Token)match(input,38,FOLLOW_9); 
 
@@ -4130,17 +4130,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getMissionGoalSentAccess().getIsKeyword_1());
             		
-            // InternalMyLanguage.g:1545:3: ( (lv_posX_2_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1546:4: (lv_posX_2_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1545:3: ( (lv_posX_2_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1546:4: (lv_posX_2_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1546:4: (lv_posX_2_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1547:5: lv_posX_2_0= ruleDOUBLE
+            // InternalMyLanguage.g:1546:4: (lv_posX_2_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1547:5: lv_posX_2_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posX_2_0=ruleDOUBLE();
+            lv_posX_2_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -4152,7 +4152,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posX",
             						lv_posX_2_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -4161,17 +4161,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1564:3: ( (lv_posY_3_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1565:4: (lv_posY_3_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1564:3: ( (lv_posY_3_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1565:4: (lv_posY_3_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1565:4: (lv_posY_3_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1566:5: lv_posY_3_0= ruleDOUBLE
+            // InternalMyLanguage.g:1565:4: (lv_posY_3_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1566:5: lv_posY_3_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posY_3_0=ruleDOUBLE();
+            lv_posY_3_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -4183,7 +4183,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posY",
             						lv_posY_3_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -4192,17 +4192,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1583:3: ( (lv_posZ_4_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1584:4: (lv_posZ_4_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1583:3: ( (lv_posZ_4_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1584:4: (lv_posZ_4_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1584:4: (lv_posZ_4_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1585:5: lv_posZ_4_0= ruleDOUBLE
+            // InternalMyLanguage.g:1584:4: (lv_posZ_4_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1585:5: lv_posZ_4_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_2);
-            lv_posZ_4_0=ruleDOUBLE();
+            lv_posZ_4_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -4214,7 +4214,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posZ",
             						lv_posZ_4_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -5078,7 +5078,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             if ( (LA21_0==48) ) {
                 alt21=1;
             }
-            else if ( (LA21_0==RULE_INT||LA21_0==82) ) {
+            else if ( ((LA21_0>=77 && LA21_0<=80)) ) {
                 alt21=2;
             }
             else {
@@ -5206,16 +5206,16 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDistanceToLocationSent"
-    // InternalMyLanguage.g:1947:1: ruleDistanceToLocationSent returns [EObject current=null] : ( ( (lv_posX_0_0= ruleDOUBLE ) ) ( (lv_posY_1_0= ruleDOUBLE ) ) ( (lv_posZ_2_0= ruleDOUBLE ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? ) ;
+    // InternalMyLanguage.g:1947:1: ruleDistanceToLocationSent returns [EObject current=null] : ( ( (lv_posX_0_0= ruleDistanceUnit ) ) ( (lv_posY_1_0= ruleDistanceUnit ) ) ( (lv_posZ_2_0= ruleDistanceUnit ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? ) ;
     public final EObject ruleDistanceToLocationSent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_3=null;
-        AntlrDatatypeRuleToken lv_posX_0_0 = null;
+        EObject lv_posX_0_0 = null;
 
-        AntlrDatatypeRuleToken lv_posY_1_0 = null;
+        EObject lv_posY_1_0 = null;
 
-        AntlrDatatypeRuleToken lv_posZ_2_0 = null;
+        EObject lv_posZ_2_0 = null;
 
         EObject lv_body_4_1 = null;
 
@@ -5230,23 +5230,23 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:1953:2: ( ( ( (lv_posX_0_0= ruleDOUBLE ) ) ( (lv_posY_1_0= ruleDOUBLE ) ) ( (lv_posZ_2_0= ruleDOUBLE ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? ) )
-            // InternalMyLanguage.g:1954:2: ( ( (lv_posX_0_0= ruleDOUBLE ) ) ( (lv_posY_1_0= ruleDOUBLE ) ) ( (lv_posZ_2_0= ruleDOUBLE ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? )
+            // InternalMyLanguage.g:1953:2: ( ( ( (lv_posX_0_0= ruleDistanceUnit ) ) ( (lv_posY_1_0= ruleDistanceUnit ) ) ( (lv_posZ_2_0= ruleDistanceUnit ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? ) )
+            // InternalMyLanguage.g:1954:2: ( ( (lv_posX_0_0= ruleDistanceUnit ) ) ( (lv_posY_1_0= ruleDistanceUnit ) ) ( (lv_posZ_2_0= ruleDistanceUnit ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? )
             {
-            // InternalMyLanguage.g:1954:2: ( ( (lv_posX_0_0= ruleDOUBLE ) ) ( (lv_posY_1_0= ruleDOUBLE ) ) ( (lv_posZ_2_0= ruleDOUBLE ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? )
-            // InternalMyLanguage.g:1955:3: ( (lv_posX_0_0= ruleDOUBLE ) ) ( (lv_posY_1_0= ruleDOUBLE ) ) ( (lv_posZ_2_0= ruleDOUBLE ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )?
+            // InternalMyLanguage.g:1954:2: ( ( (lv_posX_0_0= ruleDistanceUnit ) ) ( (lv_posY_1_0= ruleDistanceUnit ) ) ( (lv_posZ_2_0= ruleDistanceUnit ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )? )
+            // InternalMyLanguage.g:1955:3: ( (lv_posX_0_0= ruleDistanceUnit ) ) ( (lv_posY_1_0= ruleDistanceUnit ) ) ( (lv_posZ_2_0= ruleDistanceUnit ) ) otherlv_3= 'is' ( ( (lv_body_4_1= ruleGreaterSent | lv_body_4_2= ruleLessSent | lv_body_4_3= ruleEqualSent ) ) ) ( (lv_tolerance_5_0= ruleToleranceSent ) )?
             {
-            // InternalMyLanguage.g:1955:3: ( (lv_posX_0_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1956:4: (lv_posX_0_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1955:3: ( (lv_posX_0_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1956:4: (lv_posX_0_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1956:4: (lv_posX_0_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1957:5: lv_posX_0_0= ruleDOUBLE
+            // InternalMyLanguage.g:1956:4: (lv_posX_0_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1957:5: lv_posX_0_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosXDOUBLEParserRuleCall_0_0());
+            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosXDistanceUnitParserRuleCall_0_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posX_0_0=ruleDOUBLE();
+            lv_posX_0_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -5258,7 +5258,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posX",
             						lv_posX_0_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -5267,17 +5267,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1974:3: ( (lv_posY_1_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1975:4: (lv_posY_1_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1974:3: ( (lv_posY_1_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1975:4: (lv_posY_1_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1975:4: (lv_posY_1_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1976:5: lv_posY_1_0= ruleDOUBLE
+            // InternalMyLanguage.g:1975:4: (lv_posY_1_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1976:5: lv_posY_1_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosYDOUBLEParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosYDistanceUnitParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posY_1_0=ruleDOUBLE();
+            lv_posY_1_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -5289,7 +5289,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posY",
             						lv_posY_1_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -5298,17 +5298,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:1993:3: ( (lv_posZ_2_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:1994:4: (lv_posZ_2_0= ruleDOUBLE )
+            // InternalMyLanguage.g:1993:3: ( (lv_posZ_2_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:1994:4: (lv_posZ_2_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:1994:4: (lv_posZ_2_0= ruleDOUBLE )
-            // InternalMyLanguage.g:1995:5: lv_posZ_2_0= ruleDOUBLE
+            // InternalMyLanguage.g:1994:4: (lv_posZ_2_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:1995:5: lv_posZ_2_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosZDOUBLEParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosZDistanceUnitParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_9);
-            lv_posZ_2_0=ruleDOUBLE();
+            lv_posZ_2_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -5320,7 +5320,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posZ",
             						lv_posZ_2_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -6421,17 +6421,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRobotPositionSent"
-    // InternalMyLanguage.g:2435:1: ruleRobotPositionSent returns [EObject current=null] : (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
+    // InternalMyLanguage.g:2435:1: ruleRobotPositionSent returns [EObject current=null] : (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) ;
     public final EObject ruleRobotPositionSent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        AntlrDatatypeRuleToken lv_posX_2_0 = null;
+        EObject lv_posX_2_0 = null;
 
-        AntlrDatatypeRuleToken lv_posY_3_0 = null;
+        EObject lv_posY_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_posZ_4_0 = null;
+        EObject lv_posZ_4_0 = null;
 
         EObject lv_tolerance_5_1 = null;
 
@@ -6442,11 +6442,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:2441:2: ( (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
-            // InternalMyLanguage.g:2442:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:2441:2: ( (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? ) )
+            // InternalMyLanguage.g:2442:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
             {
-            // InternalMyLanguage.g:2442:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
-            // InternalMyLanguage.g:2443:3: otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDOUBLE ) ) ( (lv_posY_3_0= ruleDOUBLE ) ) ( (lv_posZ_4_0= ruleDOUBLE ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
+            // InternalMyLanguage.g:2442:2: (otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )? )
+            // InternalMyLanguage.g:2443:3: otherlv_0= 'position' otherlv_1= 'is' ( (lv_posX_2_0= ruleDistanceUnit ) ) ( (lv_posY_3_0= ruleDistanceUnit ) ) ( (lv_posZ_4_0= ruleDistanceUnit ) ) ( ( (lv_tolerance_5_1= ruleCirclePosition | lv_tolerance_5_2= ruleSpherePosition ) ) )?
             {
             otherlv_0=(Token)match(input,35,FOLLOW_9); 
 
@@ -6456,17 +6456,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getRobotPositionSentAccess().getIsKeyword_1());
             		
-            // InternalMyLanguage.g:2451:3: ( (lv_posX_2_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:2452:4: (lv_posX_2_0= ruleDOUBLE )
+            // InternalMyLanguage.g:2451:3: ( (lv_posX_2_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:2452:4: (lv_posX_2_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:2452:4: (lv_posX_2_0= ruleDOUBLE )
-            // InternalMyLanguage.g:2453:5: lv_posX_2_0= ruleDOUBLE
+            // InternalMyLanguage.g:2452:4: (lv_posX_2_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:2453:5: lv_posX_2_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posX_2_0=ruleDOUBLE();
+            lv_posX_2_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -6478,7 +6478,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posX",
             						lv_posX_2_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -6487,17 +6487,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:2470:3: ( (lv_posY_3_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:2471:4: (lv_posY_3_0= ruleDOUBLE )
+            // InternalMyLanguage.g:2470:3: ( (lv_posY_3_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:2471:4: (lv_posY_3_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:2471:4: (lv_posY_3_0= ruleDOUBLE )
-            // InternalMyLanguage.g:2472:5: lv_posY_3_0= ruleDOUBLE
+            // InternalMyLanguage.g:2471:4: (lv_posY_3_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:2472:5: lv_posY_3_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_12);
-            lv_posY_3_0=ruleDOUBLE();
+            lv_posY_3_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -6509,7 +6509,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posY",
             						lv_posY_3_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -6518,17 +6518,17 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMyLanguage.g:2489:3: ( (lv_posZ_4_0= ruleDOUBLE ) )
-            // InternalMyLanguage.g:2490:4: (lv_posZ_4_0= ruleDOUBLE )
+            // InternalMyLanguage.g:2489:3: ( (lv_posZ_4_0= ruleDistanceUnit ) )
+            // InternalMyLanguage.g:2490:4: (lv_posZ_4_0= ruleDistanceUnit )
             {
-            // InternalMyLanguage.g:2490:4: (lv_posZ_4_0= ruleDOUBLE )
-            // InternalMyLanguage.g:2491:5: lv_posZ_4_0= ruleDOUBLE
+            // InternalMyLanguage.g:2490:4: (lv_posZ_4_0= ruleDistanceUnit )
+            // InternalMyLanguage.g:2491:5: lv_posZ_4_0= ruleDistanceUnit
             {
 
-            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_13);
-            lv_posZ_4_0=ruleDOUBLE();
+            lv_posZ_4_0=ruleDistanceUnit();
 
             state._fsp--;
 
@@ -6540,7 +6540,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             						current,
             						"posZ",
             						lv_posZ_4_0,
-            						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+            						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
             					afterParserOrEnumRuleCall();
             				
 
@@ -6744,7 +6744,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getCirclePositionAccess().getWithKeyword_2());
             		
-            otherlv_3=(Token)match(input,57,FOLLOW_42); 
+            otherlv_3=(Token)match(input,57,FOLLOW_12); 
 
             			newLeafNode(otherlv_3, grammarAccess.getCirclePositionAccess().getRadiusKeyword_3());
             		
@@ -6859,7 +6859,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:2617:2: (otherlv_0= 'within' otherlv_1= 'sphere' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) ) )
             // InternalMyLanguage.g:2618:3: otherlv_0= 'within' otherlv_1= 'sphere' otherlv_2= 'with' otherlv_3= 'radius' ( (lv_tolerance_4_0= ruleDistanceUnit ) )
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_43); 
+            otherlv_0=(Token)match(input,54,FOLLOW_42); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSpherePositionAccess().getWithinKeyword_0());
             		
@@ -6871,7 +6871,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getSpherePositionAccess().getWithKeyword_2());
             		
-            otherlv_3=(Token)match(input,57,FOLLOW_42); 
+            otherlv_3=(Token)match(input,57,FOLLOW_12); 
 
             			newLeafNode(otherlv_3, grammarAccess.getSpherePositionAccess().getRadiusKeyword_3());
             		
@@ -6992,7 +6992,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getRobotSpeedSentAccess().getSpeedKeyword_0());
             		
-            otherlv_1=(Token)match(input,17,FOLLOW_12); 
+            otherlv_1=(Token)match(input,17,FOLLOW_43); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRobotSpeedSentAccess().getIsKeyword_1());
             		
@@ -7005,7 +7005,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedXDOUBLEParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_43);
             lv_speedX_2_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7036,7 +7036,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getRobotSpeedSentAccess().getSpeedYDOUBLEParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_43);
             lv_speedY_3_0=ruleDOUBLE();
 
             state._fsp--;
@@ -7499,7 +7499,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getToleranceSentAccess().getWithKeyword_0());
             		
-            otherlv_1=(Token)match(input,63,FOLLOW_42); 
+            otherlv_1=(Token)match(input,63,FOLLOW_12); 
 
             			newLeafNode(otherlv_1, grammarAccess.getToleranceSentAccess().getToleranceKeyword_1());
             		
@@ -8806,7 +8806,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:3306:2: (otherlv_0= 'meter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')' )
             // InternalMyLanguage.g:3307:3: otherlv_0= 'meter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,77,FOLLOW_12); 
+            otherlv_0=(Token)match(input,77,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMETERAccess().getMeterKeyword_0());
             		
@@ -8923,7 +8923,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:3352:2: (otherlv_0= 'centimeter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')' )
             // InternalMyLanguage.g:3353:3: otherlv_0= 'centimeter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,78,FOLLOW_12); 
+            otherlv_0=(Token)match(input,78,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCENTIMETERAccess().getCentimeterKeyword_0());
             		
@@ -9040,7 +9040,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:3398:2: (otherlv_0= 'millimeter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')' )
             // InternalMyLanguage.g:3399:3: otherlv_0= 'millimeter(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,79,FOLLOW_12); 
+            otherlv_0=(Token)match(input,79,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMILLIMETERAccess().getMillimeterKeyword_0());
             		
@@ -9157,7 +9157,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             // InternalMyLanguage.g:3444:2: (otherlv_0= 'kilometer(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')' )
             // InternalMyLanguage.g:3445:3: otherlv_0= 'kilometer(' ( (lv_value_1_0= ruleDOUBLE ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,80,FOLLOW_12); 
+            otherlv_0=(Token)match(input,80,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getKILOMETERAccess().getKilometerKeyword_0());
             		
@@ -9598,7 +9598,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000181L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000090000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000040L,0x0000000000040000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000000L,0x000000000001E000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0040000000000002L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000290000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0016000000000000L});
@@ -9621,15 +9621,15 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x00000C0000000000L});
     public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0001000000000040L,0x0000000000040000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0001000000000000L,0x000000000001E000L});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0100000000000002L});
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x000000000003E000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0080000000000000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0100000000000000L});
     public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x000000000001E000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000040L,0x0000000000040000L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x2000000000000000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000068L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x8000000000000000L});

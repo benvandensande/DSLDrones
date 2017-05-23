@@ -28,9 +28,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSSent/sent"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//GPSReadingSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//GPSReadingSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSReadingSent/posX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSReadingSent/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSReadingSent/posZ"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//GPSReadingSent/tolerance"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//BaroSent">
@@ -61,9 +61,9 @@
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//PeopleSent"/>
     <genClasses ecoreClass="MyLanguage.ecore#//PeoplePosSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//PeoplePosSent/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//PeoplePosSent/posY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//PeoplePosSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//PeoplePosSent/posX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//PeoplePosSent/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//PeoplePosSent/posZ"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//PeoplePosSent/tolerance"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//PeopleNumbSent">
@@ -71,9 +71,9 @@
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//MissionSent"/>
     <genClasses ecoreClass="MyLanguage.ecore#//MissionGoalSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//MissionGoalSent/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//MissionGoalSent/posY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//MissionGoalSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//MissionGoalSent/posX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//MissionGoalSent/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//MissionGoalSent/posZ"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//MissionRiskLevelSent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//MissionRiskLevelSent/risklevel"/>
@@ -92,9 +92,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotDistanceSent/sent"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//DistanceToLocationSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//DistanceToLocationSent/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//DistanceToLocationSent/posY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//DistanceToLocationSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//DistanceToLocationSent/posX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//DistanceToLocationSent/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//DistanceToLocationSent/posZ"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//DistanceToLocationSent/body"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//DistanceToLocationSent/tolerance"/>
     </genClasses>
@@ -115,9 +115,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotStateSent/state"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//RobotPositionSent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotPositionSent/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotPositionSent/posY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyLanguage.ecore#//RobotPositionSent/posZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotPositionSent/posX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotPositionSent/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotPositionSent/posZ"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyLanguage.ecore#//RobotPositionSent/tolerance"/>
     </genClasses>
     <genClasses ecoreClass="MyLanguage.ecore#//CirclePosition">

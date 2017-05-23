@@ -592,9 +592,9 @@ ruleGPSReadingSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
 				}
-				lv_posX_2_0=ruleDOUBLE
+				lv_posX_2_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
@@ -603,7 +603,7 @@ ruleGPSReadingSent returns [EObject current=null]
 						$current,
 						"posX",
 						lv_posX_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -611,9 +611,9 @@ ruleGPSReadingSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
 				}
-				lv_posY_3_0=ruleDOUBLE
+				lv_posY_3_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
@@ -622,7 +622,7 @@ ruleGPSReadingSent returns [EObject current=null]
 						$current,
 						"posY",
 						lv_posY_3_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -630,9 +630,9 @@ ruleGPSReadingSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGPSReadingSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
 				}
-				lv_posZ_4_0=ruleDOUBLE
+				lv_posZ_4_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGPSReadingSentRule());
@@ -641,7 +641,7 @@ ruleGPSReadingSent returns [EObject current=null]
 						$current,
 						"posZ",
 						lv_posZ_4_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1328,9 +1328,9 @@ rulePeoplePosSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
 				}
-				lv_posX_2_0=ruleDOUBLE
+				lv_posX_2_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPeoplePosSentRule());
@@ -1339,7 +1339,7 @@ rulePeoplePosSent returns [EObject current=null]
 						$current,
 						"posX",
 						lv_posX_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1347,9 +1347,9 @@ rulePeoplePosSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
 				}
-				lv_posY_3_0=ruleDOUBLE
+				lv_posY_3_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPeoplePosSentRule());
@@ -1358,7 +1358,7 @@ rulePeoplePosSent returns [EObject current=null]
 						$current,
 						"posY",
 						lv_posY_3_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1366,9 +1366,9 @@ rulePeoplePosSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getPeoplePosSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
 				}
-				lv_posZ_4_0=ruleDOUBLE
+				lv_posZ_4_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPeoplePosSentRule());
@@ -1377,7 +1377,7 @@ rulePeoplePosSent returns [EObject current=null]
 						$current,
 						"posZ",
 						lv_posZ_4_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1545,9 +1545,9 @@ ruleMissionGoalSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
 				}
-				lv_posX_2_0=ruleDOUBLE
+				lv_posX_2_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMissionGoalSentRule());
@@ -1556,7 +1556,7 @@ ruleMissionGoalSent returns [EObject current=null]
 						$current,
 						"posX",
 						lv_posX_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1564,9 +1564,9 @@ ruleMissionGoalSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
 				}
-				lv_posY_3_0=ruleDOUBLE
+				lv_posY_3_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMissionGoalSentRule());
@@ -1575,7 +1575,7 @@ ruleMissionGoalSent returns [EObject current=null]
 						$current,
 						"posY",
 						lv_posY_3_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1583,9 +1583,9 @@ ruleMissionGoalSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getMissionGoalSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
 				}
-				lv_posZ_4_0=ruleDOUBLE
+				lv_posZ_4_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMissionGoalSentRule());
@@ -1594,7 +1594,7 @@ ruleMissionGoalSent returns [EObject current=null]
 						$current,
 						"posZ",
 						lv_posZ_4_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1955,9 +1955,9 @@ ruleDistanceToLocationSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosXDOUBLEParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosXDistanceUnitParserRuleCall_0_0());
 				}
-				lv_posX_0_0=ruleDOUBLE
+				lv_posX_0_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDistanceToLocationSentRule());
@@ -1966,7 +1966,7 @@ ruleDistanceToLocationSent returns [EObject current=null]
 						$current,
 						"posX",
 						lv_posX_0_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1974,9 +1974,9 @@ ruleDistanceToLocationSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosYDOUBLEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosYDistanceUnitParserRuleCall_1_0());
 				}
-				lv_posY_1_0=ruleDOUBLE
+				lv_posY_1_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDistanceToLocationSentRule());
@@ -1985,7 +1985,7 @@ ruleDistanceToLocationSent returns [EObject current=null]
 						$current,
 						"posY",
 						lv_posY_1_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1993,9 +1993,9 @@ ruleDistanceToLocationSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosZDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getDistanceToLocationSentAccess().getPosZDistanceUnitParserRuleCall_2_0());
 				}
-				lv_posZ_2_0=ruleDOUBLE
+				lv_posZ_2_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDistanceToLocationSentRule());
@@ -2004,7 +2004,7 @@ ruleDistanceToLocationSent returns [EObject current=null]
 						$current,
 						"posZ",
 						lv_posZ_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2451,9 +2451,9 @@ ruleRobotPositionSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosXDOUBLEParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosXDistanceUnitParserRuleCall_2_0());
 				}
-				lv_posX_2_0=ruleDOUBLE
+				lv_posX_2_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRobotPositionSentRule());
@@ -2462,7 +2462,7 @@ ruleRobotPositionSent returns [EObject current=null]
 						$current,
 						"posX",
 						lv_posX_2_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2470,9 +2470,9 @@ ruleRobotPositionSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosYDOUBLEParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosYDistanceUnitParserRuleCall_3_0());
 				}
-				lv_posY_3_0=ruleDOUBLE
+				lv_posY_3_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRobotPositionSentRule());
@@ -2481,7 +2481,7 @@ ruleRobotPositionSent returns [EObject current=null]
 						$current,
 						"posY",
 						lv_posY_3_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2489,9 +2489,9 @@ ruleRobotPositionSent returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosZDOUBLEParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getRobotPositionSentAccess().getPosZDistanceUnitParserRuleCall_4_0());
 				}
-				lv_posZ_4_0=ruleDOUBLE
+				lv_posZ_4_0=ruleDistanceUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRobotPositionSentRule());
@@ -2500,7 +2500,7 @@ ruleRobotPositionSent returns [EObject current=null]
 						$current,
 						"posZ",
 						lv_posZ_4_0,
-						"org.xtext.example.mydsl.MyLanguage.DOUBLE");
+						"org.xtext.example.mydsl.MyLanguage.DistanceUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)

@@ -329,7 +329,7 @@ public interface MyLanguagePackage extends EPackage
   int GPS_READING_SENT = 9;
 
   /**
-   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * The feature id for the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -338,7 +338,7 @@ public interface MyLanguagePackage extends EPackage
   int GPS_READING_SENT__POS_X = 0;
 
   /**
-   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -347,7 +347,7 @@ public interface MyLanguagePackage extends EPackage
   int GPS_READING_SENT__POS_Y = 1;
 
   /**
-   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -655,7 +655,7 @@ public interface MyLanguagePackage extends EPackage
   int PEOPLE_POS_SENT = 20;
 
   /**
-   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * The feature id for the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -664,7 +664,7 @@ public interface MyLanguagePackage extends EPackage
   int PEOPLE_POS_SENT__POS_X = PEOPLE_SENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -673,7 +673,7 @@ public interface MyLanguagePackage extends EPackage
   int PEOPLE_POS_SENT__POS_Y = PEOPLE_SENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -757,7 +757,7 @@ public interface MyLanguagePackage extends EPackage
   int MISSION_GOAL_SENT = 23;
 
   /**
-   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * The feature id for the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -766,7 +766,7 @@ public interface MyLanguagePackage extends EPackage
   int MISSION_GOAL_SENT__POS_X = MISSION_SENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -775,7 +775,7 @@ public interface MyLanguagePackage extends EPackage
   int MISSION_GOAL_SENT__POS_Y = MISSION_SENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -962,7 +962,7 @@ public interface MyLanguagePackage extends EPackage
   int DISTANCE_TO_LOCATION_SENT = 30;
 
   /**
-   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * The feature id for the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -971,7 +971,7 @@ public interface MyLanguagePackage extends EPackage
   int DISTANCE_TO_LOCATION_SENT__POS_X = 0;
 
   /**
-   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -980,7 +980,7 @@ public interface MyLanguagePackage extends EPackage
   int DISTANCE_TO_LOCATION_SENT__POS_Y = 1;
 
   /**
-   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1175,7 +1175,7 @@ public interface MyLanguagePackage extends EPackage
   int ROBOT_POSITION_SENT = 36;
 
   /**
-   * The feature id for the '<em><b>Pos X</b></em>' attribute.
+   * The feature id for the '<em><b>Pos X</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1184,7 +1184,7 @@ public interface MyLanguagePackage extends EPackage
   int ROBOT_POSITION_SENT__POS_X = ROBOT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Pos Y</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Y</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1193,7 +1193,7 @@ public interface MyLanguagePackage extends EPackage
   int ROBOT_POSITION_SENT__POS_Y = ROBOT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Pos Z</b></em>' attribute.
+   * The feature id for the '<em><b>Pos Z</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1864,37 +1864,37 @@ public interface MyLanguagePackage extends EPackage
   EClass getGPSReadingSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosX <em>Pos X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosX <em>Pos X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @return the meta object for the containment reference '<em>Pos X</em>'.
    * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosX()
    * @see #getGPSReadingSent()
    * @generated
    */
-  EAttribute getGPSReadingSent_PosX();
+  EReference getGPSReadingSent_PosX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosY <em>Pos Y</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosY <em>Pos Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @return the meta object for the containment reference '<em>Pos Y</em>'.
    * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosY()
    * @see #getGPSReadingSent()
    * @generated
    */
-  EAttribute getGPSReadingSent_PosY();
+  EReference getGPSReadingSent_PosY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosZ <em>Pos Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosZ <em>Pos Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @return the meta object for the containment reference '<em>Pos Z</em>'.
    * @see org.xtext.example.mydsl.myLanguage.GPSReadingSent#getPosZ()
    * @see #getGPSReadingSent()
    * @generated
    */
-  EAttribute getGPSReadingSent_PosZ();
+  EReference getGPSReadingSent_PosZ();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.GPSReadingSent#getTolerance <em>Tolerance</em>}'.
@@ -2117,37 +2117,37 @@ public interface MyLanguagePackage extends EPackage
   EClass getPeoplePosSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosX <em>Pos X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosX <em>Pos X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @return the meta object for the containment reference '<em>Pos X</em>'.
    * @see org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosX()
    * @see #getPeoplePosSent()
    * @generated
    */
-  EAttribute getPeoplePosSent_PosX();
+  EReference getPeoplePosSent_PosX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosY <em>Pos Y</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosY <em>Pos Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @return the meta object for the containment reference '<em>Pos Y</em>'.
    * @see org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosY()
    * @see #getPeoplePosSent()
    * @generated
    */
-  EAttribute getPeoplePosSent_PosY();
+  EReference getPeoplePosSent_PosY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosZ <em>Pos Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosZ <em>Pos Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @return the meta object for the containment reference '<em>Pos Z</em>'.
    * @see org.xtext.example.mydsl.myLanguage.PeoplePosSent#getPosZ()
    * @see #getPeoplePosSent()
    * @generated
    */
-  EAttribute getPeoplePosSent_PosZ();
+  EReference getPeoplePosSent_PosZ();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.PeoplePosSent#getTolerance <em>Tolerance</em>}'.
@@ -2202,37 +2202,37 @@ public interface MyLanguagePackage extends EPackage
   EClass getMissionGoalSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosX <em>Pos X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosX <em>Pos X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @return the meta object for the containment reference '<em>Pos X</em>'.
    * @see org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosX()
    * @see #getMissionGoalSent()
    * @generated
    */
-  EAttribute getMissionGoalSent_PosX();
+  EReference getMissionGoalSent_PosX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosY <em>Pos Y</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosY <em>Pos Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @return the meta object for the containment reference '<em>Pos Y</em>'.
    * @see org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosY()
    * @see #getMissionGoalSent()
    * @generated
    */
-  EAttribute getMissionGoalSent_PosY();
+  EReference getMissionGoalSent_PosY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosZ <em>Pos Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosZ <em>Pos Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @return the meta object for the containment reference '<em>Pos Z</em>'.
    * @see org.xtext.example.mydsl.myLanguage.MissionGoalSent#getPosZ()
    * @see #getMissionGoalSent()
    * @generated
    */
-  EAttribute getMissionGoalSent_PosZ();
+  EReference getMissionGoalSent_PosZ();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myLanguage.MissionRiskLevelSent <em>Mission Risk Level Sent</em>}'.
@@ -2360,37 +2360,37 @@ public interface MyLanguagePackage extends EPackage
   EClass getDistanceToLocationSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosX <em>Pos X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosX <em>Pos X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @return the meta object for the containment reference '<em>Pos X</em>'.
    * @see org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosX()
    * @see #getDistanceToLocationSent()
    * @generated
    */
-  EAttribute getDistanceToLocationSent_PosX();
+  EReference getDistanceToLocationSent_PosX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosY <em>Pos Y</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosY <em>Pos Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @return the meta object for the containment reference '<em>Pos Y</em>'.
    * @see org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosY()
    * @see #getDistanceToLocationSent()
    * @generated
    */
-  EAttribute getDistanceToLocationSent_PosY();
+  EReference getDistanceToLocationSent_PosY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosZ <em>Pos Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosZ <em>Pos Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @return the meta object for the containment reference '<em>Pos Z</em>'.
    * @see org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getPosZ()
    * @see #getDistanceToLocationSent()
    * @generated
    */
-  EAttribute getDistanceToLocationSent_PosZ();
+  EReference getDistanceToLocationSent_PosZ();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.DistanceToLocationSent#getBody <em>Body</em>}'.
@@ -2541,37 +2541,37 @@ public interface MyLanguagePackage extends EPackage
   EClass getRobotPositionSent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosX <em>Pos X</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosX <em>Pos X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos X</em>'.
+   * @return the meta object for the containment reference '<em>Pos X</em>'.
    * @see org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosX()
    * @see #getRobotPositionSent()
    * @generated
    */
-  EAttribute getRobotPositionSent_PosX();
+  EReference getRobotPositionSent_PosX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosY <em>Pos Y</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosY <em>Pos Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Y</em>'.
+   * @return the meta object for the containment reference '<em>Pos Y</em>'.
    * @see org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosY()
    * @see #getRobotPositionSent()
    * @generated
    */
-  EAttribute getRobotPositionSent_PosY();
+  EReference getRobotPositionSent_PosY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosZ <em>Pos Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosZ <em>Pos Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos Z</em>'.
+   * @return the meta object for the containment reference '<em>Pos Z</em>'.
    * @see org.xtext.example.mydsl.myLanguage.RobotPositionSent#getPosZ()
    * @see #getRobotPositionSent()
    * @generated
    */
-  EAttribute getRobotPositionSent_PosZ();
+  EReference getRobotPositionSent_PosZ();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myLanguage.RobotPositionSent#getTolerance <em>Tolerance</em>}'.
@@ -3045,28 +3045,28 @@ public interface MyLanguagePackage extends EPackage
     EClass GPS_READING_SENT = eINSTANCE.getGPSReadingSent();
 
     /**
-     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos X</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GPS_READING_SENT__POS_X = eINSTANCE.getGPSReadingSent_PosX();
+    EReference GPS_READING_SENT__POS_X = eINSTANCE.getGPSReadingSent_PosX();
 
     /**
-     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Y</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GPS_READING_SENT__POS_Y = eINSTANCE.getGPSReadingSent_PosY();
+    EReference GPS_READING_SENT__POS_Y = eINSTANCE.getGPSReadingSent_PosY();
 
     /**
-     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Z</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GPS_READING_SENT__POS_Z = eINSTANCE.getGPSReadingSent_PosZ();
+    EReference GPS_READING_SENT__POS_Z = eINSTANCE.getGPSReadingSent_PosZ();
 
     /**
      * The meta object literal for the '<em><b>Tolerance</b></em>' containment reference feature.
@@ -3259,28 +3259,28 @@ public interface MyLanguagePackage extends EPackage
     EClass PEOPLE_POS_SENT = eINSTANCE.getPeoplePosSent();
 
     /**
-     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos X</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PEOPLE_POS_SENT__POS_X = eINSTANCE.getPeoplePosSent_PosX();
+    EReference PEOPLE_POS_SENT__POS_X = eINSTANCE.getPeoplePosSent_PosX();
 
     /**
-     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Y</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PEOPLE_POS_SENT__POS_Y = eINSTANCE.getPeoplePosSent_PosY();
+    EReference PEOPLE_POS_SENT__POS_Y = eINSTANCE.getPeoplePosSent_PosY();
 
     /**
-     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Z</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PEOPLE_POS_SENT__POS_Z = eINSTANCE.getPeoplePosSent_PosZ();
+    EReference PEOPLE_POS_SENT__POS_Z = eINSTANCE.getPeoplePosSent_PosZ();
 
     /**
      * The meta object literal for the '<em><b>Tolerance</b></em>' containment reference feature.
@@ -3329,28 +3329,28 @@ public interface MyLanguagePackage extends EPackage
     EClass MISSION_GOAL_SENT = eINSTANCE.getMissionGoalSent();
 
     /**
-     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos X</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MISSION_GOAL_SENT__POS_X = eINSTANCE.getMissionGoalSent_PosX();
+    EReference MISSION_GOAL_SENT__POS_X = eINSTANCE.getMissionGoalSent_PosX();
 
     /**
-     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Y</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MISSION_GOAL_SENT__POS_Y = eINSTANCE.getMissionGoalSent_PosY();
+    EReference MISSION_GOAL_SENT__POS_Y = eINSTANCE.getMissionGoalSent_PosY();
 
     /**
-     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Z</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MISSION_GOAL_SENT__POS_Z = eINSTANCE.getMissionGoalSent_PosZ();
+    EReference MISSION_GOAL_SENT__POS_Z = eINSTANCE.getMissionGoalSent_PosZ();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myLanguage.impl.MissionRiskLevelSentImpl <em>Mission Risk Level Sent</em>}' class.
@@ -3463,28 +3463,28 @@ public interface MyLanguagePackage extends EPackage
     EClass DISTANCE_TO_LOCATION_SENT = eINSTANCE.getDistanceToLocationSent();
 
     /**
-     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos X</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DISTANCE_TO_LOCATION_SENT__POS_X = eINSTANCE.getDistanceToLocationSent_PosX();
+    EReference DISTANCE_TO_LOCATION_SENT__POS_X = eINSTANCE.getDistanceToLocationSent_PosX();
 
     /**
-     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Y</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DISTANCE_TO_LOCATION_SENT__POS_Y = eINSTANCE.getDistanceToLocationSent_PosY();
+    EReference DISTANCE_TO_LOCATION_SENT__POS_Y = eINSTANCE.getDistanceToLocationSent_PosY();
 
     /**
-     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Z</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DISTANCE_TO_LOCATION_SENT__POS_Z = eINSTANCE.getDistanceToLocationSent_PosZ();
+    EReference DISTANCE_TO_LOCATION_SENT__POS_Z = eINSTANCE.getDistanceToLocationSent_PosZ();
 
     /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
@@ -3611,28 +3611,28 @@ public interface MyLanguagePackage extends EPackage
     EClass ROBOT_POSITION_SENT = eINSTANCE.getRobotPositionSent();
 
     /**
-     * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos X</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROBOT_POSITION_SENT__POS_X = eINSTANCE.getRobotPositionSent_PosX();
+    EReference ROBOT_POSITION_SENT__POS_X = eINSTANCE.getRobotPositionSent_PosX();
 
     /**
-     * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Y</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROBOT_POSITION_SENT__POS_Y = eINSTANCE.getRobotPositionSent_PosY();
+    EReference ROBOT_POSITION_SENT__POS_Y = eINSTANCE.getRobotPositionSent_PosY();
 
     /**
-     * The meta object literal for the '<em><b>Pos Z</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Pos Z</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROBOT_POSITION_SENT__POS_Z = eINSTANCE.getRobotPositionSent_PosZ();
+    EReference ROBOT_POSITION_SENT__POS_Z = eINSTANCE.getRobotPositionSent_PosZ();
 
     /**
      * The meta object literal for the '<em><b>Tolerance</b></em>' containment reference feature.

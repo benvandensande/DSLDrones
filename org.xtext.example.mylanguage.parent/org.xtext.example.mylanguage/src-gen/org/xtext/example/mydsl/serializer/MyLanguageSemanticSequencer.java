@@ -326,7 +326,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DistanceToLocationSent returns DistanceToLocationSent
 	 *
 	 * Constraint:
-	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE (body=GreaterSent | body=LessSent | body=EqualSent) tolerance=ToleranceSent?)
+	 *     (posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit (body=GreaterSent | body=LessSent | body=EqualSent) tolerance=ToleranceSent?)
 	 */
 	protected void sequence_DistanceToLocationSent(ISerializationContext context, DistanceToLocationSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -375,7 +375,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     GPSReadingSent returns GPSReadingSent
 	 *
 	 * Constraint:
-	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE (tolerance=CirclePosition | tolerance=SpherePosition)?)
+	 *     (posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit (tolerance=CirclePosition | tolerance=SpherePosition)?)
 	 */
 	protected void sequence_GPSReadingSent(ISerializationContext context, GPSReadingSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -540,7 +540,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     MissionGoalSent returns MissionGoalSent
 	 *
 	 * Constraint:
-	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE)
+	 *     (posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit)
 	 */
 	protected void sequence_MissionGoalSent(ISerializationContext context, MissionGoalSent semanticObject) {
 		if (errorAcceptor != null) {
@@ -552,9 +552,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.MISSION_GOAL_SENT__POS_Z));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0(), semanticObject.getPosX());
-		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0(), semanticObject.getPosY());
-		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0(), semanticObject.getPosZ());
+		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosXDistanceUnitParserRuleCall_2_0(), semanticObject.getPosX());
+		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosYDistanceUnitParserRuleCall_3_0(), semanticObject.getPosY());
+		feeder.accept(grammarAccess.getMissionGoalSentAccess().getPosZDistanceUnitParserRuleCall_4_0(), semanticObject.getPosZ());
 		feeder.finish();
 	}
 	
@@ -665,7 +665,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     PeoplePosSent returns PeoplePosSent
 	 *
 	 * Constraint:
-	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE (tolerance=CirclePosition | tolerance=SpherePosition)?)
+	 *     (posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit (tolerance=CirclePosition | tolerance=SpherePosition)?)
 	 */
 	protected void sequence_PeoplePosSent(ISerializationContext context, PeoplePosSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -745,7 +745,7 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     RobotPositionSent returns RobotPositionSent
 	 *
 	 * Constraint:
-	 *     (posX=DOUBLE posY=DOUBLE posZ=DOUBLE (tolerance=CirclePosition | tolerance=SpherePosition)?)
+	 *     (posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit (tolerance=CirclePosition | tolerance=SpherePosition)?)
 	 */
 	protected void sequence_RobotPositionSent(ISerializationContext context, RobotPositionSent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

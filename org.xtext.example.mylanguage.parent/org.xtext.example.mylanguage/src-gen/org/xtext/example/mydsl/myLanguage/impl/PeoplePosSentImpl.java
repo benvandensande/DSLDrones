@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.example.mydsl.myLanguage.DistanceUnit;
 import org.xtext.example.mydsl.myLanguage.MyLanguagePackage;
 import org.xtext.example.mydsl.myLanguage.PeoplePosSent;
 
@@ -34,64 +35,34 @@ import org.xtext.example.mydsl.myLanguage.PeoplePosSent;
 public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
 {
   /**
-   * The default value of the '{@link #getPosX() <em>Pos X</em>}' attribute.
+   * The cached value of the '{@link #getPosX() <em>Pos X</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPosX()
    * @generated
    * @ordered
    */
-  protected static final String POS_X_EDEFAULT = null;
+  protected DistanceUnit posX;
 
   /**
-   * The cached value of the '{@link #getPosX() <em>Pos X</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPosX()
-   * @generated
-   * @ordered
-   */
-  protected String posX = POS_X_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getPosY() <em>Pos Y</em>}' attribute.
+   * The cached value of the '{@link #getPosY() <em>Pos Y</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPosY()
    * @generated
    * @ordered
    */
-  protected static final String POS_Y_EDEFAULT = null;
+  protected DistanceUnit posY;
 
   /**
-   * The cached value of the '{@link #getPosY() <em>Pos Y</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPosY()
-   * @generated
-   * @ordered
-   */
-  protected String posY = POS_Y_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getPosZ() <em>Pos Z</em>}' attribute.
+   * The cached value of the '{@link #getPosZ() <em>Pos Z</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPosZ()
    * @generated
    * @ordered
    */
-  protected static final String POS_Z_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getPosZ() <em>Pos Z</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPosZ()
-   * @generated
-   * @ordered
-   */
-  protected String posZ = POS_Z_EDEFAULT;
+  protected DistanceUnit posZ;
 
   /**
    * The cached value of the '{@link #getTolerance() <em>Tolerance</em>}' containment reference.
@@ -129,7 +100,7 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPosX()
+  public DistanceUnit getPosX()
   {
     return posX;
   }
@@ -139,12 +110,16 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPosX(String newPosX)
+  public NotificationChain basicSetPosX(DistanceUnit newPosX, NotificationChain msgs)
   {
-    String oldPosX = posX;
+    DistanceUnit oldPosX = posX;
     posX = newPosX;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_X, oldPosX, posX));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_X, oldPosX, newPosX);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -152,7 +127,28 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPosY()
+  public void setPosX(DistanceUnit newPosX)
+  {
+    if (newPosX != posX)
+    {
+      NotificationChain msgs = null;
+      if (posX != null)
+        msgs = ((InternalEObject)posX).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_X, null, msgs);
+      if (newPosX != null)
+        msgs = ((InternalEObject)newPosX).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_X, null, msgs);
+      msgs = basicSetPosX(newPosX, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_X, newPosX, newPosX));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DistanceUnit getPosY()
   {
     return posY;
   }
@@ -162,12 +158,16 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPosY(String newPosY)
+  public NotificationChain basicSetPosY(DistanceUnit newPosY, NotificationChain msgs)
   {
-    String oldPosY = posY;
+    DistanceUnit oldPosY = posY;
     posY = newPosY;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Y, oldPosY, posY));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Y, oldPosY, newPosY);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -175,7 +175,28 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPosZ()
+  public void setPosY(DistanceUnit newPosY)
+  {
+    if (newPosY != posY)
+    {
+      NotificationChain msgs = null;
+      if (posY != null)
+        msgs = ((InternalEObject)posY).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_Y, null, msgs);
+      if (newPosY != null)
+        msgs = ((InternalEObject)newPosY).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_Y, null, msgs);
+      msgs = basicSetPosY(newPosY, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Y, newPosY, newPosY));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DistanceUnit getPosZ()
   {
     return posZ;
   }
@@ -185,12 +206,37 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPosZ(String newPosZ)
+  public NotificationChain basicSetPosZ(DistanceUnit newPosZ, NotificationChain msgs)
   {
-    String oldPosZ = posZ;
+    DistanceUnit oldPosZ = posZ;
     posZ = newPosZ;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Z, oldPosZ, posZ));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Z, oldPosZ, newPosZ);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPosZ(DistanceUnit newPosZ)
+  {
+    if (newPosZ != posZ)
+    {
+      NotificationChain msgs = null;
+      if (posZ != null)
+        msgs = ((InternalEObject)posZ).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_Z, null, msgs);
+      if (newPosZ != null)
+        msgs = ((InternalEObject)newPosZ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyLanguagePackage.PEOPLE_POS_SENT__POS_Z, null, msgs);
+      msgs = basicSetPosZ(newPosZ, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyLanguagePackage.PEOPLE_POS_SENT__POS_Z, newPosZ, newPosZ));
   }
 
   /**
@@ -251,6 +297,12 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
   {
     switch (featureID)
     {
+      case MyLanguagePackage.PEOPLE_POS_SENT__POS_X:
+        return basicSetPosX(null, msgs);
+      case MyLanguagePackage.PEOPLE_POS_SENT__POS_Y:
+        return basicSetPosY(null, msgs);
+      case MyLanguagePackage.PEOPLE_POS_SENT__POS_Z:
+        return basicSetPosZ(null, msgs);
       case MyLanguagePackage.PEOPLE_POS_SENT__TOLERANCE:
         return basicSetTolerance(null, msgs);
     }
@@ -290,13 +342,13 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
     switch (featureID)
     {
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_X:
-        setPosX((String)newValue);
+        setPosX((DistanceUnit)newValue);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Y:
-        setPosY((String)newValue);
+        setPosY((DistanceUnit)newValue);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Z:
-        setPosZ((String)newValue);
+        setPosZ((DistanceUnit)newValue);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__TOLERANCE:
         setTolerance((EObject)newValue);
@@ -316,13 +368,13 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
     switch (featureID)
     {
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_X:
-        setPosX(POS_X_EDEFAULT);
+        setPosX((DistanceUnit)null);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Y:
-        setPosY(POS_Y_EDEFAULT);
+        setPosY((DistanceUnit)null);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Z:
-        setPosZ(POS_Z_EDEFAULT);
+        setPosZ((DistanceUnit)null);
         return;
       case MyLanguagePackage.PEOPLE_POS_SENT__TOLERANCE:
         setTolerance((EObject)null);
@@ -342,36 +394,15 @@ public class PeoplePosSentImpl extends PeopleSentImpl implements PeoplePosSent
     switch (featureID)
     {
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_X:
-        return POS_X_EDEFAULT == null ? posX != null : !POS_X_EDEFAULT.equals(posX);
+        return posX != null;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Y:
-        return POS_Y_EDEFAULT == null ? posY != null : !POS_Y_EDEFAULT.equals(posY);
+        return posY != null;
       case MyLanguagePackage.PEOPLE_POS_SENT__POS_Z:
-        return POS_Z_EDEFAULT == null ? posZ != null : !POS_Z_EDEFAULT.equals(posZ);
+        return posZ != null;
       case MyLanguagePackage.PEOPLE_POS_SENT__TOLERANCE:
         return tolerance != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (posX: ");
-    result.append(posX);
-    result.append(", posY: ");
-    result.append(posY);
-    result.append(", posZ: ");
-    result.append(posZ);
-    result.append(')');
-    return result.toString();
   }
 
 } //PeoplePosSentImpl

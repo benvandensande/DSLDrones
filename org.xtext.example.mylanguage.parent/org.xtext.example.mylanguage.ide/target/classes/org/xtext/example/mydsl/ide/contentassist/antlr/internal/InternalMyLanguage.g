@@ -7060,9 +7060,9 @@ rule__GPSReadingSent__PosXAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getGPSReadingSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getGPSReadingSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
+		{ before(grammarAccess.getGPSReadingSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getGPSReadingSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -7075,9 +7075,9 @@ rule__GPSReadingSent__PosYAssignment_3
 	}
 :
 	(
-		{ before(grammarAccess.getGPSReadingSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getGPSReadingSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
+		{ before(grammarAccess.getGPSReadingSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getGPSReadingSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -7090,9 +7090,9 @@ rule__GPSReadingSent__PosZAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getGPSReadingSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getGPSReadingSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGPSReadingSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getGPSReadingSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -7259,9 +7259,9 @@ rule__PeoplePosSent__PosXAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getPeoplePosSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getPeoplePosSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
+		{ before(grammarAccess.getPeoplePosSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getPeoplePosSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -7274,9 +7274,9 @@ rule__PeoplePosSent__PosYAssignment_3
 	}
 :
 	(
-		{ before(grammarAccess.getPeoplePosSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getPeoplePosSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
+		{ before(grammarAccess.getPeoplePosSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getPeoplePosSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -7289,9 +7289,9 @@ rule__PeoplePosSent__PosZAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getPeoplePosSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getPeoplePosSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
+		{ before(grammarAccess.getPeoplePosSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getPeoplePosSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -7334,9 +7334,9 @@ rule__MissionGoalSent__PosXAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getMissionGoalSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
+		{ before(grammarAccess.getMissionGoalSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getMissionGoalSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -7349,9 +7349,9 @@ rule__MissionGoalSent__PosYAssignment_3
 	}
 :
 	(
-		{ before(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getMissionGoalSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
+		{ before(grammarAccess.getMissionGoalSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getMissionGoalSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -7364,9 +7364,9 @@ rule__MissionGoalSent__PosZAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getMissionGoalSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
+		{ before(grammarAccess.getMissionGoalSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getMissionGoalSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -7458,9 +7458,9 @@ rule__DistanceToLocationSent__PosXAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosXDOUBLEParserRuleCall_0_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosXDOUBLEParserRuleCall_0_0()); }
+		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosXDistanceUnitParserRuleCall_0_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosXDistanceUnitParserRuleCall_0_0()); }
 	)
 ;
 finally {
@@ -7473,9 +7473,9 @@ rule__DistanceToLocationSent__PosYAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosYDOUBLEParserRuleCall_1_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosYDOUBLEParserRuleCall_1_0()); }
+		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosYDistanceUnitParserRuleCall_1_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosYDistanceUnitParserRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -7488,9 +7488,9 @@ rule__DistanceToLocationSent__PosZAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosZDOUBLEParserRuleCall_2_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosZDOUBLEParserRuleCall_2_0()); }
+		{ before(grammarAccess.getDistanceToLocationSentAccess().getPosZDistanceUnitParserRuleCall_2_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getDistanceToLocationSentAccess().getPosZDistanceUnitParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -7623,9 +7623,9 @@ rule__RobotPositionSent__PosXAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getRobotPositionSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getRobotPositionSentAccess().getPosXDOUBLEParserRuleCall_2_0()); }
+		{ before(grammarAccess.getRobotPositionSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getRobotPositionSentAccess().getPosXDistanceUnitParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -7638,9 +7638,9 @@ rule__RobotPositionSent__PosYAssignment_3
 	}
 :
 	(
-		{ before(grammarAccess.getRobotPositionSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getRobotPositionSentAccess().getPosYDOUBLEParserRuleCall_3_0()); }
+		{ before(grammarAccess.getRobotPositionSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getRobotPositionSentAccess().getPosYDistanceUnitParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -7653,9 +7653,9 @@ rule__RobotPositionSent__PosZAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getRobotPositionSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
-		ruleDOUBLE
-		{ after(grammarAccess.getRobotPositionSentAccess().getPosZDOUBLEParserRuleCall_4_0()); }
+		{ before(grammarAccess.getRobotPositionSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
+		ruleDistanceUnit
+		{ after(grammarAccess.getRobotPositionSentAccess().getPosZDistanceUnitParserRuleCall_4_0()); }
 	)
 ;
 finally {

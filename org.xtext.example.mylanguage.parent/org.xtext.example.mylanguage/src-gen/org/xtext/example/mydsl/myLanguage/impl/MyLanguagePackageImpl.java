@@ -676,9 +676,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGPSReadingSent_PosX()
+  public EReference getGPSReadingSent_PosX()
   {
-    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(0);
+    return (EReference)gpsReadingSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -686,9 +686,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGPSReadingSent_PosY()
+  public EReference getGPSReadingSent_PosY()
   {
-    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(1);
+    return (EReference)gpsReadingSentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -696,9 +696,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGPSReadingSent_PosZ()
+  public EReference getGPSReadingSent_PosZ()
   {
-    return (EAttribute)gpsReadingSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)gpsReadingSentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -916,9 +916,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPeoplePosSent_PosX()
+  public EReference getPeoplePosSent_PosX()
   {
-    return (EAttribute)peoplePosSentEClass.getEStructuralFeatures().get(0);
+    return (EReference)peoplePosSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -926,9 +926,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPeoplePosSent_PosY()
+  public EReference getPeoplePosSent_PosY()
   {
-    return (EAttribute)peoplePosSentEClass.getEStructuralFeatures().get(1);
+    return (EReference)peoplePosSentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -936,9 +936,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPeoplePosSent_PosZ()
+  public EReference getPeoplePosSent_PosZ()
   {
-    return (EAttribute)peoplePosSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)peoplePosSentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -996,9 +996,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMissionGoalSent_PosX()
+  public EReference getMissionGoalSent_PosX()
   {
-    return (EAttribute)missionGoalSentEClass.getEStructuralFeatures().get(0);
+    return (EReference)missionGoalSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1006,9 +1006,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMissionGoalSent_PosY()
+  public EReference getMissionGoalSent_PosY()
   {
-    return (EAttribute)missionGoalSentEClass.getEStructuralFeatures().get(1);
+    return (EReference)missionGoalSentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1016,9 +1016,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMissionGoalSent_PosZ()
+  public EReference getMissionGoalSent_PosZ()
   {
-    return (EAttribute)missionGoalSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)missionGoalSentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1146,9 +1146,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDistanceToLocationSent_PosX()
+  public EReference getDistanceToLocationSent_PosX()
   {
-    return (EAttribute)distanceToLocationSentEClass.getEStructuralFeatures().get(0);
+    return (EReference)distanceToLocationSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1156,9 +1156,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDistanceToLocationSent_PosY()
+  public EReference getDistanceToLocationSent_PosY()
   {
-    return (EAttribute)distanceToLocationSentEClass.getEStructuralFeatures().get(1);
+    return (EReference)distanceToLocationSentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1166,9 +1166,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDistanceToLocationSent_PosZ()
+  public EReference getDistanceToLocationSent_PosZ()
   {
-    return (EAttribute)distanceToLocationSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)distanceToLocationSentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1316,9 +1316,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRobotPositionSent_PosX()
+  public EReference getRobotPositionSent_PosX()
   {
-    return (EAttribute)robotPositionSentEClass.getEStructuralFeatures().get(0);
+    return (EReference)robotPositionSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1326,9 +1326,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRobotPositionSent_PosY()
+  public EReference getRobotPositionSent_PosY()
   {
-    return (EAttribute)robotPositionSentEClass.getEStructuralFeatures().get(1);
+    return (EReference)robotPositionSentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1336,9 +1336,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRobotPositionSent_PosZ()
+  public EReference getRobotPositionSent_PosZ()
   {
-    return (EAttribute)robotPositionSentEClass.getEStructuralFeatures().get(2);
+    return (EReference)robotPositionSentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1677,9 +1677,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEReference(gpsSentEClass, GPS_SENT__SENT);
 
     gpsReadingSentEClass = createEClass(GPS_READING_SENT);
-    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_X);
-    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_Y);
-    createEAttribute(gpsReadingSentEClass, GPS_READING_SENT__POS_Z);
+    createEReference(gpsReadingSentEClass, GPS_READING_SENT__POS_X);
+    createEReference(gpsReadingSentEClass, GPS_READING_SENT__POS_Y);
+    createEReference(gpsReadingSentEClass, GPS_READING_SENT__POS_Z);
     createEReference(gpsReadingSentEClass, GPS_READING_SENT__TOLERANCE);
 
     baroSentEClass = createEClass(BARO_SENT);
@@ -1712,9 +1712,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     peopleSentEClass = createEClass(PEOPLE_SENT);
 
     peoplePosSentEClass = createEClass(PEOPLE_POS_SENT);
-    createEAttribute(peoplePosSentEClass, PEOPLE_POS_SENT__POS_X);
-    createEAttribute(peoplePosSentEClass, PEOPLE_POS_SENT__POS_Y);
-    createEAttribute(peoplePosSentEClass, PEOPLE_POS_SENT__POS_Z);
+    createEReference(peoplePosSentEClass, PEOPLE_POS_SENT__POS_X);
+    createEReference(peoplePosSentEClass, PEOPLE_POS_SENT__POS_Y);
+    createEReference(peoplePosSentEClass, PEOPLE_POS_SENT__POS_Z);
     createEReference(peoplePosSentEClass, PEOPLE_POS_SENT__TOLERANCE);
 
     peopleNumbSentEClass = createEClass(PEOPLE_NUMB_SENT);
@@ -1723,9 +1723,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     missionSentEClass = createEClass(MISSION_SENT);
 
     missionGoalSentEClass = createEClass(MISSION_GOAL_SENT);
-    createEAttribute(missionGoalSentEClass, MISSION_GOAL_SENT__POS_X);
-    createEAttribute(missionGoalSentEClass, MISSION_GOAL_SENT__POS_Y);
-    createEAttribute(missionGoalSentEClass, MISSION_GOAL_SENT__POS_Z);
+    createEReference(missionGoalSentEClass, MISSION_GOAL_SENT__POS_X);
+    createEReference(missionGoalSentEClass, MISSION_GOAL_SENT__POS_Y);
+    createEReference(missionGoalSentEClass, MISSION_GOAL_SENT__POS_Z);
 
     missionRiskLevelSentEClass = createEClass(MISSION_RISK_LEVEL_SENT);
     createEAttribute(missionRiskLevelSentEClass, MISSION_RISK_LEVEL_SENT__RISKLEVEL);
@@ -1745,9 +1745,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEReference(robotDistanceSentEClass, ROBOT_DISTANCE_SENT__SENT);
 
     distanceToLocationSentEClass = createEClass(DISTANCE_TO_LOCATION_SENT);
-    createEAttribute(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_X);
-    createEAttribute(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_Y);
-    createEAttribute(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_Z);
+    createEReference(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_X);
+    createEReference(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_Y);
+    createEReference(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__POS_Z);
     createEReference(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__BODY);
     createEReference(distanceToLocationSentEClass, DISTANCE_TO_LOCATION_SENT__TOLERANCE);
 
@@ -1768,9 +1768,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEAttribute(robotStateSentEClass, ROBOT_STATE_SENT__STATE);
 
     robotPositionSentEClass = createEClass(ROBOT_POSITION_SENT);
-    createEAttribute(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_X);
-    createEAttribute(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_Y);
-    createEAttribute(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_Z);
+    createEReference(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_X);
+    createEReference(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_Y);
+    createEReference(robotPositionSentEClass, ROBOT_POSITION_SENT__POS_Z);
     createEReference(robotPositionSentEClass, ROBOT_POSITION_SENT__TOLERANCE);
 
     circlePositionEClass = createEClass(CIRCLE_POSITION);
@@ -1907,9 +1907,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEReference(getGPSSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, GPSSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(gpsReadingSentEClass, GPSReadingSent.class, "GPSReadingSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGPSReadingSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGPSReadingSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGPSReadingSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGPSReadingSent_PosX(), this.getDistanceUnit(), null, "posX", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGPSReadingSent_PosY(), this.getDistanceUnit(), null, "posY", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGPSReadingSent_PosZ(), this.getDistanceUnit(), null, "posZ", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGPSReadingSent_Tolerance(), ecorePackage.getEObject(), null, "tolerance", null, 0, 1, GPSReadingSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(baroSentEClass, BaroSent.class, "BaroSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1942,9 +1942,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEClass(peopleSentEClass, PeopleSent.class, "PeopleSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(peoplePosSentEClass, PeoplePosSent.class, "PeoplePosSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPeoplePosSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPeoplePosSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPeoplePosSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPeoplePosSent_PosX(), this.getDistanceUnit(), null, "posX", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPeoplePosSent_PosY(), this.getDistanceUnit(), null, "posY", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPeoplePosSent_PosZ(), this.getDistanceUnit(), null, "posZ", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPeoplePosSent_Tolerance(), ecorePackage.getEObject(), null, "tolerance", null, 0, 1, PeoplePosSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(peopleNumbSentEClass, PeopleNumbSent.class, "PeopleNumbSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1953,9 +1953,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEClass(missionSentEClass, MissionSent.class, "MissionSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(missionGoalSentEClass, MissionGoalSent.class, "MissionGoalSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMissionGoalSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMissionGoalSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMissionGoalSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMissionGoalSent_PosX(), this.getDistanceUnit(), null, "posX", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMissionGoalSent_PosY(), this.getDistanceUnit(), null, "posY", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMissionGoalSent_PosZ(), this.getDistanceUnit(), null, "posZ", null, 0, 1, MissionGoalSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(missionRiskLevelSentEClass, MissionRiskLevelSent.class, "MissionRiskLevelSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMissionRiskLevelSent_Risklevel(), ecorePackage.getEString(), "risklevel", null, 0, 1, MissionRiskLevelSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1975,9 +1975,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEReference(getRobotDistanceSent_Sent(), ecorePackage.getEObject(), null, "sent", null, 0, 1, RobotDistanceSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(distanceToLocationSentEClass, DistanceToLocationSent.class, "DistanceToLocationSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDistanceToLocationSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDistanceToLocationSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDistanceToLocationSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDistanceToLocationSent_PosX(), this.getDistanceUnit(), null, "posX", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDistanceToLocationSent_PosY(), this.getDistanceUnit(), null, "posY", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDistanceToLocationSent_PosZ(), this.getDistanceUnit(), null, "posZ", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDistanceToLocationSent_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDistanceToLocationSent_Tolerance(), this.getToleranceSent(), null, "tolerance", null, 0, 1, DistanceToLocationSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1998,9 +1998,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEAttribute(getRobotStateSent_State(), ecorePackage.getEString(), "state", null, 0, 1, RobotStateSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(robotPositionSentEClass, RobotPositionSent.class, "RobotPositionSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRobotPositionSent_PosX(), ecorePackage.getEString(), "posX", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRobotPositionSent_PosY(), ecorePackage.getEString(), "posY", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRobotPositionSent_PosZ(), ecorePackage.getEString(), "posZ", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobotPositionSent_PosX(), this.getDistanceUnit(), null, "posX", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobotPositionSent_PosY(), this.getDistanceUnit(), null, "posY", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobotPositionSent_PosZ(), this.getDistanceUnit(), null, "posZ", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRobotPositionSent_Tolerance(), ecorePackage.getEObject(), null, "tolerance", null, 0, 1, RobotPositionSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(circlePositionEClass, CirclePosition.class, "CirclePosition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

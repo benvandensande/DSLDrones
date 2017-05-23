@@ -300,11 +300,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPositionReadingKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPosXAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPosXDOUBLEParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
+		private final RuleCall cPosXDistanceUnitParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
 		private final Assignment cPosYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPosYDOUBLEParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
+		private final RuleCall cPosYDistanceUnitParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
 		private final Assignment cPosZAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPosZDOUBLEParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
+		private final RuleCall cPosZDistanceUnitParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
 		private final Assignment cToleranceAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final Alternatives cToleranceAlternatives_5_0 = (Alternatives)cToleranceAssignment_5.eContents().get(0);
 		private final RuleCall cToleranceCirclePositionParserRuleCall_5_0_0 = (RuleCall)cToleranceAlternatives_5_0.eContents().get(0);
@@ -312,13 +312,14 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GPSReadingSent:
 		//	'positionReading' 'is'
-		//	posX=DOUBLE
-		//	posY=DOUBLE
-		//	posZ=DOUBLE
+		//	posX=DistanceUnit
+		//	posY=DistanceUnit
+		//	posZ=DistanceUnit
 		//	tolerance=(CirclePosition | SpherePosition)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'positionReading' 'is' posX=DOUBLE posY=DOUBLE posZ=DOUBLE tolerance=(CirclePosition | SpherePosition)?
+		//'positionReading' 'is' posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit tolerance=(CirclePosition |
+		//SpherePosition)?
 		public Group getGroup() { return cGroup; }
 		
 		//'positionReading'
@@ -327,23 +328,23 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//posX=DOUBLE
+		//posX=DistanceUnit
 		public Assignment getPosXAssignment_2() { return cPosXAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getPosXDOUBLEParserRuleCall_2_0() { return cPosXDOUBLEParserRuleCall_2_0; }
+		//DistanceUnit
+		public RuleCall getPosXDistanceUnitParserRuleCall_2_0() { return cPosXDistanceUnitParserRuleCall_2_0; }
 		
-		//posY=DOUBLE
+		//posY=DistanceUnit
 		public Assignment getPosYAssignment_3() { return cPosYAssignment_3; }
 		
-		//DOUBLE
-		public RuleCall getPosYDOUBLEParserRuleCall_3_0() { return cPosYDOUBLEParserRuleCall_3_0; }
+		//DistanceUnit
+		public RuleCall getPosYDistanceUnitParserRuleCall_3_0() { return cPosYDistanceUnitParserRuleCall_3_0; }
 		
-		//posZ=DOUBLE
+		//posZ=DistanceUnit
 		public Assignment getPosZAssignment_4() { return cPosZAssignment_4; }
 		
-		//DOUBLE
-		public RuleCall getPosZDOUBLEParserRuleCall_4_0() { return cPosZDOUBLEParserRuleCall_4_0; }
+		//DistanceUnit
+		public RuleCall getPosZDistanceUnitParserRuleCall_4_0() { return cPosZDistanceUnitParserRuleCall_4_0; }
 		
 		//tolerance=(CirclePosition | SpherePosition)?
 		public Assignment getToleranceAssignment_5() { return cToleranceAssignment_5; }
@@ -706,11 +707,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPositionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPosXAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPosXDOUBLEParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
+		private final RuleCall cPosXDistanceUnitParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
 		private final Assignment cPosYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPosYDOUBLEParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
+		private final RuleCall cPosYDistanceUnitParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
 		private final Assignment cPosZAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPosZDOUBLEParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
+		private final RuleCall cPosZDistanceUnitParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
 		private final Assignment cToleranceAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final Alternatives cToleranceAlternatives_5_0 = (Alternatives)cToleranceAssignment_5.eContents().get(0);
 		private final RuleCall cToleranceCirclePositionParserRuleCall_5_0_0 = (RuleCall)cToleranceAlternatives_5_0.eContents().get(0);
@@ -718,13 +719,13 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//PeoplePosSent:
 		//	'position' 'is'
-		//	posX=DOUBLE
-		//	posY=DOUBLE
-		//	posZ=DOUBLE
+		//	posX=DistanceUnit
+		//	posY=DistanceUnit
+		//	posZ=DistanceUnit
 		//	tolerance=(CirclePosition | SpherePosition)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'position' 'is' posX=DOUBLE posY=DOUBLE posZ=DOUBLE tolerance=(CirclePosition | SpherePosition)?
+		//'position' 'is' posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit tolerance=(CirclePosition | SpherePosition)?
 		public Group getGroup() { return cGroup; }
 		
 		//'position'
@@ -733,23 +734,23 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//posX=DOUBLE
+		//posX=DistanceUnit
 		public Assignment getPosXAssignment_2() { return cPosXAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getPosXDOUBLEParserRuleCall_2_0() { return cPosXDOUBLEParserRuleCall_2_0; }
+		//DistanceUnit
+		public RuleCall getPosXDistanceUnitParserRuleCall_2_0() { return cPosXDistanceUnitParserRuleCall_2_0; }
 		
-		//posY=DOUBLE
+		//posY=DistanceUnit
 		public Assignment getPosYAssignment_3() { return cPosYAssignment_3; }
 		
-		//DOUBLE
-		public RuleCall getPosYDOUBLEParserRuleCall_3_0() { return cPosYDOUBLEParserRuleCall_3_0; }
+		//DistanceUnit
+		public RuleCall getPosYDistanceUnitParserRuleCall_3_0() { return cPosYDistanceUnitParserRuleCall_3_0; }
 		
-		//posZ=DOUBLE
+		//posZ=DistanceUnit
 		public Assignment getPosZAssignment_4() { return cPosZAssignment_4; }
 		
-		//DOUBLE
-		public RuleCall getPosZDOUBLEParserRuleCall_4_0() { return cPosZDOUBLEParserRuleCall_4_0; }
+		//DistanceUnit
+		public RuleCall getPosZDistanceUnitParserRuleCall_4_0() { return cPosZDistanceUnitParserRuleCall_4_0; }
 		
 		//tolerance=(CirclePosition | SpherePosition)?
 		public Assignment getToleranceAssignment_5() { return cToleranceAssignment_5; }
@@ -828,20 +829,20 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGoalKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPosXAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPosXDOUBLEParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
+		private final RuleCall cPosXDistanceUnitParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
 		private final Assignment cPosYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPosYDOUBLEParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
+		private final RuleCall cPosYDistanceUnitParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
 		private final Assignment cPosZAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPosZDOUBLEParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
+		private final RuleCall cPosZDistanceUnitParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
 		
 		//MissionGoalSent:
 		//	'goal' 'is'
-		//	posX=DOUBLE
-		//	posY=DOUBLE
-		//	posZ=DOUBLE;
+		//	posX=DistanceUnit
+		//	posY=DistanceUnit
+		//	posZ=DistanceUnit;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'goal' 'is' posX=DOUBLE posY=DOUBLE posZ=DOUBLE
+		//'goal' 'is' posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit
 		public Group getGroup() { return cGroup; }
 		
 		//'goal'
@@ -850,23 +851,23 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//posX=DOUBLE
+		//posX=DistanceUnit
 		public Assignment getPosXAssignment_2() { return cPosXAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getPosXDOUBLEParserRuleCall_2_0() { return cPosXDOUBLEParserRuleCall_2_0; }
+		//DistanceUnit
+		public RuleCall getPosXDistanceUnitParserRuleCall_2_0() { return cPosXDistanceUnitParserRuleCall_2_0; }
 		
-		//posY=DOUBLE
+		//posY=DistanceUnit
 		public Assignment getPosYAssignment_3() { return cPosYAssignment_3; }
 		
-		//DOUBLE
-		public RuleCall getPosYDOUBLEParserRuleCall_3_0() { return cPosYDOUBLEParserRuleCall_3_0; }
+		//DistanceUnit
+		public RuleCall getPosYDistanceUnitParserRuleCall_3_0() { return cPosYDistanceUnitParserRuleCall_3_0; }
 		
-		//posZ=DOUBLE
+		//posZ=DistanceUnit
 		public Assignment getPosZAssignment_4() { return cPosZAssignment_4; }
 		
-		//DOUBLE
-		public RuleCall getPosZDOUBLEParserRuleCall_4_0() { return cPosZDOUBLEParserRuleCall_4_0; }
+		//DistanceUnit
+		public RuleCall getPosZDistanceUnitParserRuleCall_4_0() { return cPosZDistanceUnitParserRuleCall_4_0; }
 	}
 	public class MissionRiskLevelSentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.MissionRiskLevelSent");
@@ -1073,11 +1074,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.DistanceToLocationSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cPosXAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cPosXDOUBLEParserRuleCall_0_0 = (RuleCall)cPosXAssignment_0.eContents().get(0);
+		private final RuleCall cPosXDistanceUnitParserRuleCall_0_0 = (RuleCall)cPosXAssignment_0.eContents().get(0);
 		private final Assignment cPosYAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPosYDOUBLEParserRuleCall_1_0 = (RuleCall)cPosYAssignment_1.eContents().get(0);
+		private final RuleCall cPosYDistanceUnitParserRuleCall_1_0 = (RuleCall)cPosYAssignment_1.eContents().get(0);
 		private final Assignment cPosZAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPosZDOUBLEParserRuleCall_2_0 = (RuleCall)cPosZAssignment_2.eContents().get(0);
+		private final RuleCall cPosZDistanceUnitParserRuleCall_2_0 = (RuleCall)cPosZAssignment_2.eContents().get(0);
 		private final Keyword cIsKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final Alternatives cBodyAlternatives_4_0 = (Alternatives)cBodyAssignment_4.eContents().get(0);
@@ -1088,33 +1089,34 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cToleranceToleranceSentParserRuleCall_5_0 = (RuleCall)cToleranceAssignment_5.eContents().get(0);
 		
 		//DistanceToLocationSent:
-		//	posX=DOUBLE
-		//	posY=DOUBLE
-		//	posZ=DOUBLE
+		//	posX=DistanceUnit
+		//	posY=DistanceUnit
+		//	posZ=DistanceUnit
 		//	'is'
 		//	body=(GreaterSent | LessSent | EqualSent) tolerance=ToleranceSent?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//posX=DOUBLE posY=DOUBLE posZ=DOUBLE 'is' body=(GreaterSent | LessSent | EqualSent) tolerance=ToleranceSent?
+		//posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit 'is' body=(GreaterSent | LessSent | EqualSent)
+		//tolerance=ToleranceSent?
 		public Group getGroup() { return cGroup; }
 		
-		//posX=DOUBLE
+		//posX=DistanceUnit
 		public Assignment getPosXAssignment_0() { return cPosXAssignment_0; }
 		
-		//DOUBLE
-		public RuleCall getPosXDOUBLEParserRuleCall_0_0() { return cPosXDOUBLEParserRuleCall_0_0; }
+		//DistanceUnit
+		public RuleCall getPosXDistanceUnitParserRuleCall_0_0() { return cPosXDistanceUnitParserRuleCall_0_0; }
 		
-		//posY=DOUBLE
+		//posY=DistanceUnit
 		public Assignment getPosYAssignment_1() { return cPosYAssignment_1; }
 		
-		//DOUBLE
-		public RuleCall getPosYDOUBLEParserRuleCall_1_0() { return cPosYDOUBLEParserRuleCall_1_0; }
+		//DistanceUnit
+		public RuleCall getPosYDistanceUnitParserRuleCall_1_0() { return cPosYDistanceUnitParserRuleCall_1_0; }
 		
-		//posZ=DOUBLE
+		//posZ=DistanceUnit
 		public Assignment getPosZAssignment_2() { return cPosZAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getPosZDOUBLEParserRuleCall_2_0() { return cPosZDOUBLEParserRuleCall_2_0; }
+		//DistanceUnit
+		public RuleCall getPosZDistanceUnitParserRuleCall_2_0() { return cPosZDistanceUnitParserRuleCall_2_0; }
 		
 		//'is'
 		public Keyword getIsKeyword_3() { return cIsKeyword_3; }
@@ -1329,11 +1331,11 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPositionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPosXAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPosXDOUBLEParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
+		private final RuleCall cPosXDistanceUnitParserRuleCall_2_0 = (RuleCall)cPosXAssignment_2.eContents().get(0);
 		private final Assignment cPosYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPosYDOUBLEParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
+		private final RuleCall cPosYDistanceUnitParserRuleCall_3_0 = (RuleCall)cPosYAssignment_3.eContents().get(0);
 		private final Assignment cPosZAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPosZDOUBLEParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
+		private final RuleCall cPosZDistanceUnitParserRuleCall_4_0 = (RuleCall)cPosZAssignment_4.eContents().get(0);
 		private final Assignment cToleranceAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final Alternatives cToleranceAlternatives_5_0 = (Alternatives)cToleranceAssignment_5.eContents().get(0);
 		private final RuleCall cToleranceCirclePositionParserRuleCall_5_0_0 = (RuleCall)cToleranceAlternatives_5_0.eContents().get(0);
@@ -1341,13 +1343,13 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//RobotPositionSent:
 		//	'position' 'is'
-		//	posX=DOUBLE
-		//	posY=DOUBLE
-		//	posZ=DOUBLE
+		//	posX=DistanceUnit
+		//	posY=DistanceUnit
+		//	posZ=DistanceUnit
 		//	tolerance=(CirclePosition | SpherePosition)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'position' 'is' posX=DOUBLE posY=DOUBLE posZ=DOUBLE tolerance=(CirclePosition | SpherePosition)?
+		//'position' 'is' posX=DistanceUnit posY=DistanceUnit posZ=DistanceUnit tolerance=(CirclePosition | SpherePosition)?
 		public Group getGroup() { return cGroup; }
 		
 		//'position'
@@ -1356,23 +1358,23 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		//'is'
 		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
 		
-		//posX=DOUBLE
+		//posX=DistanceUnit
 		public Assignment getPosXAssignment_2() { return cPosXAssignment_2; }
 		
-		//DOUBLE
-		public RuleCall getPosXDOUBLEParserRuleCall_2_0() { return cPosXDOUBLEParserRuleCall_2_0; }
+		//DistanceUnit
+		public RuleCall getPosXDistanceUnitParserRuleCall_2_0() { return cPosXDistanceUnitParserRuleCall_2_0; }
 		
-		//posY=DOUBLE
+		//posY=DistanceUnit
 		public Assignment getPosYAssignment_3() { return cPosYAssignment_3; }
 		
-		//DOUBLE
-		public RuleCall getPosYDOUBLEParserRuleCall_3_0() { return cPosYDOUBLEParserRuleCall_3_0; }
+		//DistanceUnit
+		public RuleCall getPosYDistanceUnitParserRuleCall_3_0() { return cPosYDistanceUnitParserRuleCall_3_0; }
 		
-		//posZ=DOUBLE
+		//posZ=DistanceUnit
 		public Assignment getPosZAssignment_4() { return cPosZAssignment_4; }
 		
-		//DOUBLE
-		public RuleCall getPosZDOUBLEParserRuleCall_4_0() { return cPosZDOUBLEParserRuleCall_4_0; }
+		//DistanceUnit
+		public RuleCall getPosZDistanceUnitParserRuleCall_4_0() { return cPosZDistanceUnitParserRuleCall_4_0; }
 		
 		//tolerance=(CirclePosition | SpherePosition)?
 		public Assignment getToleranceAssignment_5() { return cToleranceAssignment_5; }
@@ -2274,9 +2276,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GPSReadingSent:
 	//	'positionReading' 'is'
-	//	posX=DOUBLE
-	//	posY=DOUBLE
-	//	posZ=DOUBLE
+	//	posX=DistanceUnit
+	//	posY=DistanceUnit
+	//	posZ=DistanceUnit
 	//	tolerance=(CirclePosition | SpherePosition)?;
 	public GPSReadingSentElements getGPSReadingSentAccess() {
 		return pGPSReadingSent;
@@ -2397,9 +2399,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//PeoplePosSent:
 	//	'position' 'is'
-	//	posX=DOUBLE
-	//	posY=DOUBLE
-	//	posZ=DOUBLE
+	//	posX=DistanceUnit
+	//	posY=DistanceUnit
+	//	posZ=DistanceUnit
 	//	tolerance=(CirclePosition | SpherePosition)?;
 	public PeoplePosSentElements getPeoplePosSentAccess() {
 		return pPeoplePosSent;
@@ -2432,9 +2434,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//MissionGoalSent:
 	//	'goal' 'is'
-	//	posX=DOUBLE
-	//	posY=DOUBLE
-	//	posZ=DOUBLE;
+	//	posX=DistanceUnit
+	//	posY=DistanceUnit
+	//	posZ=DistanceUnit;
 	public MissionGoalSentElements getMissionGoalSentAccess() {
 		return pMissionGoalSent;
 	}
@@ -2510,9 +2512,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DistanceToLocationSent:
-	//	posX=DOUBLE
-	//	posY=DOUBLE
-	//	posZ=DOUBLE
+	//	posX=DistanceUnit
+	//	posY=DistanceUnit
+	//	posZ=DistanceUnit
 	//	'is'
 	//	body=(GreaterSent | LessSent | EqualSent) tolerance=ToleranceSent?;
 	public DistanceToLocationSentElements getDistanceToLocationSentAccess() {
@@ -2579,9 +2581,9 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//RobotPositionSent:
 	//	'position' 'is'
-	//	posX=DOUBLE
-	//	posY=DOUBLE
-	//	posZ=DOUBLE
+	//	posX=DistanceUnit
+	//	posY=DistanceUnit
+	//	posZ=DistanceUnit
 	//	tolerance=(CirclePosition | SpherePosition)?;
 	public RobotPositionSentElements getRobotPositionSentAccess() {
 		return pRobotPositionSent;

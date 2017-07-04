@@ -1659,7 +1659,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
   
   public CharSequence createRunStat(final MS sent) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("new MS\"(");
+    _builder.append("new MS(");
     String _x = sent.getX();
     _builder.append(_x, "");
     _builder.append(", ");

@@ -84,3 +84,267 @@ Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' ins
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-05-23 13:36:05.557
 !MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+!SESSION 2017-05-24 16:07:56.627 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.7.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.buildship.core 4 0 2017-05-24 16:10:32.309
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unexpected error.
+!STACK 1
+Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3112)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.updateSourceFolders(SourceFolderUpdater.java:72)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.update(SourceFolderUpdater.java:174)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProjectInTransaction(SynchronizeGradleBuildOperation.java:234)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$200(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$4.run(SynchronizeGradleBuildOperation.java:223)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5366)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProject(SynchronizeGradleBuildOperation.java:219)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeOpenWorkspaceProject(SynchronizeGradleBuildOperation.java:214)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeWorkspaceProject(SynchronizeGradleBuildOperation.java:189)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:141)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:138)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:122)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:77)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:68)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-05-24 16:10:32.311
+!MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+
+!ENTRY org.eclipse.buildship.core 4 0 2017-05-24 16:10:35.520
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unexpected error.
+!STACK 1
+Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3112)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.updateSourceFolders(SourceFolderUpdater.java:72)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.update(SourceFolderUpdater.java:174)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProjectInTransaction(SynchronizeGradleBuildOperation.java:234)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$200(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$4.run(SynchronizeGradleBuildOperation.java:223)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5366)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProject(SynchronizeGradleBuildOperation.java:219)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeOpenWorkspaceProject(SynchronizeGradleBuildOperation.java:214)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeWorkspaceProject(SynchronizeGradleBuildOperation.java:189)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:141)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:138)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:122)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:77)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:68)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-05-24 16:10:35.520
+!MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+!SESSION 2017-06-02 08:58:39.199 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.7.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.buildship.core 4 0 2017-06-02 09:00:35.326
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unexpected error.
+!STACK 1
+Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3112)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.updateSourceFolders(SourceFolderUpdater.java:72)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.update(SourceFolderUpdater.java:174)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProjectInTransaction(SynchronizeGradleBuildOperation.java:234)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$200(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$4.run(SynchronizeGradleBuildOperation.java:223)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5366)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProject(SynchronizeGradleBuildOperation.java:219)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeOpenWorkspaceProject(SynchronizeGradleBuildOperation.java:214)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeWorkspaceProject(SynchronizeGradleBuildOperation.java:189)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:141)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:138)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:122)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:77)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:68)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-06-02 09:00:35.327
+!MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+
+!ENTRY org.eclipse.buildship.core 4 0 2017-06-02 09:00:37.810
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unexpected error.
+!STACK 1
+Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3112)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.updateSourceFolders(SourceFolderUpdater.java:72)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.update(SourceFolderUpdater.java:174)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProjectInTransaction(SynchronizeGradleBuildOperation.java:234)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$200(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$4.run(SynchronizeGradleBuildOperation.java:223)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5366)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProject(SynchronizeGradleBuildOperation.java:219)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeOpenWorkspaceProject(SynchronizeGradleBuildOperation.java:214)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeWorkspaceProject(SynchronizeGradleBuildOperation.java:189)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:141)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:138)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:122)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:77)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:68)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-06-02 09:00:37.810
+!MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+
+!ENTRY org.eclipse.jface 2 0 2017-06-02 09:02:37.055
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-06-02 09:02:37.055
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ae9871,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.xtext.xbase.ui.hierarchy.OpenCallHierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@149a2417,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.XtextEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.xtext.ui.editor.OpenCallHierarchy,Open Call Hierarchy,
+		Open call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13b76c92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.XtextEditorScope,,,system)
+!SESSION 2017-07-04 13:33:20.118 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.7.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.buildship.core 4 0 2017-07-04 13:35:31.823
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unexpected error.
+!STACK 1
+Java Model Exception: Java Model Status [Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3112)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.updateSourceFolders(SourceFolderUpdater.java:72)
+	at org.eclipse.buildship.core.workspace.internal.SourceFolderUpdater.update(SourceFolderUpdater.java:174)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProjectInTransaction(SynchronizeGradleBuildOperation.java:234)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$200(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$4.run(SynchronizeGradleBuildOperation.java:223)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5366)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeJavaProject(SynchronizeGradleBuildOperation.java:219)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeOpenWorkspaceProject(SynchronizeGradleBuildOperation.java:214)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeWorkspaceProject(SynchronizeGradleBuildOperation.java:189)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:106)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:141)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:138)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:122)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:77)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:68)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 964 2017-07-04 13:35:31.826
+!MESSAGE Cannot nest 'subb/src-gen/features' inside 'subb/src-gen'. To enable the nesting exclude 'features/' from 'subb/src-gen'
+
+!ENTRY org.eclipse.jface 2 0 2017-07-04 14:28:31.519
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-07-04 14:28:31.520
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@484ac831,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.xtext.xbase.ui.hierarchy.OpenCallHierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@259d2e0b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.XtextEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.xtext.ui.editor.OpenCallHierarchy,Open Call Hierarchy,
+		Open call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7239e777,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.XtextEditorScope,,,system)

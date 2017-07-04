@@ -384,7 +384,7 @@ class MyLanguageGenerator extends AbstractGenerator {
 	
 	def createRunStat(PercentUnit sent) '''new Percent(«sent.value»)'''
 	
-	def createRunStat(MS sent) '''new MS"(«sent.x», «sent.y», «sent.z»)'''
+	def createRunStat(MS sent) '''new MS(«sent.x», «sent.y», «sent.z»)'''
 	def createRunStat(KMS sent) '''new KMS(«sent.x», «sent.y», «sent.z»)'''
 	def createRunStat(MH sent) '''new MH(«sent.x», «sent.y», «sent.z»)'''
 	def createRunStat(KMH sent) '''new KMH(«sent.x», «sent.y», «sent.z»)'''

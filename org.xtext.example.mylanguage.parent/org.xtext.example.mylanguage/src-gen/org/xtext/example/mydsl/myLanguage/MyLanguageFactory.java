@@ -78,6 +78,15 @@ public interface MyLanguageFactory extends EFactory
   When createWhen();
 
   /**
+   * Returns a new object of class '<em>Complete Time Sent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Complete Time Sent</em>'.
+   * @generated
+   */
+  CompleteTimeSent createCompleteTimeSent();
+
+  /**
    * Returns a new object of class '<em>Statement Body</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

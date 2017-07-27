@@ -53,6 +53,8 @@ import org.xtext.example.mydsl.myLanguage.Then
 import org.xtext.example.mydsl.myLanguage.TimeInterval
 import org.xtext.example.mydsl.myLanguage.TimeUnit
 import org.xtext.example.mydsl.myLanguage.When
+import org.xtext.example.mydsl.myLanguage.StatementBody
+import org.xtext.example.mydsl.myLanguage.CompleteTimeSent
 
 /**
  * Generates code from your model files on save.
@@ -125,32 +127,45 @@ class MyLanguageGenerator extends AbstractGenerator {
 
 	def createStatement(Statement obj) {
 		switch obj {
-			Given case (obj instanceof Given): '''new GivenStatement(«obj.createBody()»)'''
-			Then case (obj instanceof Then): '''new ThenStatement(«obj.createBody()»)'''
+			Given case (obj instanceof Given):'''new GivenStatement(«obj.body.createBodyStat()»)'''
+			Then case (obj instanceof Then): '''new ThenStatement(«obj.body.createBodyStat()»)'''
 			When case (obj instanceof When): '''new WhenStatement(«obj.createBody()»)'''
 			default: '''new Statement("")'''
 		}
 	}
 
-	def createBody(Statement obj) {
-		var bod = obj.getBody
-		switch bod {
-			RobotPositionSent case (bod instanceof RobotPositionSent): '''«bod.createRunStat()»'''
-			RobotSpeedSent case (bod instanceof RobotSpeedSent): '''«bod.createRunStat()»'''
-			EnvironmentSent case (bod instanceof EnvironmentSent): '''«bod.createRunStat()»'''
-			RobotStateSent case (bod instanceof RobotStateSent): '''«bod.createRunStat()»'''
-			RobotDistanceSent case (bod instanceof RobotDistanceSent): '''«bod.createRunStat()»'''
-			BatterySent case (bod instanceof BatterySent): '''«bod.createRunStat()»'''
-			SonarSent case (bod instanceof SonarSent): '''«bod.createRunStat()»'''
-			BaroSent case (bod instanceof BaroSent): '''«bod.createRunStat()»'''
-			GPSSent case (bod instanceof GPSSent): '''«bod.createRunStat()»'''
-			MissionGoalSent case (bod instanceof MissionGoalSent): '''«bod.createRunStat()»'''
-			MissionRiskLevelSent case (bod instanceof MissionRiskLevelSent): '''«bod.createRunStat()»'''
-			MissionStatusSent case (bod instanceof MissionStatusSent): '''«bod.createRunStat()»'''
-			TimeInterval case (bod instanceof TimeInterval): '''«bod.createRunStat()»'''
+	def createBodyStat(StatementBody obj) {
+		switch obj {
+			RobotPositionSent case (obj instanceof RobotPositionSent): '''«obj.createRunStat()»'''
+			RobotSpeedSent case (obj instanceof RobotSpeedSent): '''«obj.createRunStat()»'''
+			EnvironmentSent case (obj instanceof EnvironmentSent): '''«obj.createRunStat()»'''
+			RobotStateSent case (obj instanceof RobotStateSent): '''«obj.createRunStat()»'''
+			RobotDistanceSent case (obj instanceof RobotDistanceSent): '''«obj.createRunStat()»'''
+			BatterySent case (obj instanceof BatterySent): '''«obj.createRunStat()»'''
+			SonarSent case (obj instanceof SonarSent): '''«obj.createRunStat()»'''
+			BaroSent case (obj instanceof BaroSent): '''«obj.createRunStat()»'''
+			GPSSent case (obj instanceof GPSSent): '''«obj.createRunStat()»'''
+			MissionGoalSent case (obj instanceof MissionGoalSent): '''«obj.createRunStat()»'''
+			MissionRiskLevelSent case (obj instanceof MissionRiskLevelSent): '''«obj.createRunStat()»'''
+			MissionStatusSent case (obj instanceof MissionStatusSent): '''«obj.createRunStat()»'''
+			TimeInterval case (obj instanceof TimeInterval): '''«obj.createRunStat()»'''
 			default: ''''''
 		}
 	}
+	
+	def createBodyStat(CompleteTimeSent obj) {
+		'''new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)'''
+	}
+	
+	def createBody(When statement){
+		var bod = statement.body;
+		switch bod {
+				StatementBody case (bod instanceof StatementBody): '''«bod.createBodyStat()»'''
+				CompleteTimeSent case (bod instanceof CompleteTimeSent): '''«bod.createBodyStat()»'''
+				default: ''''''
+				}
+	}
+	
 
 	def createRunStat(RobotPositionSent body){
 		var tolerance = body.tolerance;

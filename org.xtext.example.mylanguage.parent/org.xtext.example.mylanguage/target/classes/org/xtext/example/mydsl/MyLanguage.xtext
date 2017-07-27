@@ -25,7 +25,12 @@ Then:
 	
 When:
 	'When:'
-	body=StatementBody;
+	body=(StatementBody|CompleteTimeSent);
+
+CompleteTimeSent:
+	'Time''is'
+	value = ('always'|'never')
+;
 	
 StatementBody:
 	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent

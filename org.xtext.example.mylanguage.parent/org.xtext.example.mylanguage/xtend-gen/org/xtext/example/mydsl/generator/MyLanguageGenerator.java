@@ -21,6 +21,7 @@ import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
 import org.xtext.example.mydsl.myLanguage.CompStatusSent;
+import org.xtext.example.mydsl.myLanguage.CompleteTimeSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
@@ -250,8 +251,9 @@ public class MyLanguageGenerator extends AbstractGenerator {
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("new GivenStatement(");
-        CharSequence _createBody = this.createBody(obj);
-        _builder.append(_createBody, "");
+        StatementBody _body = ((Given)obj).getBody();
+        CharSequence _createBodyStat = this.createBodyStat(_body);
+        _builder.append(_createBodyStat, "");
         _builder.append(")");
         _switchResult = _builder;
       }
@@ -262,8 +264,9 @@ public class MyLanguageGenerator extends AbstractGenerator {
           _matched=true;
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("new ThenStatement(");
-          CharSequence _createBody = this.createBody(obj);
-          _builder.append(_createBody, "");
+          StatementBody _body = ((Then)obj).getBody();
+          CharSequence _createBodyStat = this.createBodyStat(_body);
+          _builder.append(_createBodyStat, "");
           _builder.append(")");
           _switchResult = _builder;
         }
@@ -275,7 +278,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
           _matched=true;
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("new WhenStatement(");
-          CharSequence _createBody = this.createBody(obj);
+          CharSequence _createBody = this.createBody(((When)obj));
           _builder.append(_createBody, "");
           _builder.append(")");
           _switchResult = _builder;
@@ -290,149 +293,185 @@ public class MyLanguageGenerator extends AbstractGenerator {
     return _switchResult;
   }
   
-  public CharSequence createBody(final Statement obj) {
-    CharSequence _xblockexpression = null;
-    {
-      StatementBody bod = obj.getBody();
-      CharSequence _switchResult = null;
-      boolean _matched = false;
-      if (bod instanceof RobotPositionSent) {
-        if ((bod instanceof RobotPositionSent)) {
+  public CharSequence createBodyStat(final StatementBody obj) {
+    CharSequence _switchResult = null;
+    boolean _matched = false;
+    if (obj instanceof RobotPositionSent) {
+      if ((obj instanceof RobotPositionSent)) {
+        _matched=true;
+        StringConcatenation _builder = new StringConcatenation();
+        CharSequence _createRunStat = this.createRunStat(((RobotPositionSent)obj));
+        _builder.append(_createRunStat, "");
+        _switchResult = _builder;
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof RobotSpeedSent) {
+        if ((obj instanceof RobotSpeedSent)) {
           _matched=true;
           StringConcatenation _builder = new StringConcatenation();
-          CharSequence _createRunStat = this.createRunStat(((RobotPositionSent)bod));
+          CharSequence _createRunStat = this.createRunStat(((RobotSpeedSent)obj));
           _builder.append(_createRunStat, "");
           _switchResult = _builder;
         }
       }
-      if (!_matched) {
-        if (bod instanceof RobotSpeedSent) {
-          if ((bod instanceof RobotSpeedSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((RobotSpeedSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
+    }
+    if (!_matched) {
+      if (obj instanceof EnvironmentSent) {
+        if ((obj instanceof EnvironmentSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((EnvironmentSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof RobotStateSent) {
+        if ((obj instanceof RobotStateSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((RobotStateSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof RobotDistanceSent) {
+        if ((obj instanceof RobotDistanceSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((RobotDistanceSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof BatterySent) {
+        if ((obj instanceof BatterySent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((BatterySent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof SonarSent) {
+        if ((obj instanceof SonarSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((SonarSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof BaroSent) {
+        if ((obj instanceof BaroSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((BaroSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof GPSSent) {
+        if ((obj instanceof GPSSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((GPSSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof MissionGoalSent) {
+        if ((obj instanceof MissionGoalSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((MissionGoalSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof MissionRiskLevelSent) {
+        if ((obj instanceof MissionRiskLevelSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((MissionRiskLevelSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof MissionStatusSent) {
+        if ((obj instanceof MissionStatusSent)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((MissionStatusSent)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      if (obj instanceof TimeInterval) {
+        if ((obj instanceof TimeInterval)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createRunStat = this.createRunStat(((TimeInterval)obj));
+          _builder.append(_createRunStat, "");
+          _switchResult = _builder;
+        }
+      }
+    }
+    if (!_matched) {
+      StringConcatenation _builder = new StringConcatenation();
+      _switchResult = _builder;
+    }
+    return _switchResult;
+  }
+  
+  public CharSequence createBodyStat(final CompleteTimeSent obj) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)");
+    return _builder;
+  }
+  
+  public CharSequence createBody(final When statement) {
+    CharSequence _xblockexpression = null;
+    {
+      EObject bod = statement.getBody();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (bod instanceof StatementBody) {
+        if ((bod instanceof StatementBody)) {
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          CharSequence _createBodyStat = this.createBodyStat(((StatementBody)bod));
+          _builder.append(_createBodyStat, "");
+          _switchResult = _builder;
         }
       }
       if (!_matched) {
-        if (bod instanceof EnvironmentSent) {
-          if ((bod instanceof EnvironmentSent)) {
+        if (bod instanceof CompleteTimeSent) {
+          if ((bod instanceof CompleteTimeSent)) {
             _matched=true;
             StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((EnvironmentSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof RobotStateSent) {
-          if ((bod instanceof RobotStateSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((RobotStateSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof RobotDistanceSent) {
-          if ((bod instanceof RobotDistanceSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((RobotDistanceSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof BatterySent) {
-          if ((bod instanceof BatterySent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((BatterySent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof SonarSent) {
-          if ((bod instanceof SonarSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((SonarSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof BaroSent) {
-          if ((bod instanceof BaroSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((BaroSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof GPSSent) {
-          if ((bod instanceof GPSSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((GPSSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof MissionGoalSent) {
-          if ((bod instanceof MissionGoalSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((MissionGoalSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof MissionRiskLevelSent) {
-          if ((bod instanceof MissionRiskLevelSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((MissionRiskLevelSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof MissionStatusSent) {
-          if ((bod instanceof MissionStatusSent)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((MissionStatusSent)bod));
-            _builder.append(_createRunStat, "");
-            _switchResult = _builder;
-          }
-        }
-      }
-      if (!_matched) {
-        if (bod instanceof TimeInterval) {
-          if ((bod instanceof TimeInterval)) {
-            _matched=true;
-            StringConcatenation _builder = new StringConcatenation();
-            CharSequence _createRunStat = this.createRunStat(((TimeInterval)bod));
-            _builder.append(_createRunStat, "");
+            CharSequence _createBodyStat = this.createBodyStat(((CompleteTimeSent)bod));
+            _builder.append(_createBodyStat, "");
             _switchResult = _builder;
           }
         }

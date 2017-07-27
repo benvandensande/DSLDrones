@@ -162,24 +162,68 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWhenKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cBodyStatementBodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		private final Alternatives cBodyAlternatives_1_0 = (Alternatives)cBodyAssignment_1.eContents().get(0);
+		private final RuleCall cBodyStatementBodyParserRuleCall_1_0_0 = (RuleCall)cBodyAlternatives_1_0.eContents().get(0);
+		private final RuleCall cBodyCompleteTimeSentParserRuleCall_1_0_1 = (RuleCall)cBodyAlternatives_1_0.eContents().get(1);
 		
 		//When:
 		//	'When:'
-		//	body=StatementBody;
+		//	body=(StatementBody | CompleteTimeSent);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'When:' body=StatementBody
+		//'When:' body=(StatementBody | CompleteTimeSent)
 		public Group getGroup() { return cGroup; }
 		
 		//'When:'
 		public Keyword getWhenKeyword_0() { return cWhenKeyword_0; }
 		
-		//body=StatementBody
+		//body=(StatementBody | CompleteTimeSent)
 		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
 		
+		//(StatementBody | CompleteTimeSent)
+		public Alternatives getBodyAlternatives_1_0() { return cBodyAlternatives_1_0; }
+		
 		//StatementBody
-		public RuleCall getBodyStatementBodyParserRuleCall_1_0() { return cBodyStatementBodyParserRuleCall_1_0; }
+		public RuleCall getBodyStatementBodyParserRuleCall_1_0_0() { return cBodyStatementBodyParserRuleCall_1_0_0; }
+		
+		//CompleteTimeSent
+		public RuleCall getBodyCompleteTimeSentParserRuleCall_1_0_1() { return cBodyCompleteTimeSentParserRuleCall_1_0_1; }
+	}
+	public class CompleteTimeSentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.CompleteTimeSent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTimeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cIsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cValueAlternatives_2_0 = (Alternatives)cValueAssignment_2.eContents().get(0);
+		private final Keyword cValueAlwaysKeyword_2_0_0 = (Keyword)cValueAlternatives_2_0.eContents().get(0);
+		private final Keyword cValueNeverKeyword_2_0_1 = (Keyword)cValueAlternatives_2_0.eContents().get(1);
+		
+		//CompleteTimeSent:
+		//	'Time' 'is'
+		//	value=('always' | 'never');
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Time' 'is' value=('always' | 'never')
+		public Group getGroup() { return cGroup; }
+		
+		//'Time'
+		public Keyword getTimeKeyword_0() { return cTimeKeyword_0; }
+		
+		//'is'
+		public Keyword getIsKeyword_1() { return cIsKeyword_1; }
+		
+		//value=('always' | 'never')
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//('always' | 'never')
+		public Alternatives getValueAlternatives_2_0() { return cValueAlternatives_2_0; }
+		
+		//'always'
+		public Keyword getValueAlwaysKeyword_2_0_0() { return cValueAlwaysKeyword_2_0_0; }
+		
+		//'never'
+		public Keyword getValueNeverKeyword_2_0_1() { return cValueNeverKeyword_2_0_1; }
 	}
 	public class StatementBodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.StatementBody");
@@ -2262,6 +2306,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	private final GivenElements pGiven;
 	private final ThenElements pThen;
 	private final WhenElements pWhen;
+	private final CompleteTimeSentElements pCompleteTimeSent;
 	private final StatementBodyElements pStatementBody;
 	private final CompStatusSentElements pCompStatusSent;
 	private final GPSSentElements pGPSSent;
@@ -2336,6 +2381,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGiven = new GivenElements();
 		this.pThen = new ThenElements();
 		this.pWhen = new WhenElements();
+		this.pCompleteTimeSent = new CompleteTimeSentElements();
 		this.pStatementBody = new StatementBodyElements();
 		this.pCompStatusSent = new CompStatusSentElements();
 		this.pGPSSent = new GPSSentElements();
@@ -2479,13 +2525,24 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//When:
 	//	'When:'
-	//	body=StatementBody;
+	//	body=(StatementBody | CompleteTimeSent);
 	public WhenElements getWhenAccess() {
 		return pWhen;
 	}
 	
 	public ParserRule getWhenRule() {
 		return getWhenAccess().getRule();
+	}
+	
+	//CompleteTimeSent:
+	//	'Time' 'is'
+	//	value=('always' | 'never');
+	public CompleteTimeSentElements getCompleteTimeSentAccess() {
+		return pCompleteTimeSent;
+	}
+	
+	public ParserRule getCompleteTimeSentRule() {
+		return getCompleteTimeSentAccess().getRule();
 	}
 	
 	//StatementBody:

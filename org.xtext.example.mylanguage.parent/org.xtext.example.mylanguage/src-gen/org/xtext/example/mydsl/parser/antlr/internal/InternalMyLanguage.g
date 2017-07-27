@@ -331,21 +331,93 @@ ruleWhen returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0());
-				}
-				lv_body_1_0=ruleStatementBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getWhenRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0_0());
 					}
-					set(
-						$current,
-						"body",
-						lv_body_1_0,
-						"org.xtext.example.mydsl.MyLanguage.StatementBody");
-					afterParserOrEnumRuleCall();
-				}
+					lv_body_1_1=ruleStatementBody
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getWhenRule());
+						}
+						set(
+							$current,
+							"body",
+							lv_body_1_1,
+							"org.xtext.example.mydsl.MyLanguage.StatementBody");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getWhenAccess().getBodyCompleteTimeSentParserRuleCall_1_0_1());
+					}
+					lv_body_1_2=ruleCompleteTimeSent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getWhenRule());
+						}
+						set(
+							$current,
+							"body",
+							lv_body_1_2,
+							"org.xtext.example.mydsl.MyLanguage.CompleteTimeSent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleCompleteTimeSent
+entryRuleCompleteTimeSent returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCompleteTimeSentRule()); }
+	iv_ruleCompleteTimeSent=ruleCompleteTimeSent
+	{ $current=$iv_ruleCompleteTimeSent.current; }
+	EOF;
+
+// Rule CompleteTimeSent
+ruleCompleteTimeSent returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='Time'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getCompleteTimeSentAccess().getTimeKeyword_0());
+		}
+		otherlv_1='is'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getCompleteTimeSentAccess().getIsKeyword_1());
+		}
+		(
+			(
+				(
+					lv_value_2_1='always'
+					{
+						newLeafNode(lv_value_2_1, grammarAccess.getCompleteTimeSentAccess().getValueAlwaysKeyword_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getCompleteTimeSentRule());
+						}
+						setWithLastConsumed($current, "value", lv_value_2_1, null);
+					}
+					    |
+					lv_value_2_2='never'
+					{
+						newLeafNode(lv_value_2_2, grammarAccess.getCompleteTimeSentAccess().getValueNeverKeyword_2_0_1());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getCompleteTimeSentRule());
+						}
+						setWithLastConsumed($current, "value", lv_value_2_2, null);
+					}
+				)
 			)
 		)
 	)

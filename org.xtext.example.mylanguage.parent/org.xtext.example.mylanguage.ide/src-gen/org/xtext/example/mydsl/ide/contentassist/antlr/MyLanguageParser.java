@@ -36,6 +36,8 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
+					put(grammarAccess.getWhenAccess().getBodyAlternatives_1_0(), "rule__When__BodyAlternatives_1_0");
+					put(grammarAccess.getCompleteTimeSentAccess().getValueAlternatives_2_0(), "rule__CompleteTimeSent__ValueAlternatives_2_0");
 					put(grammarAccess.getStatementBodyAccess().getAlternatives(), "rule__StatementBody__Alternatives");
 					put(grammarAccess.getGPSSentAccess().getSentAlternatives_1_0(), "rule__GPSSent__SentAlternatives_1_0");
 					put(grammarAccess.getGPSReadingSentAccess().getToleranceAlternatives_5_0(), "rule__GPSReadingSent__ToleranceAlternatives_5_0");
@@ -71,6 +73,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getGroup(), "rule__Given__Group__0");
 					put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
 					put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
+					put(grammarAccess.getCompleteTimeSentAccess().getGroup(), "rule__CompleteTimeSent__Group__0");
 					put(grammarAccess.getCompStatusSentAccess().getGroup(), "rule__CompStatusSent__Group__0");
 					put(grammarAccess.getGPSSentAccess().getGroup(), "rule__GPSSent__Group__0");
 					put(grammarAccess.getGPSReadingSentAccess().getGroup(), "rule__GPSReadingSent__Group__0");
@@ -130,6 +133,7 @@ public class MyLanguageParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGivenAccess().getBodyAssignment_1(), "rule__Given__BodyAssignment_1");
 					put(grammarAccess.getThenAccess().getBodyAssignment_1(), "rule__Then__BodyAssignment_1");
 					put(grammarAccess.getWhenAccess().getBodyAssignment_1(), "rule__When__BodyAssignment_1");
+					put(grammarAccess.getCompleteTimeSentAccess().getValueAssignment_2(), "rule__CompleteTimeSent__ValueAssignment_2");
 					put(grammarAccess.getCompStatusSentAccess().getStatusAssignment_2(), "rule__CompStatusSent__StatusAssignment_2");
 					put(grammarAccess.getGPSSentAccess().getSentAssignment_1(), "rule__GPSSent__SentAssignment_1");
 					put(grammarAccess.getGPSReadingSentAccess().getPosXAssignment_2(), "rule__GPSReadingSent__PosXAssignment_2");

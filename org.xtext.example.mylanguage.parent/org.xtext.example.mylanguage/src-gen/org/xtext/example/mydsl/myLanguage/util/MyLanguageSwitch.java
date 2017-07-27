@@ -118,6 +118,13 @@ public class MyLanguageSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MyLanguagePackage.COMPLETE_TIME_SENT:
+      {
+        CompleteTimeSent completeTimeSent = (CompleteTimeSent)theEObject;
+        T result = caseCompleteTimeSent(completeTimeSent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MyLanguagePackage.STATEMENT_BODY:
       {
         StatementBody statementBody = (StatementBody)theEObject;
@@ -625,6 +632,22 @@ public class MyLanguageSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseWhen(When object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Complete Time Sent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Complete Time Sent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCompleteTimeSent(CompleteTimeSent object)
   {
     return null;
   }

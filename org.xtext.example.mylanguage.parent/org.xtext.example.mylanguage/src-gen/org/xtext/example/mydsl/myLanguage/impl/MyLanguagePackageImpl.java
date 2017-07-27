@@ -16,6 +16,7 @@ import org.xtext.example.mydsl.myLanguage.BatteryLevelSent;
 import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
 import org.xtext.example.mydsl.myLanguage.CompStatusSent;
+import org.xtext.example.mydsl.myLanguage.CompleteTimeSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.DistanceUnit;
@@ -109,6 +110,13 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * @generated
    */
   private EClass whenEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass completeTimeSentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -612,9 +620,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStatement_Body()
+  public EClass getGiven()
   {
-    return (EReference)statementEClass.getEStructuralFeatures().get(0);
+    return givenEClass;
   }
 
   /**
@@ -622,9 +630,9 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGiven()
+  public EReference getGiven_Body()
   {
-    return givenEClass;
+    return (EReference)givenEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -642,9 +650,49 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getThen_Body()
+  {
+    return (EReference)thenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getWhen()
   {
     return whenEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWhen_Body()
+  {
+    return (EReference)whenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCompleteTimeSent()
+  {
+    return completeTimeSentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCompleteTimeSent_Value()
+  {
+    return (EAttribute)completeTimeSentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1756,13 +1804,18 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     createEReference(testEClass, TEST__STATEMENTS);
 
     statementEClass = createEClass(STATEMENT);
-    createEReference(statementEClass, STATEMENT__BODY);
 
     givenEClass = createEClass(GIVEN);
+    createEReference(givenEClass, GIVEN__BODY);
 
     thenEClass = createEClass(THEN);
+    createEReference(thenEClass, THEN__BODY);
 
     whenEClass = createEClass(WHEN);
+    createEReference(whenEClass, WHEN__BODY);
+
+    completeTimeSentEClass = createEClass(COMPLETE_TIME_SENT);
+    createEAttribute(completeTimeSentEClass, COMPLETE_TIME_SENT__VALUE);
 
     statementBodyEClass = createEClass(STATEMENT_BODY);
 
@@ -2001,13 +2054,18 @@ public class MyLanguagePackageImpl extends EPackageImpl implements MyLanguagePac
     initEReference(getTest_Statements(), this.getStatement(), null, "statements", null, 0, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStatement_Body(), this.getStatementBody(), null, "body", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(givenEClass, Given.class, "Given", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGiven_Body(), this.getStatementBody(), null, "body", null, 0, 1, Given.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(thenEClass, Then.class, "Then", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThen_Body(), this.getStatementBody(), null, "body", null, 0, 1, Then.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(whenEClass, When.class, "When", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getWhen_Body(), ecorePackage.getEObject(), null, "body", null, 0, 1, When.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(completeTimeSentEClass, CompleteTimeSent.class, "CompleteTimeSent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCompleteTimeSent_Value(), ecorePackage.getEString(), "value", null, 0, 1, CompleteTimeSent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementBodyEClass, StatementBody.class, "StatementBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

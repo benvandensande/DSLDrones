@@ -21,6 +21,7 @@ import org.xtext.example.mydsl.myLanguage.BatterySent;
 import org.xtext.example.mydsl.myLanguage.CENTIMETER;
 import org.xtext.example.mydsl.myLanguage.CirclePosition;
 import org.xtext.example.mydsl.myLanguage.CompStatusSent;
+import org.xtext.example.mydsl.myLanguage.CompleteTimeSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToLocationSent;
 import org.xtext.example.mydsl.myLanguage.DistanceToObstaclesSent;
 import org.xtext.example.mydsl.myLanguage.EnvironmentSent;
@@ -100,6 +101,9 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MyLanguagePackage.COMP_STATUS_SENT:
 				sequence_CompStatusSent(context, (CompStatusSent) semanticObject); 
+				return; 
+			case MyLanguagePackage.COMPLETE_TIME_SENT:
+				sequence_CompleteTimeSent(context, (CompleteTimeSent) semanticObject); 
 				return; 
 			case MyLanguagePackage.DISTANCE_TO_LOCATION_SENT:
 				sequence_DistanceToLocationSent(context, (DistanceToLocationSent) semanticObject); 
@@ -339,6 +343,18 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     CompleteTimeSent returns CompleteTimeSent
+	 *
+	 * Constraint:
+	 *     (value='always' | value='never')
+	 */
+	protected void sequence_CompleteTimeSent(ISerializationContext context, CompleteTimeSent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DistanceToLocationSent returns DistanceToLocationSent
 	 *
 	 * Constraint:
@@ -421,8 +437,8 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Given(ISerializationContext context, Given semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.GIVEN__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.GIVEN__BODY));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGivenAccess().getBodyStatementBodyParserRuleCall_1_0(), semanticObject.getBody());
@@ -998,8 +1014,8 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Then(ISerializationContext context, Then semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY));
+			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.THEN__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.THEN__BODY));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getThenAccess().getBodyStatementBodyParserRuleCall_1_0(), semanticObject.getBody());
@@ -1054,16 +1070,10 @@ public class MyLanguageSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     When returns When
 	 *
 	 * Constraint:
-	 *     body=StatementBody
+	 *     (body=StatementBody | body=CompleteTimeSent)
 	 */
 	protected void sequence_When(ISerializationContext context, When semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyLanguagePackage.Literals.STATEMENT__BODY));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWhenAccess().getBodyStatementBodyParserRuleCall_1_0(), semanticObject.getBody());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

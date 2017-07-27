@@ -71,6 +71,7 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
       case MyLanguagePackage.GIVEN: return createGiven();
       case MyLanguagePackage.THEN: return createThen();
       case MyLanguagePackage.WHEN: return createWhen();
+      case MyLanguagePackage.COMPLETE_TIME_SENT: return createCompleteTimeSent();
       case MyLanguagePackage.STATEMENT_BODY: return createStatementBody();
       case MyLanguagePackage.COMP_STATUS_SENT: return createCompStatusSent();
       case MyLanguagePackage.GPS_SENT: return createGPSSent();
@@ -192,6 +193,17 @@ public class MyLanguageFactoryImpl extends EFactoryImpl implements MyLanguageFac
   {
     WhenImpl when = new WhenImpl();
     return when;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CompleteTimeSent createCompleteTimeSent()
+  {
+    CompleteTimeSentImpl completeTimeSent = new CompleteTimeSentImpl();
+    return completeTimeSent;
   }
 
   /**

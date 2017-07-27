@@ -106,6 +106,11 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
         return createWhenAdapter();
       }
       @Override
+      public Adapter caseCompleteTimeSent(CompleteTimeSent object)
+      {
+        return createCompleteTimeSentAdapter();
+      }
+      @Override
       public Adapter caseStatementBody(StatementBody object)
       {
         return createStatementBodyAdapter();
@@ -473,6 +478,21 @@ public class MyLanguageAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createWhenAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myLanguage.CompleteTimeSent <em>Complete Time Sent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myLanguage.CompleteTimeSent
+   * @generated
+   */
+  public Adapter createCompleteTimeSentAdapter()
   {
     return null;
   }

@@ -445,9 +445,33 @@ public class MyLanguageGenerator extends AbstractGenerator {
   }
   
   public CharSequence createBodyStat(final CompleteTimeSent obj) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)");
-    return _builder;
+    CharSequence _xblockexpression = null;
+    {
+      String valu = obj.getValue();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      boolean _equals = Objects.equal(valu, "never");
+      if (_equals) {
+        _matched=true;
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("new TimeSentence(Double.MIN_VALUE, this.app, this.drone, test)");
+        _switchResult = _builder;
+      }
+      if (!_matched) {
+        boolean _equals_1 = Objects.equal(valu, "always");
+        if (_equals_1) {
+          _matched=true;
+          StringConcatenation _builder_1 = new StringConcatenation();
+          _builder_1.append("new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)");
+          _switchResult = _builder_1;
+        }
+      }
+      if (!_matched) {
+        _switchResult = valu;
+      }
+      _xblockexpression = _switchResult;
+    }
+    return _xblockexpression;
   }
   
   public CharSequence createBody(final When statement) {

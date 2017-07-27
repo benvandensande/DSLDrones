@@ -154,7 +154,13 @@ class MyLanguageGenerator extends AbstractGenerator {
 	}
 	
 	def createBodyStat(CompleteTimeSent obj) {
-		'''new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)'''
+		var valu = obj.value
+		switch valu{
+			case (valu == 'never'): '''new TimeSentence(Double.MIN_VALUE, this.app, this.drone, test)'''
+			case (valu == 'always'): '''new TimeSentence(Double.MAX_VALUE, this.app, this.drone, test)'''
+			default: valu
+			}
+		
 	}
 	
 	def createBody(When statement){

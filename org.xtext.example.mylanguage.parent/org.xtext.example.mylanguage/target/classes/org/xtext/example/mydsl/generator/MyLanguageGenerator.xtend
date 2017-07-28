@@ -87,15 +87,17 @@ class MyLanguageGenerator extends AbstractGenerator {
 			private List<Test> tests = new ArrayList<Test>();
 			private IDrone drone = null;
 			private Application app = null;
+			private long timeout = 0;
 			
-			public «name»(IDrone drone, Application app){
+			public «name»(IDrone drone, Application app, long t){
 				this.drone = drone;
 				this.app = app;
+				this.timeout = t;
 				List<Statement> stat = new ArrayList<Statement>();
 				Test test;
 				«FOR Test t : f.tests»
 					stat = new ArrayList<Statement>();
-					test = new Test("«t.name»","«t.description»", this.app);
+					test = new Test("«t.name»","«t.description»", this.app, this.timeout);
 					«FOR Statement s : t.statements»
 						stat.add(«s.createStatement()»);
 					«ENDFOR»

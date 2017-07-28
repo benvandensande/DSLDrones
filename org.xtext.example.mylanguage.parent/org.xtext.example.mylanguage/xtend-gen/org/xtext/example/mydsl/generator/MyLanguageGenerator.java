@@ -128,17 +128,23 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("private Application app = null;");
     _builder.newLine();
     _builder.append("\t");
+    _builder.append("private long timeout = 0;");
+    _builder.newLine();
+    _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
     _builder.append(name, "\t");
-    _builder.append("(IDrone drone, Application app){");
+    _builder.append("(IDrone drone, Application app, long t){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("this.drone = drone;");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("this.app = app;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("this.timeout = t;");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("List<Statement> stat = new ArrayList<Statement>();");
@@ -159,7 +165,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
         _builder.append("\",\"");
         String _description = t.getDescription();
         _builder.append(_description, "\t\t");
-        _builder.append("\", this.app);");
+        _builder.append("\", this.app, this.timeout);");
         _builder.newLineIfNotEmpty();
         {
           EList<Statement> _statements = t.getStatements();

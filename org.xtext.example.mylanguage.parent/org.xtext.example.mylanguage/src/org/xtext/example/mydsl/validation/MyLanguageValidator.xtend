@@ -96,9 +96,9 @@ class MyLanguageValidator extends AbstractMyLanguageValidator {
 		val state = sent.state;
 		if(!state.toString.equals("FLYING") && !state.toString.equals("HOVER")
 			&& !state.toString.equals("LANDED") && !state.toString.equals("TAKEOFF")
-			&& !state.toString.equals("EMERGENCYLANDING")
+			&& !state.toString.equals("EMERGENCYLANDING") && !state.toString.equals("LANDING")
 		){
-			error('State must be FLYING, HOVER, LANDED, EMERGENCYLANDING or TAKEOFF', MyLanguagePackage.Literals.ROBOT_STATE_SENT__STATE, INVALID_NAME)
+			error('State must be FLYING, HOVER, LANDED, LANDING, EMERGENCYLANDING or TAKEOFF', MyLanguagePackage.Literals.ROBOT_STATE_SENT__STATE, INVALID_NAME)
 		}
 	}
 	

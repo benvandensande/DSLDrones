@@ -130,8 +130,8 @@ public class MyLanguageValidator extends AbstractMyLanguageValidator {
   @Check
   public void checkCorrectState(final RobotStateSent sent) {
     final String state = sent.getState();
-    if ((((((!state.toString().equals("FLYING")) && (!state.toString().equals("HOVER"))) && (!state.toString().equals("LANDED"))) && (!state.toString().equals("TAKEOFF"))) && (!state.toString().equals("EMERGENCYLANDING")))) {
-      this.error("State must be FLYING, HOVER, LANDED, EMERGENCYLANDING or TAKEOFF", MyLanguagePackage.Literals.ROBOT_STATE_SENT__STATE, this.INVALID_NAME);
+    if (((((((!state.toString().equals("FLYING")) && (!state.toString().equals("HOVER"))) && (!state.toString().equals("LANDED"))) && (!state.toString().equals("TAKEOFF"))) && (!state.toString().equals("EMERGENCYLANDING"))) && (!state.toString().equals("LANDING")))) {
+      this.error("State must be FLYING, HOVER, LANDED, LANDING, EMERGENCYLANDING or TAKEOFF", MyLanguagePackage.Literals.ROBOT_STATE_SENT__STATE, this.INVALID_NAME);
     }
   }
   

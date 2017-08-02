@@ -18,7 +18,7 @@ import org.xtext.example.mydsl.ui.contentassist.AbstractMyLanguageProposalProvid
 public class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {
   @Override
   public void complete_PositiveDouble(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
-    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("0.0", "Natural number", null, context);
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("0", "Natural number", null, context);
     acceptor.accept(_createCompletionProposal);
   }
   
@@ -90,5 +90,15 @@ public class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvid
   public void complete_DistanceToLocationSent(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     ICompletionProposal _createCompletionProposal = this.createCompletionProposal("0 0 0", "Location", null, context);
     acceptor.accept(_createCompletionProposal);
+  }
+  
+  @Override
+  public void complete_COMPSTATUS(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    ICompletionProposal _createCompletionProposal = this.createCompletionProposal("ACTIVE", "active", null, context);
+    acceptor.accept(_createCompletionProposal);
+    ICompletionProposal _createCompletionProposal_1 = this.createCompletionProposal("FAILING", "failing", null, context);
+    acceptor.accept(_createCompletionProposal_1);
+    ICompletionProposal _createCompletionProposal_2 = this.createCompletionProposal("REDUNDANT", "redundant", null, context);
+    acceptor.accept(_createCompletionProposal_2);
   }
 }

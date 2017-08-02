@@ -51,6 +51,7 @@ class MyLanguageValidator extends AbstractMyLanguageValidator {
 	def boolean checkNot(Given statement){
 		return false;
 	}
+	
 	def boolean checkNot(When statement, List<Statement> s){
 		val index = s.indexOf(statement)
 		var next = s.get(index)

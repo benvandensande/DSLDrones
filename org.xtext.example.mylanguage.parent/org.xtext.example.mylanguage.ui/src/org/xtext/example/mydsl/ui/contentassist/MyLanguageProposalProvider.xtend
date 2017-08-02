@@ -15,7 +15,7 @@ import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {
 	
 	override void complete_PositiveDouble(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		acceptor.accept(createCompletionProposal("0.0","Natural number" , null, context))
+		acceptor.accept(createCompletionProposal("0","Natural number" , null, context))
 	}
 	
 	override void complete_DOUBLE(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
@@ -62,5 +62,11 @@ class MyLanguageProposalProvider extends AbstractMyLanguageProposalProvider {
 	
 	override void complete_DistanceToLocationSent(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		acceptor.accept(createCompletionProposal("0 0 0","Location" , null, context))
+	}
+	
+	override void complete_COMPSTATUS(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(createCompletionProposal("ACTIVE","active" , null, context))
+		acceptor.accept(createCompletionProposal("FAILING","failing" , null, context))
+		acceptor.accept(createCompletionProposal("REDUNDANT","redundant" , null, context))
 	}
 }

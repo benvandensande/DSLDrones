@@ -78,18 +78,18 @@ class MyLanguageGenerator extends AbstractGenerator {
 		import java.util.List;
 		
 		import com.github.drone.subb.Application;
-		import com.github.drone.subb.IDrone;
+		import com.github.drone.subb.IUAV;
 		
 		import SimpleTester.*;
 		import Units.*;
 		
 		public class «name» {
 			private List<Test> tests = new ArrayList<Test>();
-			private IDrone drone = null;
+			private IUAV drone = null;
 			private Application app = null;
 			private long timeout = 0;
 			
-			public «name»(IDrone drone, Application app, long t){
+			public «name»(IUAV drone, Application app, long t){
 				this.drone = drone;
 				this.app = app;
 				this.timeout = t;

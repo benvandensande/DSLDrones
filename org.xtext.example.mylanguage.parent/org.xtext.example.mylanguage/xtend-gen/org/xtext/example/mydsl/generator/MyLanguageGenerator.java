@@ -106,7 +106,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("import com.github.drone.subb.Application;");
     _builder.newLine();
-    _builder.append("import com.github.drone.subb.IDrone;");
+    _builder.append("import com.github.drone.subb.IUAV;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import SimpleTester.*;");
@@ -122,7 +122,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("private List<Test> tests = new ArrayList<Test>();");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("private IDrone drone = null;");
+    _builder.append("private IUAV drone = null;");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private Application app = null;");
@@ -135,7 +135,7 @@ public class MyLanguageGenerator extends AbstractGenerator {
     _builder.append("\t");
     _builder.append("public ");
     _builder.append(name, "\t");
-    _builder.append("(IDrone drone, Application app, long t){");
+    _builder.append("(IUAV drone, Application app, long t){");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("this.drone = drone;");

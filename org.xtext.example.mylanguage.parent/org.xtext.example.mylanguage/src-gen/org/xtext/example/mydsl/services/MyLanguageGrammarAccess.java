@@ -240,8 +240,8 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGPSSentParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
 		//StatementBody:
-		//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-		//	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
+		//	Robot | EnvironmentSent | TimeSent | PeopleSent
+		//	| MissionSent | NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent | NotificationSent | BatterySent | SonarSent | BaroSent |
@@ -972,7 +972,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	public class RobotElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.Robot");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRobotKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cUAVKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
 		private final RuleCall cRobotPositionSentParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
 		private final RuleCall cRobotSpeedSentParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
@@ -983,17 +983,17 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRobotAutoPilotParserRuleCall_1_6 = (RuleCall)cAlternatives_1.eContents().get(6);
 		
 		//Robot:
-		//	'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent
+		//	'UAV' (RobotPositionSent | RobotSpeedSent | RobotStateSent
 		//	| RobotDistanceSent | RiskSent | PayloadSent
 		//	| RobotAutoPilot);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent |
+		//'UAV' (RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent |
 		//RobotAutoPilot)
 		public Group getGroup() { return cGroup; }
 		
-		//'Robot'
-		public Keyword getRobotKeyword_0() { return cRobotKeyword_0; }
+		//'UAV'
+		public Keyword getUAVKeyword_0() { return cUAVKeyword_0; }
 		
 		//RobotPositionSent | RobotSpeedSent | RobotStateSent | RobotDistanceSent | RiskSent | PayloadSent | RobotAutoPilot
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
@@ -1278,7 +1278,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.LessSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLowerKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cThenKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cThanKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cAmountAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final Alternatives cAmountAlternatives_2_0 = (Alternatives)cAmountAssignment_2.eContents().get(0);
 		private final RuleCall cAmountDistanceUnitParserRuleCall_2_0_0 = (RuleCall)cAmountAlternatives_2_0.eContents().get(0);
@@ -1286,18 +1286,18 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAmountSpeedUnitParserRuleCall_2_0_2 = (RuleCall)cAmountAlternatives_2_0.eContents().get(2);
 		
 		//LessSent:
-		//	'lower' 'then'
+		//	'lower' 'than'
 		//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'lower' 'then' amount=(DistanceUnit | PercentUnit | SpeedUnit)
+		//'lower' 'than' amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Group getGroup() { return cGroup; }
 		
 		//'lower'
 		public Keyword getLowerKeyword_0() { return cLowerKeyword_0; }
 		
-		//'then'
-		public Keyword getThenKeyword_1() { return cThenKeyword_1; }
+		//'than'
+		public Keyword getThanKeyword_1() { return cThanKeyword_1; }
 		
 		//amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Assignment getAmountAssignment_2() { return cAmountAssignment_2; }
@@ -1318,7 +1318,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyLanguage.GreaterSent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGreaterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cThenKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cThanKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cAmountAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final Alternatives cAmountAlternatives_2_0 = (Alternatives)cAmountAssignment_2.eContents().get(0);
 		private final RuleCall cAmountDistanceUnitParserRuleCall_2_0_0 = (RuleCall)cAmountAlternatives_2_0.eContents().get(0);
@@ -1326,18 +1326,18 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAmountSpeedUnitParserRuleCall_2_0_2 = (RuleCall)cAmountAlternatives_2_0.eContents().get(2);
 		
 		//GreaterSent:
-		//	'greater' 'then'
+		//	'greater' 'than'
 		//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'greater' 'then' amount=(DistanceUnit | PercentUnit | SpeedUnit)
+		//'greater' 'than' amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Group getGroup() { return cGroup; }
 		
 		//'greater'
 		public Keyword getGreaterKeyword_0() { return cGreaterKeyword_0; }
 		
-		//'then'
-		public Keyword getThenKeyword_1() { return cThenKeyword_1; }
+		//'than'
+		public Keyword getThanKeyword_1() { return cThanKeyword_1; }
 		
 		//amount=(DistanceUnit | PercentUnit | SpeedUnit)
 		public Assignment getAmountAssignment_2() { return cAmountAssignment_2; }
@@ -2546,8 +2546,8 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//StatementBody:
-	//	Robot | EnvironmentSent | TimeSent | PeopleSent | MissionSent
-	//	| NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
+	//	Robot | EnvironmentSent | TimeSent | PeopleSent
+	//	| MissionSent | NotificationSent | BatterySent | SonarSent | BaroSent | GPSSent;
 	public StatementBodyElements getStatementBodyAccess() {
 		return pStatementBody;
 	}
@@ -2772,7 +2772,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Robot:
-	//	'Robot' (RobotPositionSent | RobotSpeedSent | RobotStateSent
+	//	'UAV' (RobotPositionSent | RobotSpeedSent | RobotStateSent
 	//	| RobotDistanceSent | RiskSent | PayloadSent
 	//	| RobotAutoPilot);
 	public RobotElements getRobotAccess() {
@@ -2852,7 +2852,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//LessSent:
-	//	'lower' 'then'
+	//	'lower' 'than'
 	//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 	public LessSentElements getLessSentAccess() {
 		return pLessSent;
@@ -2863,7 +2863,7 @@ public class MyLanguageGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GreaterSent:
-	//	'greater' 'then'
+	//	'greater' 'than'
 	//	amount=(DistanceUnit | PercentUnit | SpeedUnit);
 	public GreaterSentElements getGreaterSentAccess() {
 		return pGreaterSent;

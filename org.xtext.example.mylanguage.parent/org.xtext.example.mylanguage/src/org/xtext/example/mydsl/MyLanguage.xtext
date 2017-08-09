@@ -142,7 +142,7 @@ MissionStatusSent:
 ;
 
 Robot:
-	'Robot'
+	'UAV'
 	(RobotPositionSent | RobotSpeedSent | RobotStateSent 
 		| RobotDistanceSent | RiskSent  | PayloadSent
 		| RobotAutoPilot
@@ -184,12 +184,12 @@ EqualSent:
 ;
 
 LessSent:
-	'lower''then'
+	'lower''than'
 	amount = (DistanceUnit|PercentUnit|SpeedUnit)
 ;
 
 GreaterSent:
-	'greater''then'
+	'greater''than'
 	amount = (DistanceUnit|PercentUnit|SpeedUnit)
 ;
 

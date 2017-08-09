@@ -1782,9 +1782,9 @@ ruleRobot returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Robot'
+		otherlv_0='UAV'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getRobotAccess().getRobotKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getRobotAccess().getUAVKeyword_0());
 		}
 		(
 			{
@@ -2359,9 +2359,9 @@ ruleLessSent returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getLessSentAccess().getLowerKeyword_0());
 		}
-		otherlv_1='then'
+		otherlv_1='than'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getLessSentAccess().getThenKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getLessSentAccess().getThanKeyword_1());
 		}
 		(
 			(
@@ -2439,9 +2439,9 @@ ruleGreaterSent returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGreaterSentAccess().getGreaterKeyword_0());
 		}
-		otherlv_1='then'
+		otherlv_1='than'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGreaterSentAccess().getThenKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGreaterSentAccess().getThanKeyword_1());
 		}
 		(
 			(

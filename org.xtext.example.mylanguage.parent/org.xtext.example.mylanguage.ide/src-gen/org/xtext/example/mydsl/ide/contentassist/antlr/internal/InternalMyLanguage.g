@@ -4696,9 +4696,9 @@ rule__Robot__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getRobotAccess().getRobotKeyword_0()); }
-	'Robot'
-	{ after(grammarAccess.getRobotAccess().getRobotKeyword_0()); }
+	{ before(grammarAccess.getRobotAccess().getUAVKeyword_0()); }
+	'UAV'
+	{ after(grammarAccess.getRobotAccess().getUAVKeyword_0()); }
 )
 ;
 finally {
@@ -5344,9 +5344,9 @@ rule__LessSent__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getLessSentAccess().getThenKeyword_1()); }
-	'then'
-	{ after(grammarAccess.getLessSentAccess().getThenKeyword_1()); }
+	{ before(grammarAccess.getLessSentAccess().getThanKeyword_1()); }
+	'than'
+	{ after(grammarAccess.getLessSentAccess().getThanKeyword_1()); }
 )
 ;
 finally {
@@ -5425,9 +5425,9 @@ rule__GreaterSent__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGreaterSentAccess().getThenKeyword_1()); }
-	'then'
-	{ after(grammarAccess.getGreaterSentAccess().getThenKeyword_1()); }
+	{ before(grammarAccess.getGreaterSentAccess().getThanKeyword_1()); }
+	'than'
+	{ after(grammarAccess.getGreaterSentAccess().getThanKeyword_1()); }
 )
 ;
 finally {

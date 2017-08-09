@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Time'", "'is'", "'always'", "'never'", "'status'", "'GPS'", "'positionReading'", "'Barometer'", "'altitudereading'", "'Sonar'", "'distancereading'", "'Notification'", "'sent'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'autopilot'", "'ON'", "'OFF'", "'payload'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'collisionrisk'", "'tolerance'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'FAILING'", "'REDUNDANT'", "'m/s('", "')'", "'km/s('", "'m/h('", "'km/h('", "'seconds('", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Time'", "'is'", "'always'", "'never'", "'status'", "'GPS'", "'positionReading'", "'Barometer'", "'altitudereading'", "'Sonar'", "'distancereading'", "'Notification'", "'sent'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'UAV'", "'autopilot'", "'ON'", "'OFF'", "'payload'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'than'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'collisionrisk'", "'tolerance'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'FAILING'", "'REDUNDANT'", "'m/s('", "')'", "'km/s('", "'m/h('", "'km/h('", "'seconds('", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -4738,7 +4738,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRobot"
-    // InternalMyLanguage.g:1777:1: ruleRobot returns [EObject current=null] : (otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) ) ;
+    // InternalMyLanguage.g:1777:1: ruleRobot returns [EObject current=null] : (otherlv_0= 'UAV' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) ) ;
     public final EObject ruleRobot() throws RecognitionException {
         EObject current = null;
 
@@ -4762,15 +4762,15 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:1783:2: ( (otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) ) )
-            // InternalMyLanguage.g:1784:2: (otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) )
+            // InternalMyLanguage.g:1783:2: ( (otherlv_0= 'UAV' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) ) )
+            // InternalMyLanguage.g:1784:2: (otherlv_0= 'UAV' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) )
             {
-            // InternalMyLanguage.g:1784:2: (otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) )
-            // InternalMyLanguage.g:1785:3: otherlv_0= 'Robot' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot )
+            // InternalMyLanguage.g:1784:2: (otherlv_0= 'UAV' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot ) )
+            // InternalMyLanguage.g:1785:3: otherlv_0= 'UAV' (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot )
             {
             otherlv_0=(Token)match(input,42,FOLLOW_32); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getRobotAccess().getRobotKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getRobotAccess().getUAVKeyword_0());
             		
             // InternalMyLanguage.g:1789:3: (this_RobotPositionSent_1= ruleRobotPositionSent | this_RobotSpeedSent_2= ruleRobotSpeedSent | this_RobotStateSent_3= ruleRobotStateSent | this_RobotDistanceSent_4= ruleRobotDistanceSent | this_RiskSent_5= ruleRiskSent | this_PayloadSent_6= rulePayloadSent | this_RobotAutoPilot_7= ruleRobotAutoPilot )
             int alt21=7;
@@ -6234,7 +6234,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLessSent"
-    // InternalMyLanguage.g:2350:1: ruleLessSent returns [EObject current=null] : (otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) ;
+    // InternalMyLanguage.g:2350:1: ruleLessSent returns [EObject current=null] : (otherlv_0= 'lower' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) ;
     public final EObject ruleLessSent() throws RecognitionException {
         EObject current = null;
 
@@ -6251,11 +6251,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:2356:2: ( (otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) )
-            // InternalMyLanguage.g:2357:2: (otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
+            // InternalMyLanguage.g:2356:2: ( (otherlv_0= 'lower' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) )
+            // InternalMyLanguage.g:2357:2: (otherlv_0= 'lower' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
             {
-            // InternalMyLanguage.g:2357:2: (otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
-            // InternalMyLanguage.g:2358:3: otherlv_0= 'lower' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
+            // InternalMyLanguage.g:2357:2: (otherlv_0= 'lower' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
+            // InternalMyLanguage.g:2358:3: otherlv_0= 'lower' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
             {
             otherlv_0=(Token)match(input,52,FOLLOW_39); 
 
@@ -6263,7 +6263,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             		
             otherlv_1=(Token)match(input,53,FOLLOW_38); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getLessSentAccess().getThenKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getLessSentAccess().getThanKeyword_1());
             		
             // InternalMyLanguage.g:2366:3: ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
             // InternalMyLanguage.g:2367:4: ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) )
@@ -6446,7 +6446,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGreaterSent"
-    // InternalMyLanguage.g:2430:1: ruleGreaterSent returns [EObject current=null] : (otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) ;
+    // InternalMyLanguage.g:2430:1: ruleGreaterSent returns [EObject current=null] : (otherlv_0= 'greater' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) ;
     public final EObject ruleGreaterSent() throws RecognitionException {
         EObject current = null;
 
@@ -6463,11 +6463,11 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMyLanguage.g:2436:2: ( (otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) )
-            // InternalMyLanguage.g:2437:2: (otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
+            // InternalMyLanguage.g:2436:2: ( (otherlv_0= 'greater' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) ) )
+            // InternalMyLanguage.g:2437:2: (otherlv_0= 'greater' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
             {
-            // InternalMyLanguage.g:2437:2: (otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
-            // InternalMyLanguage.g:2438:3: otherlv_0= 'greater' otherlv_1= 'then' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
+            // InternalMyLanguage.g:2437:2: (otherlv_0= 'greater' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) ) )
+            // InternalMyLanguage.g:2438:3: otherlv_0= 'greater' otherlv_1= 'than' ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
             {
             otherlv_0=(Token)match(input,54,FOLLOW_39); 
 
@@ -6475,7 +6475,7 @@ public class InternalMyLanguageParser extends AbstractInternalAntlrParser {
             		
             otherlv_1=(Token)match(input,53,FOLLOW_38); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getGreaterSentAccess().getThenKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getGreaterSentAccess().getThanKeyword_1());
             		
             // InternalMyLanguage.g:2446:3: ( ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) ) )
             // InternalMyLanguage.g:2447:4: ( (lv_amount_2_1= ruleDistanceUnit | lv_amount_2_2= rulePercentUnit | lv_amount_2_3= ruleSpeedUnit ) )

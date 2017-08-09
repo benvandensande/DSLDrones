@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyLanguageParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'always'", "'never'", "'ON'", "'OFF'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'FAILING'", "'REDUNDANT'", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Time'", "'is'", "'status'", "'GPS'", "'positionReading'", "'Barometer'", "'altitudereading'", "'Sonar'", "'distancereading'", "'sent'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'Robot'", "'autopilot'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'then'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'collisionrisk'", "'tolerance'", "'m/s('", "')'", "'km/s('", "'m/h('", "'km/h('", "'seconds('", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'", "'Notification'", "'payload'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'always'", "'never'", "'ON'", "'OFF'", "'ACTIVE'", "'UNACTIVE'", "'PAUSED'", "'SAFE'", "'UNSAFE'", "'WARNING'", "'CRITICAL'", "'FAILING'", "'REDUNDANT'", "'Test:'", "'Description:'", "'Given:'", "'Then:'", "'When:'", "'Time'", "'is'", "'status'", "'GPS'", "'positionReading'", "'Barometer'", "'altitudereading'", "'Sonar'", "'distancereading'", "'sent'", "'interval'", "'in'", "'['", "','", "']'", "'Battery'", "'level'", "'Person'", "'position'", "'number'", "'Mission'", "'goal'", "'missionsafety'", "'UAV'", "'autopilot'", "'drops'", "'distance'", "'to'", "'obstacles'", "'equal'", "'lower'", "'than'", "'greater'", "'state'", "'within'", "'circle'", "'with'", "'radius'", "'sphere'", "'speed'", "'Environment'", "'windspeed'", "'collisionrisk'", "'tolerance'", "'m/s('", "')'", "'km/s('", "'m/h('", "'km/h('", "'seconds('", "'hours('", "'minutes('", "'meter('", "'centimeter('", "'millimeter('", "'kilometer('", "'percent('", "'-'", "'.'", "'Notification'", "'payload'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -14844,21 +14844,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Robot__Group__0__Impl"
-    // InternalMyLanguage.g:4693:1: rule__Robot__Group__0__Impl : ( 'Robot' ) ;
+    // InternalMyLanguage.g:4693:1: rule__Robot__Group__0__Impl : ( 'UAV' ) ;
     public final void rule__Robot__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:4697:1: ( ( 'Robot' ) )
-            // InternalMyLanguage.g:4698:1: ( 'Robot' )
+            // InternalMyLanguage.g:4697:1: ( ( 'UAV' ) )
+            // InternalMyLanguage.g:4698:1: ( 'UAV' )
             {
-            // InternalMyLanguage.g:4698:1: ( 'Robot' )
-            // InternalMyLanguage.g:4699:2: 'Robot'
+            // InternalMyLanguage.g:4698:1: ( 'UAV' )
+            // InternalMyLanguage.g:4699:2: 'UAV'
             {
-             before(grammarAccess.getRobotAccess().getRobotKeyword_0()); 
+             before(grammarAccess.getRobotAccess().getUAVKeyword_0()); 
             match(input,52,FOLLOW_2); 
-             after(grammarAccess.getRobotAccess().getRobotKeyword_0()); 
+             after(grammarAccess.getRobotAccess().getUAVKeyword_0()); 
 
             }
 
@@ -16751,21 +16751,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LessSent__Group__1__Impl"
-    // InternalMyLanguage.g:5341:1: rule__LessSent__Group__1__Impl : ( 'then' ) ;
+    // InternalMyLanguage.g:5341:1: rule__LessSent__Group__1__Impl : ( 'than' ) ;
     public final void rule__LessSent__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:5345:1: ( ( 'then' ) )
-            // InternalMyLanguage.g:5346:1: ( 'then' )
+            // InternalMyLanguage.g:5345:1: ( ( 'than' ) )
+            // InternalMyLanguage.g:5346:1: ( 'than' )
             {
-            // InternalMyLanguage.g:5346:1: ( 'then' )
-            // InternalMyLanguage.g:5347:2: 'then'
+            // InternalMyLanguage.g:5346:1: ( 'than' )
+            // InternalMyLanguage.g:5347:2: 'than'
             {
-             before(grammarAccess.getLessSentAccess().getThenKeyword_1()); 
+             before(grammarAccess.getLessSentAccess().getThanKeyword_1()); 
             match(input,60,FOLLOW_2); 
-             after(grammarAccess.getLessSentAccess().getThenKeyword_1()); 
+             after(grammarAccess.getLessSentAccess().getThanKeyword_1()); 
 
             }
 
@@ -16981,21 +16981,21 @@ public class InternalMyLanguageParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GreaterSent__Group__1__Impl"
-    // InternalMyLanguage.g:5422:1: rule__GreaterSent__Group__1__Impl : ( 'then' ) ;
+    // InternalMyLanguage.g:5422:1: rule__GreaterSent__Group__1__Impl : ( 'than' ) ;
     public final void rule__GreaterSent__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyLanguage.g:5426:1: ( ( 'then' ) )
-            // InternalMyLanguage.g:5427:1: ( 'then' )
+            // InternalMyLanguage.g:5426:1: ( ( 'than' ) )
+            // InternalMyLanguage.g:5427:1: ( 'than' )
             {
-            // InternalMyLanguage.g:5427:1: ( 'then' )
-            // InternalMyLanguage.g:5428:2: 'then'
+            // InternalMyLanguage.g:5427:1: ( 'than' )
+            // InternalMyLanguage.g:5428:2: 'than'
             {
-             before(grammarAccess.getGreaterSentAccess().getThenKeyword_1()); 
+             before(grammarAccess.getGreaterSentAccess().getThanKeyword_1()); 
             match(input,60,FOLLOW_2); 
-             after(grammarAccess.getGreaterSentAccess().getThenKeyword_1()); 
+             after(grammarAccess.getGreaterSentAccess().getThanKeyword_1()); 
 
             }
 

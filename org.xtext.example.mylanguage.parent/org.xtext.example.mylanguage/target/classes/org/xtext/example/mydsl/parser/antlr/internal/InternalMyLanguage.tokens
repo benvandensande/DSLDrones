@@ -18,12 +18,12 @@
 'PAUSED'=68
 'Person'=36
 'REDUNDANT'=74
-'Robot'=42
 'SAFE'=69
 'Sonar'=25
 'Test:'=11
 'Then:'=14
 'Time'=16
+'UAV'=42
 'UNACTIVE'=67
 'UNSAFE'=70
 'WARNING'=71
@@ -71,7 +71,7 @@
 'sphere'=60
 'state'=55
 'status'=20
-'then'=53
+'than'=53
 'to'=49
 'tolerance'=65
 'windspeed'=63
